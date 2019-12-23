@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Announcement View Controller-->
+        <!--공고-->
         <scene sceneID="9Mo-ZU-wMX">
             <objects>
                 <viewController storyboardIdentifier="Announcement" id="3DW-Zo-DkL" customClass="AnnouncementViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="4H9-5e-AyD"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Gmc-Aj-R4w"/>
+                    <navigationItem key="navigationItem" title="공고" id="Gmc-Aj-R4w">
+                        <barButtonItem key="rightBarButtonItem" title="Calendar" id="uN7-qK-nPg"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lvn-H7-Ma7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

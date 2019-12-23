@@ -7,17 +7,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Story View Controller-->
+        <!--스토리-->
         <scene sceneID="3lS-Um-b8a">
             <objects>
                 <viewController storyboardIdentifier="Story" id="Mpp-1N-9vO" customClass="StoryViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hyh-Nc-DEg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="hKi-a3-mgc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="C1Z-g8-vpz"/>
+                    <navigationItem key="navigationItem" title="스토리" id="C1Z-g8-vpz">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="CQZ-a6-avf"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cY-fS-Joe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
