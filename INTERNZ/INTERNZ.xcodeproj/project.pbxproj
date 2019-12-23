@@ -23,6 +23,7 @@
 		B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C97923B12F7200348A7B /* StoryViewController.swift */; };
 		B6D9C97E23B1347600348A7B /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C97D23B1347600348A7B /* TabbarViewController.swift */; };
 		B6D9C98123B13D7400348A7B /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98023B13D7400348A7B /* UIColor+Additions.swift */; };
+		B6D9C98423B13E0600348A7B /* NeworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98323B13E0600348A7B /* NeworkResult.swift */; };
 		C3D769A1ED19F5BB94283452 /* Pods_INTERNZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16EF8E341DAE52684405B6A /* Pods_INTERNZ.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		B6D9C97923B12F7200348A7B /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		B6D9C97D23B1347600348A7B /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		B6D9C98023B13D7400348A7B /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		B6D9C98323B13E0600348A7B /* NeworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeworkResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		B6D9C96723B1189800348A7B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B6D9C98223B13DDA00348A7B /* APIServices */,
 				B6D9C96823B118B300348A7B /* Storyboards */,
 				B6D9C95A23B1169200348A7B /* Assets.xcassets */,
 			);
@@ -142,6 +145,14 @@
 				B6D9C98023B13D7400348A7B /* UIColor+Additions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B6D9C98223B13DDA00348A7B /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				B6D9C98323B13E0600348A7B /* NeworkResult.swift */,
+			);
+			path = APIServices;
 			sourceTree = "<group>";
 		};
 		C3B15F560FC513C07941125C /* Pods */ = {
@@ -282,6 +293,7 @@
 			files = (
 				B6D9C97E23B1347600348A7B /* TabbarViewController.swift in Sources */,
 				B6D9C97823B12F2400348A7B /* ProfileViewController.swift in Sources */,
+				B6D9C98423B13E0600348A7B /* NeworkResult.swift in Sources */,
 				B6D9C97623B12ED400348A7B /* AnnouncementViewController.swift in Sources */,
 				B6D9C95623B1169100348A7B /* ViewController.swift in Sources */,
 				B6D9C95223B1169100348A7B /* AppDelegate.swift in Sources */,
