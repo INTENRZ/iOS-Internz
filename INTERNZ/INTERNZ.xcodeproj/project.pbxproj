@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
 		B6D9C95223B1169100348A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C95123B1169100348A7B /* AppDelegate.swift */; };
 		B6D9C95423B1169100348A7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C95323B1169100348A7B /* SceneDelegate.swift */; };
-		B6D9C95623B1169100348A7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C95523B1169100348A7B /* ViewController.swift */; };
 		B6D9C95923B1169100348A7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D9C95723B1169100348A7B /* Main.storyboard */; };
 		B6D9C95B23B1169200348A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6D9C95A23B1169200348A7B /* Assets.xcassets */; };
 		B6D9C95E23B1169200348A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D9C95C23B1169200348A7B /* LaunchScreen.storyboard */; };
@@ -32,10 +32,10 @@
 		4DBB74BF62F1CEEB716663DF /* Pods-INTERNZ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INTERNZ.debug.xcconfig"; path = "Target Support Files/Pods-INTERNZ/Pods-INTERNZ.debug.xcconfig"; sourceTree = "<group>"; };
 		781EC13AE66EF4087EF04F10 /* Pods-INTERNZ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INTERNZ.release.xcconfig"; path = "Target Support Files/Pods-INTERNZ/Pods-INTERNZ.release.xcconfig"; sourceTree = "<group>"; };
 		A16EF8E341DAE52684405B6A /* Pods_INTERNZ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INTERNZ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B67CBF9523B1740B001C78B2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		B6D9C94E23B1169100348A7B /* INTERNZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INTERNZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D9C95123B1169100348A7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6D9C95323B1169100348A7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B6D9C95523B1169100348A7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6D9C95823B1169100348A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6D9C95A23B1169200348A7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6D9C95D23B1169200348A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,6 +66,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B67CBF9823B174B8001C78B2 /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+				B6D9C97323B12D7A00348A7B /* HomeViewController.swift */,
+			);
+			path = HomeTab;
+			sourceTree = "<group>";
+		};
+		B67CBF9923B174CD001C78B2 /* AnnouncementTab */ = {
+			isa = PBXGroup;
+			children = (
+				B6D9C97523B12ED400348A7B /* AnnouncementViewController.swift */,
+				B6D9C98723B1575500348A7B /* CalendarViewController.swift */,
+			);
+			path = AnnouncementTab;
+			sourceTree = "<group>";
+		};
+		B67CBF9A23B174DC001C78B2 /* StoryTab */ = {
+			isa = PBXGroup;
+			children = (
+				B6D9C97923B12F7200348A7B /* StoryViewController.swift */,
+			);
+			path = StoryTab;
+			sourceTree = "<group>";
+		};
+		B67CBF9B23B174EB001C78B2 /* ProfileTab */ = {
+			isa = PBXGroup;
+			children = (
+				B6D9C97723B12F2400348A7B /* ProfileViewController.swift */,
+			);
+			path = ProfileTab;
+			sourceTree = "<group>";
+		};
+		B67CBF9C23B175B3001C78B2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B6D9C97D23B1347600348A7B /* TabbarViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		B6D9C94523B1169100348A7B = {
 			isa = PBXGroup;
 			children = (
@@ -108,13 +149,11 @@
 		B6D9C96623B1187900348A7B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B6D9C95523B1169100348A7B /* ViewController.swift */,
-				B6D9C97323B12D7A00348A7B /* HomeViewController.swift */,
-				B6D9C97523B12ED400348A7B /* AnnouncementViewController.swift */,
-				B6D9C97723B12F2400348A7B /* ProfileViewController.swift */,
-				B6D9C97923B12F7200348A7B /* StoryViewController.swift */,
-				B6D9C97D23B1347600348A7B /* TabbarViewController.swift */,
-				B6D9C98723B1575500348A7B /* CalendarViewController.swift */,
+				B67CBF9C23B175B3001C78B2 /* Main */,
+				B67CBF9A23B174DC001C78B2 /* StoryTab */,
+				B67CBF9823B174B8001C78B2 /* HomeTab */,
+				B67CBF9923B174CD001C78B2 /* AnnouncementTab */,
+				B67CBF9B23B174EB001C78B2 /* ProfileTab */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -154,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				B6D9C98323B13E0600348A7B /* NeworkResult.swift */,
+				B67CBF9523B1740B001C78B2 /* APIConstants.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -299,9 +339,9 @@
 				B6D9C98423B13E0600348A7B /* NeworkResult.swift in Sources */,
 				B6D9C98823B1575500348A7B /* CalendarViewController.swift in Sources */,
 				B6D9C97623B12ED400348A7B /* AnnouncementViewController.swift in Sources */,
-				B6D9C95623B1169100348A7B /* ViewController.swift in Sources */,
 				B6D9C95223B1169100348A7B /* AppDelegate.swift in Sources */,
 				B6D9C95423B1169100348A7B /* SceneDelegate.swift in Sources */,
+				B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */,
 				B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */,
 				B6D9C97423B12D7A00348A7B /* HomeViewController.swift in Sources */,
 				B6D9C98123B13D7400348A7B /* UIColor+Additions.swift in Sources */,

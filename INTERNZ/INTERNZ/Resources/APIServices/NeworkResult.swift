@@ -16,9 +16,3 @@ enum NetworkResult<T> {
     case serverErr
     case networkFail
 }
-
-struct APIConstants {
-    
-    static let BaseURL = ""
-    
-}
