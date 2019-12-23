@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -63,15 +63,47 @@
 		B6D9C95023B1169100348A7B /* INTERNZ */ = {
 			isa = PBXGroup;
 			children = (
+				B6D9C96723B1189800348A7B /* Resources */,
+				B6D9C96523B1186F00348A7B /* Sources */,
 				B6D9C95123B1169100348A7B /* AppDelegate.swift */,
 				B6D9C95323B1169100348A7B /* SceneDelegate.swift */,
-				B6D9C95523B1169100348A7B /* ViewController.swift */,
-				B6D9C95723B1169100348A7B /* Main.storyboard */,
-				B6D9C95A23B1169200348A7B /* Assets.xcassets */,
-				B6D9C95C23B1169200348A7B /* LaunchScreen.storyboard */,
 				B6D9C95F23B1169200348A7B /* Info.plist */,
 			);
 			path = INTERNZ;
+			sourceTree = "<group>";
+		};
+		B6D9C96523B1186F00348A7B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B6D9C96623B1187900348A7B /* ViewControllers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B6D9C96623B1187900348A7B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6D9C95523B1169100348A7B /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B6D9C96723B1189800348A7B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B6D9C96823B118B300348A7B /* Storyboards */,
+				B6D9C95A23B1169200348A7B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B6D9C96823B118B300348A7B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B6D9C95C23B1169200348A7B /* LaunchScreen.storyboard */,
+				B6D9C95723B1169100348A7B /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		C3B15F560FC513C07941125C /* Pods */ = {
@@ -80,7 +112,6 @@
 				4DBB74BF62F1CEEB716663DF /* Pods-INTERNZ.debug.xcconfig */,
 				781EC13AE66EF4087EF04F10 /* Pods-INTERNZ.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
