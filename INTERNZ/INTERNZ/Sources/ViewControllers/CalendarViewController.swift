@@ -19,21 +19,27 @@ class CalendarViewController: UIViewController {
         let plusImage = UIImage(named: "searchIcon")!
         
         let calendarButton = UIBarButtonItem(image: calendarImage, style: .plain
-            , target: self, action: #selector(moveCalendar))
+            , target: self, action: #selector(moveAnnouncement))
         
         let plusButton = UIBarButtonItem(image: plusImage, style: .plain, target: self, action: #selector(plusSchedule))
         
-        navigationItem.rightBarButtonItems = [calendarButton, plusButton]
+        navigationItem.rightBarButtonItems = [plusButton, calendarButton]
         
         
         
     }
     
-    @objc func moveCalendar(){
-        print("tap calendar")
+    
+    // 공고 리스트 view 로 이동
+    @objc func moveAnnouncement(){
+        print("tap back to list")
         
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "Announcement") as? AnnouncementViewController {
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
     }
 
+    // 캘린더 뷰에 일정 추가 
     @objc func plusSchedule(){
         print("tap plus button")
     }
