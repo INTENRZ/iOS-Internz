@@ -12,21 +12,17 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        self.title = "홈"
+       
+        // tab bar item 의 title 설정
+        if let downcastStrings = self.tabBarController?.tabBar.items
+        {
+            downcastStrings[0].title = "홈"
+            downcastStrings[1].title = "공고"
+            downcastStrings[2].title = "스토리"
+            downcastStrings[3].title = "프로필"
+        }
 
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

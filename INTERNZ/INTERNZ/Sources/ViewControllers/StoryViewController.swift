@@ -13,9 +13,6 @@ class StoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.title = "스토리"
-
-        // Do any additional setup after loading the view.
     }
     
 

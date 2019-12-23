@@ -13,9 +13,6 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.title = "프로필"
-
-        // Do any additional setup after loading the view.
     }
     
 

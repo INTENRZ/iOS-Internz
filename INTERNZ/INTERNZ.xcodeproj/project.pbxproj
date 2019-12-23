@@ -21,6 +21,7 @@
 		B6D9C97623B12ED400348A7B /* AnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C97523B12ED400348A7B /* AnnouncementViewController.swift */; };
 		B6D9C97823B12F2400348A7B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C97723B12F2400348A7B /* ProfileViewController.swift */; };
 		B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C97923B12F7200348A7B /* StoryViewController.swift */; };
+		B6D9C97E23B1347600348A7B /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C97D23B1347600348A7B /* TabbarViewController.swift */; };
 		C3D769A1ED19F5BB94283452 /* Pods_INTERNZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16EF8E341DAE52684405B6A /* Pods_INTERNZ.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		B6D9C97523B12ED400348A7B /* AnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementViewController.swift; sourceTree = "<group>"; };
 		B6D9C97723B12F2400348A7B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6D9C97923B12F7200348A7B /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		B6D9C97D23B1347600348A7B /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				B6D9C97523B12ED400348A7B /* AnnouncementViewController.swift */,
 				B6D9C97723B12F2400348A7B /* ProfileViewController.swift */,
 				B6D9C97923B12F7200348A7B /* StoryViewController.swift */,
+				B6D9C97D23B1347600348A7B /* TabbarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D9C97E23B1347600348A7B /* TabbarViewController.swift in Sources */,
 				B6D9C97823B12F2400348A7B /* ProfileViewController.swift in Sources */,
 				B6D9C97623B12ED400348A7B /* AnnouncementViewController.swift in Sources */,
 				B6D9C95623B1169100348A7B /* ViewController.swift in Sources */,
