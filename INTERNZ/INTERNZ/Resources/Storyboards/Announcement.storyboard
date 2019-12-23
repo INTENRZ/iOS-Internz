@@ -18,12 +18,32 @@
                         <viewLayoutGuide key="safeArea" id="4H9-5e-AyD"/>
                     </view>
                     <navigationItem key="navigationItem" title="공고" id="Gmc-Aj-R4w">
-                        <barButtonItem key="rightBarButtonItem" title="Calendar" id="uN7-qK-nPg"/>
+                        <barButtonItem key="rightBarButtonItem" title="Calendar" id="uN7-qK-nPg">
+                            <connections>
+                                <segue destination="wAL-9E-c20" kind="show" animates="NO" id="H9C-4O-lA0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lvn-H7-Ma7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="905.79710144927549" y="49.553571428571423"/>
+        </scene>
+        <!--공고-->
+        <scene sceneID="b4W-4P-C2O">
+            <objects>
+                <viewController id="wAL-9E-c20" customClass="CalendarViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CYN-hC-aEL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Fd2-Wu-ns2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="공고" id="mnb-8W-WkB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXQ-6t-rdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="792"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GEE-6r-c4T">
