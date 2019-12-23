@@ -22,6 +22,7 @@
 		B6D9C97823B12F2400348A7B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C97723B12F2400348A7B /* ProfileViewController.swift */; };
 		B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C97923B12F7200348A7B /* StoryViewController.swift */; };
 		B6D9C97E23B1347600348A7B /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C97D23B1347600348A7B /* TabbarViewController.swift */; };
+		B6D9C98123B13D7400348A7B /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98023B13D7400348A7B /* UIColor+Additions.swift */; };
 		C3D769A1ED19F5BB94283452 /* Pods_INTERNZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16EF8E341DAE52684405B6A /* Pods_INTERNZ.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		B6D9C97723B12F2400348A7B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6D9C97923B12F7200348A7B /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		B6D9C97D23B1347600348A7B /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		B6D9C98023B13D7400348A7B /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		B6D9C96523B1186F00348A7B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B6D9C97F23B13D1800348A7B /* Extensions */,
 				B6D9C96623B1187900348A7B /* ViewControllers */,
 			);
 			path = Sources;
@@ -131,6 +134,14 @@
 				B6D9C97123B124F100348A7B /* Home.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B6D9C97F23B13D1800348A7B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B6D9C98023B13D7400348A7B /* UIColor+Additions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C3B15F560FC513C07941125C /* Pods */ = {
@@ -277,6 +288,7 @@
 				B6D9C95423B1169100348A7B /* SceneDelegate.swift in Sources */,
 				B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */,
 				B6D9C97423B12D7A00348A7B /* HomeViewController.swift in Sources */,
+				B6D9C98123B13D7400348A7B /* UIColor+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
