@@ -34,11 +34,6 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ReS-NT-KDd">
                                                     <rect key="frame" x="245" y="19" width="114" height="73"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="ReS-NT-KDd" secondAttribute="height" multiplier="114:73" id="6wJ-ZX-INV"/>
-                                                        <constraint firstAttribute="width" constant="114" id="Uee-Sb-Jli"/>
-                                                        <constraint firstAttribute="height" constant="73" id="ex1-l2-q32"/>
-                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQg-XM-BHg">
                                                     <rect key="frame" x="16" y="14" width="193" height="48"/>
@@ -51,7 +46,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lre-U0-G4R">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한한한" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lre-U0-G4R">
                                                     <rect key="frame" x="16" y="72" width="39" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="0Hg-YJ-cFo"/>
@@ -62,12 +57,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiP-YJ-6fq">
-                                                    <rect key="frame" x="59" y="72" width="35" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.25" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiP-YJ-6fq">
+                                                    <rect key="frame" x="59" y="73" width="38" height="17"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="CSj-Cd-122"/>
-                                                        <constraint firstAttribute="width" secondItem="eiP-YJ-6fq" secondAttribute="height" multiplier="7:4" id="FAp-ye-Ai6"/>
-                                                        <constraint firstAttribute="width" constant="35" id="Hot-Ek-wlk"/>
+                                                        <constraint firstAttribute="height" constant="17" id="58c-DW-voD"/>
+                                                        <constraint firstAttribute="width" constant="38" id="W0m-rn-hSy"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
@@ -75,15 +69,14 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="eiP-YJ-6fq" firstAttribute="top" secondItem="CQg-XM-BHg" secondAttribute="bottom" constant="10" id="HPp-Ce-UQx"/>
+                                                <constraint firstItem="eiP-YJ-6fq" firstAttribute="top" secondItem="CQg-XM-BHg" secondAttribute="bottom" constant="11" id="HPp-Ce-UQx"/>
                                                 <constraint firstAttribute="bottom" secondItem="ReS-NT-KDd" secondAttribute="bottom" constant="18" id="Uce-aZ-ohj"/>
                                                 <constraint firstItem="lre-U0-G4R" firstAttribute="top" secondItem="CQg-XM-BHg" secondAttribute="bottom" constant="10" id="VgD-XN-n8U"/>
                                                 <constraint firstItem="ReS-NT-KDd" firstAttribute="top" secondItem="dgv-XN-BPf" secondAttribute="top" constant="19" id="YAT-9c-lxd"/>
+                                                <constraint firstItem="ReS-NT-KDd" firstAttribute="leading" secondItem="CQg-XM-BHg" secondAttribute="trailing" constant="36" id="YiN-gs-aQh"/>
                                                 <constraint firstItem="lre-U0-G4R" firstAttribute="leading" secondItem="dgv-XN-BPf" secondAttribute="leading" constant="16" id="bRq-dY-J7h"/>
-                                                <constraint firstItem="ReS-NT-KDd" firstAttribute="leading" secondItem="eiP-YJ-6fq" secondAttribute="trailing" constant="151" id="f3E-ct-wE2"/>
                                                 <constraint firstAttribute="bottom" secondItem="CQg-XM-BHg" secondAttribute="bottom" constant="48" id="hEp-5e-y4e"/>
                                                 <constraint firstItem="CQg-XM-BHg" firstAttribute="leading" secondItem="dgv-XN-BPf" secondAttribute="leading" constant="16" id="nRV-iF-Gbz"/>
-                                                <constraint firstItem="ReS-NT-KDd" firstAttribute="leading" secondItem="lre-U0-G4R" secondAttribute="trailing" constant="190" id="tm3-6b-6dT"/>
                                                 <constraint firstItem="eiP-YJ-6fq" firstAttribute="leading" secondItem="lre-U0-G4R" secondAttribute="trailing" constant="4" id="wx6-sk-ANd"/>
                                                 <constraint firstAttribute="trailing" secondItem="ReS-NT-KDd" secondAttribute="trailing" constant="16" id="zRt-z3-MNw"/>
                                             </constraints>
@@ -91,6 +84,7 @@
                                         <connections>
                                             <outlet property="dateLabel" destination="eiP-YJ-6fq" id="1Kv-lO-Dso"/>
                                             <outlet property="nameLabel" destination="lre-U0-G4R" id="Jeg-6n-B4C"/>
+                                            <outlet property="storyImage" destination="ReS-NT-KDd" id="b9f-3E-bJU"/>
                                             <outlet property="storyTitleLabel" destination="CQg-XM-BHg" id="FVK-ZB-gpZ"/>
                                         </connections>
                                     </tableViewCell>

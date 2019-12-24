@@ -31,16 +31,17 @@ class StoryViewController: UIViewController {
 
 extension StoryViewController {
     func setStorySampleData(){
-        let story1 = Story(title: "test title11", name: "name", date: "12.25", storyImgName: "22")
+        let story1 = Story(title: "test title11", name: "name", date: "12.25", storyImgName: "33")
         
-        let story2 = Story(title: "test title22", name: "name", date: "12.25", storyImgName: "22")
+        let story2 = Story(title: "test title22", name: "name", date: "12.25", storyImgName: "33")
         
-        let story3 = Story(title: "test title33", name: "name", date: "12.25", storyImgName: "22")
+        let story3 = Story(title: "test title33", name: "name", date: "12.25", storyImgName: "33")
         
-        let story4 = Story(title: "test title44", name: "name", date: "12.25", storyImgName: "22")
+        let story4 = Story(title: "test title44", name: "name", date: "12.25", storyImgName: "33")
         
-        let story5 = Story(title: "test title55", name: "name", date: "12.25", storyImgName: "22")
+        let story5 = Story(title: "test title55", name: "name", date: "12.25", storyImgName: "33")
         
+      
         storySampleList = [story1, story2, story3, story4, story5]
     }
 }
@@ -62,7 +63,8 @@ extension StoryViewController: UITableViewDataSource {
         cell.storyTitleLabel.text = story.storyTitle
         cell.nameLabel.text = story.name
         cell.dateLabel.text = story.date
-//        cell.storyImage.image = story.storyImg
+//        cell.storyImage.image = UIImage(named: "33")
+        cell.storyImage.image = story.storyImg
         
         
         return cell
