@@ -63,7 +63,6 @@ extension StoryViewController: UITableViewDataSource {
         cell.storyTitleLabel.text = story.storyTitle
         cell.nameLabel.text = story.name
         cell.dateLabel.text = story.date
-//        cell.storyImage.image = UIImage(named: "33")
         cell.storyImage.image = story.storyImg
         
         
