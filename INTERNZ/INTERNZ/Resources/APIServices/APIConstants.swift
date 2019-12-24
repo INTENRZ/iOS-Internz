@@ -12,7 +12,7 @@ struct APIConstants {
     
     static let BaseURL = ""
     
-    static let SigninURL = ""
-    static let loginURL = ""
+    static let SigninURL = BaseURL +  ""
+    static let loginURL = BaseURL + ""
     
 }
