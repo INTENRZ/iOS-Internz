@@ -16,10 +16,14 @@ class StoryCell: UITableViewCell {
     @IBOutlet weak var storyImage: UIImageView!
     
 
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        // Initialization code
-//    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        storyTitleLabel.lineBreakMode = .byWordWrapping
+        storyTitleLabel.numberOfLines = 0
+        
+        
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

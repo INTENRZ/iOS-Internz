@@ -34,6 +34,11 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ReS-NT-KDd">
                                                     <rect key="frame" x="245" y="19" width="114" height="73"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="ReS-NT-KDd" secondAttribute="height" multiplier="114:73" id="Rgc-Mt-s5O"/>
+                                                        <constraint firstAttribute="width" constant="114" id="Z7A-gW-eEY"/>
+                                                        <constraint firstAttribute="height" constant="73" id="w9U-vO-Nua"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQg-XM-BHg">
                                                     <rect key="frame" x="16" y="14" width="193" height="48"/>

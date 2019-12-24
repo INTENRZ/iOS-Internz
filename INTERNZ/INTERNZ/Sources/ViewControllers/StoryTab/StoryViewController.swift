@@ -31,15 +31,15 @@ class StoryViewController: UIViewController {
 
 extension StoryViewController {
     func setStorySampleData(){
-        let story1 = Story(title: "test title11", name: "name", date: "12.25", storyImgName: "33")
+        let story1 = Story(title: "test title11 테스트테스트테스트트틑ㅌ", name: "김김김", date: "12.25", storyImgName: "33")
         
-        let story2 = Story(title: "test title22", name: "name", date: "12.25", storyImgName: "33")
+        let story2 = Story(title: "test title22 타이틀 길게 가자 멀티플라인", name: "박박박", date: "12.25", storyImgName: "33")
         
-        let story3 = Story(title: "test title33", name: "name", date: "12.25", storyImgName: "33")
+        let story3 = Story(title: "test title33 테스트테스트테스트트틑ㅌ", name: "최최최", date: "12.25", storyImgName: "33")
         
-        let story4 = Story(title: "test title44", name: "name", date: "12.25", storyImgName: "33")
+        let story4 = Story(title: "test title44 테스트테스트테스트트틑ㅌ", name: "name", date: "12.25", storyImgName: "33")
         
-        let story5 = Story(title: "test title55", name: "name", date: "12.25", storyImgName: "33")
+        let story5 = Story(title: "test title55 테스트테스트테스트트틑ㅌ", name: "name", date: "12.25", storyImgName: "33")
         
       
         storySampleList = [story1, story2, story3, story4, story5]
