@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F37E0F823B33D6600C80F1A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F37E0F723B33D6600C80F1A /* Login.storyboard */; };
+		7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */; };
 		B63DBAC923B275FE00EEE1C2 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */; };
 		B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBACD23B2779A00EEE1C2 /* Story.swift */; };
 		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
@@ -35,6 +37,8 @@
 /* Begin PBXFileReference section */
 		4DBB74BF62F1CEEB716663DF /* Pods-INTERNZ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INTERNZ.debug.xcconfig"; path = "Target Support Files/Pods-INTERNZ/Pods-INTERNZ.debug.xcconfig"; sourceTree = "<group>"; };
 		781EC13AE66EF4087EF04F10 /* Pods-INTERNZ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INTERNZ.release.xcconfig"; path = "Target Support Files/Pods-INTERNZ/Pods-INTERNZ.release.xcconfig"; sourceTree = "<group>"; };
+		7F37E0F723B33D6600C80F1A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A16EF8E341DAE52684405B6A /* Pods_INTERNZ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INTERNZ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
 		B63DBACD23B2779A00EEE1C2 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
@@ -74,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F37E0F923B33D7D00C80F1A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		B63DBACA23B2775C00EEE1C2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +181,7 @@
 		B6D9C96623B1187900348A7B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7F37E0F923B33D7D00C80F1A /* Login */,
 				B67CBF9C23B175B3001C78B2 /* Main */,
 				B67CBF9A23B174DC001C78B2 /* StoryTab */,
 				B67CBF9823B174B8001C78B2 /* HomeTab */,
@@ -197,6 +210,7 @@
 				B6D9C96B23B122B400348A7B /* Profile.storyboard */,
 				B6D9C96F23B122F400348A7B /* Announcement.storyboard */,
 				B6D9C97123B124F100348A7B /* Home.storyboard */,
+				7F37E0F723B33D6600C80F1A /* Login.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -295,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F37E0F823B33D6600C80F1A /* Login.storyboard in Resources */,
 				B6D9C97223B124F100348A7B /* Home.storyboard in Resources */,
 				B6D9C96A23B1229B00348A7B /* Story.storyboard in Resources */,
 				B6D9C97023B122F400348A7B /* Announcement.storyboard in Resources */,
@@ -366,6 +381,7 @@
 				B6D1F99423B295F300C8BA31 /* AnnouncementCell.swift in Sources */,
 				B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */,
 				B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */,
+				7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */,
 				B6D9C97423B12D7A00348A7B /* HomeViewController.swift in Sources */,
 				B6D9C98123B13D7400348A7B /* UIColor+Additions.swift in Sources */,
 				B63DBAC923B275FE00EEE1C2 /* StoryCell.swift in Sources */,
