@@ -21,6 +21,15 @@ class HomeViewController: UIViewController {
             downcastStrings[2].title = "스토리"
             downcastStrings[3].title = "프로필"
         }
+        
+        // tab bar item image 설정
+        self.tabBarController?.tabBar.items![0].image = UIImage(named: "tabHomeActiveIc")
+        self.tabBarController?.tabBar.items![1].image = UIImage(named: "tabNoticeIc")
+        self.tabBarController?.tabBar.items![2].image = UIImage(named: "tabStoryIc")
+        self.tabBarController?.tabBar.items![3].image = UIImage(named: "tabProfileIc")
+        
+        // tab bar color 설정
+        self.tabBarController?.tabBar.selectedImageTintColor = UIColor.marigold
 
         
     }
