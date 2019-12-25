@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G1g-Fw-vmq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="631-GF-K4g">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -120,6 +120,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cY-fS-Joe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1024.8" y="-12.561576354679804"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U82-yO-Qgf">
+            <objects>
+                <navigationController id="631-GF-K4g" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xq5-Fe-xBd">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4C4-z4-g5x" kind="relationship" relationship="rootViewController" id="SXU-a2-7iW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AQZ-Cj-LJ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50" y="745"/>
+        </scene>
+        <!--스토리-->
+        <scene sceneID="G50-dS-nCl">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iyb-AR-lyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="4C4-z4-g5x" customClass="StoryTabViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EHe-O8-rUZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ous-Aa-DUN"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="스토리" id="3aX-SO-tFx"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="745" y="745"/>
         </scene>
         <!--Story Detail View Controller-->
         <scene sceneID="jAc-D9-edx">

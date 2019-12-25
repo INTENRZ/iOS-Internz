@@ -50,7 +50,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6pF-2M-1qd">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6pF-2M-1qd">
                                                     <rect key="frame" x="236" y="17" width="124" height="65"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -72,14 +72,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bF7-wf-BmS">
+                                <rect key="frame" x="313" y="104" width="46" height="21"/>
+                                <state key="normal" title="Button" image="filterBtn"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="bF7-wf-BmS" firstAttribute="leading" secondItem="4H9-5e-AyD" secondAttribute="leading" constant="313" id="3iW-6E-Mac"/>
                             <constraint firstAttribute="bottom" secondItem="nqt-Y9-WlH" secondAttribute="bottom" id="KTd-m0-BMC"/>
                             <constraint firstItem="nqt-Y9-WlH" firstAttribute="trailing" secondItem="4H9-5e-AyD" secondAttribute="trailing" id="Qk6-Tj-Xam"/>
                             <constraint firstItem="nqt-Y9-WlH" firstAttribute="leading" secondItem="4H9-5e-AyD" secondAttribute="leading" id="VTs-zB-ale"/>
                             <constraint firstItem="nqt-Y9-WlH" firstAttribute="top" secondItem="s5B-Kl-x5V" secondAttribute="bottom" id="Wm2-Qj-ASr"/>
                             <constraint firstItem="s5B-Kl-x5V" firstAttribute="top" secondItem="4H9-5e-AyD" secondAttribute="top" constant="22" id="Won-nN-BBW"/>
+                            <constraint firstItem="4H9-5e-AyD" firstAttribute="trailing" secondItem="bF7-wf-BmS" secondAttribute="trailing" constant="16" id="Xu8-gy-WXC"/>
+                            <constraint firstItem="bF7-wf-BmS" firstAttribute="top" secondItem="4H9-5e-AyD" secondAttribute="top" constant="16" id="aCF-Dx-8XT"/>
                             <constraint firstItem="nqt-Y9-WlH" firstAttribute="top" secondItem="s5B-Kl-x5V" secondAttribute="bottom" id="fuh-Q5-yWY"/>
                             <constraint firstItem="s5B-Kl-x5V" firstAttribute="leading" secondItem="4H9-5e-AyD" secondAttribute="leading" constant="16" id="jh6-HM-Z6v"/>
                         </constraints>
@@ -144,4 +151,7 @@
             <point key="canvasLocation" x="-4.3478260869565224" y="49.553571428571423"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="filterBtn" width="46" height="21"/>
+    </resources>
 </document>
