@@ -23,6 +23,14 @@ class StoryTabViewController: TabmanViewController {
         let bar = TMBar.ButtonBar()
         bar.layout.transitionStyle = .snap
         
+        // Customize button color
+        bar.buttons.customize { (button) in
+            button.tintColor = UIColor.brownishGreyTwo
+            button.selectedTintColor = UIColor.marigold
+        }
+        
+        bar.indicator.tintColor = UIColor.marigold
+        
         addBar(bar, dataSource: self, at: .top)
         
     }

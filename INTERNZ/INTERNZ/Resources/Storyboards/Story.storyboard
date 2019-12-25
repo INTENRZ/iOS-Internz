@@ -140,7 +140,6 @@
         <!--스토리-->
         <scene sceneID="G50-dS-nCl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iyb-AR-lyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="4C4-z4-g5x" customClass="StoryTabViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EHe-O8-rUZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -150,6 +149,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="스토리" id="3aX-SO-tFx"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iyb-AR-lyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="745" y="745"/>
         </scene>
