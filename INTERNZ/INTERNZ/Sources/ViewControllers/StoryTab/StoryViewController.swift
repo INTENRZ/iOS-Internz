@@ -48,6 +48,19 @@ extension StoryViewController {
 
 extension StoryViewController: UITableViewDelegate{
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let dvc = storyboard?.instantiateViewController(identifier: "StoryDetailViewController") as! StoryDetailViewController
+        
+        let story = storySampleList[indexPath.row]
+        
+        dvc.storyString = story.storyTitle
+        dvc.writerString = story.name
+        
+        navigationController?.pushViewController(dvc, animated: true)
+        
+    }
+    
 }
 
 extension StoryViewController: UITableViewDataSource {
