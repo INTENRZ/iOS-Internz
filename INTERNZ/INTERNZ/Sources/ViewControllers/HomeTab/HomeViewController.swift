@@ -50,9 +50,9 @@ class HomeViewController: UIViewController {
     }
     
     private func setBanner(){
-        let banner1 = Banner(corpImgName: "corpImg1", corpName: "네이버", jobName: "iOS 개발자", day: "d-20")
-        let banner2 = Banner(corpImgName: "corpImg1", corpName: "네이버", jobName: "iOS 개발자", day: "d-20")
-        let banner3 = Banner(corpImgName: "corpImg1", corpName: "네이버", jobName: "iOS 개발자", day: "d-20")
+        let banner1 = Banner(corpImgName: "corpImg1", corpName: "네이버11", jobName: "iOS 개발자", day: "d-20")
+        let banner2 = Banner(corpImgName: "corpImg1", corpName: "네이버22", jobName: "iOS 개발자", day: "d-20")
+        let banner3 = Banner(corpImgName: "corpImg1", corpName: "네이버33", jobName: "iOS 개발자", day: "d-20")
         
         let delegate = UIApplication.shared.delegate as? AppDelegate
         delegate?.bannerList = [banner1, banner2, banner3]
