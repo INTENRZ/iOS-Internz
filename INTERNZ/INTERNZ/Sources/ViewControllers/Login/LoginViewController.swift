@@ -16,15 +16,18 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
-   // @IBOutlet weak var idTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var idlineUIView: UIView!
+    @IBOutlet weak var pwlineUIView: UIView!
+    
+    // @IBOutlet weak var idTopConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         addKeyboardObserver()
-        
-        //pwTextField.delegate = self
-       // idTextField.delegate = self
+        idTextField.delegate = self
+        pwTextField.delegate = self
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,7 +35,7 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         
         
-            }
+    }
     
     //    @IBAction func doLogin(_ sender: Any) {
     //        // 로그인 서버 통신 구현 코드
@@ -82,12 +85,39 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: UITextFieldDelegate {
     
-  
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == idTextField {
+            idlineUIView.backgroundColor = .marigold
+        }
+        
+        if textField == pwTextField {
+            pwlineUIView.backgroundColor = .marigold
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == idTextField {
+            idlineUIView.backgroundColor = .whiteFour
+        }
+        
+        if textField == pwTextField {
+            pwlineUIView.backgroundColor = .whiteFour
+        }
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        print("did change selection")
+    }
+}
+
+extension LoginViewController {
+    
     // 옵저버 패턴 활용 TextField 가리는 문제 해결
      private func addKeyboardObserver() {
     
-          NotificationCenter.default.addObserver(self, selector: #selector(upKeyboard), name: UIResponder.keyboardWillShowNotification, object: nil)
-          NotificationCenter.default.addObserver(self, selector: #selector(downKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+          NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+          NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
       }
     
     private func closeKeyboardObserver(){
@@ -98,13 +128,20 @@ extension LoginViewController: UITextFieldDelegate {
         
     }
     
-    
-    @objc func upKeyboard() {
-        self.view.frame.origin.y = CGFloat(-UtilValue.keyboardHeight)
+    @objc func keyboardWillShow(_ notification: Notification) {
+        let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
+        let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
+        UIView.animate(withDuration: duration, delay: 0, options: .init(rawValue: curve), animations: {
+            self.backgroundView.transform = .init(translationX: 0, y: -100)
+        })
     }
     
-    @objc func downKeyboard() {
-        self.view.frame.origin.y = 0
+    @objc func keyboardWillHide(_ notification: Notification) {
+        let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
+        let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
+        UIView.animate(withDuration: duration, delay: 0, options: .init(rawValue: curve), animations: {
+            self.backgroundView.transform = .identity
+        })
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -112,9 +149,3 @@ extension LoginViewController: UITextFieldDelegate {
        }
     
 }
-
-struct UtilValue {
-    static let keyboardHeight = 70
-}
-
-

@@ -23,7 +23,9 @@ extension UIView{
 
 
 class ProfileViewController: UIViewController {
+    
 
+    @IBOutlet weak var profilebackgroundView: UIView!
     @IBOutlet weak var topbannerUIView: UIView!
     @IBOutlet weak var followButton: UIButton!
     
@@ -31,6 +33,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var followingcountLabel: UILabel!
     
     @IBOutlet weak var introduceLabel: UILabel!
+    @IBOutlet weak var profilerecordView: UIView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
