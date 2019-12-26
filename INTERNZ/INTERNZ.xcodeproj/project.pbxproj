@@ -12,6 +12,8 @@
 		B63DBAC923B275FE00EEE1C2 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */; };
 		B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBACD23B2779A00EEE1C2 /* Story.swift */; };
 		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
+		B6C0540623B5606500D455E1 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C0540523B5606500D455E1 /* Signin.storyboard */; };
+		B6C0540923B560D900D455E1 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C0540823B560D900D455E1 /* SigninViewController.swift */; };
 		B6D1F99423B295F300C8BA31 /* AnnouncementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D1F99323B295F300C8BA31 /* AnnouncementCell.swift */; };
 		B6D1F99623B297DB00C8BA31 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D1F99523B297DB00C8BA31 /* Announcement.swift */; };
 		B6D1F99A23B341BD00C8BA31 /* StoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D1F99923B341BD00C8BA31 /* StoryDetailViewController.swift */; };
@@ -47,6 +49,8 @@
 		B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
 		B63DBACD23B2779A00EEE1C2 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		B67CBF9523B1740B001C78B2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		B6C0540523B5606500D455E1 /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
+		B6C0540823B560D900D455E1 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		B6D1F99323B295F300C8BA31 /* AnnouncementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCell.swift; sourceTree = "<group>"; };
 		B6D1F99523B297DB00C8BA31 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		B6D1F99923B341BD00C8BA31 /* StoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +154,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		B6C0540723B560B700D455E1 /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				B6C0540823B560D900D455E1 /* SigninViewController.swift */,
+			);
+			path = Signin;
+			sourceTree = "<group>";
+		};
 		B6D9C94523B1169100348A7B = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +205,7 @@
 		B6D9C96623B1187900348A7B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B6C0540723B560B700D455E1 /* Signin */,
 				7F37E0F923B33D7D00C80F1A /* Login */,
 				B67CBF9C23B175B3001C78B2 /* Main */,
 				B67CBF9A23B174DC001C78B2 /* StoryTab */,
@@ -223,6 +236,7 @@
 				B6D9C96F23B122F400348A7B /* Announcement.storyboard */,
 				B6D9C97123B124F100348A7B /* Home.storyboard */,
 				7F37E0F723B33D6600C80F1A /* Login.storyboard */,
+				B6C0540523B5606500D455E1 /* Signin.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -327,6 +341,7 @@
 				B6D9C97023B122F400348A7B /* Announcement.storyboard in Resources */,
 				B6D9C95E23B1169200348A7B /* LaunchScreen.storyboard in Resources */,
 				B6D9C96C23B122B500348A7B /* Profile.storyboard in Resources */,
+				B6C0540623B5606500D455E1 /* Signin.storyboard in Resources */,
 				B6D9C95B23B1169200348A7B /* Assets.xcassets in Resources */,
 				B6D9C95923B1169100348A7B /* Main.storyboard in Resources */,
 			);
@@ -395,6 +410,7 @@
 				B6D1F99423B295F300C8BA31 /* AnnouncementCell.swift in Sources */,
 				B6D1F99A23B341BD00C8BA31 /* StoryDetailViewController.swift in Sources */,
 				B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */,
+				B6C0540923B560D900D455E1 /* SigninViewController.swift in Sources */,
 				B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */,
 				7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */,
 				B6D9C97423B12D7A00348A7B /* HomeViewController.swift in Sources */,
