@@ -13,6 +13,8 @@ class StoryViewController: UIViewController {
     
     @IBOutlet weak var storyTable: UITableView!
     
+    var category: String?
+    
     var storySampleList: [Story] = []
     
     override func viewDidLoad() {
@@ -24,6 +26,8 @@ class StoryViewController: UIViewController {
         
         storyTable.dataSource = self
         storyTable.delegate = self
+        
+        print(category ?? "")
         
     }
     

@@ -43,18 +43,26 @@ class StoryTabViewController: TabmanViewController {
 extension StoryTabViewController {
     func setupViewControllers() {
         let storyVC1 = UIStoryboard(name: "Story", bundle: nil).instantiateViewController(identifier: "Story") as! StoryViewController
+        storyVC1.category = "전체"
         
         let storyVC2 = UIStoryboard(name: "Story", bundle: nil).instantiateViewController(identifier: "Story") as! StoryViewController
+        storyVC2.category = "인턴"
         
         let storyVC3 = UIStoryboard(name: "Story", bundle: nil).instantiateViewController(identifier: "Story") as! StoryViewController
+        storyVC3.category = "대외활동"
         
         let storyVC4 = UIStoryboard(name: "Story", bundle: nil).instantiateViewController(identifier: "Story") as! StoryViewController
+        storyVC4.category = "공모전"
         
         let storyVC5 = UIStoryboard(name: "Story", bundle: nil).instantiateViewController(identifier: "Story") as! StoryViewController
+        storyVC5.category = "동아리"
         
         let storyVC6 = UIStoryboard(name: "Story", bundle: nil).instantiateViewController(identifier: "Story") as! StoryViewController
+        storyVC6.category = "자격증"
         
         let storyVC7 = UIStoryboard(name: "Story", bundle: nil).instantiateViewController(identifier: "Story") as! StoryViewController
+        storyVC7.category = "기타"
+        
         self.viewControllers = [storyVC1, storyVC2, storyVC3, storyVC4, storyVC5, storyVC6, storyVC7]
     }
     
