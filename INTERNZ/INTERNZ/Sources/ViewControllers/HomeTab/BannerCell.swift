@@ -16,4 +16,8 @@ class BannerCell: UICollectionViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var corpImage: UIImageView!
     
+    @IBOutlet weak var cellView: UIView!
+    
+    
+    
 }

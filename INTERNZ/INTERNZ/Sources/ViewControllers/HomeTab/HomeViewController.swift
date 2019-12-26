@@ -35,18 +35,20 @@ class HomeViewController: UIViewController {
         self.tabBarController?.tabBar.selectedImageTintColor = UIColor.marigold
         
         
+        bannerCV.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.007)
+        
         // collection view 에 들어갈 sample data setting
         setBanner()
-        
+
         bannerCV.delegate = self
         bannerCV.dataSource = self
         
     }
     
     private func setBanner(){
-        let banner1 = Banner(corpImgName: "회사11", corpName: "네이버", jobName: "iOS 개발자", day: "d-20")
-        let banner2 = Banner(corpImgName: "회사22", corpName: "네이버", jobName: "iOS 개발자", day: "d-20")
-        let banner3 = Banner(corpImgName: "회사33", corpName: "네이버", jobName: "iOS 개발자", day: "d-20")
+        let banner1 = Banner(corpImgName: "corpImg1", corpName: "네이버", jobName: "iOS 개발자", day: "d-20")
+        let banner2 = Banner(corpImgName: "corpImg1", corpName: "네이버", jobName: "iOS 개발자", day: "d-20")
+        let banner3 = Banner(corpImgName: "corpImg1", corpName: "네이버", jobName: "iOS 개발자", day: "d-20")
         
         let delegate = UIApplication.shared.delegate as? AppDelegate
         delegate?.bannerList = [banner1, banner2, banner3]
@@ -68,13 +70,21 @@ extension HomeViewController: UICollectionViewDataSource {
         
         let banner = delegate.bannerList[indexPath.row]
         
-//        bannerCell.corpImage?.image = banner.corpImg
+        bannerCell.corpImage?.image = banner.corpImg
         
-        bannerCell.corpImage?.image = UIImage(named: "corpImg1")
+//        bannerCell.corpImage?.image = UIImage(named: "corpImg1")
         
         bannerCell.corpNameLabel.text = banner.corpName
         bannerCell.jobLabelName.text = banner.jobName
         bannerCell.dateLabel.text = banner.day
+        
+        bannerCell.cellView.layer.cornerRadius = 7
+        
+        bannerCell.cellView.layer.shadowColor = UIColor.black.cgColor
+        bannerCell.cellView.layer.shadowOpacity = 0.1
+        bannerCell.cellView.layer.shadowOffset = .zero
+        bannerCell.cellView.layer.shadowRadius = 2
+        
         
         return bannerCell
     }
