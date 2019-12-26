@@ -95,7 +95,7 @@
                     <navigationItem key="navigationItem" title="공고" id="Gmc-Aj-R4w">
                         <barButtonItem key="rightBarButtonItem" title="Calendar" id="uN7-qK-nPg">
                             <connections>
-                                <segue destination="wAL-9E-c20" kind="show" animates="NO" id="H9C-4O-lA0"/>
+                                <segue destination="wAL-9E-c20" kind="show" id="H9C-4O-lA0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -107,7 +107,7 @@
             </objects>
             <point key="canvasLocation" x="904.79999999999995" y="49.50738916256158"/>
         </scene>
-        <!--공고-->
+        <!--Data Source-->
         <scene sceneID="b4W-4P-C2O">
             <objects>
                 <viewController id="wAL-9E-c20" customClass="CalendarViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
@@ -115,22 +115,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xf-zG-1i5">
-                                <rect key="frame" x="147" y="243" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4r-Ab-qKD" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="88" width="375" height="399"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="3Ew-JP-o9B"/>
+                                    <constraint firstAttribute="height" constant="399" id="b7A-6h-Y4C"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                        <color key="value" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="headerDateFormat" value="YYYY년 MM월 "/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wAL-9E-c20" id="t5H-od-CSd"/>
+                                    <outlet property="delegate" destination="wAL-9E-c20" id="t3v-g5-FVb"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="x4r-Ab-qKD" firstAttribute="top" secondItem="Fd2-Wu-ns2" secondAttribute="top" id="AYm-yQ-qSi"/>
+                            <constraint firstItem="x4r-Ab-qKD" firstAttribute="trailing" secondItem="Fd2-Wu-ns2" secondAttribute="trailing" id="Fzf-42-16D"/>
+                            <constraint firstItem="x4r-Ab-qKD" firstAttribute="leading" secondItem="Fd2-Wu-ns2" secondAttribute="leading" id="a4s-YV-CPX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Fd2-Wu-ns2"/>
                     </view>
                     <navigationItem key="navigationItem" title="공고" id="mnb-8W-WkB"/>
+                    <connections>
+                        <outlet property="calendar" destination="x4r-Ab-qKD" id="qQd-2K-8We"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXQ-6t-rdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="906" y="792"/>
+            <point key="canvasLocation" x="904.79999999999995" y="791.37931034482767"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GEE-6r-c4T">

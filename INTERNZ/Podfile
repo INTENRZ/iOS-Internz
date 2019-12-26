@@ -10,5 +10,6 @@ target 'INTERNZ' do
   pod 'Kingfisher', '~> 4.10.1'
   pod 'CHIPageControl', '~> 0.1.3'
   pod 'Tabman', '~> 2.6'
+  pod 'FSCalendar'
 
 end

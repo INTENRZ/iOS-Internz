@@ -7,41 +7,31 @@
 //
 
 import UIKit
+import FSCalendar
 
 class CalendarViewController: UIViewController {
+    
+    @IBOutlet weak var calendar: FSCalendar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.setHidesBackButton(true, animated:true);
+//        let date = Date()
         
-        let calendarImage = UIImage(named: "searchIcon")!
-        let plusImage = UIImage(named: "searchIcon")!
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "yyyy-MM-dd"
         
-        let calendarButton = UIBarButtonItem(image: calendarImage, style: .plain
-            , target: self, action: #selector(moveAnnouncement))
+        let xmas = formatter.date(from: "2019-12-25")
         
-        let plusButton = UIBarButtonItem(image: plusImage, style: .plain, target: self, action: #selector(plusSchedule))
-        
-        navigationItem.rightBarButtonItems = [plusButton, calendarButton]
+        calendar.select(xmas)
         
         
+//        calendar.select(Date)
         
-    }
-    
-    
-    // 공고 리스트 view 로 이동
-    @objc func moveAnnouncement(){
-        print("tap back to list")
         
-        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "Announcement") as? AnnouncementViewController {
-            self.navigationController?.pushViewController(vc, animated: false)
-        }
-    }
-
-    // 캘린더 뷰에 일정 추가 
-    @objc func plusSchedule(){
-        print("tap plus button")
+          
+        
     }
     
     
