@@ -12,12 +12,16 @@ import Pageboy
 
 class StoryTabViewController: TabmanViewController {
     
-    private var viewControllers = [UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController(), UIViewController()]
+    private var viewControllers: [UIViewController] = [] {
+        didSet {
+            setupTabmanDatasource()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.dataSource = self
+        
+        setupViewControllers()
         
         // Create bar
         let bar = TMBar.ButtonBar()
@@ -36,8 +40,33 @@ class StoryTabViewController: TabmanViewController {
     }
 }
 
+extension StoryTabViewController {
+    func setupViewControllers() {
+        let storyVC1 = UIStoryboard(name: "Story", bundle: nil).instantiateViewController(identifier: "Story") as! StoryViewController
+        
+        let storyVC2 = UIStoryboard(name: "Story", bundle: nil).instantiateViewController(identifier: "Story") as! StoryViewController
+        
+        let storyVC3 = UIStoryboard(name: "Story", bundle: nil).instantiateViewController(identifier: "Story") as! StoryViewController
+        
+        let storyVC4 = UIStoryboard(name: "Story", bundle: nil).instantiateViewController(identifier: "Story") as! StoryViewController
+        
+        let storyVC5 = UIStoryboard(name: "Story", bundle: nil).instantiateViewController(identifier: "Story") as! StoryViewController
+        
+        let storyVC6 = UIStoryboard(name: "Story", bundle: nil).instantiateViewController(identifier: "Story") as! StoryViewController
+        
+        let storyVC7 = UIStoryboard(name: "Story", bundle: nil).instantiateViewController(identifier: "Story") as! StoryViewController
+        self.viewControllers = [storyVC1, storyVC2, storyVC3, storyVC4, storyVC5, storyVC6, storyVC7]
+    }
+    
+    func setupTabmanDatasource() {
+        self.dataSource = self
+        self.reloadData()
+    }
+}
+
 extension StoryTabViewController: PageboyViewControllerDataSource, TMBarDataSource {
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
+        print(viewControllers.count)
         return viewControllers.count
     }
     
@@ -53,7 +82,7 @@ extension StoryTabViewController: PageboyViewControllerDataSource, TMBarDataSour
         
         switch index {
         case 0:
-            return TMBarItem(title: "전체")
+            return TMBarItem(title: "  전체")
         case 1:
             return TMBarItem(title: "인턴")
         case 2:
@@ -65,7 +94,7 @@ extension StoryTabViewController: PageboyViewControllerDataSource, TMBarDataSour
         case 5:
             return TMBarItem(title: "자격증")
         case 6:
-            return TMBarItem(title: "기타")
+            return TMBarItem(title: "기타  ")
         default:
             let title = "Page \(index)"
             return TMBarItem(title: title)
