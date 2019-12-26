@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var bannerCV: UICollectionView!
     
+    @IBOutlet weak var paging: CHIPageControlAleppo!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +45,8 @@ class HomeViewController: UIViewController {
         bannerCV.delegate = self
         bannerCV.dataSource = self
         
+        bannerCV.isPagingEnabled = true
+        
     }
     
     private func setBanner(){
@@ -71,20 +75,15 @@ extension HomeViewController: UICollectionViewDataSource {
         let banner = delegate.bannerList[indexPath.row]
         
         bannerCell.corpImage?.image = banner.corpImg
-        
-//        bannerCell.corpImage?.image = UIImage(named: "corpImg1")
-        
         bannerCell.corpNameLabel.text = banner.corpName
         bannerCell.jobLabelName.text = banner.jobName
         bannerCell.dateLabel.text = banner.day
         
         bannerCell.cellView.layer.cornerRadius = 7
-        
         bannerCell.cellView.layer.shadowColor = UIColor.black.cgColor
         bannerCell.cellView.layer.shadowOpacity = 0.1
         bannerCell.cellView.layer.shadowOffset = .zero
         bannerCell.cellView.layer.shadowRadius = 2
-        
         
         return bannerCell
     }
@@ -95,6 +94,15 @@ extension HomeViewController: UICollectionViewDataSource {
 extension HomeViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let x = scrollView.contentOffset.x
+        let w = scrollView.bounds.size.width
+        let currentPage = Int(ceil(x/w))
+        print(currentPage)
+        self.paging.set(progress: currentPage, animated: true)
+    }
+    
 }
 
 
