@@ -11,12 +11,20 @@ import CHIPageControl
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var homeView: UIView!
     @IBOutlet weak var bannerCV: UICollectionView!
     
     @IBOutlet weak var paging: CHIPageControlAleppo!
     
+    
+    @IBOutlet weak var profileBannerCV: UICollectionView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.homeView.backgroundColor = UIColor(patternImage: UIImage(named: "bannerImg")!)
         
         // tab bar item 의 title 설정
         if let downcastStrings = self.tabBarController?.tabBar.items
@@ -37,15 +45,29 @@ class HomeViewController: UIViewController {
         self.tabBarController?.tabBar.selectedImageTintColor = UIColor.marigold
         
         
+        // 맞춤 공고 banner 설정
         bannerCV.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.007)
         
-        // collection view 에 들어갈 sample data setting
+        // 공고 collection view 에 들어갈 sample data setting
         setBanner()
-
+        
         bannerCV.delegate = self
         bannerCV.dataSource = self
         
         bannerCV.isPagingEnabled = true
+        
+        
+        // 프로필 banner 설정
+        profileBannerCV.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.007)
+        
+        
+        // 프로필 collection view 에 들어갈 sample profile data setting
+        setProfileBanner()
+        
+        profileBannerCV.delegate = self
+        profileBannerCV.dataSource = self
+        
+        
         
     }
     
@@ -59,33 +81,78 @@ class HomeViewController: UIViewController {
         
     }
     
+    private func setProfileBanner(){
+        let profileBanner1 = ProfileBanner(profileImgName: "profileImg1", userName: "핫가이", introduce: "영앤리치 빅앤핸섬")
+        let profileBanner2 = ProfileBanner(profileImgName: "profileImg1", userName: "핫가이", introduce: "영앤리치 빅앤핸섬")
+        let profileBanner3 = ProfileBanner(profileImgName: "profileImg1", userName: "핫가이", introduce: "영앤리치 빅앤핸섬")
+        let profileBanner4 = ProfileBanner(profileImgName: "profileImg1", userName: "핫가이", introduce: "영앤리치 빅앤핸섬")
+        
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        
+        delegate?.profileBannerList = [profileBanner1, profileBanner2, profileBanner3, profileBanner4]
+        
+    }
+    
 }
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         guard let delegate = UIApplication.shared.delegate as? AppDelegate else { return 0 }
-        return delegate.bannerList.count
+        
+        if collectionView == bannerCV {
+            return delegate.bannerList.count
+        } else {
+            return delegate.profileBannerList.count
+        }
+        
+        
+        //        return delegate.bannerList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let bannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCell", for: indexPath) as! BannerCell
         
-        guard let delegate = UIApplication.shared.delegate as? AppDelegate else { return UICollectionViewCell() }
+        if collectionView == bannerCV {
+            let bannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCell", for: indexPath) as! BannerCell
+            
+            guard let delegate = UIApplication.shared.delegate as? AppDelegate else { return UICollectionViewCell() }
+            
+            let banner = delegate.bannerList[indexPath.row]
+            
+            bannerCell.corpImage?.image = banner.corpImg
+            bannerCell.corpNameLabel.text = banner.corpName
+            bannerCell.jobLabelName.text = banner.jobName
+            bannerCell.dateLabel.text = banner.day
+            
+            bannerCell.cellView.layer.cornerRadius = 7
+            bannerCell.cellView.layer.shadowColor = UIColor.black.cgColor
+            bannerCell.cellView.layer.shadowOpacity = 0.1
+            bannerCell.cellView.layer.shadowOffset = .zero
+            bannerCell.cellView.layer.shadowRadius = 2
+            
+            return bannerCell
+        } else {
+            
+            let profileBannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileBannerCell", for: indexPath) as! ProfileBannerCell
+            
+            guard let delegate = UIApplication.shared.delegate as? AppDelegate else { return UICollectionViewCell() }
+            
+            let profileBanner = delegate.profileBannerList[indexPath.row]
+            
+            profileBannerCell.profileImage?.image = profileBanner.profileImg
+            profileBannerCell.nameLabel.text = profileBanner.userName
+            profileBannerCell.introduceLabel.text = profileBanner.introduce
+            
+            profileBannerCell.cellView.layer.cornerRadius = 7
+            profileBannerCell.cellView.layer.shadowColor = UIColor.black.cgColor
+            profileBannerCell.cellView.layer.shadowOpacity = 0.1
+            profileBannerCell.cellView.layer.shadowOffset = .zero
+            profileBannerCell.cellView.layer.shadowRadius = 2
+            
+            return profileBannerCell
+            
+        }
         
-        let banner = delegate.bannerList[indexPath.row]
-        
-        bannerCell.corpImage?.image = banner.corpImg
-        bannerCell.corpNameLabel.text = banner.corpName
-        bannerCell.jobLabelName.text = banner.jobName
-        bannerCell.dateLabel.text = banner.day
-        
-        bannerCell.cellView.layer.cornerRadius = 7
-        bannerCell.cellView.layer.shadowColor = UIColor.black.cgColor
-        bannerCell.cellView.layer.shadowOpacity = 0.1
-        bannerCell.cellView.layer.shadowOffset = .zero
-        bannerCell.cellView.layer.shadowRadius = 2
-        
-        return bannerCell
     }
     
     
