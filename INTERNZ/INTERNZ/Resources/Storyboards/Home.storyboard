@@ -244,9 +244,28 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 스토리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVU-EP-8RN">
+                                                <rect key="frame" x="16" y="624" width="98" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="98" id="L1T-hR-cr0"/>
+                                                    <constraint firstAttribute="height" constant="21" id="hQY-mh-vNc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZ6-y2-hB9">
+                                                <rect key="frame" x="16" y="657" width="343" height="359"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="343" id="jjE-GQ-9Xm"/>
+                                                    <constraint firstAttribute="height" constant="359" id="yZF-Bp-IiA"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.033176731418918921" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="tZ6-y2-hB9" firstAttribute="top" secondItem="UVU-EP-8RN" secondAttribute="bottom" constant="12" id="1Vl-Eu-YtQ"/>
                                             <constraint firstItem="Oq3-HG-DX0" firstAttribute="leading" secondItem="fCz-aq-bsq" secondAttribute="leading" constant="16" id="3mK-S6-sGv"/>
                                             <constraint firstItem="WRw-tZ-d0M" firstAttribute="leading" secondItem="fCz-aq-bsq" secondAttribute="leading" id="DBj-qP-JSU"/>
                                             <constraint firstAttribute="trailing" secondItem="e4b-Cc-FyX" secondAttribute="trailing" id="H1Z-4t-4OZ"/>
@@ -254,8 +273,12 @@
                                             <constraint firstAttribute="trailing" secondItem="KPL-eq-jqy" secondAttribute="trailing" constant="289" id="JHT-Fd-ao9"/>
                                             <constraint firstItem="Oq3-HG-DX0" firstAttribute="top" secondItem="WRw-tZ-d0M" secondAttribute="bottom" constant="40" id="Jn4-mU-3HU"/>
                                             <constraint firstItem="e4b-Cc-FyX" firstAttribute="leading" secondItem="fCz-aq-bsq" secondAttribute="leading" id="Rgg-kV-eqi"/>
+                                            <constraint firstItem="UVU-EP-8RN" firstAttribute="leading" secondItem="fCz-aq-bsq" secondAttribute="leading" constant="16" id="ceL-bx-GMb"/>
                                             <constraint firstItem="WRw-tZ-d0M" firstAttribute="top" secondItem="KPL-eq-jqy" secondAttribute="bottom" constant="11" id="enW-ez-FvZ"/>
                                             <constraint firstAttribute="trailing" secondItem="wOq-XL-lvN" secondAttribute="trailing" id="er0-fj-H74"/>
+                                            <constraint firstAttribute="trailing" secondItem="tZ6-y2-hB9" secondAttribute="trailing" constant="16" id="gOd-hW-u5W"/>
+                                            <constraint firstItem="tZ6-y2-hB9" firstAttribute="leading" secondItem="fCz-aq-bsq" secondAttribute="leading" constant="16" id="jeR-SE-6gR"/>
+                                            <constraint firstItem="UVU-EP-8RN" firstAttribute="top" secondItem="wOq-XL-lvN" secondAttribute="bottom" constant="27" id="jhW-ZA-mCF"/>
                                             <constraint firstItem="WRw-tZ-d0M" firstAttribute="leading" secondItem="fCz-aq-bsq" secondAttribute="leading" id="jlE-zB-OAE"/>
                                             <constraint firstItem="wOq-XL-lvN" firstAttribute="top" secondItem="Oq3-HG-DX0" secondAttribute="bottom" id="ofH-q5-Uh2"/>
                                             <constraint firstItem="e4b-Cc-FyX" firstAttribute="top" secondItem="fCz-aq-bsq" secondAttribute="top" id="s5h-iX-qK7"/>
@@ -292,6 +315,7 @@
                         <outlet property="homeView" destination="e4b-Cc-FyX" id="TU7-lC-SGY"/>
                         <outlet property="paging" destination="SGm-96-Nos" id="XOd-7f-CJM"/>
                         <outlet property="profileBannerCV" destination="wOq-XL-lvN" id="2Eb-kn-SyN"/>
+                        <outlet property="storyWholeView" destination="tZ6-y2-hB9" id="LPY-OO-JBX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LMv-CU-uPt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

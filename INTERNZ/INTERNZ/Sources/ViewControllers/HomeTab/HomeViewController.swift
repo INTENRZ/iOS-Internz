@@ -20,6 +20,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var profileBannerCV: UICollectionView!
     
     
+    @IBOutlet weak var storyWholeView: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +69,17 @@ class HomeViewController: UIViewController {
         profileBannerCV.delegate = self
         profileBannerCV.dataSource = self
         
+        
+
+
+        // story stack view 설정
+
+        storyWholeView.layer.cornerRadius = 7
+        storyWholeView.layer.shadowColor = UIColor.black.cgColor
+        storyWholeView.layer.shadowOpacity = 0.1
+        storyWholeView.layer.shadowOffset = .zero
+        storyWholeView.layer.shadowRadius = 2
+
         
         
     }
