@@ -69,18 +69,7 @@ class HomeViewController: UIViewController {
         profileBannerCV.delegate = self
         profileBannerCV.dataSource = self
         
-        
-
-
-        // story stack view 설정
-
-        storyWholeView.layer.cornerRadius = 7
-        storyWholeView.layer.shadowColor = UIColor.black.cgColor
-        storyWholeView.layer.shadowOpacity = 0.1
-        storyWholeView.layer.shadowOffset = .zero
-        storyWholeView.layer.shadowRadius = 2
-
-        
+        storyWholeView.setViewShadow()
         
     }
     
@@ -119,8 +108,6 @@ extension HomeViewController: UICollectionViewDataSource {
             return delegate.profileBannerList.count
         }
         
-        
-        //        return delegate.bannerList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -137,13 +124,10 @@ extension HomeViewController: UICollectionViewDataSource {
             bannerCell.jobLabelName.text = banner.jobName
             bannerCell.dateLabel.text = banner.day
             
-            bannerCell.cellView.layer.cornerRadius = 7
-            bannerCell.cellView.layer.shadowColor = UIColor.black.cgColor
-            bannerCell.cellView.layer.shadowOpacity = 0.1
-            bannerCell.cellView.layer.shadowOffset = .zero
-            bannerCell.cellView.layer.shadowRadius = 2
+            bannerCell.cellView.setViewShadow()
             
             return bannerCell
+            
         } else {
             
             let profileBannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileBannerCell", for: indexPath) as! ProfileBannerCell
@@ -156,11 +140,7 @@ extension HomeViewController: UICollectionViewDataSource {
             profileBannerCell.nameLabel.text = profileBanner.userName
             profileBannerCell.introduceLabel.text = profileBanner.introduce
             
-            profileBannerCell.cellView.layer.cornerRadius = 7
-            profileBannerCell.cellView.layer.shadowColor = UIColor.black.cgColor
-            profileBannerCell.cellView.layer.shadowOpacity = 0.1
-            profileBannerCell.cellView.layer.shadowOffset = .zero
-            profileBannerCell.cellView.layer.shadowRadius = 2
+            profileBannerCell.cellView.setViewShadow()
             
             return profileBannerCell
             

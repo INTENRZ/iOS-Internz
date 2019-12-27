@@ -20,6 +20,7 @@
 		B6AAF85E23B69CE4009571DE /* ProfileBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85D23B69CE4009571DE /* ProfileBannerCell.swift */; };
 		B6AAF86023B69DA3009571DE /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85F23B69DA3009571DE /* Profile.swift */; };
 		B6AAF86223B69FB2009571DE /* ProfileBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF86123B69FB2009571DE /* ProfileBanner.swift */; };
+		B6AAF86423B6A927009571DE /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF86323B6A927009571DE /* UIViewExtensions.swift */; };
 		B6C0540623B5606500D455E1 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C0540523B5606500D455E1 /* Signin.storyboard */; };
 		B6C0540923B560D900D455E1 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C0540823B560D900D455E1 /* SigninViewController.swift */; };
 		B6D1F99423B295F300C8BA31 /* AnnouncementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D1F99323B295F300C8BA31 /* AnnouncementCell.swift */; };
@@ -68,6 +69,7 @@
 		B6AAF85D23B69CE4009571DE /* ProfileBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBannerCell.swift; sourceTree = "<group>"; };
 		B6AAF85F23B69DA3009571DE /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		B6AAF86123B69FB2009571DE /* ProfileBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBanner.swift; sourceTree = "<group>"; };
+		B6AAF86323B6A927009571DE /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		B6C0540523B5606500D455E1 /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
 		B6C0540823B560D900D455E1 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		B6D1F99323B295F300C8BA31 /* AnnouncementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCell.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			children = (
 				B6D9C98023B13D7400348A7B /* UIColor+Additions.swift */,
 				B6AAF85723B668C3009571DE /* UIButtonExtensions.swift */,
+				B6AAF86323B6A927009571DE /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				B6D9C97423B12D7A00348A7B /* HomeViewController.swift in Sources */,
 				7FF374B923B60926004E4907 /* TimelineStoryTableViewCell.swift in Sources */,
 				B6D1F9A023B3E78D00C8BA31 /* Banner.swift in Sources */,
+				B6AAF86423B6A927009571DE /* UIViewExtensions.swift in Sources */,
 				B6AAF86223B69FB2009571DE /* ProfileBanner.swift in Sources */,
 				B6D9C98123B13D7400348A7B /* UIColor+Additions.swift in Sources */,
 				B6AAF85E23B69CE4009571DE /* ProfileBannerCell.swift in Sources */,
