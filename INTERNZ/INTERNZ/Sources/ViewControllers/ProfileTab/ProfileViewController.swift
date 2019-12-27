@@ -23,9 +23,10 @@ extension UIView{
 }
 
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController,UITableViewDelegate {
     
     
+    @IBOutlet weak var ProfileListTable: UITableView!
     @IBOutlet weak var followButton: UIButton!
     
     @IBOutlet weak var followercountLabel: UILabel!
@@ -36,6 +37,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var workselect1Label: UILabel!
     @IBOutlet weak var workselect2Label: UILabel!
     @IBOutlet weak var workselect3Label: UILabel!
+    
+    var ProfileStorySampleList:
+    [ProfileStory] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,10 +59,71 @@ class ProfileViewController: UIViewController {
         workselect2Label.setCornerRadius()
         workselect3Label.setCornerRadius()
         
+        setProfileStorySampleData()
+       
+        
+        ProfileListTable.reloadData()
+        
+        
+        ProfileListTable.dataSource = self
+        ProfileListTable.delegate = self
+        
+        print(ProfileStorySampleList.count)
+        
+        
+        
+      
+    }
+    
+}
+
+extension ProfileViewController{
+    
+    func setProfileStorySampleData(){
+        
+        let story1 = ProfileStory(title: "1NAVER SNOW Jam Studio 기획/운영팀", name:"한한한", date:"20.01.01")
+        
+        let story2 = ProfileStory(title: "2NAVER SNOW Jam Studio 기획/운영팀", name:"한한한", date:"20.01.01")
+        
+        
+        let story3 = ProfileStory(title: "3NAVER SNOW Jam Studio 기획/운영팀", name:"한한한", date:"20.01.01")
+        
+        
+        let story4 = ProfileStory(title: "4NAVER SNOW Jam Studio 기획/운영팀", name:"한한한", date:"20.01.01")
+        
+        
+        let story5 = ProfileStory(title: "5NAVER SNOW Jam Studio 기획/운영팀", name:"한한한", date:"20.01.01")
+        
+        ProfileStorySampleList = [story1, story2, story3, story4, story5]
+    
+    }
+    
+}
+
+extension ProfileViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return ProfileStorySampleList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = ProfileListTable.dequeueReusableCell(withIdentifier: "ProfileTableViewCell")as!ProfileTableViewCell
+        
+        let ProfileStory = ProfileStorySampleList[indexPath.row]
+        
+        cell.titleLabel.text = ProfileStory.profilestoryTitle
+
+        cell.categoryLabel.text = ProfileStory.category
+
+        cell.dateLabel.text = ProfileStory.date
+        
+//        cell.titleLabel.text = ""
+        
+        return cell
         
         
     }
-    
 }
 
 
