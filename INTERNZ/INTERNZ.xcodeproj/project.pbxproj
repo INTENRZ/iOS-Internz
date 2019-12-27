@@ -38,6 +38,7 @@
 		B6D9C98123B13D7400348A7B /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98023B13D7400348A7B /* UIColor+Additions.swift */; };
 		B6D9C98423B13E0600348A7B /* NeworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98323B13E0600348A7B /* NeworkResult.swift */; };
 		B6D9C98823B1575500348A7B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98723B1575500348A7B /* CalendarViewController.swift */; };
+		B6DFC56C23B607A9002EE94A /* Signin2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DFC56B23B607A9002EE94A /* Signin2ViewController.swift */; };
 		C3D769A1ED19F5BB94283452 /* Pods_INTERNZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16EF8E341DAE52684405B6A /* Pods_INTERNZ.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		B6D9C98023B13D7400348A7B /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		B6D9C98323B13E0600348A7B /* NeworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeworkResult.swift; sourceTree = "<group>"; };
 		B6D9C98723B1575500348A7B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		B6DFC56B23B607A9002EE94A /* Signin2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signin2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				B6C0540823B560D900D455E1 /* SigninViewController.swift */,
+				B6DFC56B23B607A9002EE94A /* Signin2ViewController.swift */,
 			);
 			path = Signin;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				B6D9C97423B12D7A00348A7B /* HomeViewController.swift in Sources */,
 				B6D1F9A023B3E78D00C8BA31 /* Banner.swift in Sources */,
 				B6D9C98123B13D7400348A7B /* UIColor+Additions.swift in Sources */,
+				B6DFC56C23B607A9002EE94A /* Signin2ViewController.swift in Sources */,
 				B63DBAC923B275FE00EEE1C2 /* StoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -40,12 +40,32 @@ class SigninViewController: UIViewController {
         
         addKeyboardObserver()
         
-        
         emailTextField.delegate = self
         
     }
-
+    
+    @IBAction func gotoNextSignin(_ sender: UIButton) {
+        
+        let dvc = storyboard?.instantiateViewController(identifier: "Signin2ViewController") as! Signin2ViewController
+        
+        navigationController?.pushViewController(dvc, animated: true)
+        
+        
+//        let dvc = storyboard?.instantiateViewController(identifier: "StoryDetailViewController") as! StoryDetailViewController
+//
+//
+//
+//        dvc.storyString = story.storyTitle
+//        dvc.writerString = story.name
+//
+//        navigationController?.pushViewController(dvc, animated: true)
+        
+        
+    }
 }
+
+
+
 
 extension SigninViewController: UITextFieldDelegate{
     
@@ -71,7 +91,7 @@ extension SigninViewController {
         let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
         let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
         UIView.animate(withDuration: duration, delay: 0, options: .init(rawValue: curve), animations: {
-//            self.emailLabel.transform = .init(translationX: 0, y: -50)
+            //            self.emailLabel.transform = .init(translationX: 0, y: -50)
             self.wholeView.transform = .init(translationX: 0, y: -50)
         })
     }
