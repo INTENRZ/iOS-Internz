@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F37E0F823B33D6600C80F1A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F37E0F723B33D6600C80F1A /* Login.storyboard */; };
 		7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */; };
+		7FF374B423B5EBEB004E4907 /* TimelineListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */; };
 		B63DBAC923B275FE00EEE1C2 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */; };
 		B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBACD23B2779A00EEE1C2 /* Story.swift */; };
 		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
@@ -43,6 +44,7 @@
 		781EC13AE66EF4087EF04F10 /* Pods-INTERNZ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INTERNZ.release.xcconfig"; path = "Target Support Files/Pods-INTERNZ/Pods-INTERNZ.release.xcconfig"; sourceTree = "<group>"; };
 		7F37E0F723B33D6600C80F1A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineListViewController.swift; sourceTree = "<group>"; };
 		A16EF8E341DAE52684405B6A /* Pods_INTERNZ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INTERNZ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
 		B63DBACD23B2779A00EEE1C2 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				B6D9C97723B12F2400348A7B /* ProfileViewController.swift */,
+				7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */,
 			);
 			path = ProfileTab;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				B6D9C98823B1575500348A7B /* CalendarViewController.swift in Sources */,
 				B6D1F99E23B3E5F100C8BA31 /* BannerCell.swift in Sources */,
 				B6D9C97623B12ED400348A7B /* AnnouncementViewController.swift in Sources */,
+				7FF374B423B5EBEB004E4907 /* TimelineListViewController.swift in Sources */,
 				B6D1F99C23B355B100C8BA31 /* StoryTabViewController.swift in Sources */,
 				B6D9C95223B1169100348A7B /* AppDelegate.swift in Sources */,
 				B6D9C95423B1169100348A7B /* SceneDelegate.swift in Sources */,
