@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIView{
+    
     func setCornerRadius(){
         self.layer.cornerRadius = 10
         self.clipsToBounds = true
