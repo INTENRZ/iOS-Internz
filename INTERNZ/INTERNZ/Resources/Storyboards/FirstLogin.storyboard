@@ -621,6 +621,31 @@
                     <navigationItem key="navigationItem" id="eSx-p9-j1C"/>
                     <connections>
                         <outlet property="completeButton" destination="Kkb-IR-jzE" id="27A-3a-kQ0"/>
+                        <outlet property="consultingBtn" destination="XN8-Mh-QWC" id="2eh-8L-ZgV"/>
+                        <outlet property="designBtn" destination="Pn5-9X-yRF" id="Ufc-ZC-vfy"/>
+                        <outlet property="gihwaekBtn" destination="YZK-jO-sUu" id="JfV-23-jI9"/>
+                        <outlet property="gongjeongBtn" destination="dTh-Jx-oun" id="iRc-Jg-lxg"/>
+                        <outlet property="gongmuoneBtn" destination="cis-Tf-94D" id="3qU-YG-sZY"/>
+                        <outlet property="guitarBtn" destination="tez-Xj-leE" id="Xu9-i1-GEn"/>
+                        <outlet property="guknaeBtn" destination="Jk9-oq-PoT" id="6a8-iu-x1Y"/>
+                        <outlet property="gumaeBtn" destination="OdZ-WP-hW3" id="tB4-2X-87x"/>
+                        <outlet property="gwangoBtn" destination="2Ye-1u-vY0" id="XeK-yH-Lgn"/>
+                        <outlet property="gyoyukBtn" destination="mhW-bC-K5M" id="oe3-bI-6jv"/>
+                        <outlet property="haewaeBtn" destination="DDF-5N-Z3R" id="LEp-tc-yl2"/>
+                        <outlet property="hongboBtn" destination="5bs-ly-oRx" id="wN5-F7-q3p"/>
+                        <outlet property="hwaegyeBtn" destination="HDz-ka-NLd" id="Lxm-ZM-Tb0"/>
+                        <outlet property="insaBtn" destination="mB2-po-sKl" id="oX0-uQ-9bc"/>
+                        <outlet property="itBtn" destination="P8B-yZ-ebt" id="ZvJ-hw-QyX"/>
+                        <outlet property="marketingBtn" destination="drt-6M-fFs" id="SaE-Zg-Iec"/>
+                        <outlet property="muyeokBtn" destination="CZK-U1-nQw" id="5CD-wp-xOq"/>
+                        <outlet property="pumzilBtn" destination="vZB-fv-isu" id="gLY-sI-9bo"/>
+                        <outlet property="researchBtn" destination="mmo-yq-Lbs" id="KfD-Vv-hoa"/>
+                        <outlet property="saengsanBtn" destination="Xdk-r6-Jl9" id="ASP-ZJ-Ueu"/>
+                        <outlet property="sangpumBtn" destination="lYw-mJ-eCC" id="rTS-lK-Vtd"/>
+                        <outlet property="serviceBtn" destination="fMy-i7-r6Y" id="Ums-uI-MKq"/>
+                        <outlet property="yeonguBtn" destination="eLe-bO-8VO" id="eev-wY-V2y"/>
+                        <outlet property="youngupBtn" destination="yKJ-qE-Nup" id="VwE-a1-yfU"/>
+                        <outlet property="youtongBtn" destination="zWm-IZ-wJV" id="hPi-29-Oad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqd-ZT-6qp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
