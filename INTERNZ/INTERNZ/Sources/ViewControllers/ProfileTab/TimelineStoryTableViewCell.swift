@@ -10,15 +10,22 @@ import UIKit
 
 class TimelineStoryTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var storyTitleLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var storyImage: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        storyTitleLabel.lineBreakMode = .byWordWrapping
+        storyTitleLabel.numberOfLines = 0
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }
