@@ -23,10 +23,20 @@ class SigninViewController: UIViewController {
     @IBOutlet weak var wholeView: UIView!
     
     
+    @IBOutlet weak var loginButton: UIButton!
+    
+    @IBOutlet weak var nextButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "회원가입"
+        loginButton.underline()
+        
+        nextButton.backgroundColor = UIColor.whiteFour
+        nextButton.layer.cornerRadius = 5
+        
         
         addKeyboardObserver()
         
@@ -78,5 +88,15 @@ extension SigninViewController {
         self.view.endEditing(true)
     }
     
+}
+
+extension UIButton {
+    func underline() {
+        guard let title = self.titleLabel else { return }
+        guard let tittleText = title.text else { return }
+        let attributedString = NSMutableAttributedString(string: (tittleText))
+        attributedString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: (tittleText.count)))
+        self.setAttributedTitle(attributedString, for: .normal)
+    }
 }
 

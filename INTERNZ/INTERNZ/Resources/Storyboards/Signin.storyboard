@@ -126,6 +126,43 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이미 가입하셨나요?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fln-Kn-bSL">
+                                        <rect key="frame" x="99" y="579" width="110" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="31L-b3-bTV"/>
+                                            <constraint firstAttribute="width" constant="110" id="JoK-HX-Z88"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guE-lY-Qqm">
+                                        <rect key="frame" x="226" y="577" width="0.0" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJe-Ak-t1H">
+                                        <rect key="frame" x="215" y="579" width="62" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="62" id="7WR-3K-GSi"/>
+                                            <constraint firstAttribute="height" constant="17" id="XZx-qk-VV3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="로그인하기">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mo-hg-7IV">
+                                        <rect key="frame" x="16" y="632" width="343" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="다음">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -137,9 +174,11 @@
                                     <constraint firstItem="372-zR-6SZ" firstAttribute="top" secondItem="grg-H2-GIn" secondAttribute="bottom" constant="40" id="Ckd-ZN-c9a"/>
                                     <constraint firstItem="6bh-2P-K42" firstAttribute="top" secondItem="5kV-hg-Bkv" secondAttribute="bottom" constant="6" id="D8B-tN-CuR"/>
                                     <constraint firstAttribute="trailing" secondItem="5kV-hg-Bkv" secondAttribute="trailing" constant="16" id="FMC-iO-4Ew"/>
+                                    <constraint firstItem="Fln-Kn-bSL" firstAttribute="top" secondItem="6bh-2P-K42" secondAttribute="bottom" constant="198" id="H51-Ki-OeB"/>
                                     <constraint firstItem="WPX-fv-ohE" firstAttribute="leading" secondItem="85V-TO-4qC" secondAttribute="leading" constant="16" id="HXc-zC-3oI"/>
                                     <constraint firstItem="4nc-M0-Oaw" firstAttribute="leading" secondItem="85V-TO-4qC" secondAttribute="leading" constant="16" id="Kzc-Lf-p43"/>
                                     <constraint firstItem="5kV-hg-Bkv" firstAttribute="top" secondItem="372-zR-6SZ" secondAttribute="bottom" constant="10" id="OEo-9t-nLi"/>
+                                    <constraint firstItem="Fln-Kn-bSL" firstAttribute="leading" secondItem="85V-TO-4qC" secondAttribute="leading" constant="99" id="OR5-On-90J"/>
                                     <constraint firstItem="mZS-qS-jme" firstAttribute="top" secondItem="Y8z-6g-2N6" secondAttribute="bottom" constant="6" id="Oms-OH-m5r"/>
                                     <constraint firstItem="6bh-2P-K42" firstAttribute="leading" secondItem="85V-TO-4qC" secondAttribute="leading" constant="16" id="R7z-gV-lnO"/>
                                     <constraint firstAttribute="trailing" secondItem="grg-H2-GIn" secondAttribute="trailing" constant="16" id="RLO-Du-b0k"/>
@@ -154,6 +193,7 @@
                                     <constraint firstItem="fA8-bE-NCs" firstAttribute="leading" secondItem="85V-TO-4qC" secondAttribute="leading" constant="16" id="isJ-A2-cdw"/>
                                     <constraint firstItem="Y8z-6g-2N6" firstAttribute="leading" secondItem="85V-TO-4qC" secondAttribute="leading" constant="16" id="jmP-M7-phq"/>
                                     <constraint firstItem="mZS-qS-jme" firstAttribute="leading" secondItem="85V-TO-4qC" secondAttribute="leading" constant="16" id="kzF-jT-TuD"/>
+                                    <constraint firstItem="jJe-Ak-t1H" firstAttribute="top" secondItem="6bh-2P-K42" secondAttribute="bottom" constant="198" id="lpk-Vb-bJ8"/>
                                     <constraint firstItem="4nc-M0-Oaw" firstAttribute="top" secondItem="WPX-fv-ohE" secondAttribute="bottom" constant="10" id="nZd-Eh-KhQ"/>
                                     <constraint firstAttribute="trailing" secondItem="Y8z-6g-2N6" secondAttribute="trailing" constant="16" id="olS-9K-DCy"/>
                                     <constraint firstItem="Y8z-6g-2N6" firstAttribute="top" secondItem="u77-oL-W0y" secondAttribute="bottom" constant="10" id="q0p-9Q-Y9F"/>
@@ -161,6 +201,7 @@
                                     <constraint firstItem="372-zR-6SZ" firstAttribute="leading" secondItem="85V-TO-4qC" secondAttribute="leading" constant="16" id="qnq-fL-KQv"/>
                                     <constraint firstItem="2bG-BZ-6L2" firstAttribute="leading" secondItem="85V-TO-4qC" secondAttribute="leading" constant="16" id="zby-qH-ozf"/>
                                     <constraint firstAttribute="trailing" secondItem="fA8-bE-NCs" secondAttribute="trailing" constant="16" id="zr9-cl-INY"/>
+                                    <constraint firstItem="jJe-Ak-t1H" firstAttribute="leading" secondItem="Fln-Kn-bSL" secondAttribute="trailing" constant="6" id="zzS-N0-hxj"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -177,6 +218,8 @@
                     <connections>
                         <outlet property="emailLabel" destination="j98-sP-rFv" id="MUT-0j-Ggd"/>
                         <outlet property="emailTextField" destination="2bG-BZ-6L2" id="sdD-pp-KdE"/>
+                        <outlet property="loginButton" destination="jJe-Ak-t1H" id="ha9-W9-bue"/>
+                        <outlet property="nextButton" destination="8Mo-hg-7IV" id="hpa-nX-0xX"/>
                         <outlet property="passwordConfirmTextField" destination="4nc-M0-Oaw" id="x3m-gH-3hn"/>
                         <outlet property="passwordTextField" destination="Y8z-6g-2N6" id="s4J-by-Qc3"/>
                         <outlet property="phoneTextField" destination="5kV-hg-Bkv" id="bGu-xU-xlz"/>
