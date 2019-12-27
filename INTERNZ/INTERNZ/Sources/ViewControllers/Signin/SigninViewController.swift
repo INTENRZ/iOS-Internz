@@ -50,18 +50,18 @@ class SigninViewController: UIViewController {
         
         navigationController?.pushViewController(dvc, animated: true)
         
+    }
+    
+    @IBAction func gotoLoginView(_ sender: UIButton) {
         
-//        let dvc = storyboard?.instantiateViewController(identifier: "StoryDetailViewController") as! StoryDetailViewController
-//
-//
-//
-//        dvc.storyString = story.storyTitle
-//        dvc.writerString = story.name
-//
-//        navigationController?.pushViewController(dvc, animated: true)
-        
+        let loginStoryBoard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        loginViewController.modalPresentationStyle = .fullScreen
+        self.present(loginViewController, animated: true, completion: nil)
         
     }
+    
+    
 }
 
 

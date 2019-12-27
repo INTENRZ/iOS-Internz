@@ -14,6 +14,7 @@ class Signin2ViewController: UIViewController {
     @IBOutlet weak var wholeView: UIView!
     @IBOutlet weak var nameTextField: UITextField!
     
+    @IBOutlet weak var completeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,9 @@ class Signin2ViewController: UIViewController {
         addKeyboardObserver()
         
         nameTextField.delegate = self
+        
+        completeButton.backgroundColor = UIColor.whiteFour
+        completeButton.layer.cornerRadius = 5
         
         
     }

@@ -153,6 +153,9 @@
                                         <state key="normal" title="로그인하기">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="gotoLoginView:" destination="N1j-ya-6R9" eventType="touchUpInside" id="sId-Cf-nnh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mo-hg-7IV">
                                         <rect key="frame" x="16" y="632" width="343" height="50"/>
@@ -470,10 +473,13 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mql-bq-m6Z">
                                 <rect key="frame" x="16" y="680" width="343" height="50"/>
+                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="3rA-Kj-TeM"/>
                                     <constraint firstAttribute="height" constant="50" id="qEU-oG-yQQ"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="완료"/>
                             </button>
                         </subviews>
@@ -489,6 +495,7 @@
                         <viewLayoutGuide key="safeArea" id="S9R-3z-luO"/>
                     </view>
                     <connections>
+                        <outlet property="completeButton" destination="Mql-bq-m6Z" id="heH-MX-h8F"/>
                         <outlet property="nameTextField" destination="Qpa-DV-6XH" id="J8m-4F-LNi"/>
                         <outlet property="wholeView" destination="Erb-52-PgW" id="ChL-Gi-YMp"/>
                     </connections>
