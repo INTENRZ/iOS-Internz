@@ -10,6 +10,8 @@
 		7F37E0F823B33D6600C80F1A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F37E0F723B33D6600C80F1A /* Login.storyboard */; };
 		7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */; };
 		7FF374B423B5EBEB004E4907 /* TimelineListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */; };
+		7FF374B723B608F3004E4907 /* TimelineStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374B623B608F3004E4907 /* TimelineStory.swift */; };
+		7FF374B923B60926004E4907 /* TimelineStoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374B823B60926004E4907 /* TimelineStoryTableViewCell.swift */; };
 		B63DBAC923B275FE00EEE1C2 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */; };
 		B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBACD23B2779A00EEE1C2 /* Story.swift */; };
 		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
@@ -47,6 +49,8 @@
 		7F37E0F723B33D6600C80F1A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineListViewController.swift; sourceTree = "<group>"; };
+		7FF374B623B608F3004E4907 /* TimelineStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineStory.swift; sourceTree = "<group>"; };
+		7FF374B823B60926004E4907 /* TimelineStoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineStoryTableViewCell.swift; sourceTree = "<group>"; };
 		A16EF8E341DAE52684405B6A /* Pods_INTERNZ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INTERNZ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
 		B63DBACD23B2779A00EEE1C2 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			children = (
 				B63DBACD23B2779A00EEE1C2 /* Story.swift */,
 				B6D1F99523B297DB00C8BA31 /* Announcement.swift */,
+				7FF374B623B608F3004E4907 /* TimelineStory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			children = (
 				B6D9C97723B12F2400348A7B /* ProfileViewController.swift */,
 				7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */,
+				7FF374B823B60926004E4907 /* TimelineStoryTableViewCell.swift */,
 			);
 			path = ProfileTab;
 			sourceTree = "<group>";
@@ -417,7 +423,9 @@
 				B6C0540923B560D900D455E1 /* SigninViewController.swift in Sources */,
 				B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */,
 				7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */,
+				7FF374B723B608F3004E4907 /* TimelineStory.swift in Sources */,
 				B6D9C97423B12D7A00348A7B /* HomeViewController.swift in Sources */,
+				7FF374B923B60926004E4907 /* TimelineStoryTableViewCell.swift in Sources */,
 				B6D1F9A023B3E78D00C8BA31 /* Banner.swift in Sources */,
 				B6D9C98123B13D7400348A7B /* UIColor+Additions.swift in Sources */,
 				B63DBAC923B275FE00EEE1C2 /* StoryCell.swift in Sources */,
