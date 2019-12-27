@@ -9,22 +9,64 @@
 import UIKit
 
 class Signin2ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var wholeView: UIView!
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        addKeyboardObserver()
+        
+        nameTextField.delegate = self
+        
+        
     }
     
+}
 
-    /*
-    // MARK: - Navigation
+extension Signin2ViewController: UITextFieldDelegate {
+    
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension Signin2ViewController {
+    
+    private func addKeyboardObserver() {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
     }
-    */
-
+    
+    private func closeKeyboardObserver(){
+        
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
+        let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
+        UIView.animate(withDuration: duration, delay: 0, options: .init(rawValue: curve), animations: {
+            //            self.emailLabel.transform = .init(translationX: 0, y: -50)
+            self.wholeView.transform = .init(translationX: 0, y: -50)
+        })
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
+        let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
+        UIView.animate(withDuration: duration, delay: 0, options: .init(rawValue: curve), animations: {
+            self.wholeView.transform = .identity
+        })
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
 }
