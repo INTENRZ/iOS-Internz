@@ -93,7 +93,8 @@
                         <viewLayoutGuide key="safeArea" id="4H9-5e-AyD"/>
                     </view>
                     <navigationItem key="navigationItem" title="공고" id="Gmc-Aj-R4w">
-                        <barButtonItem key="rightBarButtonItem" title="Calendar" id="uN7-qK-nPg">
+                        <barButtonItem key="rightBarButtonItem" title="Calendar" image="calendarIc" id="uN7-qK-nPg">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="wAL-9E-c20" kind="show" id="H9C-4O-lA0"/>
                             </connections>
@@ -181,6 +182,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendarIc" width="24" height="24"/>
         <image name="filterBtn" width="46" height="21"/>
     </resources>
 </document>

@@ -28,6 +28,13 @@ class AnnouncementViewController: UIViewController {
         announcementTable.dataSource = self
  
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        backItem.tintColor = UIColor.black
+        navigationItem.backBarButtonItem = backItem
+    }
  
 }
 
