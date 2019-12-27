@@ -1,19 +1,19 @@
 {
   "images" : [
     {
+      "idiom" : "universal",
       "filename" : "cirWh.png",
-      "scale" : "1x",
-      "idiom" : "universal"
+      "scale" : "1x"
     },
     {
       "scale" : "2x",
-      "idiom" : "universal",
-      "filename" : "cirWh@2x.png"
+      "filename" : "cirWh@2x.png",
+      "idiom" : "universal"
     },
     {
-      "filename" : "cirWh@3x.png",
       "scale" : "3x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "cirWh@3x.png"
     }
   ],
   "info" : {
