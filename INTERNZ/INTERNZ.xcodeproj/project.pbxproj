@@ -41,6 +41,8 @@
 		B6D9C98423B13E0600348A7B /* NeworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98323B13E0600348A7B /* NeworkResult.swift */; };
 		B6D9C98823B1575500348A7B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98723B1575500348A7B /* CalendarViewController.swift */; };
 		B6DFC56C23B607A9002EE94A /* Signin2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DFC56B23B607A9002EE94A /* Signin2ViewController.swift */; };
+		B6DFC56E23B650B0002EE94A /* FirstLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DFC56D23B650B0002EE94A /* FirstLogin.storyboard */; };
+		B6DFC57123B65135002EE94A /* SettingFavorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DFC57023B65135002EE94A /* SettingFavorViewController.swift */; };
 		C3D769A1ED19F5BB94283452 /* Pods_INTERNZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16EF8E341DAE52684405B6A /* Pods_INTERNZ.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,8 @@
 		B6D9C98323B13E0600348A7B /* NeworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeworkResult.swift; sourceTree = "<group>"; };
 		B6D9C98723B1575500348A7B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		B6DFC56B23B607A9002EE94A /* Signin2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signin2ViewController.swift; sourceTree = "<group>"; };
+		B6DFC56D23B650B0002EE94A /* FirstLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstLogin.storyboard; sourceTree = "<group>"; };
+		B6DFC57023B65135002EE94A /* SettingFavorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFavorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +221,7 @@
 		B6D9C96623B1187900348A7B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B6DFC56F23B65101002EE94A /* FirstLogin */,
 				B6C0540723B560B700D455E1 /* Signin */,
 				7F37E0F923B33D7D00C80F1A /* Login */,
 				B67CBF9C23B175B3001C78B2 /* Main */,
@@ -249,6 +254,7 @@
 				B6D9C97123B124F100348A7B /* Home.storyboard */,
 				7F37E0F723B33D6600C80F1A /* Login.storyboard */,
 				B6C0540523B5606500D455E1 /* Signin.storyboard */,
+				B6DFC56D23B650B0002EE94A /* FirstLogin.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -268,6 +274,14 @@
 				B67CBF9523B1740B001C78B2 /* APIConstants.swift */,
 			);
 			path = APIServices;
+			sourceTree = "<group>";
+		};
+		B6DFC56F23B65101002EE94A /* FirstLogin */ = {
+			isa = PBXGroup;
+			children = (
+				B6DFC57023B65135002EE94A /* SettingFavorViewController.swift */,
+			);
+			path = FirstLogin;
 			sourceTree = "<group>";
 		};
 		C3B15F560FC513C07941125C /* Pods */ = {
@@ -348,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F37E0F823B33D6600C80F1A /* Login.storyboard in Resources */,
+				B6DFC56E23B650B0002EE94A /* FirstLogin.storyboard in Resources */,
 				B6D9C97223B124F100348A7B /* Home.storyboard in Resources */,
 				B6D9C96A23B1229B00348A7B /* Story.storyboard in Resources */,
 				B6D9C97023B122F400348A7B /* Announcement.storyboard in Resources */,
@@ -426,6 +441,7 @@
 				B6C0540923B560D900D455E1 /* SigninViewController.swift in Sources */,
 				B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */,
 				7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */,
+				B6DFC57123B65135002EE94A /* SettingFavorViewController.swift in Sources */,
 				7FF374B723B608F3004E4907 /* TimelineStory.swift in Sources */,
 				B6D9C97423B12D7A00348A7B /* HomeViewController.swift in Sources */,
 				7FF374B923B60926004E4907 /* TimelineStoryTableViewCell.swift in Sources */,
