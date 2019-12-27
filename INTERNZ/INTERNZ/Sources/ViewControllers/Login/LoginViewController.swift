@@ -27,14 +27,24 @@ class LoginViewController: UIViewController {
         addKeyboardObserver()
         idTextField.delegate = self
         pwTextField.delegate = self
+        
+        self.signupButton.underline()
        
     }
     
+    
+    @IBAction func goSigninView(_ sender: UIButton) {
+        
+        let signinStoryBoard : UIStoryboard = UIStoryboard(name: "Signin", bundle: nil)
+        let signinViewController = signinStoryBoard.instantiateViewController(withIdentifier: "SigninView") as! SigninViewController
+        signinViewController.modalPresentationStyle = .fullScreen
+        self.present(signinViewController
+            , animated: true, completion: nil)
+
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
-        
         super.viewWillAppear(animated)
-        
-        
     }
     
     //    @IBAction func doLogin(_ sender: Any) {

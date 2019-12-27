@@ -97,6 +97,9 @@
                                         <state key="normal" title="회원가입하기">
                                             <color key="titleColor" red="0.12941176470588234" green="0.14509803921568626" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="goSigninView:" destination="NWH-a0-PtK" eventType="touchUpInside" id="R1C-6q-mI6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

@@ -10,7 +10,7 @@
         <!--회원가입-->
         <scene sceneID="WK7-97-JP1">
             <objects>
-                <viewController title="회원가입" id="N1j-ya-6R9" customClass="SigninViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SigninView" title="회원가입" id="N1j-ya-6R9" customClass="SigninViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KF3-x6-3qZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
