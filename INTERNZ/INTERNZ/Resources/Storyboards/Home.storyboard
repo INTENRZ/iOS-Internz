@@ -62,10 +62,10 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJS-l1-ZUb">
-                                                                    <rect key="frame" x="16" y="2" width="343" height="116"/>
+                                                                    <rect key="frame" x="8" y="2" width="351" height="116"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회사 이름 샘플" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLD-vV-Tyj">
-                                                                            <rect key="frame" x="16" y="21" width="148" height="19"/>
+                                                                            <rect key="frame" x="16" y="21" width="156" height="19"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="19" id="KOV-8y-tok"/>
                                                                                 <constraint firstAttribute="width" constant="148" id="eCo-xQ-ZBK"/>
@@ -95,7 +95,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PgY-kY-kwF">
-                                                                            <rect key="frame" x="205" y="16" width="122" height="30"/>
+                                                                            <rect key="frame" x="213" y="16" width="122" height="30"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="PgY-kY-kwF" secondAttribute="height" multiplier="61:15" id="GCn-iu-h4h"/>
                                                                                 <constraint firstAttribute="height" constant="30" id="MQy-kX-Ov4"/>
@@ -124,7 +124,7 @@
                                                                 <constraint firstItem="xJS-l1-ZUb" firstAttribute="top" secondItem="VnF-CG-e3a" secondAttribute="top" constant="2" id="PmS-yn-YOz"/>
                                                                 <constraint firstAttribute="trailing" secondItem="xJS-l1-ZUb" secondAttribute="trailing" constant="16" id="ucn-sr-tgX"/>
                                                                 <constraint firstAttribute="bottom" secondItem="xJS-l1-ZUb" secondAttribute="bottom" constant="2" id="zT7-eZ-NRj"/>
-                                                                <constraint firstItem="xJS-l1-ZUb" firstAttribute="leading" secondItem="VnF-CG-e3a" secondAttribute="leading" constant="16" id="zZ3-6m-bQs"/>
+                                                                <constraint firstItem="xJS-l1-ZUb" firstAttribute="leading" secondItem="VnF-CG-e3a" secondAttribute="leading" constant="8" id="zZ3-6m-bQs"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="375" height="120"/>
@@ -155,7 +155,9 @@
                                         </subviews>
                                         <color key="backgroundColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.033176731418918921" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="WRw-tZ-d0M" firstAttribute="leading" secondItem="fCz-aq-bsq" secondAttribute="leading" id="DBj-qP-JSU"/>
                                             <constraint firstAttribute="trailing" secondItem="e4b-Cc-FyX" secondAttribute="trailing" id="H1Z-4t-4OZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="WRw-tZ-d0M" secondAttribute="trailing" id="IUx-YO-0x9"/>
                                             <constraint firstAttribute="trailing" secondItem="KPL-eq-jqy" secondAttribute="trailing" constant="289" id="JHT-Fd-ao9"/>
                                             <constraint firstItem="e4b-Cc-FyX" firstAttribute="leading" secondItem="fCz-aq-bsq" secondAttribute="leading" id="Rgg-kV-eqi"/>
                                             <constraint firstItem="WRw-tZ-d0M" firstAttribute="top" secondItem="KPL-eq-jqy" secondAttribute="bottom" constant="11" id="enW-ez-FvZ"/>
