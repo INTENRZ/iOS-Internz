@@ -16,6 +16,7 @@
 		B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBACD23B2779A00EEE1C2 /* Story.swift */; };
 		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
 		B6AAF85823B668C3009571DE /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85723B668C3009571DE /* UIButtonExtensions.swift */; };
+		B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */; };
 		B6C0540623B5606500D455E1 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C0540523B5606500D455E1 /* Signin.storyboard */; };
 		B6C0540923B560D900D455E1 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C0540823B560D900D455E1 /* SigninViewController.swift */; };
 		B6D1F99423B295F300C8BA31 /* AnnouncementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D1F99323B295F300C8BA31 /* AnnouncementCell.swift */; };
@@ -60,6 +61,7 @@
 		B63DBACD23B2779A00EEE1C2 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		B67CBF9523B1740B001C78B2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		B6AAF85723B668C3009571DE /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
+		B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileViewController.swift; sourceTree = "<group>"; };
 		B6C0540523B5606500D455E1 /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
 		B6C0540823B560D900D455E1 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		B6D1F99323B295F300C8BA31 /* AnnouncementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCell.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				B6DFC57023B65135002EE94A /* SettingFavorViewController.swift */,
+				B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */,
 			);
 			path = FirstLogin;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				B6C0540923B560D900D455E1 /* SigninViewController.swift in Sources */,
 				B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */,
 				7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */,
+				B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */,
 				B6DFC57123B65135002EE94A /* SettingFavorViewController.swift in Sources */,
 				7FF374B723B608F3004E4907 /* TimelineStory.swift in Sources */,
 				B6D9C97423B12D7A00348A7B /* HomeViewController.swift in Sources */,

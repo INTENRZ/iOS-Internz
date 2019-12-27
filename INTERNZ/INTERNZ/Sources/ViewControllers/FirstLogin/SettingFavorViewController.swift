@@ -12,7 +12,7 @@ class SettingFavorViewController: UIViewController {
     
     @IBOutlet weak var completeButton: UIButton!
     
-    
+    // 관심 직무 버튼
     @IBOutlet weak var gihwaekBtn: UIButton!
     @IBOutlet weak var insaBtn: UIButton!
     @IBOutlet weak var hwaegyeBtn: UIButton!
@@ -25,24 +25,19 @@ class SettingFavorViewController: UIViewController {
     @IBOutlet weak var youngupBtn: UIButton!
     @IBOutlet weak var marketingBtn: UIButton!
     @IBOutlet weak var serviceBtn: UIButton!
-    
     @IBOutlet weak var sangpumBtn: UIButton!
     @IBOutlet weak var gongjeongBtn: UIButton!
     @IBOutlet weak var saengsanBtn: UIButton!
     @IBOutlet weak var pumzilBtn: UIButton!
-    
     @IBOutlet weak var youtongBtn: UIButton!
     @IBOutlet weak var yeonguBtn: UIButton!
     @IBOutlet weak var designBtn: UIButton!
     @IBOutlet weak var muyeokBtn: UIButton!
-    
     @IBOutlet weak var itBtn: UIButton!
     @IBOutlet weak var gongmuoneBtn: UIButton!
     @IBOutlet weak var researchBtn: UIButton!
     @IBOutlet weak var consultingBtn: UIButton!
     @IBOutlet weak var guitarBtn: UIButton!
-    
-    
     
     
     override func viewDidLoad() {
@@ -54,11 +49,18 @@ class SettingFavorViewController: UIViewController {
         
         
         initBtn()
-        
-
-        
+    
     }
     
+    
+    @IBAction func gotoProfileSetting(_ sender: UIButton) {
+        
+        let dvc = storyboard?.instantiateViewController(identifier: "SettingProfileVC") as! SettingProfileViewController
+        
+        navigationController?.pushViewController(dvc, animated: true)
+        
+        
+    }
     
     // 버튼 초기 상태 setting
     func initBtn(){
