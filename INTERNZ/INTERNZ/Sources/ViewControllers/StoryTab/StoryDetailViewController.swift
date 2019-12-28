@@ -16,11 +16,23 @@ class StoryDetailViewController: UIViewController {
     @IBOutlet weak var storyTitleLabel: UILabel!
     @IBOutlet weak var writerLabel: UILabel!
     
+    @IBOutlet weak var backButton: UIButton!
+    
+    
+    @IBOutlet weak var followButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setContents()
+        
+        storyTitleLabel.lineBreakMode = .byWordWrapping
+        storyTitleLabel.numberOfLines = 0
+        
+        followButton.layer.cornerRadius = 10
+        
+
 
     }
     
@@ -29,6 +41,13 @@ class StoryDetailViewController: UIViewController {
         writerLabel.text = writerString
     }
     
-
+    
+    // 뒤로가기
+    @IBAction func goToBack(_ sender: UIButton) {
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
 
 }
