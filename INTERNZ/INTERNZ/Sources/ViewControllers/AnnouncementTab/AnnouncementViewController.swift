@@ -48,6 +48,28 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         let UIPicker: UIPickerView = UIPickerView()
         
+        UIPicker.backgroundColor = UIColor.white
+        
+        // create UIPicker Toolbar
+        let toolBar = UIToolbar()
+        
+        // set Toolbar style
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor.blue
+        toolBar.sizeToFit()
+        toolBar.backgroundColor = UIColor.black
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: nil)
+        
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        
+        UIPicker.addSubview(toolBar)
+        
+        
+        
         UIPicker.delegate = self as UIPickerViewDelegate
         UIPicker.dataSource = self as UIPickerViewDataSource
         
@@ -57,6 +79,13 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         UIPicker.bottomAnchor.constraint(equalTo: view.superview!.bottomAnchor).isActive = true
         UIPicker.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
         UIPicker.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        
+        
+        
+        
+//        announcementTable.transform = .init(translationX: 0, y: -100)
+        
+        
        
     }
     
@@ -80,6 +109,13 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         print(selectString)
         
         sortButton.titleLabel?.text = selectString
+        
+        pickerView.isHidden = true
+        
+//         self.wholeView.transform = .init(translationX: 0, y: -50)
+         
+        
+        
     }
     
 }
@@ -92,7 +128,7 @@ extension AnnouncementViewController {
         let sample4 = Announcement(companyName: "회사44", jobName: "디쟌직군", day: "d-20", companyImageName: "1")
         let sample5 = Announcement(companyName: "회사555", jobName: "디쟌직군", day: "d-20", companyImageName: "1")
         
-        announcementList = [sample1, sample2, sample3, sample4, sample5]
+        announcementList = [sample1, sample2, sample3, sample4, sample5, sample1, sample1, sample1, sample1]
     }
 }
 
