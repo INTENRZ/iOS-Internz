@@ -10,6 +10,9 @@
 		7F0E5C8A23B7A68500F12492 /* FollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C8923B7A68500F12492 /* FollowerViewController.swift */; };
 		7F0E5C8E23B7B95200F12492 /* Follow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C8D23B7B95200F12492 /* Follow.swift */; };
 		7F0E5C9023B7B98C00F12492 /* FollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C8F23B7B98C00F12492 /* FollowTableViewCell.swift */; };
+		7F0E5C9223B80DB900F12492 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0E5C9123B80DB900F12492 /* Message.storyboard */; };
+		7F0E5C9523B80E1300F12492 /* MessageProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C9423B80E1300F12492 /* MessageProfileViewController.swift */; };
+		7F0E5C9723B80EB500F12492 /* MessageUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C9623B80EB500F12492 /* MessageUser.swift */; };
 		7F37E0F823B33D6600C80F1A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F37E0F723B33D6600C80F1A /* Login.storyboard */; };
 		7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */; };
 		7FF374B423B5EBEB004E4907 /* TimelineListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */; };
@@ -63,6 +66,9 @@
 		7F0E5C8923B7A68500F12492 /* FollowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerViewController.swift; sourceTree = "<group>"; };
 		7F0E5C8D23B7B95200F12492 /* Follow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follow.swift; sourceTree = "<group>"; };
 		7F0E5C8F23B7B98C00F12492 /* FollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTableViewCell.swift; sourceTree = "<group>"; };
+		7F0E5C9123B80DB900F12492 /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
+		7F0E5C9423B80E1300F12492 /* MessageProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageProfileViewController.swift; sourceTree = "<group>"; };
+		7F0E5C9623B80EB500F12492 /* MessageUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageUser.swift; sourceTree = "<group>"; };
 		7F37E0F723B33D6600C80F1A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineListViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +130,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F0E5C9323B80DD800F12492 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				7F0E5C9423B80E1300F12492 /* MessageProfileViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
 		7F37E0F923B33D7D00C80F1A /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +155,7 @@
 				B6AAF85F23B69DA3009571DE /* Profile.swift */,
 				7FF374BC23B69EC5004E4907 /* ProfileStory.swift */,
 				7F0E5C8D23B7B95200F12492 /* Follow.swift */,
+				7F0E5C9623B80EB500F12492 /* MessageUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,6 +266,7 @@
 		B6D9C96623B1187900348A7B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7F0E5C9323B80DD800F12492 /* Message */,
 				B6DFC56F23B65101002EE94A /* FirstLogin */,
 				B6C0540723B560B700D455E1 /* Signin */,
 				7F37E0F923B33D7D00C80F1A /* Login */,
@@ -285,6 +301,7 @@
 				7F37E0F723B33D6600C80F1A /* Login.storyboard */,
 				B6C0540523B5606500D455E1 /* Signin.storyboard */,
 				B6DFC56D23B650B0002EE94A /* FirstLogin.storyboard */,
+				7F0E5C9123B80DB900F12492 /* Message.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -400,6 +417,7 @@
 				B6D9C96A23B1229B00348A7B /* Story.storyboard in Resources */,
 				B6D9C97023B122F400348A7B /* Announcement.storyboard in Resources */,
 				B6D9C95E23B1169200348A7B /* LaunchScreen.storyboard in Resources */,
+				7F0E5C9223B80DB900F12492 /* Message.storyboard in Resources */,
 				B6D9C96C23B122B500348A7B /* Profile.storyboard in Resources */,
 				B6C0540623B5606500D455E1 /* Signin.storyboard in Resources */,
 				B6D9C95B23B1169200348A7B /* Assets.xcassets in Resources */,
@@ -477,7 +495,9 @@
 				B6D1F99A23B341BD00C8BA31 /* StoryDetailViewController.swift in Sources */,
 				B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */,
 				B6AAF85823B668C3009571DE /* UIButtonExtensions.swift in Sources */,
+				7F0E5C9723B80EB500F12492 /* MessageUser.swift in Sources */,
 				B6C0540923B560D900D455E1 /* SigninViewController.swift in Sources */,
+				7F0E5C9523B80E1300F12492 /* MessageProfileViewController.swift in Sources */,
 				7F0E5C9023B7B98C00F12492 /* FollowTableViewCell.swift in Sources */,
 				B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */,
 				7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */,
