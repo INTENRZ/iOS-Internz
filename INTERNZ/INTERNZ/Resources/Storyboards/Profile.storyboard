@@ -514,6 +514,9 @@
                                                     <state key="normal" title="팔로잉">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="startFollow:" destination="pzd-Xg-PXT" eventType="touchUpInside" id="Sh4-sX-nmW"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한한한" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oK7-RJ-SBW">
                                                     <rect key="frame" x="70" y="24" width="194" height="21"/>
