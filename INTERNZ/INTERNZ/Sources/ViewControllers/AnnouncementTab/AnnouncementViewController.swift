@@ -8,9 +8,14 @@
 
 import UIKit
 
-class AnnouncementViewController: UIViewController {
-
+class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
+    
+    var dataArray = ["최신순", "조회순"]
+    
     @IBOutlet weak var announcementTable: UITableView!
+    
+    @IBOutlet weak var sortButton: UIButton!
+    
     
     var announcementList:[Announcement] = [] // 공고 리스트를 전역으로 선언
     
@@ -26,7 +31,7 @@ class AnnouncementViewController: UIViewController {
         
         announcementTable.delegate = self
         announcementTable.dataSource = self
- 
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,7 +40,44 @@ class AnnouncementViewController: UIViewController {
         backItem.tintColor = UIColor.black
         navigationItem.backBarButtonItem = backItem
     }
- 
+    
+    
+    
+    // create UIPickerViews programmatically
+    @IBAction func clickSortBtn(_ sender: Any) {
+        
+        let UIPicker: UIPickerView = UIPickerView()
+        
+        UIPicker.delegate = self as UIPickerViewDelegate
+        UIPicker.dataSource = self as UIPickerViewDataSource
+        
+        UIPicker.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(UIPicker)
+        
+        UIPicker.bottomAnchor.constraint(equalTo: view.superview!.bottomAnchor).isActive = true
+        UIPicker.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        UIPicker.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+       
+    }
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        return dataArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let row = dataArray[row]
+        return row
+    }
+    
+    
+    
+    
 }
 
 extension AnnouncementViewController {
