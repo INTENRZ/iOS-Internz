@@ -10,7 +10,7 @@ import UIKit
 
 class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     
-    var dataArray = ["최신순", "조회순"] // picker view array
+    var dataArray = ["최신순", "마감순"] // picker view array
     
     @IBOutlet weak var announcementTable: UITableView!
     
@@ -42,52 +42,83 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     
-    
+    // 정렬 버튼 눌렀을 때 - picker 생성
     // create UIPickerViews programmatically
     @IBAction func clickSortBtn(_ sender: Any) {
         
-        let UIPicker: UIPickerView = UIPickerView()
+        print("sort")
         
-        UIPicker.backgroundColor = UIColor.white
+        // 1. 전체를 잡는 view 생성 + constraint 걸기
+        let picker = UIView(frame: CGRect(x: 0, y: view.frame.height - 260, width: view.frame.width, height: 260))
         
-        // create UIPicker Toolbar
-        let toolBar = UIToolbar()
+        view.addSubview(picker)
         
-        // set Toolbar style
-        toolBar.barStyle = UIBarStyle.default
-        toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor.blue
-        toolBar.sizeToFit()
-        toolBar.backgroundColor = UIColor.black
+//        pickerWholeView.translatesAutoresizingMaskIntoConstraints = false
+//        pickerWholeView.bottomAnchor.constraint(equalTo: view.superview!.bottomAnchor).isActive = true
+//        pickerWholeView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+//        pickerWholeView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: nil)
-        
-        toolBar.setItems([doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        
-        
-        UIPicker.addSubview(toolBar)
+        // 2. Tool Bar 에 들어갈 버튼 생성
+//        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: nil)
+        let btnDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.testfunc))
         
         
         
-        UIPicker.delegate = self as UIPickerViewDelegate
-        UIPicker.dataSource = self as UIPickerViewDataSource
+        // 3. UIPicker Toolbar 생성 + 속성 setting
+        let barAccessory = UIToolbar(frame: CGRect(x: 0, y: 0, width: picker.frame.width, height: 44))
         
-        UIPicker.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(UIPicker)
+        barAccessory.barStyle = UIBarStyle.default
+        barAccessory.isTranslucent = true
+        barAccessory.items = [btnDone]
         
-        UIPicker.bottomAnchor.constraint(equalTo: view.superview!.bottomAnchor).isActive = true
-        UIPicker.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        UIPicker.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        
-        
-        
-        
-//        announcementTable.transform = .init(translationX: 0, y: -100)
+        picker.addSubview(barAccessory)
+//        toolBar.tintColor = UIColor.blue
+//        toolBar.sizeToFit()
+//        toolBar.backgroundColor = UIColor.black
         
         
+        
+        // 4. PickerView 생성
+        let sortPicker = UIPickerView(frame: CGRect(x: 0, y: barAccessory.frame.height, width: view.frame.width, height: picker.frame.height - barAccessory.frame.height))
+        sortPicker.delegate = self
+        sortPicker.dataSource = self
+        sortPicker.backgroundColor = UIColor.white
+        
+        picker.addSubview(sortPicker)
+        
+        
+        
+        
+        
+        
+        // 3. ToolBar 에 BarButtonItem 생성 + ToolBar 에 추가
        
+        
+//        toolBar.setItems([doneButton], animated: false)
+//        toolBar.isUserInteractionEnabled = true
+//
+//
+//        pickerWholeView.addSubview(toolBar)
+        
+
+        // 4. picker view 에 ToolBar 에 대한 constraint 걸기
+        
+//        let UIPicker: UIPickerView = UIPickerView(frame: CGRect(x: 0, y: toolBar.frame.height, width: view.frame.width, height: pickerWholeView.frame.height - toolBar.frame.height))
+//
+//        UIPicker.backgroundColor = UIColor.white
+//
+//        UIPicker.delegate = self as UIPickerViewDelegate
+//        UIPicker.dataSource = self as UIPickerViewDataSource
+//
+//        pickerWholeView.addSubview(UIPicker)
+        
+        
     }
+    
+    
+    
+    
+    
     
     // UIPickerView delegate functions
     
@@ -110,11 +141,15 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         sortButton.titleLabel?.text = selectString
         
-        pickerView.isHidden = true
+        //        pickerView.isHidden = true
         
-//         self.wholeView.transform = .init(translationX: 0, y: -50)
-         
+        //         self.wholeView.transform = .init(translationX: 0, y: -50)
         
+        
+        
+    }
+    
+    @objc func testfunc(){
         
     }
     
