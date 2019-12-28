@@ -27,7 +27,7 @@ class StoryViewController: UIViewController {
         storyTable.dataSource = self
         storyTable.delegate = self
         
-        print(category ?? "")
+//        print(category ?? "")
         
     }
     
@@ -54,14 +54,32 @@ extension StoryViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let dvc = storyboard?.instantiateViewController(identifier: "StoryDetailViewController") as! StoryDetailViewController
+//        let signinStoryBoard : UIStoryboard = UIStoryboard(name: "Signin", bundle: nil)
+//        let signinViewController = signinStoryBoard.instantiateViewController(withIdentifier: "SigninView") as! SigninViewController
+//        signinViewController.modalPresentationStyle = .fullScreen
+//        self.present(signinViewController
+//            , animated: true, completion: nil)
+        
+//
+//        let story = storySampleList[indexPath.row]
+//
+//        let dvc = storyboard?.instantiateViewController(identifier: "StoryDetailViewController") as! StoryDetailViewController
+//
+//        dvc.modalPresentationStyle = .fullScreen
+//        dvc.storyString = story.storyTitle
+//        dvc.writerString = story.name
+//
+//        navigationController?.pushViewController(dvc, animated: true)
         
         let story = storySampleList[indexPath.row]
         
+        let dvc = storyboard?.instantiateViewController(identifier: "StoryDetailViewController") as! StoryDetailViewController
+        
         dvc.storyString = story.storyTitle
         dvc.writerString = story.name
+        dvc.modalPresentationStyle = .fullScreen
         
-        navigationController?.pushViewController(dvc, animated: true)
+        self.present(dvc, animated: true, completion: nil)
         
     }
     
