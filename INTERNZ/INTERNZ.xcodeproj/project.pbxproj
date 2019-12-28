@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0E5C8A23B7A68500F12492 /* FollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C8923B7A68500F12492 /* FollowerViewController.swift */; };
+		7F0E5C8E23B7B95200F12492 /* Follow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C8D23B7B95200F12492 /* Follow.swift */; };
+		7F0E5C9023B7B98C00F12492 /* FollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C8F23B7B98C00F12492 /* FollowTableViewCell.swift */; };
 		7F37E0F823B33D6600C80F1A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F37E0F723B33D6600C80F1A /* Login.storyboard */; };
 		7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */; };
 		7FF374B423B5EBEB004E4907 /* TimelineListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */; };
@@ -57,6 +60,9 @@
 /* Begin PBXFileReference section */
 		4DBB74BF62F1CEEB716663DF /* Pods-INTERNZ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INTERNZ.debug.xcconfig"; path = "Target Support Files/Pods-INTERNZ/Pods-INTERNZ.debug.xcconfig"; sourceTree = "<group>"; };
 		781EC13AE66EF4087EF04F10 /* Pods-INTERNZ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INTERNZ.release.xcconfig"; path = "Target Support Files/Pods-INTERNZ/Pods-INTERNZ.release.xcconfig"; sourceTree = "<group>"; };
+		7F0E5C8923B7A68500F12492 /* FollowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerViewController.swift; sourceTree = "<group>"; };
+		7F0E5C8D23B7B95200F12492 /* Follow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follow.swift; sourceTree = "<group>"; };
+		7F0E5C8F23B7B98C00F12492 /* FollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTableViewCell.swift; sourceTree = "<group>"; };
 		7F37E0F723B33D6600C80F1A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineListViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 				7FF374B623B608F3004E4907 /* TimelineStory.swift */,
 				B6AAF85F23B69DA3009571DE /* Profile.swift */,
 				7FF374BC23B69EC5004E4907 /* ProfileStory.swift */,
+				7F0E5C8D23B7B95200F12492 /* Follow.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,6 +185,8 @@
 				7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */,
 				7FF374B823B60926004E4907 /* TimelineStoryTableViewCell.swift */,
 				7FF374BA23B69E47004E4907 /* ProfileTableViewCell.swift */,
+				7F0E5C8923B7A68500F12492 /* FollowerViewController.swift */,
+				7F0E5C8F23B7B98C00F12492 /* FollowTableViewCell.swift */,
 			);
 			path = ProfileTab;
 			sourceTree = "<group>";
@@ -460,6 +469,8 @@
 				7FF374B423B5EBEB004E4907 /* TimelineListViewController.swift in Sources */,
 				B6D1F99C23B355B100C8BA31 /* StoryTabViewController.swift in Sources */,
 				B6D9C95223B1169100348A7B /* AppDelegate.swift in Sources */,
+				7F0E5C8E23B7B95200F12492 /* Follow.swift in Sources */,
+				7F0E5C8A23B7A68500F12492 /* FollowerViewController.swift in Sources */,
 				B6D9C95423B1169100348A7B /* SceneDelegate.swift in Sources */,
 				B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */,
 				B6D1F99423B295F300C8BA31 /* AnnouncementCell.swift in Sources */,
@@ -467,6 +478,7 @@
 				B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */,
 				B6AAF85823B668C3009571DE /* UIButtonExtensions.swift in Sources */,
 				B6C0540923B560D900D455E1 /* SigninViewController.swift in Sources */,
+				7F0E5C9023B7B98C00F12492 /* FollowTableViewCell.swift in Sources */,
 				B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */,
 				7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */,
 				B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */,
