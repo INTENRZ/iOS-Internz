@@ -15,11 +15,11 @@ extension UIView{
         self.clipsToBounds = true
     }
     
-    func setBorderWidth(){
-        //self.layer.borderWidth = 100
-        //self.layer.borderColor = UIColor.marigold.cgColor
-        
-    }
+//    func setBorderWidth(){
+//    self.layer.borderWidth = 100
+//        self.layer.borderColor = UIColor.marigold.cgColor
+//
+//    }
 }
 
 
@@ -29,8 +29,10 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
     @IBOutlet weak var ProfileListTable: UITableView!
     @IBOutlet weak var followButton: UIButton!
     
-    @IBOutlet weak var followercountLabel: UILabel!
-    @IBOutlet weak var followingcountLabel: UILabel!
+    @IBOutlet weak var messageButton: UIButton!
+    
+    @IBOutlet weak var followercountButton: UIButton!
+    @IBOutlet weak var followingcountButton: UIButton!
     
     @IBOutlet weak var introduceLabel: UILabel!
     
