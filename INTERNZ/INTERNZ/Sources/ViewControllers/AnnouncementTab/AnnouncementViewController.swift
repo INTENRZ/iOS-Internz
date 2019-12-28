@@ -10,7 +10,7 @@ import UIKit
 
 class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     
-    var dataArray = ["최신순", "조회순"]
+    var dataArray = ["최신순", "조회순"] // picker view array
     
     @IBOutlet weak var announcementTable: UITableView!
     
@@ -60,13 +60,13 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
        
     }
     
+    // UIPickerView delegate functions
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
         return dataArray.count
     }
     
@@ -75,8 +75,12 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         return row
     }
     
-    
-    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let selectString = dataArray[pickerView.selectedRow(inComponent: 0)]
+        print(selectString)
+        
+        sortButton.titleLabel?.text = selectString
+    }
     
 }
 
@@ -110,8 +114,7 @@ extension AnnouncementViewController: UITableViewDataSource {
         cell.companyLabel.text = announcement.companyName
         cell.jobLabel.text = announcement.jobName
         cell.dayLabel.text = announcement.day
-        cell.companyImageView
-            .image = announcement.companyImage
+        cell.companyImageView.image = announcement.companyImage
         
         return cell
     }
