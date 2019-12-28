@@ -10,13 +10,18 @@ import UIKit
 
 class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     
-    var dataArray = ["최신순", "마감순"] // picker view array
+    var dataArray = ["최신순", "마감순" ,"sss", "sssss"] // picker view array
     
     @IBOutlet weak var announcementTable: UITableView!
     
     @IBOutlet weak var sortButton: UIButton!
     
     var announcementList:[Announcement] = [] // 공고 리스트를 전역으로 선언
+    
+    var picker = UIView()
+    
+    var isClickedSortBtn: Bool = false
+    var selectString = "최신순" // pickerView 에서 선택한 내용
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +36,7 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         announcementTable.delegate = self
         announcementTable.dataSource = self
         
-        
+        self.sortButton.titleLabel?.text = selectString
         
     }
     
@@ -43,16 +48,20 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     
-    // 정렬 버튼 눌렀을 때 - picker 생성
+    // 정렬 버튼 눌렀을 때 -> picker 생성
     // create UIPickerViews programmatically
     @IBAction func clickSortBtn(_ sender: Any) {
         
         print("sort")
         
         // 1. 전체를 잡는 view 생성 + constraint 걸기
-        let picker = UIView(frame: CGRect(x: 0, y: view.frame.height - 260, width: view.frame.width, height: 260))
+        self.picker.isHidden = false
         
-        view.addSubview(picker)
+        self.picker.frame = CGRect(x: 0, y: view.frame.height - 260, width: view.frame.width, height: 260)
+        
+//        let picker = UIView(frame: CGRect(x: 0, y: view.frame.height - 260, width: view.frame.width, height: 260))
+        
+        view.addSubview(self.picker)
         
         
         // 2. Tool Bar 에 들어갈 버튼 생성
@@ -97,14 +106,22 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let selectString = dataArray[pickerView.selectedRow(inComponent: 0)]
-        print(selectString)
-        
-        sortButton.titleLabel?.text = selectString
+        selectString = dataArray[pickerView.selectedRow(inComponent: 0)]
     }
     
+    // PickerView 완료 버튼 클릭
     @objc func testfunc(){
         print("test")
+        
+        if isClickedSortBtn == false {
+            self.picker.isHidden = true
+            isClickedSortBtn = false
+            self.sortButton.titleLabel?.text = selectString
+        } else {
+            self.picker.isHidden = false
+            isClickedSortBtn = true
+            self.sortButton.titleLabel?.text = selectString
+        }
     }
     
 }
