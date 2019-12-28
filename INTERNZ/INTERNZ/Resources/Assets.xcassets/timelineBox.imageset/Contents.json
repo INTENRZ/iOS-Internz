@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "backIc.png"
+      "filename" : "timelineBox.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "backIc@2x.png"
+      "filename" : "timelineBox@2x.png",
+      "scale" : "2x"
     },
     {
       "scale" : "3x",
-      "filename" : "backIc@3x.png",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "timelineBox@3x.png"
     }
   ],
   "info" : {

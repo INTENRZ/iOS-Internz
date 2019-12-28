@@ -18,11 +18,13 @@ import UIKit
 
 class ProfileTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var circleUIView: UIView!
-    @IBOutlet weak var lineUIView: UIView!
+
+
+    @IBOutlet weak var timelineImgView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var clickImgView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
