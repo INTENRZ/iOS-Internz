@@ -15,14 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최신순" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIM-jc-P9M">
-                                <rect key="frame" x="16" y="61" width="37" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sjh-fH-drb">
-                                <rect key="frame" x="0.0" y="92" width="375" height="720"/>
+                                <rect key="frame" x="0.0" y="77" width="375" height="735"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StoryCell" id="TyF-nb-YFo" customClass="StoryCell" customModule="INTERNZ" customModuleProvider="target">
@@ -95,16 +89,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5U4-Ie-dnp">
+                                <rect key="frame" x="16" y="60" width="37" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="HEp-y3-Knp"/>
+                                    <constraint firstAttribute="width" constant="37" id="xNN-az-e4M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="최신순">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doSortStory:" destination="Mpp-1N-9vO" eventType="touchUpInside" id="vjA-7l-tRz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="5U4-Ie-dnp" firstAttribute="leading" secondItem="hKi-a3-mgc" secondAttribute="leading" constant="16" id="08o-mr-jEe"/>
                             <constraint firstItem="sjh-fH-drb" firstAttribute="leading" secondItem="hKi-a3-mgc" secondAttribute="leading" id="3lN-KS-GX7"/>
-                            <constraint firstItem="XIM-jc-P9M" firstAttribute="top" secondItem="hKi-a3-mgc" secondAttribute="top" constant="17" id="CPJ-WO-MtG"/>
                             <constraint firstAttribute="bottom" secondItem="sjh-fH-drb" secondAttribute="bottom" id="PuA-H9-T4T"/>
-                            <constraint firstItem="XIM-jc-P9M" firstAttribute="leading" secondItem="hKi-a3-mgc" secondAttribute="leading" constant="16" id="dW8-RW-UAz"/>
                             <constraint firstItem="sjh-fH-drb" firstAttribute="trailing" secondItem="hKi-a3-mgc" secondAttribute="trailing" id="dem-00-zre"/>
-                            <constraint firstItem="sjh-fH-drb" firstAttribute="top" secondItem="XIM-jc-P9M" secondAttribute="bottom" constant="14" id="zlY-sH-T4p"/>
-                            <constraint firstItem="sjh-fH-drb" firstAttribute="top" secondItem="XIM-jc-P9M" secondAttribute="bottom" constant="14" id="zok-ae-rGr"/>
+                            <constraint firstItem="5U4-Ie-dnp" firstAttribute="top" secondItem="hKi-a3-mgc" secondAttribute="top" constant="16" id="n4D-2m-8PK"/>
+                            <constraint firstItem="sjh-fH-drb" firstAttribute="top" secondItem="5U4-Ie-dnp" secondAttribute="bottom" id="tHW-8u-bB5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hKi-a3-mgc"/>
                     </view>
@@ -114,6 +121,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="sortButton" destination="5U4-Ie-dnp" id="erN-Kb-ycS"/>
                         <outlet property="storyTable" destination="sjh-fH-drb" id="yhn-Ul-V7s"/>
                     </connections>
                 </viewController>
