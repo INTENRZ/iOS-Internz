@@ -156,19 +156,6 @@
                         <viewLayoutGuide key="safeArea" id="6LC-Fw-KoD"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="c73-DE-jG3">
-                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="cm2-np-Ew9">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NjN-Bc-MWH">
-                                <rect key="frame" x="16" y="0.0" width="48" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="left1Ic"/>
-                                <connections>
-                                    <action selector="backBtn:" destination="rcF-45-UKv" eventType="touchUpInside" id="c4N-lW-mQ4"/>
-                                </connections>
-                            </button>
-                            <connections>
-                                <action selector="backButton:" destination="SN7-og-2En" id="KHt-JY-F03"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="TSW-mE-X7Z">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qjo-8Y-Yer">
                                 <rect key="frame" x="311" y="0.0" width="48" height="44"/>
@@ -182,7 +169,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvA-hg-8LL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="SN7-og-2En" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="542" y="788"/>
         </scene>
@@ -224,7 +210,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="left1Ic" width="24" height="24"/>
         <image name="messagesendIc" width="24" height="24"/>
         <image name="profileImg1" width="46" height="46"/>
     </resources>
