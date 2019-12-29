@@ -31,6 +31,7 @@
 		B66EBE1A23B8A478009ACA31 /* DateStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1923B8A478009ACA31 /* DateStruct.swift */; };
 		B66EBE1C23B8E85E009ACA31 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1B23B8E85E009ACA31 /* CommentCell.swift */; };
 		B66EBE1E23B8E974009ACA31 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1D23B8E974009ACA31 /* Comment.swift */; };
+		B66EBE2023B90224009ACA31 /* CreateTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1F23B90224009ACA31 /* CreateTimelineViewController.swift */; };
 		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
 		B6AAF85823B668C3009571DE /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85723B668C3009571DE /* UIButtonExtensions.swift */; };
 		B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */; };
@@ -97,6 +98,7 @@
 		B66EBE1923B8A478009ACA31 /* DateStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStruct.swift; sourceTree = "<group>"; };
 		B66EBE1B23B8E85E009ACA31 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		B66EBE1D23B8E974009ACA31 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		B66EBE1F23B90224009ACA31 /* CreateTimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTimelineViewController.swift; sourceTree = "<group>"; };
 		B67CBF9523B1740B001C78B2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		B6AAF85723B668C3009571DE /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				7FF374BA23B69E47004E4907 /* ProfileTableViewCell.swift */,
 				7F0E5C8923B7A68500F12492 /* FollowerViewController.swift */,
 				7F0E5C8F23B7B98C00F12492 /* FollowTableViewCell.swift */,
+				B66EBE1F23B90224009ACA31 /* CreateTimelineViewController.swift */,
 			);
 			path = ProfileTab;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				7F0E5C8E23B7B95200F12492 /* Follow.swift in Sources */,
 				7F0E5C8A23B7A68500F12492 /* FollowerViewController.swift in Sources */,
 				B6D9C95423B1169100348A7B /* SceneDelegate.swift in Sources */,
+				B66EBE2023B90224009ACA31 /* CreateTimelineViewController.swift in Sources */,
 				B66EBE1A23B8A478009ACA31 /* DateStruct.swift in Sources */,
 				B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */,
 				B6D1F99423B295F300C8BA31 /* AnnouncementCell.swift in Sources */,

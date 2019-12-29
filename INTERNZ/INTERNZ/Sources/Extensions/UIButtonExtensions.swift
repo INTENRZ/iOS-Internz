@@ -19,5 +19,12 @@ extension UIButton {
         self.tintColor = UIColor.darkGreyTwo
     
     }
+    
+    func setBorderGray() {
+        self.layer.borderColor = UIColor.whiteFour.cgColor
+        self.layer.borderWidth = 1
+        self.layer.cornerRadius = 15
+    }
+    
 }
 

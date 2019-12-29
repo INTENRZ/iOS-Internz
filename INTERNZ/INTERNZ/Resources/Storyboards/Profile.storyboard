@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ETd-rS-oBw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="02O-dW-6YT">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -269,6 +269,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="floatingBtn"/>
+                                        <connections>
+                                            <segue destination="fVx-6y-3f1" kind="show" id="YTf-me-LHG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </view>
@@ -292,6 +295,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hc8-Z9-MxH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1792.8" y="28.817733990147783"/>
+        </scene>
+        <!--Create Timeline View Controller-->
+        <scene sceneID="lWT-gj-mjb">
+            <objects>
+                <viewController id="fVx-6y-3f1" customClass="CreateTimelineViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vBR-Jj-QHZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="활동명" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aux-Cw-7jT">
+                                <rect key="frame" x="16" y="128" width="42" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="3jN-HD-pQE"/>
+                                    <constraint firstAttribute="height" constant="19" id="Hv6-0j-NS9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="활동 내용 또는 회사명, 담당 직무 등을 적어주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t6a-wy-qIf">
+                                <rect key="frame" x="16" y="157" width="343" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="OEj-WP-y2g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grH-Xs-J56">
+                                <rect key="frame" x="16" y="183" width="343" height="1"/>
+                                <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="GmO-CE-Xeu"/>
+                                    <constraint firstAttribute="width" constant="343" id="p1L-oa-jcy"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="활동기간" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWW-Fe-6X1">
+                                <rect key="frame" x="16" y="224" width="57" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="53O-zV-rbs"/>
+                                    <constraint firstAttribute="width" constant="57" id="9eh-Ry-F4h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcP-v1-2yA">
+                                <rect key="frame" x="16" y="253" width="74" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="1ku-TD-tQB"/>
+                                    <constraint firstAttribute="height" constant="31" id="QzL-K1-Rvr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="19.12.25">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startSelect:" destination="fVx-6y-3f1" eventType="touchUpInside" id="M9q-MC-JN1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MGb-uA-66R" firstAttribute="trailing" secondItem="grH-Xs-J56" secondAttribute="trailing" constant="16" id="46U-Qu-X48"/>
+                            <constraint firstItem="YcP-v1-2yA" firstAttribute="leading" secondItem="MGb-uA-66R" secondAttribute="leading" constant="16" id="6Wn-xo-HdN"/>
+                            <constraint firstItem="grH-Xs-J56" firstAttribute="top" secondItem="t6a-wy-qIf" secondAttribute="bottom" constant="6" id="EYF-6Z-pqh"/>
+                            <constraint firstItem="t6a-wy-qIf" firstAttribute="top" secondItem="Aux-Cw-7jT" secondAttribute="bottom" constant="10" id="KzU-fZ-yXe"/>
+                            <constraint firstItem="t6a-wy-qIf" firstAttribute="leading" secondItem="MGb-uA-66R" secondAttribute="leading" constant="16" id="QKD-hR-RqD"/>
+                            <constraint firstItem="YcP-v1-2yA" firstAttribute="top" secondItem="lWW-Fe-6X1" secondAttribute="bottom" constant="10" id="QOW-Dc-tbg"/>
+                            <constraint firstItem="Aux-Cw-7jT" firstAttribute="top" secondItem="MGb-uA-66R" secondAttribute="top" constant="40" id="Twk-Z1-gZ6"/>
+                            <constraint firstItem="Aux-Cw-7jT" firstAttribute="leading" secondItem="MGb-uA-66R" secondAttribute="leading" constant="16" id="fDK-AA-hNO"/>
+                            <constraint firstItem="MGb-uA-66R" firstAttribute="trailing" secondItem="t6a-wy-qIf" secondAttribute="trailing" constant="16" id="fsb-ei-nf6"/>
+                            <constraint firstItem="lWW-Fe-6X1" firstAttribute="leading" secondItem="MGb-uA-66R" secondAttribute="leading" constant="16" id="mdu-lu-TdK"/>
+                            <constraint firstItem="lWW-Fe-6X1" firstAttribute="top" secondItem="grH-Xs-J56" secondAttribute="bottom" constant="40" id="n3g-1o-5Nz"/>
+                            <constraint firstItem="grH-Xs-J56" firstAttribute="leading" secondItem="MGb-uA-66R" secondAttribute="leading" constant="16" id="syu-8A-o8u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MGb-uA-66R"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rdH-66-PBr">
+                        <barButtonItem key="rightBarButtonItem" title="등록" id="gqU-tT-CFL"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="startSelectButton" destination="YcP-v1-2yA" id="6Zf-nB-Kkf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t23-3r-u2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2656.8000000000002" y="28.817733990147783"/>
         </scene>
         <!--Timeline List View Controller-->
         <scene sceneID="J24-Cd-Lhw">
