@@ -9,7 +9,7 @@
 import UIKit
 
 class StoryDetailViewController: UIViewController {
-
+    
     var storyString: String?
     var writerString: String?
     
@@ -22,6 +22,11 @@ class StoryDetailViewController: UIViewController {
     @IBOutlet weak var followButton: UIButton!
     
     
+    @IBOutlet weak var scrapButton: UIButton!
+    
+    var isScrap:Bool = false
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +37,20 @@ class StoryDetailViewController: UIViewController {
         
         followButton.layer.cornerRadius = 10
         
-
+        
+        
+    }
+    
+    
+    @IBAction func doScrap(_ sender: UIButton) {
+        
+        if isScrap == false {
+            self.scrapButton.setImage(UIImage(named: "scrapFillIc"), for: .normal)
+            isScrap = true
+        } else {
+            self.scrapButton.setImage(UIImage(named: "scrapIc"), for: .normal)
+            isScrap = false
+        }
 
     }
     
@@ -49,5 +67,25 @@ class StoryDetailViewController: UIViewController {
         
     }
     
-
+    
+    @IBAction func goToComment(_ sender: UIButton) {
+        
+        print("tab comment btn")
+        
+        //        CommentViewController
+        
+//        let dvc = storyboard?.instantiateViewController(identifier: "CommentViewController") as! CommentViewController
+        
+        let dvc = storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
+        
+        dvc.modalPresentationStyle = .fullScreen
+//
+        self.present(dvc, animated: true, completion: nil)
+//
+//        navigationController?.pushViewController(dvc, animated: true)
+        
+    }
+    
+    
+    
 }

@@ -23,6 +23,7 @@
 		7FF374BD23B69EC5004E4907 /* ProfileStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374BC23B69EC5004E4907 /* ProfileStory.swift */; };
 		B63DBAC923B275FE00EEE1C2 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */; };
 		B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBACD23B2779A00EEE1C2 /* Story.swift */; };
+		B66EBE1623B82305009ACA31 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1523B82305009ACA31 /* CommentViewController.swift */; };
 		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
 		B6AAF85823B668C3009571DE /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85723B668C3009571DE /* UIButtonExtensions.swift */; };
 		B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */; };
@@ -81,6 +82,7 @@
 		A16EF8E341DAE52684405B6A /* Pods_INTERNZ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INTERNZ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
 		B63DBACD23B2779A00EEE1C2 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		B66EBE1523B82305009ACA31 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		B67CBF9523B1740B001C78B2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		B6AAF85723B668C3009571DE /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */,
 				B6D1F99923B341BD00C8BA31 /* StoryDetailViewController.swift */,
 				B6D1F99B23B355B100C8BA31 /* StoryTabViewController.swift */,
+				B66EBE1523B82305009ACA31 /* CommentViewController.swift */,
 			);
 			path = StoryTab;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B66EBE1623B82305009ACA31 /* CommentViewController.swift in Sources */,
 				B6D9C97E23B1347600348A7B /* TabbarViewController.swift in Sources */,
 				B6AAF86023B69DA3009571DE /* Profile.swift in Sources */,
 				7FF374BB23B69E47004E4907 /* ProfileTableViewCell.swift in Sources */,
