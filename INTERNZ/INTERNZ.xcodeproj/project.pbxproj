@@ -29,6 +29,8 @@
 		B66EBE1623B82305009ACA31 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1523B82305009ACA31 /* CommentViewController.swift */; };
 		B66EBE1823B8A2AD009ACA31 /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1723B8A2AD009ACA31 /* DateTableViewCell.swift */; };
 		B66EBE1A23B8A478009ACA31 /* DateStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1923B8A478009ACA31 /* DateStruct.swift */; };
+		B66EBE1C23B8E85E009ACA31 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1B23B8E85E009ACA31 /* CommentCell.swift */; };
+		B66EBE1E23B8E974009ACA31 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1D23B8E974009ACA31 /* Comment.swift */; };
 		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
 		B6AAF85823B668C3009571DE /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85723B668C3009571DE /* UIButtonExtensions.swift */; };
 		B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */; };
@@ -93,6 +95,8 @@
 		B66EBE1523B82305009ACA31 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		B66EBE1723B8A2AD009ACA31 /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
 		B66EBE1923B8A478009ACA31 /* DateStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStruct.swift; sourceTree = "<group>"; };
+		B66EBE1B23B8E85E009ACA31 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		B66EBE1D23B8E974009ACA31 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		B67CBF9523B1740B001C78B2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		B6AAF85723B668C3009571DE /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 				7F0E5C9623B80EB500F12492 /* MessageUser.swift */,
 				B66EBE1923B8A478009ACA31 /* DateStruct.swift */,
 				7F0E5C9E23B8A43600F12492 /* MessageList.swift */,
+				B66EBE1D23B8E974009ACA31 /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				B6D1F99923B341BD00C8BA31 /* StoryDetailViewController.swift */,
 				B6D1F99B23B355B100C8BA31 /* StoryTabViewController.swift */,
 				B66EBE1523B82305009ACA31 /* CommentViewController.swift */,
+				B66EBE1B23B8E85E009ACA31 /* CommentCell.swift */,
 			);
 			path = StoryTab;
 			sourceTree = "<group>";
@@ -528,6 +534,7 @@
 				7F0E5C9B23B82ECF00F12492 /* MessageListViewController.swift in Sources */,
 				7F0E5C9F23B8A43600F12492 /* MessageList.swift in Sources */,
 				7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */,
+				B66EBE1C23B8E85E009ACA31 /* CommentCell.swift in Sources */,
 				B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */,
 				B6DFC57123B65135002EE94A /* SettingFavorViewController.swift in Sources */,
 				7F0E5C9D23B82F2600F12492 /* MessageListTableViewCell.swift in Sources */,
@@ -537,6 +544,7 @@
 				B6D1F9A023B3E78D00C8BA31 /* Banner.swift in Sources */,
 				B6AAF86423B6A927009571DE /* UIViewExtensions.swift in Sources */,
 				B6AAF86223B69FB2009571DE /* ProfileBanner.swift in Sources */,
+				B66EBE1E23B8E974009ACA31 /* Comment.swift in Sources */,
 				B6D9C98123B13D7400348A7B /* UIColor+Additions.swift in Sources */,
 				B6AAF85E23B69CE4009571DE /* ProfileBannerCell.swift in Sources */,
 				B6DFC56C23B607A9002EE94A /* Signin2ViewController.swift in Sources */,
