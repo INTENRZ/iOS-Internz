@@ -19,6 +19,8 @@ class MessageProfileViewController:UIViewController, UITableViewDelegate{
         
         super.viewDidLoad()
         
+        self.navigationItem.title = "유저쪽지"
+        
         setMessageProfileSampleData()
         
         MessageProfileListTable.reloadData()
@@ -26,6 +28,16 @@ class MessageProfileViewController:UIViewController, UITableViewDelegate{
         MessageProfileListTable.dataSource = self
         MessageProfileListTable.delegate = self
         
+        var addItem: UIBarButtonItem{
+            let addImage = UIImage(named: "closeIc")
+            let addButton = UIButton(type: UIButton.ButtonType.custom)
+            addButton.setBackgroundImage(addImage, for: UIControl.State())
+            addButton.frame = CGRect(x: 0, y: 0, width: (addImage?.size.width)!, height: (addImage?.size.height)!)
+            let addItem = UIBarButtonItem(customView: addButton)
+            return addItem
+        }
+    
+        navigationItem.leftBarButtonItems = [addItem]
         
     }
     
@@ -52,11 +64,29 @@ extension MessageProfileViewController{
         
         
         MessageProfileSampleList = [message1, message2, message3, message4, message5, message6, message7]
-
+        
     }
 }
 
 extension MessageProfileViewController: UITableViewDataSource{
+    
+    // table cell click event
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print(indexPath.row)
+        
+        let MessageUser = MessageProfileSampleList[indexPath.row]
+        print(MessageUser.name)
+        
+        let dvc = storyboard?.instantiateViewController(withIdentifier: "MessageListViewController") as! MessageListViewController
+        dvc.username = MessageUser.name
+        
+        let navigationController = UINavigationController(rootViewController: dvc)
+        
+        navigationController.modalPresentationStyle = .fullScreen
+        
+        present(navigationController, animated: true, completion: nil)
+        
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
