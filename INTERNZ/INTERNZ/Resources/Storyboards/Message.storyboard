@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--쪽지-->
+        <!--Message Profile View Controller-->
         <scene sceneID="TgL-qg-5rG">
             <objects>
                 <viewController storyboardIdentifier="Message" id="6Hy-hR-wrk" customClass="MessageProfileViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
@@ -68,7 +68,6 @@
                                             <outlet property="UserImgView" destination="l6o-u9-Iym" id="Zbn-s5-mns"/>
                                             <outlet property="UserNameLabel" destination="tuD-Hi-ToZ" id="cBB-uT-d5F"/>
                                             <outlet property="UserTextLabel" destination="vdg-50-uYx" id="lYx-mv-CFT"/>
-                                            <segue destination="rcF-45-UKv" kind="show" id="Wgl-oI-Tzd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -77,7 +76,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Qcc-JR-9gV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="쪽지" id="mZf-AS-4aq"/>
+                    <navigationItem key="navigationItem" id="mZf-AS-4aq"/>
                     <connections>
                         <outlet property="MessageProfileListTable" destination="64i-T9-Jfb" id="i4m-2M-1Hc"/>
                     </connections>
@@ -86,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="541.60000000000002" y="99.753694581280797"/>
         </scene>
-        <!--Title-->
+        <!--Message List View Controller-->
         <scene sceneID="mao-xA-FyI">
             <objects>
-                <viewController id="rcF-45-UKv" customClass="MessageListViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessageListViewController" id="rcF-45-UKv" customClass="MessageListViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yuL-1C-fEe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,14 +154,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6LC-Fw-KoD"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="c73-DE-jG3">
-                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="TSW-mE-X7Z">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qjo-8Y-Yer">
-                                <rect key="frame" x="311" y="0.0" width="48" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="messagesendIc"/>
-                            </button>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" id="c73-DE-jG3">
+                        <barButtonItem key="backBarButtonItem" title="image" id="uct-zE-yam"/>
                     </navigationItem>
                     <connections>
                         <outlet property="MessageListTable" destination="rVL-lz-BdY" id="u2c-hr-8W3"/>
@@ -170,7 +163,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvA-hg-8LL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="542" y="788"/>
+            <point key="canvasLocation" x="542" y="849"/>
+        </scene>
+        <!--Message Send View Controller-->
+        <scene sceneID="yfi-0M-lKZ">
+            <objects>
+                <viewController storyboardIdentifier="MessageSendViewController" id="Jmc-vB-c84" customClass="MessageSendViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kuB-VY-gha">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="쪽지 내용을 입력해주세요." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KLF-tQ-ACe">
+                                <rect key="frame" x="16" y="88" width="343" height="388"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Pww-jG-Odn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y3z-JY-r7u"/>
+                    <connections>
+                        <outlet property="textView" destination="KLF-tQ-ACe" id="yED-pP-RrB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="leZ-8P-6iD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541.60000000000002" y="1540.6403940886701"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2od-bi-FkU">
@@ -188,32 +209,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5A-FI-XkQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-191.19999999999999" y="99.753694581280797"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="fMu-qk-S0d">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dnc-v0-PTb" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jm3-Sh-4o8">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="rcF-45-UKv" kind="relationship" relationship="rootViewController" id="Al3-vb-f8Q"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G40-rg-U4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-191" y="834"/>
+            <point key="canvasLocation" x="-338" y="100"/>
         </scene>
     </scenes>
     <resources>
-        <image name="messagesendIc" width="24" height="24"/>
         <image name="profileImg1" width="46" height="46"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Wgl-oI-Tzd"/>
-    </inferredMetricsTieBreakers>
 </document>
