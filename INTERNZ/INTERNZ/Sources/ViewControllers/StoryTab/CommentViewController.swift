@@ -9,22 +9,23 @@
 import UIKit
 
 class CommentViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "댓글"
+        
+        let button1 = UIBarButtonItem(image: UIImage(named: "closeIc"), style: .plain, target: self, action: #selector(goBack)) // action:#selector(Class.MethodName) for swift 3
+        self.navigationItem.leftBarButtonItem  = button1
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func goBack(){
+        print("tap close btn")
+        self.dismiss(animated: true, completion: nil)
     }
-    */
-
+    
+    
+    
+    
 }

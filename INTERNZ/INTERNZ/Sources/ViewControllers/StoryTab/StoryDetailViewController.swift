@@ -72,20 +72,15 @@ class StoryDetailViewController: UIViewController {
         
         print("tab comment btn")
         
-        //        CommentViewController
-        
-//        let dvc = storyboard?.instantiateViewController(identifier: "CommentViewController") as! CommentViewController
+     
         
         let dvc = storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
         
-        dvc.modalPresentationStyle = .fullScreen
-//
-        self.present(dvc, animated: true, completion: nil)
-//
-//        navigationController?.pushViewController(dvc, animated: true)
+        let navigationController = UINavigationController(rootViewController: dvc)
+        
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true, completion: nil)
         
     }
-    
-    
     
 }
