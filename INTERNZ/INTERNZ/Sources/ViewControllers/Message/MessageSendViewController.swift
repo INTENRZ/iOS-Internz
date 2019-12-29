@@ -19,28 +19,13 @@ class MessageSendViewController: UIViewController {
         
         self.navigationItem.setHidesBackButton(true, animated: true)
         
+        let closeButton = UIBarButtonItem(image: UIImage(named: "closeIc"), style: .plain, target: self, action: #selector(goBack))
+        closeButton.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem = closeButton
         
-        
-//        var addItem: UIBarButtonItem{
-//               let addImage = UIImage(named: "closeIc")
-//               let addButton = UIButton(type: UIButton.ButtonType.custom)
-//               addButton.setBackgroundImage(addImage, for: UIControl.State())
-//               addButton.frame = CGRect(x: 0, y: 0, width: (addImage?.size.width)!, height: (addImage?.size.height)!)
-//               let addItem = UIBarButtonItem(customView: addButton)
-//               return addItem
-//           }
-
-//        var contactsItem: UIBarButtonItem {
-//               let contactsImage = UIImage(named: "closeIc")
-//               let contactsButton = UIButton(type: UIButton.ButtonType.custom)
-//               contactsButton.setBackgroundImage(contactsImage, for: UIControl.State())
-//               contactsButton.frame = CGRect(x: 0, y: 0, width: (contactsImage?.size.width)!, height: (contactsImage?.size.height)!)
-//               let contactsItem = UIBarButtonItem(customView: contactsButton)
-//               return contactsItem
-//        }
-        
-//        navigationItem.leftBarButtonItems = [contactsItem]
-//        navigationItem.rightBarButtonItems = [addItem]
+        let sendButton = UIBarButtonItem(title: "전송", style: .plain, target: self, action: #selector(send))
+        sendButton.tintColor = UIColor.black
+        self.navigationItem.rightBarButtonItem = sendButton
 
         
         let textView = UITextView()
@@ -62,6 +47,14 @@ class MessageSendViewController: UIViewController {
 
         textViewDidChange(textView)
 
+    }
+    
+    @objc func goBack(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func send(){
+        print("tab send")
     }
 }
 
