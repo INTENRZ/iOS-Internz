@@ -24,6 +24,8 @@
 		B63DBAC923B275FE00EEE1C2 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */; };
 		B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBACD23B2779A00EEE1C2 /* Story.swift */; };
 		B66EBE1623B82305009ACA31 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1523B82305009ACA31 /* CommentViewController.swift */; };
+		B66EBE1823B8A2AD009ACA31 /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1723B8A2AD009ACA31 /* DateTableViewCell.swift */; };
+		B66EBE1A23B8A478009ACA31 /* DateStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1923B8A478009ACA31 /* DateStruct.swift */; };
 		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
 		B6AAF85823B668C3009571DE /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85723B668C3009571DE /* UIButtonExtensions.swift */; };
 		B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */; };
@@ -83,6 +85,8 @@
 		B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
 		B63DBACD23B2779A00EEE1C2 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		B66EBE1523B82305009ACA31 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		B66EBE1723B8A2AD009ACA31 /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
+		B66EBE1923B8A478009ACA31 /* DateStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStruct.swift; sourceTree = "<group>"; };
 		B67CBF9523B1740B001C78B2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		B6AAF85723B668C3009571DE /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 				7FF374BC23B69EC5004E4907 /* ProfileStory.swift */,
 				7F0E5C8D23B7B95200F12492 /* Follow.swift */,
 				7F0E5C9623B80EB500F12492 /* MessageUser.swift */,
+				B66EBE1923B8A478009ACA31 /* DateStruct.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				B6D9C97523B12ED400348A7B /* AnnouncementViewController.swift */,
 				B6D9C98723B1575500348A7B /* CalendarViewController.swift */,
 				B6D1F99323B295F300C8BA31 /* AnnouncementCell.swift */,
+				B66EBE1723B8A2AD009ACA31 /* DateTableViewCell.swift */,
 			);
 			path = AnnouncementTab;
 			sourceTree = "<group>";
@@ -498,9 +504,11 @@
 				7F0E5C8E23B7B95200F12492 /* Follow.swift in Sources */,
 				7F0E5C8A23B7A68500F12492 /* FollowerViewController.swift in Sources */,
 				B6D9C95423B1169100348A7B /* SceneDelegate.swift in Sources */,
+				B66EBE1A23B8A478009ACA31 /* DateStruct.swift in Sources */,
 				B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */,
 				B6D1F99423B295F300C8BA31 /* AnnouncementCell.swift in Sources */,
 				B6D1F99A23B341BD00C8BA31 /* StoryDetailViewController.swift in Sources */,
+				B66EBE1823B8A2AD009ACA31 /* DateTableViewCell.swift in Sources */,
 				B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */,
 				B6AAF85823B668C3009571DE /* UIButtonExtensions.swift in Sources */,
 				7F0E5C9723B80EB500F12492 /* MessageUser.swift in Sources */,

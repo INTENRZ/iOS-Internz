@@ -15,6 +15,10 @@ class CalendarViewController: UIViewController {
     
     var dates: [Date] = []
     
+    @IBOutlet weak var calendarTableView: UITableView!
+    
+    var dateStructs: [DateStruct] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +38,14 @@ class CalendarViewController: UIViewController {
         let sampledate = formatter.date(from: "2019-12-22")
         
         dates = [xmas!, sampledate!]
+        
+        
+        // setting calendar table view
+        
+        setCalendarData()
+        
+        calendarTableView.delegate = self
+        calendarTableView.dataSource = self
         
     }
     
@@ -61,4 +73,41 @@ extension CalendarViewController: FSCalendarDataSource{
         
         return 0
     }
+}
+
+extension CalendarViewController {
+    func setCalendarData(){
+        let dateSample1 = DateStruct(companyImgName: "corpImg1", companyName: "회사이름11", jobName: "프론트", date: "d-13")
+        let dateSample2 = DateStruct(companyImgName: "corpImg1", companyName: "회사이름22", jobName: "프론트", date: "d-13")
+        let dateSample3 = DateStruct(companyImgName: "corpImg1", companyName: "회사이름33", jobName: "프론트", date: "d-13")
+        let dateSample4 = DateStruct(companyImgName: "corpImg1", companyName: "회사이름44", jobName: "프론트", date: "d-13")
+        
+        dateStructs = [dateSample1, dateSample2, dateSample3, dateSample4]
+    }
+}
+
+extension CalendarViewController: UITableViewDelegate {
+    
+}
+
+extension CalendarViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dateStructs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = calendarTableView.dequeueReusableCell(withIdentifier: "dateCell") as! DateTableViewCell
+        
+        let mydate = dateStructs[indexPath.row]
+        
+        cell.companyLabel.text = mydate.companyName
+        cell.jobLabel.text = mydate.jobName
+        cell.dateLabel.text = mydate.date
+        cell.companyImage.image = mydate.companyImg
+        
+        return cell
+        
+    }
+    
+    
 }
