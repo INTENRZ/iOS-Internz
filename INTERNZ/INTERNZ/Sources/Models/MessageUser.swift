@@ -7,3 +7,19 @@
 //
 
 import Foundation
+import UIKit
+
+struct MessageUser {
+    
+    var name: String
+    var content: String
+    var userMessageImg: UIImage?
+    
+    init(name:String, content:String, userMessageImgName:String){
+        
+        self.name = name
+        self.content = content
+        self.userMessageImg = UIImage(named:userMessageImgName)
+    }
+    
+}

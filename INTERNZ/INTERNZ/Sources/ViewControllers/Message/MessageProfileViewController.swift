@@ -8,23 +8,71 @@
 
 import UIKit
 
-class MessageProfileViewController: UIViewController {
-
+class MessageProfileViewController:UIViewController, UITableViewDelegate{
+    
+    
+    @IBOutlet weak var MessageProfileListTable: UITableView!
+    
+    var MessageProfileSampleList:[MessageUser] = []
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setMessageProfileSampleData()
+        
+        MessageProfileListTable.reloadData()
+        
+        MessageProfileListTable.dataSource = self
+        MessageProfileListTable.delegate = self
+        
+        
     }
     
+}
 
-    /*
-    // MARK: - Navigation
+extension MessageProfileViewController{
+    
+    func setMessageProfileSampleData(){
+        
+        
+        let message1 = MessageUser(name: "1박정민", content: "최근 주고 받은 쪽지 내용~~~",userMessageImgName: "profileImg1")
+        
+        let message2 = MessageUser(name: "1박정민", content: "최근 주고 받은 쪽지 내용~~~",userMessageImgName: "profileImg1")
+        
+        let message3 = MessageUser(name: "1박정민", content: "최근 주고 받은 쪽지 내용~~~",userMessageImgName: "profileImg1")
+        
+        let message4 = MessageUser(name: "1박정민", content: "최근 주고 받은 쪽지 내용~~~",userMessageImgName: "profileImg1")
+        
+        let message5 = MessageUser(name: "1박정민", content: "최근 주고 받은 쪽지 내용~~~",userMessageImgName: "profileImg1")
+        
+        let message6 = MessageUser(name: "1박정민", content: "최근 주고 받은 쪽지 내용~~~",userMessageImgName: "profileImg1")
+        
+        let message7 = MessageUser(name: "1박정민", content: "최근 주고 받은 쪽지 내용~~~",userMessageImgName: "profileImg1")
+        
+        
+        MessageProfileSampleList = [message1, message2, message3, message4, message5, message6, message7]
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+}
 
+extension MessageProfileViewController: UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return MessageProfileSampleList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = MessageProfileListTable.dequeueReusableCell(withIdentifier: "MessageProfileTableViewCell")as! MessageProfileTableViewCell
+        
+        let MessageUser = MessageProfileSampleList[indexPath.row]
+        
+        cell.UserNameLabel.text = MessageUser.name
+        cell.UserTextLabel.text = MessageUser.content
+        cell.UserImgView.image = MessageUser.userMessageImg
+        
+        return cell
+    }
 }
