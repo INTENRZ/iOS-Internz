@@ -243,6 +243,9 @@
                                     <constraint firstAttribute="height" constant="24" id="eeo-zn-WqW"/>
                                 </constraints>
                                 <state key="normal" image="commentIc"/>
+                                <connections>
+                                    <action selector="goToComment:" destination="osh-G3-O2E" eventType="touchUpInside" id="JvH-Fm-NRx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UO0-6Y-SyX">
                                 <rect key="frame" x="47" y="620" width="42" height="20"/>
@@ -292,6 +295,17 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuU-lQ-5sd">
+                                <rect key="frame" x="335" y="50" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="Ub4-4E-jsO"/>
+                                    <constraint firstAttribute="height" constant="24" id="y0s-yr-bcV"/>
+                                </constraints>
+                                <state key="normal" image="scrapIc"/>
+                                <connections>
+                                    <action selector="doScrap:" destination="osh-G3-O2E" eventType="touchUpInside" id="xdn-Hb-Me6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -323,9 +337,11 @@
                             <constraint firstItem="fxv-2I-mnY" firstAttribute="leading" secondItem="Xfw-y4-5tn" secondAttribute="leading" id="cdZ-Y4-bvw"/>
                             <constraint firstItem="2dv-dB-qbM" firstAttribute="leading" secondItem="Xfw-y4-5tn" secondAttribute="leading" constant="16" id="ht3-8z-xPf"/>
                             <constraint firstItem="Nqb-yY-tZ3" firstAttribute="leading" secondItem="Xfw-y4-5tn" secondAttribute="leading" id="k0A-ey-Psv"/>
+                            <constraint firstItem="Xfw-y4-5tn" firstAttribute="trailing" secondItem="EuU-lQ-5sd" secondAttribute="trailing" constant="16" id="lE2-UY-rKv"/>
                             <constraint firstItem="2Oa-Bc-M1p" firstAttribute="top" secondItem="fxv-2I-mnY" secondAttribute="bottom" constant="24" id="lXR-dg-1IQ"/>
                             <constraint firstItem="UO0-6Y-SyX" firstAttribute="leading" secondItem="Crw-7h-Dfz" secondAttribute="trailing" constant="7" id="m5Z-zj-dEb"/>
                             <constraint firstItem="bmZ-12-7sp" firstAttribute="leading" secondItem="Xfw-y4-5tn" secondAttribute="leading" constant="16" id="nqa-Zz-oUP"/>
+                            <constraint firstItem="EuU-lQ-5sd" firstAttribute="top" secondItem="Xfw-y4-5tn" secondAttribute="top" constant="6" id="pKF-8V-bAf"/>
                             <constraint firstItem="fxv-2I-mnY" firstAttribute="top" secondItem="Nqb-yY-tZ3" secondAttribute="bottom" constant="38" id="u2M-tX-Mhj"/>
                             <constraint firstItem="fxv-2I-mnY" firstAttribute="trailing" secondItem="Xfw-y4-5tn" secondAttribute="trailing" id="vBy-cQ-tQN"/>
                             <constraint firstItem="vNC-PG-v8H" firstAttribute="leading" secondItem="Xfw-y4-5tn" secondAttribute="leading" constant="16" id="wiT-Ox-M6s"/>
@@ -335,6 +351,7 @@
                     <connections>
                         <outlet property="backButton" destination="vNC-PG-v8H" id="kcU-aq-zff"/>
                         <outlet property="followButton" destination="2Oa-Bc-M1p" id="ZdB-9M-b1E"/>
+                        <outlet property="scrapButton" destination="EuU-lQ-5sd" id="yaJ-nb-8kA"/>
                         <outlet property="storyTitleLabel" destination="VCe-sV-O9h" id="ium-io-D30"/>
                         <outlet property="writerLabel" destination="MBf-Pg-Z2F" id="lUe-vl-Phd"/>
                     </connections>
@@ -343,12 +360,38 @@
             </objects>
             <point key="canvasLocation" x="1880.8" y="-13.300492610837439"/>
         </scene>
+        <!--Comment View Controller-->
+        <scene sceneID="AyE-tq-gAF">
+            <objects>
+                <viewController storyboardIdentifier="CommentViewController" id="1Tx-9a-DT7" customClass="CommentViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nvG-bl-UB4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPy-SQ-ywL">
+                                <rect key="frame" x="135" y="198" width="73" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Uy7-Qf-Tqn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NfW-xm-zAC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nCc-MH-cdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2706" y="-13"/>
+        </scene>
     </scenes>
     <resources>
         <image name="22" width="147.33332824707031" height="184.33332824707031"/>
         <image name="backWhIc" width="24" height="24"/>
         <image name="commentIc" width="24" height="24"/>
         <image name="profileImg1" width="46" height="46"/>
+        <image name="scrapIc" width="24" height="24"/>
         <image name="searchIcon" width="24" height="24"/>
     </resources>
 </document>
