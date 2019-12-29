@@ -102,7 +102,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Calendar" image="calendarIc" id="uN7-qK-nPg">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="wAL-9E-c20" kind="show" id="H9C-4O-lA0"/>
+                                <action selector="gotoCalendar:" destination="3DW-Zo-DkL" id="HET-FL-92v"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -118,13 +118,13 @@
         <!--Data Source-->
         <scene sceneID="b4W-4P-C2O">
             <objects>
-                <viewController id="wAL-9E-c20" customClass="CalendarViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendarViewController" id="wAL-9E-c20" customClass="CalendarViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CYN-hC-aEL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4r-Ab-qKD" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="88" width="375" height="399"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="399"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="3Ew-JP-o9B"/>
@@ -160,14 +160,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fd2-Wu-ns2"/>
                     </view>
-                    <navigationItem key="navigationItem" title="공고" id="mnb-8W-WkB"/>
+                    <navigationItem key="navigationItem" title="공고" id="mnb-8W-WkB">
+                        <barButtonItem key="rightBarButtonItem" image="tabNoticeIc" id="IOM-TH-Ze5">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="gotoBack:" destination="wAL-9E-c20" id="au6-fZ-YUC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="calendar" destination="x4r-Ab-qKD" id="qQd-2K-8We"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXQ-6t-rdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904.79999999999995" y="791.37931034482767"/>
+            <point key="canvasLocation" x="1663" y="50"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GEE-6r-c4T">
@@ -191,5 +198,6 @@
     <resources>
         <image name="calendarIc" width="24" height="24"/>
         <image name="filterBtn" width="46" height="21"/>
+        <image name="tabNoticeIc" width="24" height="24"/>
     </resources>
 </document>

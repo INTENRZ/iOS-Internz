@@ -40,12 +40,23 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let backItem = UIBarButtonItem()
-        backItem.title = ""
-        backItem.tintColor = UIColor.black
-        navigationItem.backBarButtonItem = backItem
+    @IBAction func gotoCalendar(_ sender: UIBarButtonItem) {
+        
+        print("go to calendar")
+        
+        let dvc = storyboard?.instantiateViewController(identifier: "CalendarViewController") as! CalendarViewController
+        
+        navigationController?.pushViewController(dvc, animated: true)
+        
     }
+    
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let backItem = UIBarButtonItem()
+//        backItem.title = ""
+//        backItem.tintColor = UIColor.black
+//        navigationItem.backBarButtonItem = backItem
+//    }
     
     
     // 정렬 버튼 눌렀을 때 -> picker 생성
@@ -58,8 +69,6 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         self.picker.isHidden = false
         
         self.picker.frame = CGRect(x: 0, y: view.frame.height - 260, width: view.frame.width, height: 260)
-        
-//        let picker = UIView(frame: CGRect(x: 0, y: view.frame.height - 260, width: view.frame.width, height: 260))
         
         view.addSubview(self.picker)
         

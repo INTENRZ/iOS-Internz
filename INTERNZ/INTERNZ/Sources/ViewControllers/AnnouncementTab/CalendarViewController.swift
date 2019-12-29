@@ -15,13 +15,10 @@ class CalendarViewController: UIViewController {
     
     var dates: [Date] = []
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        navigationItem.backBarButtonItem = UIBarButtonItem(
-//        title: "a", style: .plain, target: nil, action: nil)
-        
+        self.navigationItem.setHidesBackButton(true, animated:true);
         
         // customizing calendar
         calendar.appearance.weekdayTextColor = UIColor.black
@@ -36,31 +33,31 @@ class CalendarViewController: UIViewController {
         
         let sampledate = formatter.date(from: "2019-12-22")
         
-//        calendar.select(xmas)
-//        calendar.select(sampledate)
-        
         dates = [xmas!, sampledate!]
         
-        
-        
     }
+    
+    
+    @IBAction func gotoBack(_ sender: Any) {
+        
+        print("go to back")
+        
+         let dvc = storyboard?.instantiateViewController(identifier: "Announcement") as! AnnouncementViewController
+               
+        navigationController?.pushViewController(dvc, animated: true)
+               
+    }
+    
+    
+    
 }
 
 extension CalendarViewController: FSCalendarDataSource{
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        
-//        let formatter2 = DateFormatter()
-//        formatter2.locale = Locale(identifier: "ko_KR")
-//        formatter2.dateFormat = "yyyy-MM-dd"
-//
-//        let dateString = formatter2.string(from: date)
-        
+
         if self.dates.contains(date){
             return 1
         }
-        
-        
-        
         
         return 0
     }
