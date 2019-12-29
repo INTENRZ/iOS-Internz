@@ -26,6 +26,8 @@ class Signin2ViewController: UIViewController {
         completeButton.backgroundColor = UIColor.whiteFour
         completeButton.layer.cornerRadius = 5
         
+        self.navigationItem.title = "회원가입"
+        
         
     }
     

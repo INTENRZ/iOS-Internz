@@ -42,6 +42,8 @@ class SigninViewController: UIViewController {
         
         emailTextField.delegate = self
         
+        self.navigationItem.setHidesBackButton(true, animated:true);
+        
     }
     
     @IBAction func gotoNextSignin(_ sender: UIButton) {
