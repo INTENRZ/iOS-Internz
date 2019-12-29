@@ -26,7 +26,14 @@ class MessageListViewController: UIViewController, UITableViewDelegate {
         MessageListTable.dataSource = self
         MessageListTable.delegate = self
     }
-
+    
+    
+    @IBAction func backBtn(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
 
 extension MessageListViewController{
