@@ -14,6 +14,9 @@
 		7F0E5C9523B80E1300F12492 /* MessageProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C9423B80E1300F12492 /* MessageProfileViewController.swift */; };
 		7F0E5C9723B80EB500F12492 /* MessageUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C9623B80EB500F12492 /* MessageUser.swift */; };
 		7F0E5C9923B811CC00F12492 /* MessageProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C9823B811CC00F12492 /* MessageProfileTableViewCell.swift */; };
+		7F0E5C9B23B82ECF00F12492 /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C9A23B82ECF00F12492 /* MessageListViewController.swift */; };
+		7F0E5C9D23B82F2600F12492 /* MessageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C9C23B82F2600F12492 /* MessageListTableViewCell.swift */; };
+		7F0E5C9F23B8A43600F12492 /* MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C9E23B8A43600F12492 /* MessageList.swift */; };
 		7F37E0F823B33D6600C80F1A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F37E0F723B33D6600C80F1A /* Login.storyboard */; };
 		7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */; };
 		7FF374B423B5EBEB004E4907 /* TimelineListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */; };
@@ -72,6 +75,9 @@
 		7F0E5C9423B80E1300F12492 /* MessageProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageProfileViewController.swift; sourceTree = "<group>"; };
 		7F0E5C9623B80EB500F12492 /* MessageUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageUser.swift; sourceTree = "<group>"; };
 		7F0E5C9823B811CC00F12492 /* MessageProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageProfileTableViewCell.swift; sourceTree = "<group>"; };
+		7F0E5C9A23B82ECF00F12492 /* MessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
+		7F0E5C9C23B82F2600F12492 /* MessageListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListTableViewCell.swift; sourceTree = "<group>"; };
+		7F0E5C9E23B8A43600F12492 /* MessageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageList.swift; sourceTree = "<group>"; };
 		7F37E0F723B33D6600C80F1A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineListViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +145,8 @@
 			children = (
 				7F0E5C9423B80E1300F12492 /* MessageProfileViewController.swift */,
 				7F0E5C9823B811CC00F12492 /* MessageProfileTableViewCell.swift */,
+				7F0E5C9A23B82ECF00F12492 /* MessageListViewController.swift */,
+				7F0E5C9C23B82F2600F12492 /* MessageListTableViewCell.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -161,6 +169,7 @@
 				7FF374BC23B69EC5004E4907 /* ProfileStory.swift */,
 				7F0E5C8D23B7B95200F12492 /* Follow.swift */,
 				7F0E5C9623B80EB500F12492 /* MessageUser.swift */,
+				7F0E5C9E23B8A43600F12492 /* MessageList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -508,9 +517,12 @@
 				7F0E5C9523B80E1300F12492 /* MessageProfileViewController.swift in Sources */,
 				7F0E5C9023B7B98C00F12492 /* FollowTableViewCell.swift in Sources */,
 				B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */,
+				7F0E5C9B23B82ECF00F12492 /* MessageListViewController.swift in Sources */,
+				7F0E5C9F23B8A43600F12492 /* MessageList.swift in Sources */,
 				7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */,
 				B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */,
 				B6DFC57123B65135002EE94A /* SettingFavorViewController.swift in Sources */,
+				7F0E5C9D23B82F2600F12492 /* MessageListTableViewCell.swift in Sources */,
 				7FF374B723B608F3004E4907 /* TimelineStory.swift in Sources */,
 				B6D9C97423B12D7A00348A7B /* HomeViewController.swift in Sources */,
 				7FF374B923B60926004E4907 /* TimelineStoryTableViewCell.swift in Sources */,
