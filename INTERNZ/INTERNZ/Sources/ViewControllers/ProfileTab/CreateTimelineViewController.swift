@@ -10,10 +10,10 @@ import UIKit
 
 class CreateTimelineViewController: UIViewController {
     
-    //    var datePicker: UIDatePicker!
-//    @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBOutlet weak var startSelectButton: UIButton!
+    
+    @IBOutlet weak var endSelectButton: UIButton!
     
     var isClickedDatePicker:Bool = false
     var isClickedSortBtn: Bool = false
@@ -23,12 +23,31 @@ class CreateTimelineViewController: UIViewController {
     
     var datePicker = UIDatePicker()
     
+    @IBOutlet weak var InternButton: UIButton!
+    @IBOutlet weak var activeButton: UIButton!
+    @IBOutlet weak var contestButton: UIButton!
+    @IBOutlet weak var groupButton: UIButton!
+    @IBOutlet weak var licenseButton: UIButton!
+    @IBOutlet weak var guitarButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         startSelectButton.setBorderGray()
+        endSelectButton.setBorderGray()
         
+        setCategoryButton()
+        
+    }
+    
+    func setCategoryButton(){
+        self.InternButton.setCategoryGray()
+        self.activeButton.setCategoryGray()
+        self.contestButton.setCategoryGray()
+        self.groupButton.setCategoryGray()
+        self.licenseButton.setCategoryGray()
+        self.guitarButton.setCategoryGray()
     }
     
     
@@ -36,6 +55,9 @@ class CreateTimelineViewController: UIViewController {
         createPicker()
     }
     
+    @IBAction func endSelect(_ sender: UIButton) {
+        createPicker()
+    }
     
     func createPicker(){
         self.picker.isHidden = false
@@ -53,6 +75,7 @@ class CreateTimelineViewController: UIViewController {
         self.picker.addSubview(barAccessory)
         
         self.datePicker.frame = CGRect(x: 0, y: barAccessory.frame.height, width: view.frame.width, height: picker.frame.height - barAccessory.frame.height)
+        self.datePicker.datePickerMode = .date
         
         self.picker.addSubview(datePicker)
         
