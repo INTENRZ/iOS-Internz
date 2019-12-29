@@ -27,8 +27,17 @@ class Signin2ViewController: UIViewController {
         completeButton.layer.cornerRadius = 5
         
         self.navigationItem.title = "회원가입"
+        self.navigationItem.setHidesBackButton(true, animated:true);
         
+        let button1 = UIBarButtonItem(image: UIImage(named: "left1Ic"), style: .plain, target: self, action: #selector(goBack))
+        button1.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem  = button1
         
+    }
+    
+    @objc func goBack(){
+        print("tap back")
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

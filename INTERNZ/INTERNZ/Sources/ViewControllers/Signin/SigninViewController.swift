@@ -44,6 +44,14 @@ class SigninViewController: UIViewController {
         
         self.navigationItem.setHidesBackButton(true, animated:true);
         
+        let button1 = UIBarButtonItem(image: UIImage(named: "left1Ic"), style: .plain, target: self, action: #selector(goBack))
+        button1.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem  = button1
+        
+    }
+    
+    @objc func goBack(){
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func gotoNextSignin(_ sender: UIButton) {
