@@ -38,4 +38,4 @@
 
 ### 👶 Contributor
 - [최은지](https://github.com/ChoiEunji0114)
-- [이주연](https://github.com/juyeonblue)
+- [박주연](https://github.com/juyeonblue)
