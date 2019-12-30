@@ -36,6 +36,8 @@
 		B66EBE2223B9C1F2009ACA31 /* SigninService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2123B9C1F2009ACA31 /* SigninService.swift */; };
 		B66EBE2423B9C203009ACA31 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2323B9C203009ACA31 /* LoginService.swift */; };
 		B66EBE2723B9C243009ACA31 /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2623B9C243009ACA31 /* ResponseString.swift */; };
+		B66EBE2A23BA46EB009ACA31 /* jobResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2923BA46EB009ACA31 /* jobResponseString.swift */; };
+		B66EBE2C23BA47D7009ACA31 /* JobListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2B23BA47D7009ACA31 /* JobListService.swift */; };
 		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
 		B6AAF85823B668C3009571DE /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85723B668C3009571DE /* UIButton+Extensions.swift */; };
 		B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */; };
@@ -107,6 +109,8 @@
 		B66EBE2123B9C1F2009ACA31 /* SigninService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninService.swift; sourceTree = "<group>"; };
 		B66EBE2323B9C203009ACA31 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		B66EBE2623B9C243009ACA31 /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
+		B66EBE2923BA46EB009ACA31 /* jobResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobResponseString.swift; sourceTree = "<group>"; };
+		B66EBE2B23BA47D7009ACA31 /* JobListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListService.swift; sourceTree = "<group>"; };
 		B67CBF9523B1740B001C78B2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		B6AAF85723B668C3009571DE /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				B66EBE2623B9C243009ACA31 /* ResponseString.swift */,
+				B66EBE2923BA46EB009ACA31 /* jobResponseString.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				B67CBF9523B1740B001C78B2 /* APIConstants.swift */,
 				B66EBE2123B9C1F2009ACA31 /* SigninService.swift */,
 				B66EBE2323B9C203009ACA31 /* LoginService.swift */,
+				B66EBE2B23BA47D7009ACA31 /* JobListService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -533,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66EBE1623B82305009ACA31 /* CommentViewController.swift in Sources */,
+				B66EBE2C23BA47D7009ACA31 /* JobListService.swift in Sources */,
 				B6D9C97E23B1347600348A7B /* TabbarViewController.swift in Sources */,
 				B6AAF86023B69DA3009571DE /* Profile.swift in Sources */,
 				7FF374BB23B69E47004E4907 /* ProfileTableViewCell.swift in Sources */,
@@ -585,6 +592,7 @@
 				B6AAF85E23B69CE4009571DE /* ProfileBannerCell.swift in Sources */,
 				B6DFC56C23B607A9002EE94A /* Signin2ViewController.swift in Sources */,
 				B63DBAC923B275FE00EEE1C2 /* StoryCell.swift in Sources */,
+				B66EBE2A23BA46EB009ACA31 /* jobResponseString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

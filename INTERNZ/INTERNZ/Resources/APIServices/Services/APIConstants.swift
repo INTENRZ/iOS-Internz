@@ -21,7 +21,11 @@ struct APIConstants {
     static let loginURL = BaseURL + "/user/signin" // 로그인
     
     
-    // 홈 
+    // 홈
+    
+    
+    // 공고
+    static let jobURL = BaseURL + "/job"
     
     
     

@@ -218,7 +218,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dv-dB-qbM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dv-dB-qbM">
                                 <rect key="frame" x="16" y="304" width="343" height="307"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="GBX-MC-PQQ"/>
@@ -358,6 +358,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="vNC-PG-v8H" id="kcU-aq-zff"/>
+                        <outlet property="detailLabel" destination="2dv-dB-qbM" id="vnZ-tf-akh"/>
                         <outlet property="followButton" destination="2Oa-Bc-M1p" id="ZdB-9M-b1E"/>
                         <outlet property="scrapButton" destination="EuU-lQ-5sd" id="yaJ-nb-8kA"/>
                         <outlet property="storyTitleLabel" destination="VCe-sV-O9h" id="ium-io-D30"/>

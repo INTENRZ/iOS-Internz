@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     
@@ -17,6 +18,9 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var sortButton: UIButton!
     
     var announcementList:[Announcement] = [] // 공고 리스트를 전역으로 선언
+    
+    var jobDataSet = [jobResponseString.JobDataClass]()
+//    let jobDataManager = JobService.sharedJob
     
     var picker = UIView()
     
@@ -37,6 +41,8 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         announcementTable.dataSource = self
         
         self.sortButton.titleLabel?.text = selectString
+        
+        downloadJobData()
         
     }
     
@@ -95,7 +101,44 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         picker.addSubview(sortPicker)
         
+        downloadJobData()
         
+//        JobListService.sharedJob.getJobList {
+//
+//            response in
+//            switch response {
+//            case .success(let data):
+//                print("@@@@@@ success @@@@@@@@")
+//                self.jobDataSet = data
+//                self.announcementTable.reloadData()
+//                print(self.jobDataSet)
+//
+//            case .failure :
+//                print("error")
+//            }
+//
+//        }
+        
+    }
+    
+    func downloadJobData(){
+        
+        JobListService.sharedJob.getJobList {
+            
+            response in
+            switch response {
+            case .success(let data):
+                print("@@@@@@ success @@@@@@@@")
+                self.jobDataSet = data
+                self.announcementTable.reloadData()
+                print(self.jobDataSet)
+                
+            case .failure :
+                print("error")
+            }
+            
+        }
+       
     }
     
     
@@ -154,18 +197,33 @@ extension AnnouncementViewController: UITableViewDelegate {
 
 extension AnnouncementViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return announcementList.count
+        return jobDataSet.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let announcement = announcementList[indexPath.row]
+//        let announcement = announcementList[indexPath.row]
+        
+       
         
         let cell = announcementTable.dequeueReusableCell(withIdentifier: "AnnouncementCell") as! AnnouncementCell
         
-        cell.companyLabel.text = announcement.companyName
-        cell.jobLabel.text = announcement.jobName
-        cell.dayLabel.text = announcement.day
-        cell.companyImageView.image = announcement.companyImage
+//        cell.companyLabel.text = announcement.companyName
+//        cell.jobLabel.text = announcement.jobName
+//        cell.dayLabel.text = announcement.day
+//        cell.companyImageView.image = announcement.companyImage
+        
+        cell.companyLabel.text = "\(jobDataSet[indexPath.row].company)"
+        cell.jobLabel.text = "\(jobDataSet[indexPath.row].team)"
+        cell.dayLabel.text = " D "+"\(jobDataSet[indexPath.row].d_day)"
+        
+//        cell.companyImageView = UIImage(named: "corpImg1")
+        
+        let urlStr = jobDataSet[indexPath.row].url
+        let url = URL(string: urlStr)
+        
+        cell.companyImageView.kf.setImage(with: url)
+
+        
         
         return cell
     }
