@@ -40,6 +40,10 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
     @IBOutlet weak var workselect2Label: UILabel!
     @IBOutlet weak var workselect3Label: UILabel!
     
+    
+    @IBOutlet weak var plusButton: UIButton!
+    
+    
     var ProfileStorySampleList:
         [ProfileStory] = []
     
@@ -72,13 +76,35 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
         
         print(ProfileStorySampleList.count)
         
+//        let navigationBar = navigationController?.navigationBar
+//        let navigationBarAppearence = UINavigationBarAppearance()
+//
+//        navigationBarAppearence.shadowColor = .clear
+//        navigationBar?.scrollEdgeAppearance = UINavigationBarAppearance()
+//
+//        navigationBar?.backgroundColor = .clear
+
+        let menuButton = UIBarButtonItem(image: UIImage(named: "closeIc"), style: .plain, target: self, action: #selector(CloseBtn))
+               menuButton.tintColor = UIColor.black
+               self.navigationItem.rightBarButtonItem = menuButton
+               
+           }
+           
+           
+           @objc func CloseBtn(){
+               self.dismiss(animated: true)
+           }
+
+    
+    @IBAction func followerCount(_ sender: UIButton) {
+        
+        let dvc = storyboard?.instantiateViewController(identifier: "FollowerViewController") as! FollowerViewController
+        
+        navigationController?.pushViewController(dvc, animated: true)
     }
     
     
-    
-    
-    
-    @IBAction func goFollowView(_ sender: UIButton) {
+    @IBAction func followingCount(_ sender: UILabel) {
         
         let dvc = storyboard?.instantiateViewController(identifier: "FollowerViewController") as! FollowerViewController
         
@@ -86,9 +112,35 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
         
     }
     
+    @IBAction func plusBtn(_ sender: UIButton) {
+        
+        let dvc = storyboard?.instantiateViewController(identifier: "CreateTimelineViewController") as! CreateTimelineViewController
+               
+               navigationController?.pushViewController(dvc, animated: true)
+
+    }
+    
+    @IBAction func messageBtn(_ sender: Any) {
+
+        let dvc = storyboard?.instantiateViewController(identifier: "ProfileViewController") as! ProfileViewController
+
+                      navigationController?.pushViewController(dvc, animated: true)
+
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue,sender: Any?){
+//    if segue.identifier == "toNavi" { // --- 1
+//        let MessageProfileViewController =
+//            segue.destination as! MessageProfileViewController// --- 2
+//        let MessageProfileViewController = MessageProfileViewController.MessageProfileSampleList
+//        as!MessageProfileViewController// --- 3
+//       // destinationTopViewController.text = "Hello Navi"
+//    }
+//    }
     
 }
 
+ 
 extension ProfileViewController{
     
     func setProfileStorySampleData(){
@@ -113,6 +165,8 @@ extension ProfileViewController{
 }
 
 extension ProfileViewController: UITableViewDataSource{
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return ProfileStorySampleList.count
@@ -147,8 +201,11 @@ extension ProfileViewController: UITableViewDataSource{
         
     }
     
+
+//    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+//    viewController.navigationController?.navigationBar
+//        .forLastBaselineLayout.backgroundColor = .red // TODO:
+//    }
     
 }
-
-
 

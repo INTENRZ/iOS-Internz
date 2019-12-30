@@ -18,6 +18,7 @@
 		7F0E5C9D23B82F2600F12492 /* MessageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C9C23B82F2600F12492 /* MessageListTableViewCell.swift */; };
 		7F0E5C9F23B8A43600F12492 /* MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C9E23B8A43600F12492 /* MessageList.swift */; };
 		7F0E5CA123B9001900F12492 /* MessageSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5CA023B9001900F12492 /* MessageSendViewController.swift */; };
+		7F0E5CA323BA367F00F12492 /* WritingStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5CA223BA367F00F12492 /* WritingStoryViewController.swift */; };
 		7F37E0F823B33D6600C80F1A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F37E0F723B33D6600C80F1A /* Login.storyboard */; };
 		7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */; };
 		7FF374B423B5EBEB004E4907 /* TimelineListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */; };
@@ -90,6 +91,7 @@
 		7F0E5C9C23B82F2600F12492 /* MessageListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListTableViewCell.swift; sourceTree = "<group>"; };
 		7F0E5C9E23B8A43600F12492 /* MessageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageList.swift; sourceTree = "<group>"; };
 		7F0E5CA023B9001900F12492 /* MessageSendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSendViewController.swift; sourceTree = "<group>"; };
+		7F0E5CA223BA367F00F12492 /* WritingStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingStoryViewController.swift; sourceTree = "<group>"; };
 		7F37E0F723B33D6600C80F1A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineListViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				7F0E5C8923B7A68500F12492 /* FollowerViewController.swift */,
 				7F0E5C8F23B7B98C00F12492 /* FollowTableViewCell.swift */,
 				B66EBE1F23B90224009ACA31 /* CreateTimelineViewController.swift */,
+				7F0E5CA223BA367F00F12492 /* WritingStoryViewController.swift */,
 			);
 			path = ProfileTab;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				7FF374BB23B69E47004E4907 /* ProfileTableViewCell.swift in Sources */,
 				B6D9C97823B12F2400348A7B /* ProfileViewController.swift in Sources */,
 				7FF374BD23B69EC5004E4907 /* ProfileStory.swift in Sources */,
+				7F0E5CA323BA367F00F12492 /* WritingStoryViewController.swift in Sources */,
 				B6D9C98423B13E0600348A7B /* NetworkResult.swift in Sources */,
 				B6D1F99623B297DB00C8BA31 /* Announcement.swift in Sources */,
 				7F0E5C9923B811CC00F12492 /* MessageProfileTableViewCell.swift in Sources */,
