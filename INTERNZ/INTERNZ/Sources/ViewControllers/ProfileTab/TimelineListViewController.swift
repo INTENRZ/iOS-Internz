@@ -10,7 +10,7 @@ import UIKit
 
 
 class TimelineListViewController: UIViewController, UITableViewDelegate {
-
+    
     @IBOutlet weak var TimelineListTable: UITableView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var topicLabel: UILabel!
@@ -30,7 +30,27 @@ class TimelineListViewController: UIViewController, UITableViewDelegate {
         
         TimelineListTable.dataSource = self
         TimelineListTable.delegate = self
+        
+//        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "left1Ic")
+//        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "left1Ic")
+//        
+//        self.navigationController?.navigationBar.backIndicatorImage?.withTintColor(UIColor.black)
+        
+        //        self.navigationItem.setHidesBackButton(true, animated:true);
+        
+        //        let button1 = UIBarButtonItem(image: UIImage(named: "left1Ic"), style: .plain, target: self, action: #selector(goBack))
+        //        button1.tintColor = UIColor.black
+        //        self.navigationItem.leftBarButtonItem  = button1
+        
+        let menuButton = UIBarButtonItem(image: UIImage(named: "menuIc"), style: .plain, target: self, action: #selector(goBack))
+        menuButton.tintColor = UIColor.black
+        self.navigationItem.rightBarButtonItem = menuButton
+        
+    }
     
+    
+    @objc func goBack(){
+        self.dismiss(animated: true)
     }
 }
 
@@ -74,7 +94,7 @@ extension TimelineListViewController: UITableViewDataSource{
         
         let cell = TimelineListTable.dequeueReusableCell(withIdentifier: "TimelineStoryTableViewCell")as! TimelineStoryTableViewCell
         
-         let TimelineStory = TimelinesStorySampleList[indexPath.row]
+        let TimelineStory = TimelinesStorySampleList[indexPath.row]
         
         cell.storyTitleLabel.text = TimelineStory.storyTitle
         cell.nameLabel.text = TimelineStory.name

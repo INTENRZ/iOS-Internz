@@ -15,11 +15,11 @@ extension UIView{
         self.clipsToBounds = true
     }
     
-//    func setBorderWidth(){
-//    self.layer.borderWidth = 100
-//        self.layer.borderColor = UIColor.marigold.cgColor
-//
-//    }
+    //    func setBorderWidth(){
+    //    self.layer.borderWidth = 100
+    //        self.layer.borderColor = UIColor.marigold.cgColor
+    //
+    //    }
 }
 
 
@@ -41,13 +41,13 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
     @IBOutlet weak var workselect3Label: UILabel!
     
     var ProfileStorySampleList:
-    [ProfileStory] = []
+        [ProfileStory] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //topbanner 네비게이션 바 색깔과 동일하게 지정
-//        topbannerUIView.backgroundColor = UIColor.marigold
+        //        topbannerUIView.backgroundColor = UIColor.marigold
         
         //자기소개 부분 라인 수 증가
         introduceLabel.lineBreakMode = .byWordWrapping
@@ -62,7 +62,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
         workselect3Label.setCornerRadius()
         
         setProfileStorySampleData()
-       
+        
         
         ProfileListTable.reloadData()
         
@@ -72,10 +72,20 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
         
         print(ProfileStorySampleList.count)
         
-        
-        
-      
     }
+    
+    
+    
+    
+    
+    @IBAction func goFollowView(_ sender: UIButton) {
+        
+        let dvc = storyboard?.instantiateViewController(identifier: "FollowerViewController") as! FollowerViewController
+        
+        navigationController?.pushViewController(dvc, animated: true)
+        
+    }
+    
     
 }
 
@@ -97,7 +107,7 @@ extension ProfileViewController{
         let story5 = ProfileStory(title: "5NAVER SNOW Jam Studio 기획/운영팀", name:"한한한", date:"20.01.01")
         
         ProfileStorySampleList = [story1, story2, story3, story4, story5]
-    
+        
     }
     
 }
@@ -115,17 +125,29 @@ extension ProfileViewController: UITableViewDataSource{
         let ProfileStory = ProfileStorySampleList[indexPath.row]
         
         cell.titleLabel.text = ProfileStory.profilestoryTitle
-
+        
         cell.categoryLabel.text = ProfileStory.category
-
+        
         cell.dateLabel.text = ProfileStory.date
         
-//        cell.titleLabel.text = ""
+        //        cell.titleLabel.text = ""
         
         return cell
         
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("tab row")
+        
+        let dvc = storyboard?.instantiateViewController(identifier: "TimelineListViewController") as! TimelineListViewController
+        
+        navigationController?.pushViewController(dvc, animated: true)
+        
+        
+    }
+    
+    
 }
 
 
