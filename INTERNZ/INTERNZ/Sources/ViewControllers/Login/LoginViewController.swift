@@ -56,28 +56,28 @@ class LoginViewController: UIViewController {
             switch data {
                 
             case .success(let data):
+                
                 let user_data = data as! LoginDataClass
-                //                print(user_data)
+//                print(user_data)
                 
                 UserDefaults.standard.set(user_data.token, forKey: "token")
                 UserDefaults.standard.set(user_data.isFirst, forKey: "isFirst")
                 
-                //                print("isFirst??")
-                //                print(UserDefaults.standard.string(forKey: "isFirst"))
+                var isFirstStr = UserDefaults.standard.value(forKey: "isFirst") as! String
+                print("isFirstStr??", isFirstStr)
                 
-                if(UserDefaults.standard.string(forKey: "isFirst") == "0"){
+                
+                if(isFirstStr == "0"){
                     print("처음 로그인")
-//                    self.goFirstLogin()
-                    self.goMain()
+                    self.goFirstLogin()
+//                    self.goMain()
                 } else {
                     print("이미 로그인 해봄")
                     self.goMain()
                 }
                 
             case .requestErr(let message) :
-                //                print(message)
-                //                print("적절하지 않은 로그인")
-                
+
                 let alert = UIAlertController(title: "Login Failed!", message: "이메일과 비밀번호를 다시 확인해 주세요", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
                 self.present(alert, animated: true)
