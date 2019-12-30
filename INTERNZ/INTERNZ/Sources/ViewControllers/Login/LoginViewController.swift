@@ -57,40 +57,30 @@ class LoginViewController: UIViewController {
                 
             case .success(let data):
                 let user_data = data as! LoginDataClass
-//                print(user_data)
+                //                print(user_data)
                 
                 UserDefaults.standard.set(user_data.token, forKey: "token")
                 UserDefaults.standard.set(user_data.isFirst, forKey: "isFirst")
                 
-                print("isFirst??")
-                print(UserDefaults.standard.string(forKey: "isFirst"))
+                //                print("isFirst??")
+                //                print(UserDefaults.standard.string(forKey: "isFirst"))
                 
                 if(UserDefaults.standard.string(forKey: "isFirst") == "0"){
                     print("처음 로그인")
-                    self.goFirstLogin()
+//                    self.goFirstLogin()
+                    self.goMain()
                 } else {
                     print("이미 로그인 해봄")
+                    self.goMain()
                 }
                 
-//                let firstLoginStoryBoard:UIStoryboard = UIStoryboard(name: "FirstLogin", bundle: nil)
-//
-//                let dvc = firstLoginStoryBoard.instantiateViewController(identifier: "FirstLogin") as! SettingFavorViewController
-//
-//                let navigationController = UINavigationController(rootViewController: dvc)
-//
-//                navigationController.modalPresentationStyle = .fullScreen
-//                self.present(navigationController, animated: true, completion: nil)
-                
-                
-                
             case .requestErr(let message) :
-//                print(message)
-//                print("적절하지 않은 로그인")
+                //                print(message)
+                //                print("적절하지 않은 로그인")
                 
-               let alert = UIAlertController(title: "Login Failed!", message: "이메일과 비밀번호를 다시 확인해 주세요", preferredStyle: .alert)
-               alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
-
-               self.present(alert, animated: true)
+                let alert = UIAlertController(title: "Login Failed!", message: "이메일과 비밀번호를 다시 확인해 주세요", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+                self.present(alert, animated: true)
                 
                 
                 break
@@ -117,17 +107,22 @@ class LoginViewController: UIViewController {
     }
     
     func goMain(){
+        let MainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
+        let dvc = MainStoryBoard.instantiateViewController(identifier: "Main") as! TabbarViewController
+        
+        dvc.modalPresentationStyle = .fullScreen
+        self.present(dvc, animated: true, completion: nil)
     }
     
     
     func goFirstLogin(){
         let firstLoginStoryBoard:UIStoryboard = UIStoryboard(name: "FirstLogin", bundle: nil)
-
+        
         let dvc = firstLoginStoryBoard.instantiateViewController(identifier: "FirstLogin") as! SettingFavorViewController
-
+        
         let navigationController = UINavigationController(rootViewController: dvc)
-
+        
         navigationController.modalPresentationStyle = .fullScreen
         self.present(navigationController, animated: true, completion: nil)
     }
@@ -157,7 +152,7 @@ extension LoginViewController: UITextFieldDelegate {
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-//        print("did change selection")
+        //        print("did change selection")
     }
 }
 
