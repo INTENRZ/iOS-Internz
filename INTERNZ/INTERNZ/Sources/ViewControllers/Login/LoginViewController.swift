@@ -21,6 +21,8 @@ class LoginViewController: UIViewController {
     
     // @IBOutlet weak var idTopConstraint: NSLayoutConstraint!
     
+    var isSuccessLogin :Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -48,15 +50,49 @@ class LoginViewController: UIViewController {
     
     @IBAction func doLogin(_ sender: UIButton) {
         
-        let firstLoginStoryBoard:UIStoryboard = UIStoryboard(name: "FirstLogin", bundle: nil)
+        guard let email = idTextField.text else { return }
+        guard let password = pwTextField.text else { return }
         
-        let dvc = firstLoginStoryBoard.instantiateViewController(identifier: "FirstLogin") as! SettingFavorViewController
+        LoginService.shared.login(email, password){
+            data in
+            switch data {
+                
+            case .success(let data):
+                let user_data = data as! LoginDataClass
+//                print(user_data)
+                
+                UserDefaults.standard.set(user_data.token, forKey: "token")
+                UserDefaults.standard.set(user_data.refreshToken, forKey: "refreshToken")
+                UserDefaults.standard.set(user_data.isFirst, forKey: "isFirst")
+                
+                let firstLoginStoryBoard:UIStoryboard = UIStoryboard(name: "FirstLogin", bundle: nil)
 
-        let navigationController = UINavigationController(rootViewController: dvc)
+                let dvc = firstLoginStoryBoard.instantiateViewController(identifier: "FirstLogin") as! SettingFavorViewController
 
-        navigationController.modalPresentationStyle = .fullScreen
-        present(navigationController, animated: true, completion: nil)
+                let navigationController = UINavigationController(rootViewController: dvc)
 
+                navigationController.modalPresentationStyle = .fullScreen
+                self.present(navigationController, animated: true, completion: nil)
+                
+                
+                
+            case .requestErr(let message) :
+                print(message)
+                break
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                print(".networkFail")
+                break
+                
+            }
+        }
+    
         
     }
     
