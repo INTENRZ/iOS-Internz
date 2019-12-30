@@ -26,6 +26,7 @@ struct jobResponseString: Codable {
         let url: String
         let ispast: Int
         let team: String
+        let logo: String
     }
 
 }
