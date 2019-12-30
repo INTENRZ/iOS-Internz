@@ -28,5 +28,9 @@ struct APIConstants {
     static let jobURL = BaseURL + "/job"
     
     
+    // 스토리
+    static let storyNewURL = BaseURL + "/story/new"
+    
+    
     
 }

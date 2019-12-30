@@ -19,6 +19,8 @@
 		7F0E5C9F23B8A43600F12492 /* MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5C9E23B8A43600F12492 /* MessageList.swift */; };
 		7F0E5CA123B9001900F12492 /* MessageSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5CA023B9001900F12492 /* MessageSendViewController.swift */; };
 		7F0E5CA323BA367F00F12492 /* WritingStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5CA223BA367F00F12492 /* WritingStoryViewController.swift */; };
+		7F0E5CA623BA734800F12492 /* StoryResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5CA523BA734800F12492 /* StoryResponseString.swift */; };
+		7F0E5CA823BA736000F12492 /* StoryListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5CA723BA736000F12492 /* StoryListService.swift */; };
 		7F37E0F823B33D6600C80F1A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F37E0F723B33D6600C80F1A /* Login.storyboard */; };
 		7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */; };
 		7FF374B423B5EBEB004E4907 /* TimelineListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */; };
@@ -92,6 +94,8 @@
 		7F0E5C9E23B8A43600F12492 /* MessageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageList.swift; sourceTree = "<group>"; };
 		7F0E5CA023B9001900F12492 /* MessageSendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSendViewController.swift; sourceTree = "<group>"; };
 		7F0E5CA223BA367F00F12492 /* WritingStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingStoryViewController.swift; sourceTree = "<group>"; };
+		7F0E5CA523BA734800F12492 /* StoryResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryResponseString.swift; sourceTree = "<group>"; };
+		7F0E5CA723BA736000F12492 /* StoryListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListService.swift; sourceTree = "<group>"; };
 		7F37E0F723B33D6600C80F1A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineListViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 			children = (
 				B66EBE2623B9C243009ACA31 /* ResponseString.swift */,
 				B66EBE2923BA46EB009ACA31 /* jobResponseString.swift */,
+				7F0E5CA523BA734800F12492 /* StoryResponseString.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				B66EBE2123B9C1F2009ACA31 /* SigninService.swift */,
 				B66EBE2323B9C203009ACA31 /* LoginService.swift */,
 				B66EBE2B23BA47D7009ACA31 /* JobListService.swift */,
+				7F0E5CA723BA736000F12492 /* StoryListService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -555,6 +561,7 @@
 				B6D9C98823B1575500348A7B /* CalendarViewController.swift in Sources */,
 				B6D1F99E23B3E5F100C8BA31 /* BannerCell.swift in Sources */,
 				B6D9C97623B12ED400348A7B /* AnnouncementViewController.swift in Sources */,
+				7F0E5CA623BA734800F12492 /* StoryResponseString.swift in Sources */,
 				7FF374B423B5EBEB004E4907 /* TimelineListViewController.swift in Sources */,
 				B6D1F99C23B355B100C8BA31 /* StoryTabViewController.swift in Sources */,
 				B6D9C95223B1169100348A7B /* AppDelegate.swift in Sources */,
@@ -591,6 +598,7 @@
 				7F0E5CA123B9001900F12492 /* MessageSendViewController.swift in Sources */,
 				B6AAF86423B6A927009571DE /* UIView+Extensions.swift in Sources */,
 				B6AAF86223B69FB2009571DE /* ProfileBanner.swift in Sources */,
+				7F0E5CA823BA736000F12492 /* StoryListService.swift in Sources */,
 				B66EBE1E23B8E974009ACA31 /* Comment.swift in Sources */,
 				B6D9C98123B13D7400348A7B /* UIColor+Additions.swift in Sources */,
 				B6AAF85E23B69CE4009571DE /* ProfileBannerCell.swift in Sources */,
