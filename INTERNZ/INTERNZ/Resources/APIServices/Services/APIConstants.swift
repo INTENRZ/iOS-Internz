@@ -10,11 +10,19 @@ import Foundation
 
 struct APIConstants {
     
-    static let BaseURL = ""
+    static let BaseURL = "http://34.97.246.7:3000"
     
     // 유저 정보
-    static let SigninURL = BaseURL +  "" // 회원가입
-    static let loginURL = BaseURL + "" // 로그인
+    static let Signup1URL = BaseURL +  "/user/signup1" // 회원가입1
+    static let Signup2URL = BaseURL + "/user/signup2" // 회원가입2
+    static let taskURL = BaseURL + "/user/task" // 관심 직군 등록
+    static let introduceURL = BaseURL + "/user/introduce" // 한 줄 소개 + 프로필사진
+    static let nicknameURL = BaseURL + "/user/nickname" // 닉네임
+    static let loginURL = BaseURL + "/user/signin" // 로그인
+    
+    
+    // 홈 
+    
     
     
 }

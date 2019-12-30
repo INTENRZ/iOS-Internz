@@ -46,6 +46,21 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func doLogin(_ sender: UIButton) {
+        
+        let firstLoginStoryBoard:UIStoryboard = UIStoryboard(name: "FirstLogin", bundle: nil)
+        
+        let dvc = firstLoginStoryBoard.instantiateViewController(identifier: "FirstLogin") as! SettingFavorViewController
+
+        let navigationController = UINavigationController(rootViewController: dvc)
+
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true, completion: nil)
+
+        
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z2a-qq-0ie">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iog-kh-EcK">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -7,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Setting Favor View Controller-->
+        <!--SettingFavorViewController-->
         <scene sceneID="XlU-5r-Dw4">
             <objects>
-                <viewController id="Iog-kh-EcK" customClass="SettingFavorViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstLogin" title="SettingFavorViewController" id="Iog-kh-EcK" customClass="SettingFavorViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uvG-Dz-68A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관심 직무를" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cT-0q-mnY">
-                                <rect key="frame" x="16" y="129" width="104" height="21"/>
+                                <rect key="frame" x="16" y="85" width="104" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ia0-ve-2Fq"/>
                                     <constraint firstAttribute="width" constant="104" id="bG9-OS-NDR"/>
@@ -26,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3개 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7Z-KX-Vg4">
-                                <rect key="frame" x="16" y="150" width="131" height="22"/>
+                                <rect key="frame" x="16" y="106" width="131" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="131" id="1Vy-tz-E37"/>
                                     <constraint firstAttribute="height" constant="22" id="ExE-Ie-OAS"/>
@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4ZQ-Si-6DH">
-                                <rect key="frame" x="8" y="191" width="359" height="270"/>
+                                <rect key="frame" x="8" y="147" width="359" height="270"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="o43-jF-klx">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="38.666666666666664"/>
@@ -761,24 +761,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHs-ql-JCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1909.5999999999999" y="37.684729064039409"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="mNf-jg-TuL">
-            <objects>
-                <navigationController storyboardIdentifier="FirstLogin" automaticallyAdjustsScrollViewInsets="NO" id="z2a-qq-0ie" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pDa-cp-Bog">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Iog-kh-EcK" kind="relationship" relationship="rootViewController" id="YDp-eO-bKd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zAL-Av-v9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="37.681159420289859" y="38.839285714285715"/>
         </scene>
     </scenes>
     <resources>
