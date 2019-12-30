@@ -35,6 +35,17 @@ class Signin2ViewController: UIViewController {
         
     }
     
+    @IBAction func gotoLogin(_ sender: UIButton) {
+        
+        let loginStoryBoard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        loginViewController.modalPresentationStyle = .fullScreen
+        self.present(loginViewController, animated: true, completion: nil)
+    }
+    
+    
+    
+    
     @objc func goBack(){
         print("tap back")
         self.dismiss(animated: true, completion: nil)

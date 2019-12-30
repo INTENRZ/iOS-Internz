@@ -33,6 +33,9 @@
 		B66EBE1C23B8E85E009ACA31 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1B23B8E85E009ACA31 /* CommentCell.swift */; };
 		B66EBE1E23B8E974009ACA31 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1D23B8E974009ACA31 /* Comment.swift */; };
 		B66EBE2023B90224009ACA31 /* CreateTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1F23B90224009ACA31 /* CreateTimelineViewController.swift */; };
+		B66EBE2223B9C1F2009ACA31 /* SigninService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2123B9C1F2009ACA31 /* SigninService.swift */; };
+		B66EBE2423B9C203009ACA31 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2323B9C203009ACA31 /* LoginService.swift */; };
+		B66EBE2723B9C243009ACA31 /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2623B9C243009ACA31 /* ResponseString.swift */; };
 		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
 		B6AAF85823B668C3009571DE /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85723B668C3009571DE /* UIButtonExtensions.swift */; };
 		B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */; };
@@ -63,7 +66,7 @@
 		B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C97923B12F7200348A7B /* StoryViewController.swift */; };
 		B6D9C97E23B1347600348A7B /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C97D23B1347600348A7B /* TabbarViewController.swift */; };
 		B6D9C98123B13D7400348A7B /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98023B13D7400348A7B /* UIColor+Additions.swift */; };
-		B6D9C98423B13E0600348A7B /* NeworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98323B13E0600348A7B /* NeworkResult.swift */; };
+		B6D9C98423B13E0600348A7B /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98323B13E0600348A7B /* NetworkResult.swift */; };
 		B6D9C98823B1575500348A7B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98723B1575500348A7B /* CalendarViewController.swift */; };
 		B6DFC56C23B607A9002EE94A /* Signin2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DFC56B23B607A9002EE94A /* Signin2ViewController.swift */; };
 		B6DFC56E23B650B0002EE94A /* FirstLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DFC56D23B650B0002EE94A /* FirstLogin.storyboard */; };
@@ -101,6 +104,9 @@
 		B66EBE1B23B8E85E009ACA31 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		B66EBE1D23B8E974009ACA31 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		B66EBE1F23B90224009ACA31 /* CreateTimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTimelineViewController.swift; sourceTree = "<group>"; };
+		B66EBE2123B9C1F2009ACA31 /* SigninService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninService.swift; sourceTree = "<group>"; };
+		B66EBE2323B9C203009ACA31 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		B66EBE2623B9C243009ACA31 /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
 		B67CBF9523B1740B001C78B2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		B6AAF85723B668C3009571DE /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +139,7 @@
 		B6D9C97923B12F7200348A7B /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		B6D9C97D23B1347600348A7B /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		B6D9C98023B13D7400348A7B /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
-		B6D9C98323B13E0600348A7B /* NeworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeworkResult.swift; sourceTree = "<group>"; };
+		B6D9C98323B13E0600348A7B /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		B6D9C98723B1575500348A7B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		B6DFC56B23B607A9002EE94A /* Signin2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signin2ViewController.swift; sourceTree = "<group>"; };
 		B6DFC56D23B650B0002EE94A /* FirstLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstLogin.storyboard; sourceTree = "<group>"; };
@@ -187,6 +193,25 @@
 				B66EBE1D23B8E974009ACA31 /* Comment.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B66EBE2523B9C22F009ACA31 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				B66EBE2623B9C243009ACA31 /* ResponseString.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		B66EBE2823B9C24A009ACA31 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B6D9C98323B13E0600348A7B /* NetworkResult.swift */,
+				B67CBF9523B1740B001C78B2 /* APIConstants.swift */,
+				B66EBE2123B9C1F2009ACA31 /* SigninService.swift */,
+				B66EBE2323B9C203009ACA31 /* LoginService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B67CBF9823B174B8001C78B2 /* HomeTab */ = {
@@ -352,8 +377,8 @@
 		B6D9C98223B13DDA00348A7B /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
-				B6D9C98323B13E0600348A7B /* NeworkResult.swift */,
-				B67CBF9523B1740B001C78B2 /* APIConstants.swift */,
+				B66EBE2823B9C24A009ACA31 /* Services */,
+				B66EBE2523B9C22F009ACA31 /* Responses */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -513,7 +538,7 @@
 				7FF374BB23B69E47004E4907 /* ProfileTableViewCell.swift in Sources */,
 				B6D9C97823B12F2400348A7B /* ProfileViewController.swift in Sources */,
 				7FF374BD23B69EC5004E4907 /* ProfileStory.swift in Sources */,
-				B6D9C98423B13E0600348A7B /* NeworkResult.swift in Sources */,
+				B6D9C98423B13E0600348A7B /* NetworkResult.swift in Sources */,
 				B6D1F99623B297DB00C8BA31 /* Announcement.swift in Sources */,
 				7F0E5C9923B811CC00F12492 /* MessageProfileTableViewCell.swift in Sources */,
 				B6D9C98823B1575500348A7B /* CalendarViewController.swift in Sources */,
@@ -522,6 +547,7 @@
 				7FF374B423B5EBEB004E4907 /* TimelineListViewController.swift in Sources */,
 				B6D1F99C23B355B100C8BA31 /* StoryTabViewController.swift in Sources */,
 				B6D9C95223B1169100348A7B /* AppDelegate.swift in Sources */,
+				B66EBE2723B9C243009ACA31 /* ResponseString.swift in Sources */,
 				7F0E5C8E23B7B95200F12492 /* Follow.swift in Sources */,
 				7F0E5C8A23B7A68500F12492 /* FollowerViewController.swift in Sources */,
 				B6D9C95423B1169100348A7B /* SceneDelegate.swift in Sources */,
@@ -534,6 +560,7 @@
 				B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */,
 				B6AAF85823B668C3009571DE /* UIButtonExtensions.swift in Sources */,
 				7F0E5C9723B80EB500F12492 /* MessageUser.swift in Sources */,
+				B66EBE2423B9C203009ACA31 /* LoginService.swift in Sources */,
 				B6C0540923B560D900D455E1 /* SigninViewController.swift in Sources */,
 				7F0E5C9523B80E1300F12492 /* MessageProfileViewController.swift in Sources */,
 				7F0E5C9023B7B98C00F12492 /* FollowTableViewCell.swift in Sources */,
@@ -548,6 +575,7 @@
 				7FF374B723B608F3004E4907 /* TimelineStory.swift in Sources */,
 				B6D9C97423B12D7A00348A7B /* HomeViewController.swift in Sources */,
 				7FF374B923B60926004E4907 /* TimelineStoryTableViewCell.swift in Sources */,
+				B66EBE2223B9C1F2009ACA31 /* SigninService.swift in Sources */,
 				B6D1F9A023B3E78D00C8BA31 /* Banner.swift in Sources */,
 				7F0E5CA123B9001900F12492 /* MessageSendViewController.swift in Sources */,
 				B6AAF86423B6A927009571DE /* UIViewExtensions.swift in Sources */,
