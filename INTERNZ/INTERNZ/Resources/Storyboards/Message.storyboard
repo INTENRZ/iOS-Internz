@@ -10,7 +10,7 @@
         <!--Message Profile View Controller-->
         <scene sceneID="TgL-qg-5rG">
             <objects>
-                <viewController storyboardIdentifier="Message" id="6Hy-hR-wrk" customClass="MessageProfileViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Message" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Hy-hR-wrk" customClass="MessageProfileViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e1H-fs-YfB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
