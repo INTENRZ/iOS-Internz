@@ -815,7 +815,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="goMain:" destination="ZyW-Oc-Dd9" eventType="touchUpInside" id="AIi-wK-6YJ"/>
+                                    <action selector="goLoginView:" destination="ZyW-Oc-Dd9" eventType="touchUpInside" id="uJB-re-FV6"/>
                                 </connections>
                             </button>
                         </subviews>

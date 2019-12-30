@@ -19,13 +19,19 @@ class SettingProfileViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     
     
-    
+    var selectOne: String?
+    var selectTwo: String?
+    var selectThree: String?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.title = "프로필 설정"
+        
+        print(selectOne)
+        print(selectTwo)
+        print(selectThree)
         
         self.profileUIView.layer.backgroundColor = UIColor.whiteFour.cgColor
         self.profileUIView.layer.cornerRadius = 40
@@ -63,15 +69,19 @@ class SettingProfileViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func goMain(_ sender: UIButton) {
-        let MainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    @IBAction func goLoginView(_ sender: UIButton) {
         
-        let dvc = MainStoryBoard.instantiateViewController(identifier: "Main") as! TabbarViewController
-        
-        dvc.modalPresentationStyle = .fullScreen
-        self.present(dvc, animated: true, completion: nil)
+        let loginStoryBoard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        loginViewController.modalPresentationStyle = .fullScreen
+        self.present(loginViewController, animated: true, completion: nil)
         
     }
+    
+    
+    
+    
 }
 
 

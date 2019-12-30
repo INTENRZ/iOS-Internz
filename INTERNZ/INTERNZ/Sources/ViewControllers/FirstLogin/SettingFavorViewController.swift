@@ -13,7 +13,7 @@ class SettingFavorViewController: UIViewController {
     @IBOutlet weak var completeButton: UIButton!
     
     var favorCnt: Int = 0
-//    var selectedJobArr:[String] = []
+    //    var selectedJobArr:[String] = []
     var selectOne: String = ""
     var selectTwo: String = ""
     var selectThree: String = ""
@@ -55,17 +55,30 @@ class SettingFavorViewController: UIViewController {
         
         
         initBtn()
-    
+        
     }
     
     
     @IBAction func gotoProfileSetting(_ sender: UIButton) {
         
-        let dvc = storyboard?.instantiateViewController(identifier: "SettingProfileVC") as! SettingProfileViewController
         
-        navigationController?.pushViewController(dvc, animated: true)
-        
-        
+        if favorCnt == 3 {
+            let dvc = storyboard?.instantiateViewController(identifier: "SettingProfileVC") as! SettingProfileViewController
+            
+            dvc.selectOne = self.selectOne
+            dvc.selectTwo = self.selectTwo
+            dvc.selectThree = self.selectThree
+            
+            navigationController?.pushViewController(dvc, animated: true)
+            
+        } else {
+
+            let alert = UIAlertController(title: "선택 오류!", message: "관심 직무를 세 개 선택해 주세요", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+            
+        }
+
     }
     
     // 버튼 초기 상태 setting
