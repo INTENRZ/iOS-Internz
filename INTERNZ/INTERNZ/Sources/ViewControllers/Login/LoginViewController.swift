@@ -19,8 +19,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var idlineUIView: UIView!
     @IBOutlet weak var pwlineUIView: UIView!
     
-    // @IBOutlet weak var idTopConstraint: NSLayoutConstraint!
-    
     var isSuccessLogin :Bool = false
     
     override func viewDidLoad() {

@@ -28,12 +28,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x37-2J-Bwc">
-                                        <rect key="frame" x="16" y="294" width="343" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <rect key="frame" x="16" y="294" width="343" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSU-Tn-jrh">
-                                        <rect key="frame" x="16" y="322" width="343" height="1"/>
+                                        <rect key="frame" x="16" y="320" width="343" height="1"/>
                                         <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -42,7 +42,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aR4-Yj-obP">
-                                        <rect key="frame" x="16" y="413" width="343" height="1"/>
+                                        <rect key="frame" x="16" y="411" width="343" height="1"/>
                                         <color key="backgroundColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -51,13 +51,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wS6-6v-wmE">
-                                        <rect key="frame" x="16" y="359" width="57" height="19"/>
+                                        <rect key="frame" x="16" y="357" width="57" height="19"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbj-dQ-iu2">
-                                        <rect key="frame" x="16" y="462" width="343" height="50"/>
+                                        <rect key="frame" x="16" y="460" width="343" height="50"/>
                                         <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="343" id="0mH-25-k9U"/>
@@ -72,7 +72,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인턴즈가 처음이신가요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWh-Ul-ygd">
-                                        <rect key="frame" x="80" y="572" width="136" height="17"/>
+                                        <rect key="frame" x="80" y="570" width="136" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="17" id="Yl4-Ek-269"/>
                                             <constraint firstAttribute="width" constant="136" id="yTl-hZ-UtG"/>
@@ -81,17 +81,17 @@
                                         <color key="textColor" red="0.38431372549019605" green="0.38431372549019605" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DFJ-OY-wJJ">
-                                        <rect key="frame" x="16" y="392" width="343" height="21"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DFJ-OY-wJJ">
+                                        <rect key="frame" x="16" y="390" width="343" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="3NQ-Pc-GvP"/>
                                             <constraint firstAttribute="width" constant="343" id="bDK-3q-f2c"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWs-IE-Mtu">
-                                        <rect key="frame" x="222" y="572" width="74" height="17"/>
+                                        <rect key="frame" x="222" y="570" width="74" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="17" id="4bL-3y-Q7C"/>
                                             <constraint firstAttribute="width" constant="74" id="ugy-cC-Ih8"/>
