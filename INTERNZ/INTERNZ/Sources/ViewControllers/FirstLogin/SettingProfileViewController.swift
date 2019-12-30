@@ -44,10 +44,11 @@ class SettingProfileViewController: UIViewController {
         self.startButton.layer.backgroundColor = UIColor.whiteFour.cgColor
         self.startButton.layer.cornerRadius = 5
         
+        self.navigationItem.setHidesBackButton(true, animated:true);
         
-        
-        
-        
+        let backButton = UIBarButtonItem(image: UIImage(named: "left1Ic"), style: .plain, target: self, action: #selector(goBack))
+        backButton.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem = backButton
         
     }
     
@@ -56,9 +57,19 @@ class SettingProfileViewController: UIViewController {
         self.introduceTextView.resignFirstResponder()
     }
     
+    @objc func goBack(){
+        self.dismiss(animated: true, completion: nil)
+    }
 
-   
-
+    @IBAction func goMain(_ sender: UIButton) {
+        let MainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let dvc = MainStoryBoard.instantiateViewController(identifier: "Main") as! TabbarViewController
+        
+        dvc.modalPresentationStyle = .fullScreen
+        self.present(dvc, animated: true, completion: nil)
+        
+    }
 }
 
 

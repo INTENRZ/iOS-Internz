@@ -49,7 +49,7 @@
         <!--Tabbar View Controller-->
         <scene sceneID="P6a-bJ-DTC">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="TRh-9E-1Xk" customClass="TabbarViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Main" automaticallyAdjustsScrollViewInsets="NO" id="TRh-9E-1Xk" customClass="TabbarViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WYs-P7-wW3">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -65,7 +65,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lt5-Qh-EXj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4257" y="2243"/>
+            <point key="canvasLocation" x="4181" y="2249"/>
         </scene>
     </scenes>
 </document>
