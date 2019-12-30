@@ -12,6 +12,12 @@ class SettingFavorViewController: UIViewController {
     
     @IBOutlet weak var completeButton: UIButton!
     
+    var favorCnt: Int = 0
+//    var selectedJobArr:[String] = []
+    var selectOne: String = ""
+    var selectTwo: String = ""
+    var selectThree: String = ""
+    
     // 관심 직무 버튼
     @IBOutlet weak var gihwaekBtn: UIButton!
     @IBOutlet weak var insaBtn: UIButton!
@@ -94,6 +100,34 @@ class SettingFavorViewController: UIViewController {
         
     }
     
-
+    @IBAction func selectFavor(_ sender: UIButton) {
+        
+        if sender.layer.borderColor == UIColor.marigold.cgColor {
+            sender.disSelectFavor()
+            favorCnt -= 1
+        } else {
+            
+            if (favorCnt < 3){
+                sender.selectFavor()
+                favorCnt += 1
+                print(favorCnt)
+                
+                switch favorCnt {
+                case 1:
+                    selectOne = sender.titleLabel?.text ?? ""
+                case 2:
+                    selectTwo = sender.titleLabel?.text ?? ""
+                case 3:
+                    selectThree = sender.titleLabel?.text ?? ""
+                default:
+                    break
+                }
+            }
+        }
+    } // selectFavor()
+    
+    
+    
+    
 }
 

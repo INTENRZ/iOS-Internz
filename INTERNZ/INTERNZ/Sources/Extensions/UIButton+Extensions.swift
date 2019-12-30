@@ -13,11 +13,19 @@ extension UIButton {
     func setFavor() {
 
         self.layer.backgroundColor = UIColor.white.cgColor
-        self.layer.borderColor = UIColor.marigold.cgColor
+        self.layer.borderColor = UIColor.whiteFour.cgColor
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 15
         self.tintColor = UIColor.darkGreyTwo
     
+    }
+    
+    func selectFavor(){
+        self.layer.borderColor = UIColor.marigold.cgColor
+    }
+    
+    func disSelectFavor(){
+        self.layer.borderColor = UIColor.whiteFour.cgColor
     }
     
     func setBorderGray() {

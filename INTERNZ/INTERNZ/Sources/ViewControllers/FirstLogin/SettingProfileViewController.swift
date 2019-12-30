@@ -19,6 +19,8 @@ class SettingProfileViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     
     
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
