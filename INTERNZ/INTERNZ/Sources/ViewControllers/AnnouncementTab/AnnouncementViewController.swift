@@ -50,13 +50,13 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         
     }
     
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let backItem = UIBarButtonItem()
-//        backItem.title = ""
-//        backItem.tintColor = UIColor.black
-//        navigationItem.backBarButtonItem = backItem
-//    }
+    
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        let backItem = UIBarButtonItem()
+    //        backItem.title = ""
+    //        backItem.tintColor = UIColor.black
+    //        navigationItem.backBarButtonItem = backItem
+    //    }
     
     
     // 정렬 버튼 눌렀을 때 -> picker 생성
@@ -85,7 +85,7 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         barAccessory.items = [btnDone]
         
         picker.addSubview(barAccessory)
-
+        
         
         // 4. PickerView 생성
         let sortPicker = UIPickerView(frame: CGRect(x: 0, y: barAccessory.frame.height, width: view.frame.width, height: picker.frame.height - barAccessory.frame.height))
@@ -95,7 +95,7 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         picker.addSubview(sortPicker)
         
-    
+        
     }
     
     
@@ -168,6 +168,18 @@ extension AnnouncementViewController: UITableViewDataSource {
         cell.companyImageView.image = announcement.companyImage
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let share = UITableViewRowAction(style: .normal, title: "추가") { action, index in
+            //하고싶은 작업
+            
+            let alert = UIAlertController(title: "일정 추가!", message: "내 일정 리스트에서 확인해 주세요", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+            
+        }
+        return [share]
     }
     
     
