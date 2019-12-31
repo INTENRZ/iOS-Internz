@@ -16,8 +16,19 @@ class Signin2ViewController: UIViewController {
     
     @IBOutlet weak var completeButton: UIButton!
     
+    var userEmailString: String?
+    var userPwdString: String?
+    var phoneString: String?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(userEmailString)
+        print(userPwdString)
+        print(phoneString)
+        
         
         addKeyboardObserver()
         

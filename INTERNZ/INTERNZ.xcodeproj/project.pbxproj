@@ -36,7 +36,7 @@
 		B66EBE1C23B8E85E009ACA31 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1B23B8E85E009ACA31 /* CommentCell.swift */; };
 		B66EBE1E23B8E974009ACA31 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1D23B8E974009ACA31 /* Comment.swift */; };
 		B66EBE2023B90224009ACA31 /* CreateTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1F23B90224009ACA31 /* CreateTimelineViewController.swift */; };
-		B66EBE2223B9C1F2009ACA31 /* SigninService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2123B9C1F2009ACA31 /* SigninService.swift */; };
+		B66EBE2223B9C1F2009ACA31 /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2123B9C1F2009ACA31 /* SignupService.swift */; };
 		B66EBE2423B9C203009ACA31 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2323B9C203009ACA31 /* LoginService.swift */; };
 		B66EBE2723B9C243009ACA31 /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2623B9C243009ACA31 /* ResponseString.swift */; };
 		B66EBE2A23BA46EB009ACA31 /* jobResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2923BA46EB009ACA31 /* jobResponseString.swift */; };
@@ -112,7 +112,7 @@
 		B66EBE1B23B8E85E009ACA31 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		B66EBE1D23B8E974009ACA31 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		B66EBE1F23B90224009ACA31 /* CreateTimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTimelineViewController.swift; sourceTree = "<group>"; };
-		B66EBE2123B9C1F2009ACA31 /* SigninService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninService.swift; sourceTree = "<group>"; };
+		B66EBE2123B9C1F2009ACA31 /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
 		B66EBE2323B9C203009ACA31 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		B66EBE2623B9C243009ACA31 /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
 		B66EBE2923BA46EB009ACA31 /* jobResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobResponseString.swift; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 			children = (
 				B6D9C98323B13E0600348A7B /* NetworkResult.swift */,
 				B67CBF9523B1740B001C78B2 /* APIConstants.swift */,
-				B66EBE2123B9C1F2009ACA31 /* SigninService.swift */,
+				B66EBE2123B9C1F2009ACA31 /* SignupService.swift */,
 				B66EBE2323B9C203009ACA31 /* LoginService.swift */,
 				B66EBE2B23BA47D7009ACA31 /* JobListService.swift */,
 				7F0E5CA723BA736000F12492 /* StoryListService.swift */,
@@ -593,7 +593,7 @@
 				7FF374B723B608F3004E4907 /* TimelineStory.swift in Sources */,
 				B6D9C97423B12D7A00348A7B /* HomeViewController.swift in Sources */,
 				7FF374B923B60926004E4907 /* TimelineStoryTableViewCell.swift in Sources */,
-				B66EBE2223B9C1F2009ACA31 /* SigninService.swift in Sources */,
+				B66EBE2223B9C1F2009ACA31 /* SignupService.swift in Sources */,
 				B6D1F9A023B3E78D00C8BA31 /* Banner.swift in Sources */,
 				7F0E5CA123B9001900F12492 /* MessageSendViewController.swift in Sources */,
 				B6AAF86423B6A927009571DE /* UIView+Extensions.swift in Sources */,

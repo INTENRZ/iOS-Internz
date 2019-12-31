@@ -58,6 +58,10 @@ class SigninViewController: UIViewController {
         
         let dvc = storyboard?.instantiateViewController(identifier: "Signin2ViewController") as! Signin2ViewController
         
+        dvc.userEmailString = emailLabel.text
+        dvc.userPwdString = passwordTextField.text
+        dvc.phoneString = phoneTextField.text
+        
         navigationController?.pushViewController(dvc, animated: true)
         
     }
