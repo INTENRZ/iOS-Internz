@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+struct StoryResponseString: Codable{
+    let success: Bool
+    let message: String
+    let data:[StoryDataClass]
+    
+struct StoryDataClass: Codable {
+    let title: String
+    let nickname: String
+    let created_date: String
+
+    }
+}

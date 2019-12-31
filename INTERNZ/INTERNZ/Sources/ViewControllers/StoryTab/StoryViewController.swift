@@ -23,7 +23,8 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
     
     var category: String?
     
-    var storySampleList: [Story] = []
+    var StoryList: [Story] = []
+    var StoryDataSet = [StoryResponseString.StoryDataClass]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,8 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         //        print(category ?? "")
         
         self.sortButton.titleLabel?.text = selectString
+        
+        downloadStoryData()
         
     }
     
@@ -75,6 +78,35 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         
         picker.addSubview(sortPicker)
         
+        downloadStoryData()
+        
+    }
+    
+    func downloadStoryData(){
+        
+        StoryListService.shared.StoryList {
+            
+            response in
+            
+            switch response{
+            case .success(let data):
+                print("성공이닷~!~!~")
+                self.StoryDataSet = data as! [StoryResponseString.StoryDataClass]
+                self.storyTable.reloadData()
+                
+            case.networkFail: print("error")
+                //찍어보기 확인
+                
+                
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            }
+            
+        }
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -127,7 +159,7 @@ extension StoryViewController {
         let story5 = Story(title: "test title55 테스트테스트테스트트틑ㅌ", name: "name", date: "12.25", storyImgName: "33")
         
         
-        storySampleList = [story1, story2, story3, story4, story5]
+        StoryList = [story1, story2, story3, story4, story5]
     }
 }
 
@@ -135,7 +167,7 @@ extension StoryViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let story = storySampleList[indexPath.row]
+        let story = StoryList[indexPath.row]
         
         let dvc = storyboard?.instantiateViewController(identifier: "StoryDetailViewController") as! StoryDetailViewController
         
@@ -151,18 +183,30 @@ extension StoryViewController: UITableViewDelegate{
 
 extension StoryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return storySampleList.count
+        return StoryDataSet.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let story = storySampleList[indexPath.row]
+        
+        //let story = storySampleList[indexPath.row]
         
         let cell = storyTable.dequeueReusableCell(withIdentifier: "StoryCell") as! StoryCell
         
-        cell.storyTitleLabel.text = story.storyTitle
-        cell.nameLabel.text = story.name
-        cell.dateLabel.text = story.date
-        cell.storyImage.image = story.storyImg
+        //        cell.storyTitleLabel.text = story.storyTitle
+        //        cell.nameLabel.text = story.name
+        //        cell.dateLabel.text = story.date
+        
+        cell.storyImage.image = UIImage(named: "33")
+        
+        
+        cell.storyTitleLabel.text = "\(StoryDataSet[indexPath.row].title)"
+        cell.nameLabel.text = "\(StoryDataSet[indexPath.row].nickname)"
+        cell.dateLabel.text = "\(StoryDataSet[indexPath.row].created_date)"
+        
+        //              let urlStr = StoryDataSet[indexPath.row].picture
+        //              let url = URL(string: urlStr)
+        //
+        //              cell.storyImage.kf.setImage(with: url)
         
         
         return cell
