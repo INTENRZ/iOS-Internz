@@ -13,10 +13,10 @@ struct StoryResponseString: Codable{
     let message: String
     let data:[StoryDataClass]
     
-struct StoryDataClass: Codable {
-    let title: String
-    let nickname: String
-    let created_date: String
-
+    struct StoryDataClass: Codable {
+        let title: String
+        let nickname: String
+        let created_date: String
+        
     }
 }

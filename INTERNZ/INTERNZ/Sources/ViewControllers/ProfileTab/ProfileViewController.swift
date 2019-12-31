@@ -14,12 +14,6 @@ extension UIView{
         self.layer.cornerRadius = 11
         self.clipsToBounds = true
     }
-    
-    //    func setBorderWidth(){
-    //    self.layer.borderWidth = 100
-    //        self.layer.borderColor = UIColor.marigold.cgColor
-    //
-    //    }
 }
 
 
@@ -47,11 +41,10 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
     var ProfileStorySampleList:
         [ProfileStory] = []
     
+    var timelineDataSet = [timelineResponseString.timelineDataClass]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //topbanner 네비게이션 바 색깔과 동일하게 지정
-        //        topbannerUIView.backgroundColor = UIColor.marigold
         
         //자기소개 부분 라인 수 증가
         introduceLabel.lineBreakMode = .byWordWrapping
@@ -65,36 +58,51 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
         workselect2Label.setCornerRadius()
         workselect3Label.setCornerRadius()
         
-        setProfileStorySampleData()
-        
-        
-        ProfileListTable.reloadData()
-        
-        
         ProfileListTable.dataSource = self
         ProfileListTable.delegate = self
         
         print(ProfileStorySampleList.count)
         
-//        let navigationBar = navigationController?.navigationBar
-//        let navigationBarAppearence = UINavigationBarAppearance()
-//
-//        navigationBarAppearence.shadowColor = .clear
-//        navigationBar?.scrollEdgeAppearance = UINavigationBarAppearance()
-//
-//        navigationBar?.backgroundColor = .clear
-
         let menuButton = UIBarButtonItem(image: UIImage(named: "closeIc"), style: .plain, target: self, action: #selector(CloseBtn))
-               menuButton.tintColor = UIColor.black
-               self.navigationItem.rightBarButtonItem = menuButton
-               
-           }
-           
-           
-           @objc func CloseBtn(){
-               self.dismiss(animated: true)
-           }
-
+        menuButton.tintColor = UIColor.black
+        self.navigationItem.rightBarButtonItem = menuButton
+        
+        downloadTimeline()
+    }
+    
+    func downloadTimeline(){
+        
+        TimelineListService.timelineShared.timelineList {
+            response in
+            
+            switch response {
+            case .success(let data):
+                print("@@@@@success@@@@@")
+                print(data)
+                self.timelineDataSet = data as! [timelineResponseString.timelineDataClass]
+                self.ProfileListTable.reloadData()
+                
+            case .networkFail :
+                print(".networkFail")
+                
+            case .pathErr :
+                print(".pathErr")
+                
+            case .requestErr(_):
+                print(".requestErr")
+            case .serverErr:
+                print(".serverErr")
+            }
+            
+        }
+        
+    }
+    
+    
+    @objc func CloseBtn(){
+        self.dismiss(animated: true)
+    }
+    
     
     @IBAction func followerCount(_ sender: UIButton) {
         
@@ -115,76 +123,39 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
     @IBAction func plusBtn(_ sender: UIButton) {
         
         let dvc = storyboard?.instantiateViewController(identifier: "CreateTimelineViewController") as! CreateTimelineViewController
-               
-               navigationController?.pushViewController(dvc, animated: true)
-
+        
+        navigationController?.pushViewController(dvc, animated: true)
+        
     }
     
     @IBAction func messageBtn(_ sender: Any) {
-
+        
         let dvc = storyboard?.instantiateViewController(identifier: "ProfileViewController") as! ProfileViewController
-
-                      navigationController?.pushViewController(dvc, animated: true)
-
-    }
-    
-//    override func prepare(for segue: UIStoryboardSegue,sender: Any?){
-//    if segue.identifier == "toNavi" { // --- 1
-//        let MessageProfileViewController =
-//            segue.destination as! MessageProfileViewController// --- 2
-//        let MessageProfileViewController = MessageProfileViewController.MessageProfileSampleList
-//        as!MessageProfileViewController// --- 3
-//       // destinationTopViewController.text = "Hello Navi"
-//    }
-//    }
-    
-}
-
- 
-extension ProfileViewController{
-    
-    func setProfileStorySampleData(){
         
-        let story1 = ProfileStory(title: "1NAVER SNOW Jam Studio 기획/운영팀", name:"한한한", date:"20.01.01")
-        
-        let story2 = ProfileStory(title: "2NAVER SNOW Jam Studio 기획/운영팀", name:"한한한", date:"20.01.01")
-        
-        
-        let story3 = ProfileStory(title: "3NAVER SNOW Jam Studio 기획/운영팀", name:"한한한", date:"20.01.01")
-        
-        
-        let story4 = ProfileStory(title: "4NAVER SNOW Jam Studio 기획/운영팀", name:"한한한", date:"20.01.01")
-        
-        
-        let story5 = ProfileStory(title: "5NAVER SNOW Jam Studio 기획/운영팀", name:"한한한", date:"20.01.01")
-        
-        ProfileStorySampleList = [story1, story2, story3, story4, story5]
+        navigationController?.pushViewController(dvc, animated: true)
         
     }
     
+
 }
+
 
 extension ProfileViewController: UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return ProfileStorySampleList.count
+        return timelineDataSet.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = ProfileListTable.dequeueReusableCell(withIdentifier: "ProfileTableViewCell")as!ProfileTableViewCell
+        let cell = ProfileListTable.dequeueReusableCell(withIdentifier: "ProfileTableViewCell") as! ProfileTableViewCell
         
-        let ProfileStory = ProfileStorySampleList[indexPath.row]
+        cell.titleLabel.text = "\(timelineDataSet[indexPath.row].title)"
+        cell.categoryLabel.text = "\(timelineDataSet[indexPath.row].category)"
+        cell.dateLabel.text = "\(timelineDataSet[indexPath.row].end_date)"
         
-        cell.titleLabel.text = ProfileStory.profilestoryTitle
-        
-        cell.categoryLabel.text = ProfileStory.category
-        
-        cell.dateLabel.text = ProfileStory.date
-        
-        //        cell.titleLabel.text = ""
         
         return cell
         
@@ -201,11 +172,6 @@ extension ProfileViewController: UITableViewDataSource{
         
     }
     
-
-//    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-//    viewController.navigationController?.navigationBar
-//        .forLastBaselineLayout.backgroundColor = .red // TODO:
-//    }
     
 }
 

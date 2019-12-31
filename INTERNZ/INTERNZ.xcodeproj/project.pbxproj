@@ -28,6 +28,8 @@
 		7FF374B923B60926004E4907 /* TimelineStoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374B823B60926004E4907 /* TimelineStoryTableViewCell.swift */; };
 		7FF374BB23B69E47004E4907 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374BA23B69E47004E4907 /* ProfileTableViewCell.swift */; };
 		7FF374BD23B69EC5004E4907 /* ProfileStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374BC23B69EC5004E4907 /* ProfileStory.swift */; };
+		B6077AD623BBA1D9006DF0E7 /* TimelineResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6077AD523BBA1D9006DF0E7 /* TimelineResponseString.swift */; };
+		B6077AD823BBA2AD006DF0E7 /* TimelineListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6077AD723BBA2AD006DF0E7 /* TimelineListService.swift */; };
 		B63DBAC923B275FE00EEE1C2 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */; };
 		B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBACD23B2779A00EEE1C2 /* Story.swift */; };
 		B66EBE1623B82305009ACA31 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1523B82305009ACA31 /* CommentViewController.swift */; };
@@ -104,6 +106,8 @@
 		7FF374BA23B69E47004E4907 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		7FF374BC23B69EC5004E4907 /* ProfileStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStory.swift; sourceTree = "<group>"; };
 		A16EF8E341DAE52684405B6A /* Pods_INTERNZ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INTERNZ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6077AD523BBA1D9006DF0E7 /* TimelineResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineResponseString.swift; sourceTree = "<group>"; };
+		B6077AD723BBA2AD006DF0E7 /* TimelineListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineListService.swift; sourceTree = "<group>"; };
 		B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
 		B63DBACD23B2779A00EEE1C2 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		B66EBE1523B82305009ACA31 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 				B66EBE2623B9C243009ACA31 /* ResponseString.swift */,
 				B66EBE2923BA46EB009ACA31 /* jobResponseString.swift */,
 				7F0E5CA523BA734800F12492 /* StoryResponseString.swift */,
+				B6077AD523BBA1D9006DF0E7 /* TimelineResponseString.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 				B66EBE2323B9C203009ACA31 /* LoginService.swift */,
 				B66EBE2B23BA47D7009ACA31 /* JobListService.swift */,
 				7F0E5CA723BA736000F12492 /* StoryListService.swift */,
+				B6077AD723BBA2AD006DF0E7 /* TimelineListService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -583,6 +589,7 @@
 				7F0E5C9523B80E1300F12492 /* MessageProfileViewController.swift in Sources */,
 				7F0E5C9023B7B98C00F12492 /* FollowTableViewCell.swift in Sources */,
 				B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */,
+				B6077AD823BBA2AD006DF0E7 /* TimelineListService.swift in Sources */,
 				7F0E5C9B23B82ECF00F12492 /* MessageListViewController.swift in Sources */,
 				7F0E5C9F23B8A43600F12492 /* MessageList.swift in Sources */,
 				7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */,
@@ -603,6 +610,7 @@
 				B6D9C98123B13D7400348A7B /* UIColor+Additions.swift in Sources */,
 				B6AAF85E23B69CE4009571DE /* ProfileBannerCell.swift in Sources */,
 				B6DFC56C23B607A9002EE94A /* Signin2ViewController.swift in Sources */,
+				B6077AD623BBA1D9006DF0E7 /* TimelineResponseString.swift in Sources */,
 				B63DBAC923B275FE00EEE1C2 /* StoryCell.swift in Sources */,
 				B66EBE2A23BA46EB009ACA31 /* jobResponseString.swift in Sources */,
 			);
