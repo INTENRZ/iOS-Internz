@@ -9,17 +9,7 @@
 import Foundation
 
 struct SignupResponseString: Codable{
+    let status : Int
     let success: Bool
-    let maessage: String
-    let data:[SignupDataClass]
-    
-    struct SignupDataClass: Codable{
-        let email : String
-        let password: String
-        let phone: String
-        let name: String
-        let nickname: String
-        let age: String
-        let sex: String
-    }
+    let message : String
 }

@@ -14,6 +14,13 @@ class Signin2ViewController: UIViewController {
     @IBOutlet weak var wholeView: UIView!
     @IBOutlet weak var nameTextField: UITextField!
     
+    
+    @IBOutlet weak var nicknameTextField: UITextField!
+    
+    
+    @IBOutlet weak var birthTextFieldd: UITextField!
+    
+    
     @IBOutlet weak var woman: UIButton!
     @IBOutlet weak var man: UIButton!
     
@@ -26,7 +33,7 @@ class Signin2ViewController: UIViewController {
     //    var genderBtn: Bool = false
     //    var agreeBtn: Bool = false
     
-    var userEmailString: String?
+    var userEmailString: String!
     var userPwdString: String?
     var phoneString: String?
     
@@ -87,12 +94,77 @@ class Signin2ViewController: UIViewController {
     
     @IBAction func gotoLogin(_ sender: UIButton) {
         
-        let loginStoryBoard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
-        let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
-        loginViewController.modalPresentationStyle = .fullScreen
-        self.present(loginViewController, animated: true, completion: nil)
+        goSignup()
+        
+        
+        
+        
+        
+//        let loginStoryBoard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+//        let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+//        loginViewController.modalPresentationStyle = .fullScreen
+//        self.present(loginViewController, animated: true, completion: nil)
     }
     
+    func goSignup(){
+        
+//        let name = 
+//        guard let title = self.titleLabel else { return }
+//        guard let tittleText = title.text else { return }
+        
+        
+        guard let name = self.nameTextField.text else { return }
+        guard let nickname = self.nicknameTextField.text else { return }
+        guard let birth = self.birthTextFieldd.text else { return }
+        
+        let gender: String!
+        
+        guard let email = self.userEmailString else { return }
+        guard let pwd = self.userPwdString else { return }
+        guard let phone = self.phoneString else { return }
+        
+        if isWoman == true {
+            gender = "woman"
+        } else {
+            gender = "man"
+        }
+        
+        
+        SignupService.sharedSignup.signup(email, pwd, phone, name, nickname, birth, gender) {
+            
+            response in
+            
+            switch response{
+            case .success(let data):
+                
+                print("data?? ", data)
+                print("성공이닷~!~!~")
+
+            case.networkFail:
+                print("error")
+                //찍어보기 확인
+
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            }
+            
+            
+            
+            
+            
+            
+        }
+        
+        
+        
+        
+
+        
+    }
     
     
     

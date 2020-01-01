@@ -11,7 +11,7 @@ import Alamofire
 
 class SignupService{
     
-    static let shared = SignupService()
+    static let sharedSignup = SignupService()
     
     func signup(_ email:String, _ password: String, _ phone: String, _ name: String, _ nickname:String, _ age:String, _ sex: String, completion: @escaping(NetworkResult<Any>) -> Void) {
         
@@ -20,16 +20,21 @@ class SignupService{
         ]
         
         let body: Parameters = [
+            "email" : email,
+            "password": password,
+            "phone" : phone,
             "name": name,
             "nickname" : nickname,
             "age": age,
             "sex": sex
         ]
         
-        //        let url = APIConstants.Signup2URL
         
         Alamofire.request(APIConstants.Signup2URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
+                
+                
+//                print("body?? ",  body)
                 
                 // parameter 위치
                 switch response.result {
@@ -45,6 +50,7 @@ class SignupService{
                                     let decoder = JSONDecoder()
                                     print("value", value)
                                     let result = try decoder.decode(loginResponseString.self, from: value)
+                                    print(result)
                                     
                                     // ResponseString2에 있는 success로 분기 처리
                                     switch result.success {
@@ -53,14 +59,13 @@ class SignupService{
                                         print("success")
                                         completion(.success(result.data)) // NetworkResult 에서 접근
                                     case false:
+                                        
                                         completion(.requestErr(result.message))
                                     }
                                 }
                                 catch {
                                     completion(.pathErr)
                                     print(error.localizedDescription)
-                                    print(APIConstants.loginURL)
-                                    print("존재하는 닉네임")
                                 }
                             case 400:
                                 completion(.pathErr)
