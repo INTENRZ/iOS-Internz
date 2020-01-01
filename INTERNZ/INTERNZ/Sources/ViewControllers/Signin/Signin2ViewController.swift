@@ -23,12 +23,14 @@ class Signin2ViewController: UIViewController {
     @IBOutlet weak var agree2: UIButton!
     
     //이거 빼도 됨
-//    var genderBtn: Bool = false
-//    var agreeBtn: Bool = false
-
+    //    var genderBtn: Bool = false
+    //    var agreeBtn: Bool = false
+    
     var userEmailString: String?
     var userPwdString: String?
     var phoneString: String?
+    
+    var isWoman: Bool = true
     
     
     
@@ -56,18 +58,32 @@ class Signin2ViewController: UIViewController {
         
     }
     
-    @IBAction func womanBtn(_ sender: Any) {
+    
+    @IBAction func clickRadioButton(_ sender: UIButton) {
+        
+        if isWoman == true {
+            woman.setImage(UIImage(named: "radioBtn"), for: .normal)
+            man.setImage(UIImage(named: "radioSelectedBtn"), for: .normal)
+            isWoman = false
+        } else {
+            woman.setImage(UIImage(named: "radioSelectedBtn"), for: .normal)
+            man.setImage(UIImage(named: "radioBtn"), for: .normal)
+            isWoman = true
+        }
+        
     }
     
-    @IBAction func manBtn(_ sender: Any) {
-    }
     
-    @IBAction func agree1Btn(_ sender: Any) {
-    }
     
-    @IBAction func agree2Btn(_ sender: Any) {
-    }
     
+    @IBAction func clickAgreeButton(_ sender: UIButton) {
+        
+        if sender.currentImage?.isEqual(UIImage(named: "checkBtn")) == true {
+            sender.setImage(UIImage(named: "checkSelectedBtn"), for: .normal)
+        } else {
+            sender.setImage(UIImage(named: "checkBtn"), for: .normal)
+        }
+    }
     
     @IBAction func gotoLogin(_ sender: UIButton) {
         
