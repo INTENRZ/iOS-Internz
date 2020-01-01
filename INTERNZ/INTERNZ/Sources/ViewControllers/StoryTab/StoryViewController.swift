@@ -29,7 +29,7 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setStorySampleData()
+//        setStorySampleData()
         
         storyTable.reloadData()
         
@@ -167,12 +167,17 @@ extension StoryViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let story = StoryList[indexPath.row]
+//        let story = StoryList[indexPath.row]
+        
+        let story = StoryDataSet[indexPath.row]
         
         let dvc = storyboard?.instantiateViewController(identifier: "StoryDetailViewController") as! StoryDetailViewController
         
-        dvc.storyString = story.storyTitle
-        dvc.writerString = story.name
+//        dvc.storyString = story.storyTitle
+//        dvc.writerString = story.name
+        
+        dvc.storyIdx = story.storyIdx
+        
         dvc.modalPresentationStyle = .fullScreen
         
         self.present(dvc, animated: true, completion: nil)

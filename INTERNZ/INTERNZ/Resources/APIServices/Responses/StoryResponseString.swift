@@ -14,9 +14,9 @@ struct StoryResponseString: Codable{
     let data:[StoryDataClass]
     
     struct StoryDataClass: Codable {
+        let storyIdx: Int
         let title: String
         let nickname: String
         let created_date: String
-        
     }
 }
