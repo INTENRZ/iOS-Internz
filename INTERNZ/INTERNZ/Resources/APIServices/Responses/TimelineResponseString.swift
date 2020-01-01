@@ -25,26 +25,3 @@ struct timelineResponseString: Codable {
     }
     
 }
-
-//struct timelineDataClass: Codable {
-//    let timelineIdx: Int
-//    let userIdx: Int
-//    let title: String
-//    let start_date: String
-//    let end_date: String
-//    let category: String
-//}
-
-//struct StoryResponseString: Codable{
-//    let success: Bool
-//    let message: String
-//    let data:[StoryDataClass]
-//
-//struct StoryDataClass: Codable {
-//    let title: String
-//    let nickname: String
-//    let created_date: String
-//
-//    }
-//}
-//

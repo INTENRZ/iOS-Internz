@@ -32,6 +32,11 @@ struct APIConstants {
     static let letterPeopleListURL = BaseURL + "/letter/others"
     
     
+    // 캘린더
+    static let calenderURL = BaseURL + "/calender/home/2020-01"
+    
+    
+    
     // 타임라인
     static let profileTimelineURL = BaseURL + "/timeline/list"
     

@@ -8,6 +8,8 @@
 
 import UIKit
 import FSCalendar
+import Kingfisher
+
 
 class CalendarViewController: UIViewController {
     
@@ -18,6 +20,8 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var calendarTableView: UITableView!
     
     var dateStructs: [DateStruct] = []
+    
+    var calenderDataSet = [calenderResponseString.calenderListDataClass]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +44,46 @@ class CalendarViewController: UIViewController {
         dates = [xmas!, sampledate!]
         
         
-        // setting calendar table view
-        
-        setCalendarData()
-        
         calendarTableView.delegate = self
         calendarTableView.dataSource = self
+        
+        downloadCalenderData()
+        
+        
+    }
+    
+    
+    func downloadCalenderData(){
+        
+        CalenderService.calenderShared.calenderList {
+            
+            response in
+            
+            switch response {
+            case .success(let data):
+                print("success ㅠㅠㅠㅠㅠ")
+                print(data)
+                
+                self.calenderDataSet = data as! [calenderResponseString.calenderListDataClass]
+                
+                self.calendarTableView.reloadData()
+                
+            case .networkFail :
+                print(".networkFail")
+                
+            case .pathErr :
+                print(".pathErr")
+                
+            case .requestErr(_):
+                print(".requestErr")
+            case .serverErr:
+                print(".serverErr")
+                
+            }
+            
+            
+        }
+        
         
     }
     
@@ -54,10 +92,10 @@ class CalendarViewController: UIViewController {
         
         print("go to back")
         
-         let dvc = storyboard?.instantiateViewController(identifier: "Announcement") as! AnnouncementViewController
-               
+        let dvc = storyboard?.instantiateViewController(identifier: "Announcement") as! AnnouncementViewController
+        
         navigationController?.pushViewController(dvc, animated: true)
-               
+        
     }
     
     
@@ -66,7 +104,7 @@ class CalendarViewController: UIViewController {
 
 extension CalendarViewController: FSCalendarDataSource{
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-
+        
         if self.dates.contains(date){
             return 1
         }
@@ -75,16 +113,6 @@ extension CalendarViewController: FSCalendarDataSource{
     }
 }
 
-extension CalendarViewController {
-    func setCalendarData(){
-        let dateSample1 = DateStruct(companyImgName: "corpImg1", companyName: "회사이름11", jobName: "프론트", date: "d-13")
-        let dateSample2 = DateStruct(companyImgName: "corpImg1", companyName: "회사이름22", jobName: "프론트", date: "d-13")
-        let dateSample3 = DateStruct(companyImgName: "corpImg1", companyName: "회사이름33", jobName: "프론트", date: "d-13")
-        let dateSample4 = DateStruct(companyImgName: "corpImg1", companyName: "회사이름44", jobName: "프론트", date: "d-13")
-        
-        dateStructs = [dateSample1, dateSample2, dateSample3, dateSample4]
-    }
-}
 
 extension CalendarViewController: UITableViewDelegate {
     
@@ -92,18 +120,25 @@ extension CalendarViewController: UITableViewDelegate {
 
 extension CalendarViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dateStructs.count
+        return calenderDataSet.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = calendarTableView.dequeueReusableCell(withIdentifier: "dateCell") as! DateTableViewCell
         
-        let mydate = dateStructs[indexPath.row]
+//        let mydate = dateStructs[indexPath.row]
         
-        cell.companyLabel.text = mydate.companyName
-        cell.jobLabel.text = mydate.jobName
-        cell.dateLabel.text = mydate.date
-        cell.companyImage.image = mydate.companyImg
+        let schedule = calenderDataSet[indexPath.row]
+        
+        cell.companyLabel.text = schedule.company
+        cell.jobLabel.text = schedule.team
+        
+        var leftDay = "d" + String(schedule.d_day) as! String
+        cell.dateLabel.text = leftDay
+        
+        var urlStr = schedule.logo
+        let url = URL(string: urlStr)
+        cell.companyImage.kf.setImage(with: url)
         
         return cell
         
