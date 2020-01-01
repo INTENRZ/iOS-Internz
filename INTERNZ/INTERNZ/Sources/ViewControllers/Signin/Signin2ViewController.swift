@@ -14,8 +14,18 @@ class Signin2ViewController: UIViewController {
     @IBOutlet weak var wholeView: UIView!
     @IBOutlet weak var nameTextField: UITextField!
     
+    @IBOutlet weak var woman: UIButton!
+    @IBOutlet weak var man: UIButton!
+    
     @IBOutlet weak var completeButton: UIButton!
     
+    @IBOutlet weak var agree1: UIButton!
+    @IBOutlet weak var agree2: UIButton!
+    
+    //이거 빼도 됨
+//    var genderBtn: Bool = false
+//    var agreeBtn: Bool = false
+
     var userEmailString: String?
     var userPwdString: String?
     var phoneString: String?
@@ -45,6 +55,19 @@ class Signin2ViewController: UIViewController {
         self.navigationItem.leftBarButtonItem  = button1
         
     }
+    
+    @IBAction func womanBtn(_ sender: Any) {
+    }
+    
+    @IBAction func manBtn(_ sender: Any) {
+    }
+    
+    @IBAction func agree1Btn(_ sender: Any) {
+    }
+    
+    @IBAction func agree2Btn(_ sender: Any) {
+    }
+    
     
     @IBAction func gotoLogin(_ sender: UIButton) {
         

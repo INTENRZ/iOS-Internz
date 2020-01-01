@@ -23,6 +23,7 @@
 		7F0E5CA823BA736000F12492 /* StoryListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E5CA723BA736000F12492 /* StoryListService.swift */; };
 		7F37E0F823B33D6600C80F1A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F37E0F723B33D6600C80F1A /* Login.storyboard */; };
 		7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */; };
+		7FE0B8E123BCE9EF008A52C7 /* SignupResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0B8E023BCE9EF008A52C7 /* SignupResponseString.swift */; };
 		7FF374B423B5EBEB004E4907 /* TimelineListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */; };
 		7FF374B723B608F3004E4907 /* TimelineStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374B623B608F3004E4907 /* TimelineStory.swift */; };
 		7FF374B923B60926004E4907 /* TimelineStoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF374B823B60926004E4907 /* TimelineStoryTableViewCell.swift */; };
@@ -102,6 +103,7 @@
 		7F0E5CA723BA736000F12492 /* StoryListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListService.swift; sourceTree = "<group>"; };
 		7F37E0F723B33D6600C80F1A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7F37E0FA23B33D8F00C80F1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7FE0B8E023BCE9EF008A52C7 /* SignupResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResponseString.swift; sourceTree = "<group>"; };
 		7FF374B323B5EBEB004E4907 /* TimelineListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineListViewController.swift; sourceTree = "<group>"; };
 		7FF374B623B608F3004E4907 /* TimelineStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineStory.swift; sourceTree = "<group>"; };
 		7FF374B823B60926004E4907 /* TimelineStoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineStoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				7F0E5CA523BA734800F12492 /* StoryResponseString.swift */,
 				B6077AD523BBA1D9006DF0E7 /* TimelineResponseString.swift */,
 				B6077AD923BCA235006DF0E7 /* CalenderResponseString.swift */,
+				7FE0B8E023BCE9EF008A52C7 /* SignupResponseString.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				7F0E5C9523B80E1300F12492 /* MessageProfileViewController.swift in Sources */,
 				7F0E5C9023B7B98C00F12492 /* FollowTableViewCell.swift in Sources */,
 				B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */,
+				7FE0B8E123BCE9EF008A52C7 /* SignupResponseString.swift in Sources */,
 				B6077AD823BBA2AD006DF0E7 /* TimelineListService.swift in Sources */,
 				7F0E5C9B23B82ECF00F12492 /* MessageListViewController.swift in Sources */,
 				7F0E5C9F23B8A43600F12492 /* MessageList.swift in Sources */,
