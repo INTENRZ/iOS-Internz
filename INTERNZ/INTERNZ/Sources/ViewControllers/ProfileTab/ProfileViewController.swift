@@ -131,19 +131,32 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
         self.dismiss(animated: true)
     }
     
+    
+    // 팔로잉으로 이동
     @IBAction func followerCount(_ sender: UIButton) {
         
         let dvc = storyboard?.instantiateViewController(identifier: "FollowerViewController") as! FollowerViewController
         
-        navigationController?.pushViewController(dvc, animated: true)
+        dvc.isFollowing = false
+        
+        dvc.modalPresentationStyle = .fullScreen
+        
+        self.present(dvc, animated: true, completion: nil)
+
     }
     
     
+    // 팔로워로 이동
     @IBAction func followingCount(_ sender: UILabel) {
         
         let dvc = storyboard?.instantiateViewController(identifier: "FollowerViewController") as! FollowerViewController
         
-        navigationController?.pushViewController(dvc, animated: true)
+        dvc.isFollowing = true
+        
+        dvc.modalPresentationStyle = .fullScreen
+        
+        self.present(dvc, animated: true, completion: nil)
+        
     }
     
     @IBAction func plusBtn(_ sender: UIButton) {

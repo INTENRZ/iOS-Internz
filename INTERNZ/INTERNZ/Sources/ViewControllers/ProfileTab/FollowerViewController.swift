@@ -12,6 +12,11 @@ class FollowerViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var followTable: UITableView!
     
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    var isFollowing: Bool!
+    
     var followStorySampleList:
         [Follow] = []
     
@@ -22,7 +27,7 @@ class FollowerViewController: UIViewController, UITableViewDelegate {
         //        topbannerUIView.backgroundColor = UIColor.marigold
         
         
-        
+        print("isFollwing?? ", self.isFollowing)
         
         setfollowStorySampleData()
         
@@ -31,9 +36,28 @@ class FollowerViewController: UIViewController, UITableViewDelegate {
         followTable.dataSource = self
         followTable.delegate = self
         
+        
+        if self.isFollowing == true {
+//            self.navigationItem.title = "팔로잉"
+            self.titleLabel.text = "팔로잉"
+        } else {
+            self.titleLabel.text = "팔로워"
+//            self.navigationItem.title = "팔로워"
+        }
+        
+        
        // print(followStorySampleList.count)
         
     }
+    
+    
+    @IBAction func goBack(_ sender: UIButton) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
 }
 
 extension FollowerViewController{
