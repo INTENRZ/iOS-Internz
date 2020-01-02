@@ -49,7 +49,8 @@ class SignupService{
                                 do {
                                     let decoder = JSONDecoder()
                                     print("value", value)
-                                    let result = try decoder.decode(loginResponseString.self, from: value)
+                                    let result = try decoder.decode(SignupResponseString
+                                        .self, from: value)
                                     print(result)
                                     
                                     // ResponseString2에 있는 success로 분기 처리
@@ -57,7 +58,7 @@ class SignupService{
                                         
                                     case true: // 진짜 로그인 성공인 경우
                                         print("success")
-                                        completion(.success(result.data)) // NetworkResult 에서 접근
+//                                        completion(.success(result.data)) // NetworkResult 에서 접근
                                     case false:
                                         
                                         completion(.requestErr(result.message))
