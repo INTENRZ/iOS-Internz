@@ -36,7 +36,6 @@ class WritingStoryViewController: UIViewController,UITextViewDelegate, UITableVi
         
     }
     
-    
     @objc func CloseBtn(){
         self.dismiss(animated: true)
     }
@@ -44,7 +43,6 @@ class WritingStoryViewController: UIViewController,UITextViewDelegate, UITableVi
     @objc func send(){
         self.dismiss(animated: true)
     }
-    
 }
 
 extension WritingStoryViewController: UITextFieldDelegate {
@@ -70,7 +68,3 @@ extension WritingStoryViewController: UITextFieldDelegate {
          static let keyboardHeight = 160
     }
 }
-
-
-
-

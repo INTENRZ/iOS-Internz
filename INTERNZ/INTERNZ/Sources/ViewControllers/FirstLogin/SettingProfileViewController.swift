@@ -13,16 +13,12 @@ class SettingProfileViewController: UIViewController {
     
     
     @IBOutlet weak var profileUIView: UIView!
-    
     @IBOutlet weak var introduceTextView: UITextView!
-    
     @IBOutlet weak var startButton: UIButton!
-    
     
     var selectOne: String?
     var selectTwo: String?
     var selectThree: String?
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +53,6 @@ class SettingProfileViewController: UIViewController {
         let backButton = UIBarButtonItem(image: UIImage(named: "left1Ic"), style: .plain, target: self, action: #selector(goBack))
         backButton.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem = backButton
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -76,14 +71,8 @@ class SettingProfileViewController: UIViewController {
         let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
         loginViewController.modalPresentationStyle = .fullScreen
         self.present(loginViewController, animated: true, completion: nil)
-        
     }
-    
-    
-    
-    
 }
-
 
 extension SettingProfileViewController: UITextViewDelegate{
 

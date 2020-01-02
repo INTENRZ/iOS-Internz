@@ -10,22 +10,13 @@ import UIKit
 
 class Signin2ViewController: UIViewController {
     
-    
     @IBOutlet weak var wholeView: UIView!
     @IBOutlet weak var nameTextField: UITextField!
-    
-    
     @IBOutlet weak var nicknameTextField: UITextField!
-    
-    
     @IBOutlet weak var birthTextFieldd: UITextField!
-    
-    
     @IBOutlet weak var woman: UIButton!
     @IBOutlet weak var man: UIButton!
-    
     @IBOutlet weak var completeButton: UIButton!
-    
     @IBOutlet weak var agree1: UIButton!
     @IBOutlet weak var agree2: UIButton!
     
@@ -42,8 +33,6 @@ class Signin2ViewController: UIViewController {
     var birth = ""
     var isWoman: Bool = true
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,11 +40,8 @@ class Signin2ViewController: UIViewController {
         print(userPwdString)
         print(phoneString)
         
-        
         addKeyboardObserver()
-        
         nameTextField.delegate = self
-        
         completeButton.backgroundColor = UIColor.whiteFour
         completeButton.layer.cornerRadius = 5
         
@@ -65,9 +51,7 @@ class Signin2ViewController: UIViewController {
         let button1 = UIBarButtonItem(image: UIImage(named: "left1Ic"), style: .plain, target: self, action: #selector(goBack))
         button1.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem  = button1
-        
     }
-    
     
     @IBAction func clickRadioButton(_ sender: UIButton) {
         
@@ -80,11 +64,7 @@ class Signin2ViewController: UIViewController {
             man.setImage(UIImage(named: "radioBtn"), for: .normal)
             isWoman = true
         }
-        
     }
-    
-    
-    
     
     @IBAction func clickAgreeButton(_ sender: UIButton) {
         
@@ -98,10 +78,6 @@ class Signin2ViewController: UIViewController {
     @IBAction func gotoLogin(_ sender: UIButton) {
         
         goSignup()
-        
-        
-        
-        
         
         //        let loginStoryBoard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
         //        let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
@@ -142,13 +118,10 @@ class Signin2ViewController: UIViewController {
         }
     }
     
-    
-    
     @objc func goBack(){
         print("tap back")
         self.dismiss(animated: true, completion: nil)
     }
-    
 }
 
 extension Signin2ViewController: UITextFieldDelegate {
@@ -161,14 +134,12 @@ extension Signin2ViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
     }
     
     private func closeKeyboardObserver(){
         
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
@@ -191,6 +162,4 @@ extension Signin2ViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    
 }

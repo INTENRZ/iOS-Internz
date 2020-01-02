@@ -14,10 +14,5 @@ class TabbarViewController: UITabBarController {
         super.viewDidLoad()
         
         // test git branch
-        
-        
     }
-    
-    
-    
 }

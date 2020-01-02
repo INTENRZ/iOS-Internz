@@ -40,22 +40,17 @@ class HomeViewController: UIViewController {
         // tab bar color 설정
         self.tabBarController?.tabBar.selectedImageTintColor = UIColor.marigold
         
-        
         // 맞춤 공고 banner 설정
         bannerCV.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.007)
         
         // 공고 collection view 에 들어갈 sample data setting
         setBanner()
-        
         bannerCV.delegate = self
         bannerCV.dataSource = self
-        
         bannerCV.isPagingEnabled = true
-        
         
         // 프로필 banner 설정
         profileBannerCV.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.007)
-        
         
         // 프로필 collection view 에 들어갈 sample profile data setting
         setProfileBanner()
@@ -64,7 +59,6 @@ class HomeViewController: UIViewController {
         profileBannerCV.dataSource = self
         
         storyWholeView.setViewShadow()
-        
     }
     
     private func setBanner(){
@@ -74,7 +68,6 @@ class HomeViewController: UIViewController {
         
         let delegate = UIApplication.shared.delegate as? AppDelegate
         delegate?.bannerList = [banner1, banner2, banner3]
-        
     }
     
     private func setProfileBanner(){
@@ -86,9 +79,7 @@ class HomeViewController: UIViewController {
         let delegate = UIApplication.shared.delegate as? AppDelegate
         
         delegate?.profileBannerList = [profileBanner1, profileBanner2, profileBanner3, profileBanner4]
-        
     }
-    
 }
 
 extension HomeViewController: UICollectionViewDataSource {
@@ -101,7 +92,6 @@ extension HomeViewController: UICollectionViewDataSource {
         } else {
             return delegate.profileBannerList.count
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -137,12 +127,8 @@ extension HomeViewController: UICollectionViewDataSource {
             profileBannerCell.cellView.setViewShadow()
             
             return profileBannerCell
-            
         }
-        
     }
-    
-    
 }
 
 extension HomeViewController: UICollectionViewDelegate{
@@ -156,7 +142,4 @@ extension HomeViewController: UICollectionViewDelegate{
         print(currentPage)
         self.paging.set(progress: currentPage, animated: true)
     }
-    
 }
-
-

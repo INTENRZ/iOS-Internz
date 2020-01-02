@@ -43,13 +43,10 @@ class CalendarViewController: UIViewController {
         
         dates = [xmas!, sampledate!]
         
-        
         calendarTableView.delegate = self
         calendarTableView.dataSource = self
         
         downloadCalenderData()
-        
-        
     }
     
     
@@ -80,26 +77,16 @@ class CalendarViewController: UIViewController {
                 print(".serverErr")
                 
             }
-            
-            
         }
-        
-        
     }
-    
     
     @IBAction func gotoBack(_ sender: Any) {
         
         print("go to back")
         
         let dvc = storyboard?.instantiateViewController(identifier: "Announcement") as! AnnouncementViewController
-        
         navigationController?.pushViewController(dvc, animated: true)
-        
     }
-    
-    
-    
 }
 
 extension CalendarViewController: FSCalendarDataSource{
@@ -113,7 +100,6 @@ extension CalendarViewController: FSCalendarDataSource{
     }
 }
 
-
 extension CalendarViewController: UITableViewDelegate {
     
 }
@@ -125,8 +111,6 @@ extension CalendarViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = calendarTableView.dequeueReusableCell(withIdentifier: "dateCell") as! DateTableViewCell
-        
-//        let mydate = dateStructs[indexPath.row]
         
         let schedule = calenderDataSet[indexPath.row]
         
@@ -141,8 +125,5 @@ extension CalendarViewController: UITableViewDataSource {
         cell.companyImage.kf.setImage(with: url)
         
         return cell
-        
     }
-    
-    
 }

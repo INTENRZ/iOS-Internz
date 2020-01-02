@@ -22,9 +22,7 @@ class DateTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         wholeView.setViewShadow()
-        
         colorDotView.layer.cornerRadius = 45
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,5 +30,4 @@ class DateTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

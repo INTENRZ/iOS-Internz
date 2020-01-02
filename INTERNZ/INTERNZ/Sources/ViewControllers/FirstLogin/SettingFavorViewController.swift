@@ -53,14 +53,10 @@ class SettingFavorViewController: UIViewController {
         
         self.completeButton.layer.cornerRadius = 5
         
-        
         initBtn()
-        
     }
     
-    
     @IBAction func gotoProfileSetting(_ sender: UIButton) {
-        
         
         if favorCnt == 3 {
             let dvc = storyboard?.instantiateViewController(identifier: "SettingProfileVC") as! SettingProfileViewController
@@ -72,13 +68,10 @@ class SettingFavorViewController: UIViewController {
             navigationController?.pushViewController(dvc, animated: true)
             
         } else {
-
             let alert = UIAlertController(title: "선택 오류!", message: "관심 직무를 세 개 선택해 주세요", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
             self.present(alert, animated: true)
-            
         }
-
     }
     
     // 버튼 초기 상태 setting
@@ -109,8 +102,6 @@ class SettingFavorViewController: UIViewController {
         researchBtn.setFavor()
         consultingBtn.setFavor()
         guitarBtn.setFavor()
-        
-        
     }
     
     @IBAction func selectFavor(_ sender: UIButton) {

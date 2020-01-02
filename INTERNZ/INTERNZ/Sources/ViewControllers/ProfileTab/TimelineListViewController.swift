@@ -23,20 +23,16 @@ class TimelineListViewController: UIViewController, UITableViewDelegate {
         
         //카테고리 버튼 라운드
         categoryLabel.setCornerRadius()
-        
         setTimelinesStorySampleData()
         
         TimelineListTable.reloadData()
-        
         TimelineListTable.dataSource = self
         TimelineListTable.delegate = self
-    
     }
     
     @IBAction func goBack(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
-    
 }
 
 extension TimelineListViewController{
@@ -88,5 +84,3 @@ extension TimelineListViewController: UITableViewDataSource{
         return cell
     }
 }
-
-

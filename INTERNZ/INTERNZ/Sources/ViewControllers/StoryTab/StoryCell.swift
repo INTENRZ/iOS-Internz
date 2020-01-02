@@ -21,8 +21,6 @@ class StoryCell: UITableViewCell {
         
         storyTitleLabel.lineBreakMode = .byWordWrapping
         storyTitleLabel.numberOfLines = 0
-        
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,5 +28,4 @@ class StoryCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

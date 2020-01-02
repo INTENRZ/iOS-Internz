@@ -10,7 +10,6 @@ import UIKit
 
 class MessageListViewController: UIViewController, UITableViewDelegate {
     
-    
     @IBOutlet weak var MessageListTable: UITableView!
     
     var MessageListSampleList:[MessageList] = []
@@ -37,12 +36,6 @@ class MessageListViewController: UIViewController, UITableViewDelegate {
         let sendButton = UIBarButtonItem(image: UIImage(named: "messagesendIc"), style: .plain, target: self, action: #selector(goSend))
         sendButton.tintColor = UIColor.black
         self.navigationItem.rightBarButtonItem = sendButton
-        
-        
-        
-        
-        
-
     }
     
     @objc func goBack(){
@@ -56,7 +49,6 @@ class MessageListViewController: UIViewController, UITableViewDelegate {
         let dvc = storyboard?.instantiateViewController(identifier: "MessageSendViewController") as! MessageSendViewController
         
         navigationController?.pushViewController(dvc, animated: true)
-        
     }
 }
 
@@ -75,7 +67,6 @@ extension MessageListViewController{
         let message5 = MessageList(send: "보낸쪽지", time:"20.01.01 ㅣ 11: 16", content: "5안녕하세요. 라인 인턴에 대해 궁금한 게 있어서 쪽지 드려요. 혹시 주 디자인 업무는 어떤 거였나요?안녕하세요. 라인 인턴에 대해 궁금한 게 있어서 쪽지 드려요. 혹시 주 디자인 업무는 어떤 거였나요?")
         
         MessageListSampleList = [message1, message2, message3, message4, message5]
-        
     }
 }
 
@@ -96,9 +87,6 @@ extension MessageListViewController: UITableViewDataSource{
         cell.timeLabel.text = MessageList.time
         cell.messageContentLabel.text = MessageList.content
         
-        
         return cell
     }
 }
-
-

@@ -9,7 +9,7 @@
 import UIKit
 
 class MessageSendViewController: UIViewController {
-
+    
     @IBOutlet weak var textView: UITextView!
     
     override func viewDidLoad() {
@@ -26,14 +26,13 @@ class MessageSendViewController: UIViewController {
         let sendButton = UIBarButtonItem(title: "전송", style: .plain, target: self, action: #selector(send))
         sendButton.tintColor = UIColor.black
         self.navigationItem.rightBarButtonItem = sendButton
-
         
         let textView = UITextView()
         textView.frame = CGRect(x: 16, y: 88, width: 343, height: 388)
         textView.backgroundColor = UIColor.white0
         textView.textColor = .darkGreyTwo
         view.addSubview(textView)
-
+        
         textView.translatesAutoresizingMaskIntoConstraints = false // for auto layout
         textView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         textView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
@@ -44,9 +43,8 @@ class MessageSendViewController: UIViewController {
         
         textView.delegate = self
         textView.isScrollEnabled = false
-
+        
         textViewDidChange(textView)
-
     }
     
     @objc func goBack(){
@@ -61,13 +59,12 @@ class MessageSendViewController: UIViewController {
 extension MessageSendViewController: UITextViewDelegate{
     
     func textViewDidChange(_ textView: UITextView) {
-    let size = CGSize(width: view.frame.width, height: .infinity) // ---- 1
-       let estimatedSize = textView.sizeThatFits(size) // ---- 2
-       textView.constraints.forEach { (constraint) in // ---- 3
-         if constraint.firstAttribute == .height {
-           constraint.constant = estimatedSize.height
-         }
-       }
-     }
+        let size = CGSize(width: view.frame.width, height: .infinity) // ---- 1
+        let estimatedSize = textView.sizeThatFits(size) // ---- 2
+        textView.constraints.forEach { (constraint) in // ---- 3
+            if constraint.firstAttribute == .height {
+                constraint.constant = estimatedSize.height
+            }
+        }
     }
-
+}

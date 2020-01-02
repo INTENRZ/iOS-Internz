@@ -34,7 +34,6 @@ class FollowerViewController: UIViewController, UITableViewDelegate {
        // print(followStorySampleList.count)
         
     }
-    
 }
 
 extension FollowerViewController{
@@ -52,9 +51,7 @@ extension FollowerViewController{
         let follow5 = Follow(name: "5name", introduce: "서비스 기획과 리서치를 좋아하는 UXUI 디자이너입니다입니…", followImgName: "profileImg1")
         
         followStorySampleList = [follow1, follow2, follow3, follow4, follow5]
-        
     }
-    
 }
 
 extension FollowerViewController: UITableViewDataSource{
@@ -74,11 +71,6 @@ extension FollowerViewController: UITableViewDataSource{
 //        cell.followButton.button = Follow.followBtn
         cell.followImgView.image = Follow.followImg
         
-        
-        //        cell.titleLabel.text = ""
-        
         return cell
-        
-        
     }
 }

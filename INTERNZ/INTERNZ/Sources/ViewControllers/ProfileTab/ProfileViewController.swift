@@ -16,11 +16,9 @@ extension UIView{
     }
 }
 
-
 class ProfileViewController: UIViewController,UITableViewDelegate {
     
     @IBOutlet weak var navigaionItem: UINavigationItem!
-    
     @IBOutlet weak var ProfileListTable: UITableView!
     @IBOutlet weak var followButton: UIButton!
     @IBOutlet weak var messageButton: UIButton!
@@ -58,12 +56,6 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
         
         ProfileListTable.dataSource = self
         ProfileListTable.delegate = self
-        
-//        print(ProfileStorySampleList.count)
-        
-//        let menuButton = UIBarButtonItem(image: UIImage(named: "closeIc"), style: .plain, target: self, action: #selector(CloseBtn))
-//        menuButton.tintColor = UIColor.black
-//        self.navigationItem.rightBarButtonItem = menuButton
         
         downloadTimeline()
     }
@@ -135,13 +127,9 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
         return nil
     }// 여기까지
     
-    
-    
-    
     @objc func CloseBtn(){
         self.dismiss(animated: true)
     }
-    
     
     @IBAction func followerCount(_ sender: UIButton) {
         
@@ -173,9 +161,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
     }
 }
 
-
 extension ProfileViewController: UITableViewDataSource{
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -201,4 +187,3 @@ extension ProfileViewController: UITableViewDataSource{
         self.present(dvc, animated: true, completion: nil)
     }
 }
-

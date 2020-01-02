@@ -156,8 +156,6 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
             }
         }
     } // testfunc()
-    
-    
 }
 
 extension AnnouncementViewController {
@@ -171,7 +169,6 @@ extension AnnouncementViewController {
         announcementList = [sample1, sample2, sample3, sample4, sample5, sample1, sample1, sample1, sample1]
     }
 }
-
 
 extension AnnouncementViewController: UITableViewDelegate {
     
@@ -190,16 +187,12 @@ extension AnnouncementViewController: UITableViewDataSource {
         cell.companyLabel.text = "\(jobDataSet[indexPath.row].company)"
         cell.jobLabel.text = "\(jobDataSet[indexPath.row].team)"
         cell.dayLabel.text = " D "+"\(jobDataSet[indexPath.row].d_day)"
-        
-        
-        
+
         let urlStr = jobDataSet[indexPath.row].logo
         let url = URL(string: urlStr)
         
         cell.companyImageView.kf.setImage(with: url)
     
-        
-        
         return cell
     }
     
@@ -212,12 +205,8 @@ extension AnnouncementViewController: UITableViewDataSource {
             self.present(alert, animated: true)
             
         }
-        
         share.backgroundColor = UIColor.marigold
-        
         
         return [share]
     }
-    
-    
 }

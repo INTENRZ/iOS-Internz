@@ -18,8 +18,6 @@ import UIKit
 
 class ProfileTableViewCell: UITableViewCell {
 
-
-
     @IBOutlet weak var timelineImgView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -30,13 +28,9 @@ class ProfileTableViewCell: UITableViewCell {
         super.awakeFromNib()
       
       categoryLabel.setCornerRadius()
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-       
     }
-
 }

@@ -29,9 +29,7 @@ class LoginViewController: UIViewController {
         pwTextField.delegate = self
         
         self.signupButton.underline()
-        
     }
-    
     
     @IBAction func goSigninView(_ sender: UIButton) {
         
@@ -43,7 +41,6 @@ class LoginViewController: UIViewController {
         
         navigationController.modalPresentationStyle = .fullScreen
         present(navigationController, animated: true, completion: nil)
-        
     }
     
     @IBAction func doLogin(_ sender: UIButton) {
@@ -58,22 +55,17 @@ class LoginViewController: UIViewController {
             case .success(let data):
                 
                 let user_data = data as! LoginDataClass
-//                print(user_data)
                 
                 UserDefaults.standard.set(user_data.token, forKey: "token")
                 UserDefaults.standard.set(user_data.isFirst, forKey: "isFirst")
                 
                 var isFirstStr = UserDefaults.standard.value(forKey: "isFirst") as! String
-                print("isFirstStr??", isFirstStr)
-                
                 var token = UserDefaults.standard.value(forKey: "token") as! String
-                print("token???", token)
-                
                 
                 if(isFirstStr == "0"){
                     print("처음 로그인")
                     self.goFirstLogin()
-//                    self.goMain()
+                    self.goMain()
                 } else {
                     print("이미 로그인 해봄")
                     self.goMain()
@@ -84,7 +76,6 @@ class LoginViewController: UIViewController {
                 let alert = UIAlertController(title: "Login Failed!", message: "이메일과 비밀번호를 다시 확인해 주세요", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
                 self.present(alert, animated: true)
-                
                 
                 break
                 
@@ -100,10 +91,7 @@ class LoginViewController: UIViewController {
                 
             }
         }
-        
-        
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -118,7 +106,6 @@ class LoginViewController: UIViewController {
         self.present(dvc, animated: true, completion: nil)
     }
     
-    
     func goFirstLogin(){
         let firstLoginStoryBoard:UIStoryboard = UIStoryboard(name: "FirstLogin", bundle: nil)
         
@@ -129,7 +116,6 @@ class LoginViewController: UIViewController {
         navigationController.modalPresentationStyle = .fullScreen
         self.present(navigationController, animated: true, completion: nil)
     }
-    
 }
 
 extension LoginViewController: UITextFieldDelegate {
@@ -166,15 +152,12 @@ extension LoginViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
     }
     
     private func closeKeyboardObserver(){
         
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        
-        
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
@@ -196,5 +179,4 @@ extension LoginViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
 }

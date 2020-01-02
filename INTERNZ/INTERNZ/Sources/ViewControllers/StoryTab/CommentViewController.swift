@@ -23,18 +23,14 @@ class CommentViewController: UIViewController {
         self.navigationItem.leftBarButtonItem  = button1
         
         setCommentData()
-        
         commentTableView.delegate = self
         commentTableView.dataSource = self
-
     }
     
     @objc func goBack(){
         print("tap close btn")
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
 }
 
 extension CommentViewController {
@@ -46,10 +42,8 @@ extension CommentViewController {
         let comment5 = Comment(username: "김김김5", comment: "댓글 내용 어쩌고고고고고", commentDate: "19-03-03", profileImgName: "profileImg1")
         
         commentList = [comment1, comment2, comment3, comment4, comment5]
-        
     }
 }
-
 
 extension CommentViewController : UITableViewDelegate {
     

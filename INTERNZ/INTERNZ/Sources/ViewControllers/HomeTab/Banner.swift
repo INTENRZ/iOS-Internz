@@ -22,5 +22,4 @@ struct Banner {
         self.jobName = jobName
         self.day = day
     }
-    
 }

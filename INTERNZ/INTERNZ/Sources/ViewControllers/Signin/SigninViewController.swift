@@ -37,7 +37,6 @@ class SigninViewController: UIViewController {
         nextButton.backgroundColor = UIColor.whiteFour
         nextButton.layer.cornerRadius = 5
         
-        
         addKeyboardObserver()
         
         emailTextField.delegate = self
@@ -47,7 +46,6 @@ class SigninViewController: UIViewController {
         let button1 = UIBarButtonItem(image: UIImage(named: "left1Ic"), style: .plain, target: self, action: #selector(goBack))
         button1.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem  = button1
-        
     }
     
     @objc func goBack(){
@@ -67,7 +65,6 @@ class SigninViewController: UIViewController {
         dvc.phoneString = phoneTextField.text!
         
         navigationController?.pushViewController(dvc, animated: true)
-        
     }
     
     @IBAction func gotoLoginView(_ sender: UIButton) {
@@ -76,12 +73,8 @@ class SigninViewController: UIViewController {
         let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
         loginViewController.modalPresentationStyle = .fullScreen
         self.present(loginViewController, animated: true, completion: nil)
-        
     }
 }
-
-
-
 
 extension SigninViewController: UITextFieldDelegate{
     

@@ -36,7 +36,6 @@ class StoryTabViewController: TabmanViewController {
         bar.indicator.tintColor = UIColor.marigold
         
         addBar(bar, dataSource: self, at: .top)
-        
     }
 }
 
@@ -107,8 +106,5 @@ extension StoryTabViewController: PageboyViewControllerDataSource, TMBarDataSour
             let title = "Page \(index)"
             return TMBarItem(title: title)
         }
-        
     }
-    
 }
-

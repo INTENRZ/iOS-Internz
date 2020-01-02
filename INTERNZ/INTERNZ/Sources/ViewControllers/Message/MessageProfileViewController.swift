@@ -22,9 +22,7 @@ class MessageProfileViewController:UIViewController, UITableViewDelegate{
         self.navigationItem.title = "유저쪽지"
         
         setMessageProfileSampleData()
-        
         MessageProfileListTable.reloadData()
-        
         MessageProfileListTable.dataSource = self
         MessageProfileListTable.delegate = self
         
@@ -36,35 +34,23 @@ class MessageProfileViewController:UIViewController, UITableViewDelegate{
             let addItem = UIBarButtonItem(customView: addButton)
             return addItem
         }
-    
         navigationItem.leftBarButtonItems = [addItem]
-        
     }
-    
 }
 
 extension MessageProfileViewController{
     
     func setMessageProfileSampleData(){
         
-        
         let message1 = MessageUser(name: "1박정민", content: "최근 주고 받은 쪽지 내용~~~",userMessageImgName: "profileImg1")
-        
         let message2 = MessageUser(name: "1박정민", content: "최근 주고 받은 쪽지 내용~~~",userMessageImgName: "profileImg1")
-        
         let message3 = MessageUser(name: "1박정민", content: "최근 주고 받은 쪽지 내용~~~",userMessageImgName: "profileImg1")
-        
         let message4 = MessageUser(name: "1박정민", content: "최근 주고 받은 쪽지 내용~~~",userMessageImgName: "profileImg1")
-        
         let message5 = MessageUser(name: "1박정민", content: "최근 주고 받은 쪽지 내용~~~",userMessageImgName: "profileImg1")
-        
         let message6 = MessageUser(name: "1박정민", content: "최근 주고 받은 쪽지 내용~~~",userMessageImgName: "profileImg1")
-        
         let message7 = MessageUser(name: "1박정민", content: "최근 주고 받은 쪽지 내용~~~",userMessageImgName: "profileImg1")
         
-        
         MessageProfileSampleList = [message1, message2, message3, message4, message5, message6, message7]
-        
     }
 }
 
@@ -85,7 +71,6 @@ extension MessageProfileViewController: UITableViewDataSource{
         navigationController.modalPresentationStyle = .fullScreen
         
         present(navigationController, animated: true, completion: nil)
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -13,7 +13,5 @@ class ProfileBannerCell: UICollectionViewCell {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var introduceLabel: UILabel!
-    
     @IBOutlet weak var cellView: UIView!
-    
 }
