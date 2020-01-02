@@ -14,7 +14,7 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
     var picker = UIView()
     var pickerView = UIPickerView()
     
-    var dataArray = ["최신순", "마감순" ,"sss", "sssss"] // picker view array
+    var dataArray = ["최신순", "마감순"] // picker view array
     
     var isClickedSortBtn:Bool = false
     var selectString = "최신순"
@@ -49,11 +49,7 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         
         // 1. 전체를 잡는 view 생성 + constraint 걸기
         self.picker.isHidden = false
-        
-        self.picker.frame = CGRect(x: 0, y: view.frame.height - 260, width: view.frame.width, height: 150)
-        
-        //        let picker = UIView(frame: CGRect(x: 0, y: view.frame.height - 260, width: view.frame.width, height: 260))
-        
+        self.picker.frame = CGRect(x: 0, y: view.frame.height - 220, width: view.frame.width, height: 150)
         view.addSubview(self.picker)
         
         
