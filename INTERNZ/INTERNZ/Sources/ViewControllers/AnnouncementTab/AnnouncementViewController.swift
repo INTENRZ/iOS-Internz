@@ -11,7 +11,7 @@ import Kingfisher
 
 class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     
-    var dataArray = ["최신순", "마감순" ,"sss", "sssss"] // picker view array
+    var dataArray = ["최신순", "마감순"] // picker view array
     
     @IBOutlet weak var announcementTable: UITableView!
     
@@ -20,9 +20,9 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
     var announcementList:[Announcement] = [] // 공고 리스트를 전역으로 선언
     
     var jobDataSet = [jobResponseString.JobDataClass]()
-//    let jobDataManager = JobService.sharedJob
     
     var picker = UIView()
+    var sortPicker = UIPickerView()
     
     var isClickedSortBtn: Bool = false
     var selectString = "최신순" // pickerView 에서 선택한 내용
@@ -55,15 +55,7 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         navigationController?.pushViewController(dvc, animated: true)
         
     }
-    
-    
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        let backItem = UIBarButtonItem()
-    //        backItem.title = ""
-    //        backItem.tintColor = UIColor.black
-    //        navigationItem.backBarButtonItem = backItem
-    //    }
-    
+
     
     // 정렬 버튼 눌렀을 때 -> picker 생성
     // create UIPickerViews programmatically
@@ -73,8 +65,7 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         // 1. 전체를 잡는 view 생성 + constraint 걸기
         self.picker.isHidden = false
-        
-        self.picker.frame = CGRect(x: 0, y: view.frame.height - 260, width: view.frame.width, height: 260)
+        self.picker.frame = CGRect(x: 0, y: view.frame.height - 220, width: view.frame.width, height: 150)
         
         view.addSubview(self.picker)
         
@@ -94,30 +85,14 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         
         // 4. PickerView 생성
-        let sortPicker = UIPickerView(frame: CGRect(x: 0, y: barAccessory.frame.height, width: view.frame.width, height: picker.frame.height - barAccessory.frame.height))
-        sortPicker.delegate = self
-        sortPicker.dataSource = self
-        sortPicker.backgroundColor = UIColor.whiteFour
+        self.sortPicker.frame = CGRect(x: 0, y: barAccessory.frame.height, width: view.frame.width, height: picker.frame.height - barAccessory.frame.height)
+        self.sortPicker.delegate = self
+        self.sortPicker.dataSource = self
+        self.sortPicker.backgroundColor = UIColor.whiteFour
         
         picker.addSubview(sortPicker)
         
         downloadJobData()
-        
-//        JobListService.sharedJob.getJobList {
-//
-//            response in
-//            switch response {
-//            case .success(let data):
-//                print("@@@@@@ success @@@@@@@@")
-//                self.jobDataSet = data
-//                self.announcementTable.reloadData()
-//                print(self.jobDataSet)
-//
-//            case .failure :
-//                print("error")
-//            }
-//
-//        }
         
     }
     
@@ -173,8 +148,15 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
             self.picker.isHidden = false
             isClickedSortBtn = true
             self.sortButton.titleLabel?.text = selectString
+            
+            if selectString == "최신순" {
+                self.sortPicker.selectedRow(inComponent: 0)
+            } else {
+                self.sortPicker.selectedRow(inComponent: 1)
+            }
         }
-    }
+    } // testfunc()
+    
     
 }
 

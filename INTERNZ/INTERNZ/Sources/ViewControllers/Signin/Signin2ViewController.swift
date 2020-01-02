@@ -111,9 +111,6 @@ class Signin2ViewController: UIViewController {
     
     func goSignup(){
         
-        // if email이 있으면
-        // if password이 있으면
-        
         if isWoman == true {
             self.gender = "woman"
         } else {
