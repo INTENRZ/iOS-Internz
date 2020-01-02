@@ -43,13 +43,13 @@ struct CommentService {
                             switch status {
                             case 200:
                                 guard let data = response.data else { return }
-                                print("data????" , data)
+//                                print("data????" , data)
                                 
                                 do {
                                     print("start decode")
                                     let decoder = JSONDecoder()
                                     let object = try decoder.decode(commentResponseString.self, from: data)
-                                    print(object)
+//                                    print(object)
                                     
                                     if object.success == true {
                                         print("통신 성공 ~!!!")

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CommentViewController: UIViewController {
     
@@ -30,20 +31,15 @@ class CommentViewController: UIViewController {
         commentTableView.delegate = self
         commentTableView.dataSource = self
         
-        print("@@@@@@@@@storyIdx???", self.storyIdx)
-        
+//        print("@@@@@@@@@storyIdx???", self.storyIdx)
         
         downloadCommentData()
-        
-        
     }
     
     @objc func goBack(){
         print("tap close btn")
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
     
     func downloadCommentData(){
         
@@ -56,8 +52,8 @@ class CommentViewController: UIViewController {
             switch response{
             case .success(let data):
                 print("data????", data)
-//                self.commentDataSet = data as! [commentDataClass]
-//                print(self.commentDataSet)
+                self.commentDataSet = data as! [commentDataClass]
+                self.commentTableView.reloadData()
                
             case.networkFail:
                 print("error") //찍어보기 확인
@@ -104,7 +100,7 @@ extension CommentViewController : UITableViewDelegate {
 
 extension CommentViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return commentList.count
+        return commentDataSet.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -112,13 +108,30 @@ extension CommentViewController: UITableViewDataSource{
         
         let comment = commentList[indexPath.row]
         
-        cell.profileImageView.image = comment.profileImg
-        cell.nameLabel.text = comment.username
-        //        cell.dateLabel.text = comment.commentDate
-        //        cell.commentLabel.text = comment.comment
+        let sampleComment = self.commentDataSet[indexPath.row]
         
-        cell.dateLabel.text = "날짜날짜"
-        cell.commentLabel.text = "댓글내용"
+//        cell.profileImageView.image = comment.profileImg
+//        cell.nameLabel.text = comment.username
+       
+        
+//        cell.dateLabel.text = "날짜날짜"
+//        cell.commentLabel.text = "댓글내용"
+        
+        cell.nameLabel.text = sampleComment.nickname
+        cell.commentLabel.text = sampleComment.content
+        cell.dateLabel.text = sampleComment.createdDate
+        
+        let urlStr = sampleComment.frontImage
+        let url = URL(string: urlStr)
+        cell.profileImageView.kf.setImage(with: url)
+        
+        
+//        let urlStr = jobDataSet[indexPath.row].logo
+//               let url = URL(string: urlStr)
+//
+//               cell.companyImageView.kf.setImage(with: url)
+        
+        
         
         return cell
     }
