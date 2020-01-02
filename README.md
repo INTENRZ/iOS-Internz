@@ -44,16 +44,36 @@
 <br/>
 
 
-### 💻 기능 소개
+### 💻  기능 소개
 
 
-| 기능       | 개발 여부          | 기타사항  |
-| ------------- |:-------------:| -----:|
-|  로그인    | right-aligned | $1600 |
-| 회원가입   | right-aligned | $1600 |
-| col 3 is      | right-aligned | $1600 |
-| col 3 is      | right-aligned | $1600 |
-| col 3 is      | right-aligned | $1600 |
+| 기능       | 개발 여부   | 기타사항  |
+| :----------------: |:------:| :---------:|
+| 로그인    | ○ | $1600 |
+| 회원가입(기본정보)  | right-aligned | $1600 |
+| 회원가입(관심직무 + 프로필 설정) | right-aligned | $1600 |
+| 프로필 설정     | right-aligned | $1600 |
+| 홈(맞춤 공고)  | right-aligned | $1600 |
+| 홈(추천 프로필) | right-aligned |  |
+| 홈(오늘의 스토리) | right-aligned | |
+| 공고 | right-aligned | 전체공고/지난공고 정렬 |
+| 공고 필터 | right-aligned | 보고 싶은 직무 1개 선택, 필터에 따라 정렬 |
+| 공고 캘린더      | right-aligned | 월별 공고 조회 |
+| 스토리      | right-aligned | 최신순/조회순 정렬 |
+| 카테고리 별 스토리 조회 | right-aligned | $1600 |
+| 스토리 상세글  | right-aligned | $1600 |
+| 스토리 댓글  | right-aligned | 댓글보기 + 댓글쓰기 |
+| 개인 프로필 | right-aligned | 정보: 회원가입시의 한 줄 소개 + 프로필 사진 + 관심 직무 |
+| 개인 프로필 쪽지  | right-aligned | 쪽지 리스트 + 쪽지 보내기 |
+| 개인 프로필 타임라인 | right-aligned | 플러팅버튼을 통해 타임라인 추가 |
+| 개인 프로필 스토리 리스트 조회 | right-aligned | $1600 |
+| 개인 프로필 스토리 추가 | right-aligned | $1600 |
+| 개인 프로필 스토리 팔로우 리스트 | right-aligned | $1600 |
+| 개인 프로필 소토리 팔로워 리스트 | right-aligned | $1600 |
+
+
+<br/>
+
 
 ### 👶 Contributor
 - [최은지](https://github.com/ChoiEunji0114)
