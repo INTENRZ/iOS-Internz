@@ -212,6 +212,10 @@ extension AnnouncementViewController: UITableViewDataSource {
             self.present(alert, animated: true)
             
         }
+        
+        share.backgroundColor = UIColor.marigold
+        
+        
         return [share]
     }
     

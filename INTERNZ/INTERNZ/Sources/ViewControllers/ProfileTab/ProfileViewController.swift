@@ -137,9 +137,9 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
     
     @IBAction func messageBtn(_ sender: Any) {
         
-        let dvc = storyboard?.instantiateViewController(identifier: "ProfileViewController") as! ProfileViewController
-        
-        navigationController?.pushViewController(dvc, animated: true)
+//        let dvc = storyboard?.instantiateViewController(identifier: "ProfileViewController") as! ProfileViewController
+//
+//        navigationController?.pushViewController(dvc, animated: true)
         
     }
     
