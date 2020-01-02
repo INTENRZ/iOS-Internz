@@ -10,7 +10,7 @@
         <!--스토리-->
         <scene sceneID="3lS-Um-b8a">
             <objects>
-                <viewController storyboardIdentifier="Story" id="Mpp-1N-9vO" customClass="StoryViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Story" modalTransitionStyle="flipHorizontal" id="Mpp-1N-9vO" customClass="StoryViewController" customModule="INTERNZ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hyh-Nc-DEg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,6 +359,8 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="vNC-PG-v8H" id="kcU-aq-zff"/>
+                        <outlet property="commentCountLabel" destination="UO0-6Y-SyX" id="bWE-Re-Jj5"/>
+                        <outlet property="dateLabel" destination="tKP-2U-wlY" id="OCG-xm-y1Q"/>
                         <outlet property="detailLabel" destination="2dv-dB-qbM" id="vnZ-tf-akh"/>
                         <outlet property="followButton" destination="2Oa-Bc-M1p" id="ZdB-9M-b1E"/>
                         <outlet property="scrapButton" destination="EuU-lQ-5sd" id="yaJ-nb-8kA"/>

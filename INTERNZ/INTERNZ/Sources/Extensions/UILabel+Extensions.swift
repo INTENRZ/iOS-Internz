@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import UIKit
+
+extension UILabel {
+    
+    func setMultiLine(){
+        self.lineBreakMode = .byWordWrapping
+        self.numberOfLines = 0
+    }
+    
+}

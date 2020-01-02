@@ -79,6 +79,7 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
             case .success(let data):
                 self.StoryDataSet = [] // 초기화
                 self.StoryDataSet = data as! [StoryResponseString.StoryDataClass]
+//                print(self.StoryDataSet)
                 self.storyTable.reloadData()
                 
             case.networkFail:
@@ -184,6 +185,9 @@ extension StoryViewController: UITableViewDelegate{
         let story = StoryDataSet[indexPath.row]
         
         let dvc = storyboard?.instantiateViewController(identifier: "StoryDetailViewController") as! StoryDetailViewController
+        
+        
+        dvc.storyIdx = story.storyIdx
         
         //        dvc.storyString = story.storyTitle
         //        dvc.writerString = story.name

@@ -47,8 +47,9 @@ struct APIConstants {
     
     
     // 스토리
-    static let storyNewURL = BaseURL + "/story/new"
-    static let storyCountURL = BaseURL + "/story/count"
+    static let storyNewURL = BaseURL + "/story/new" // 스토리 최신순 조회
+    static let storyCountURL = BaseURL + "/story/count" // 스토리 조회순 조회
+    static let storyDetailURL = BaseURL + "/story/" // 스토리 내용 조회
     
     
     
