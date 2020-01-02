@@ -14,7 +14,7 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
     var picker = UIView()
     var pickerView = UIPickerView()
     
-    var dataArray = ["최신순", "마감순"] // picker view array
+    var dataArray = ["최신순", "조회순"] // picker view array
     
     var isClickedSortBtn:Bool = false
     var selectString = "최신순"
@@ -30,18 +30,13 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        setStorySampleData()
-        
-        storyTable.reloadData()
-        
         storyTable.dataSource = self
         storyTable.delegate = self
-        
-        //        print(category ?? "")
         
         self.sortButton.titleLabel?.text = selectString
         
         downloadStoryData()
+        //        downloadStoryCountData()
         
     }
     
@@ -67,10 +62,6 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         picker.addSubview(barAccessory)
         
         
-        // 4. PickerView 생성
-//        let sortPicker = UIPickerView(frame: CGRect(x: 0, y: barAccessory.frame.height, width: view.frame.width, height: picker.frame.height - barAccessory.frame.height))
-        
-        
         self.pickerView.frame = CGRect(x: 0, y: barAccessory.frame.height, width: view.frame.width, height: picker.frame.height - barAccessory.frame.height)
         
         self.pickerView.delegate = self
@@ -83,6 +74,8 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         
     }
     
+    
+    // 스토리 최신순 조회
     func downloadStoryData(){
         
         StoryListService.shared.StoryList {
@@ -92,10 +85,12 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
             switch response{
             case .success(let data):
                 print("성공이닷~!~!~")
+                self.StoryDataSet = [] // 초기화
                 self.StoryDataSet = data as! [StoryResponseString.StoryDataClass]
                 self.storyTable.reloadData()
                 
-            case.networkFail: print("error")
+            case.networkFail:
+                print("error")
                 //찍어보기 확인
                 
                 
@@ -109,6 +104,38 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
             
         }
     }
+    
+    
+    // 스토리 조회순 조회
+    func downloadStoryCountData(){
+        
+        StoryListService.shared.StoryCountList {
+            
+            response in
+            
+            switch response{
+            case .success(let data):
+                print("성공이닷~!~!~")
+                self.StoryDataSet = [] // 초기화
+                self.StoryDataSet = data as! [StoryResponseString.StoryDataClass]
+                self.storyTable.reloadData()
+                
+            case.networkFail:
+                print("error")
+                //찍어보기 확인
+                
+                
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            }
+            
+        }
+    }
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -125,6 +152,24 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectString = dataArray[pickerView.selectedRow(inComponent: 0)]
+        
+        // 만약에 선택된 피커가 최신순이면
+        if selectString == "최신순" {
+//            pickerView.selectedRow(inComponent: 0)
+//            downloadStoryData()
+//            self.storyTable.reloadData()
+            print("최신순 조회")
+        }
+        else {
+//            pickerView.selectedRow(inComponent: 1)
+//            downloadStoryCountData()
+//            self.storyTable.reloadData()
+            print("조회순 조회")
+        }
+        
+        
+        
+        
     }
     
     // PickerView 완료 버튼 클릭
@@ -141,14 +186,22 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
             self.picker.isHidden = false
             isClickedSortBtn = true
             self.sortButton.titleLabel?.text = selectString
-            
-            // 만약에 선택된 피커가 최신순이면
-            if selectString == "최신순" {
-                pickerView.selectedRow(inComponent: 0)
-            }
-            else {
-                pickerView.selectedRow(inComponent: 1)
-            }
+          
+        }
+        
+        if selectString == "최신순" {
+//            pickerView.selectedRow(inComponent: 0)
+//            downloadStoryData()
+//            self.storyTable.reloadData()
+            print("최신순 조회")
+            downloadStoryData()
+        }
+        else {
+//            pickerView.selectedRow(inComponent: 1)
+//            downloadStoryCountData()
+//            self.storyTable.reloadData()
+            print("조회순 조회")
+            downloadStoryCountData()
         }
         
         
@@ -178,14 +231,14 @@ extension StoryViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//        let story = StoryList[indexPath.row]
+        //        let story = StoryList[indexPath.row]
         
         let story = StoryDataSet[indexPath.row]
         
         let dvc = storyboard?.instantiateViewController(identifier: "StoryDetailViewController") as! StoryDetailViewController
         
-//        dvc.storyString = story.storyTitle
-//        dvc.writerString = story.name
+        //        dvc.storyString = story.storyTitle
+        //        dvc.writerString = story.name
         
         dvc.storyIdx = story.storyIdx
         
