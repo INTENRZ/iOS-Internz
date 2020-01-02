@@ -46,6 +46,7 @@ class FollowerViewController: UIViewController, UITableViewDelegate {
             downloadFollowingData()
         } else {
             self.titleLabel.text = "팔로워"
+            downloadFollowerData()
         }
         
         
@@ -62,15 +63,14 @@ class FollowerViewController: UIViewController, UITableViewDelegate {
     
     
     func downloadFollowingData(){
-        print("@@@@@ start downloading following data @@@@@")
-        
         FollowService.followShared.followingList {
             
             response in
             
             switch response{
             case .success(let data):
-                print("data????", data)
+                //                print("data????", data)
+                self.followDataSet = []
                 self.followDataSet = data as! [followDataClass]
                 self.followTable.reloadData()
                 
@@ -85,17 +85,34 @@ class FollowerViewController: UIViewController, UITableViewDelegate {
             }
         }
         
-        
+    }
+    
+    func downloadFollowerData(){
+        FollowService.followShared.followerList {
+            response in
+            
+            switch response{
+            case .success(let data):
+                self.followDataSet = []
+                self.followDataSet = data as! [followDataClass]
+                self.followTable.reloadData()
+                
+            case.networkFail:
+                print("error") //찍어보기 확인
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            }
+        }
         
     }
     
     
-
+    
 }
-
-
-
-
 
 extension FollowerViewController{
     
@@ -123,7 +140,7 @@ extension FollowerViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = followTable.dequeueReusableCell(withIdentifier: "FollowTableViewCell")as!FollowTableViewCell
-    
+        
         let follow = followDataSet[indexPath.row]
         
         cell.nameLabel.text = follow.nickname

@@ -37,13 +37,11 @@ struct FollowService {
                             switch status {
                             case 200:
                                 guard let data = response.data else { return }
-//                                print("data????" , data)
                                 
                                 do {
                                     print("start decode")
                                     let decoder = JSONDecoder()
                                     let object = try decoder.decode(followResponseString.self, from: data)
-//                                    print(object)
                                     
                                     if object.success == true {
                                         print("통신 성공 ~!!!")
@@ -76,5 +74,76 @@ struct FollowService {
                 } // response.result switch
         } // alamofire.request
     } // func followinglist
+    
+    
+    
+    
+    
+    // 팔로워 조회
+    func followerList(completion: @escaping (NetworkResult<Any>) -> Void){
+        
+        var token = UserDefaults.standard.value(forKey: "token") as! String
+        
+        let header: HTTPHeaders = [
+            "Content-Type" : "applicatiton/json",
+            "token" : token
+        ]
+        
+        Alamofire.request(APIConstants.profileFollowerURL, method: .get, encoding: JSONEncoding.default, headers:
+            header).responseJSON{
+                response in
+                
+                // parameter 위치
+                switch response.result {
+                    
+                // 통신 성공 - 네트워크 연결
+                case .success:
+                    if response.result.value != nil {
+                        
+                        if let status = response.response?.statusCode {
+                            switch status {
+                            case 200:
+                                guard let data = response.data else { return }
+                                
+                                do {
+                                    print("start decode")
+                                    let decoder = JSONDecoder()
+                                    let object = try decoder.decode(followResponseString.self, from: data)
+                                    
+                                    if object.success == true {
+                                        print("통신 성공 ~!!!")
+                                        completion(.success(object.data))
+                                    } else {
+                                        print("통신 안 됨")
+                                    }
+                                    
+                                } catch (let err){
+                                    print(err.localizedDescription)
+                                }
+                            case 400:
+                                completion(.pathErr)
+                            case 500:
+                                completion(.serverErr)
+                            default:
+                                break
+                            }// switch
+                        }// iflet
+                    }
+                    break
+                    
+                // 통신 실패 - 네트워크 연결
+                case .failure(let err):
+                    print(err.localizedDescription)
+                    completion(.networkFail)
+                    print("통신failure")
+                    // .networkFail이라는 반환 값이 넘어감
+                    break
+                } // response.result switch
+        } // alamofire.request
+    } // func followerlist
+    
+    
+    
+    
     
 }
