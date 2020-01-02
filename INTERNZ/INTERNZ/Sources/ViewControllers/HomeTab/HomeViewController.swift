@@ -156,8 +156,8 @@ extension HomeViewController: UICollectionViewDelegate{
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let x = scrollView.contentOffset.x
-        let w = scrollView.bounds.size.width
+        let x = bannerCV.contentOffset.x
+        let w = bannerCV.bounds.size.width
         let currentPage = Int(ceil(x/w))
         print(currentPage)
         self.paging.set(progress: currentPage, animated: true)

@@ -34,7 +34,7 @@ class SignupService{
             .responseData { response in
                 
                 
-//                print("body?? ",  body)
+               print("body?? ",  body)
                 
                 // parameter 위치
                 switch response.result {

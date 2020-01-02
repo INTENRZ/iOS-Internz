@@ -288,7 +288,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2Iz-od-0ll"/>
                     </view>
-                    <navigationItem key="navigationItem" title="프로필" id="Fvs-pT-vSi"/>
+                    <navigationItem key="navigationItem" title="프로필" id="2hK-Bx-6w6"/>
                     <connections>
                         <outlet property="ProfileListTable" destination="iB8-bn-toh" id="yd0-mi-flt"/>
                         <outlet property="followButton" destination="RZJ-lo-Ega" id="Hc5-pC-NBa"/>
@@ -938,7 +938,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xpb-Uu-LXA">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

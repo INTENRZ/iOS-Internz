@@ -12,6 +12,7 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
     
     @IBOutlet weak var sortButton: UIButton!
     var picker = UIView()
+    var pickerView = UIPickerView()
     
     var dataArray = ["최신순", "마감순" ,"sss", "sssss"] // picker view array
     
@@ -49,7 +50,7 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         // 1. 전체를 잡는 view 생성 + constraint 걸기
         self.picker.isHidden = false
         
-        self.picker.frame = CGRect(x: 0, y: view.frame.height - 260, width: view.frame.width, height: 260)
+        self.picker.frame = CGRect(x: 0, y: view.frame.height - 260, width: view.frame.width, height: 150)
         
         //        let picker = UIView(frame: CGRect(x: 0, y: view.frame.height - 260, width: view.frame.width, height: 260))
         
@@ -71,12 +72,16 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         
         
         // 4. PickerView 생성
-        let sortPicker = UIPickerView(frame: CGRect(x: 0, y: barAccessory.frame.height, width: view.frame.width, height: picker.frame.height - barAccessory.frame.height))
-        sortPicker.delegate = self
-        sortPicker.dataSource = self
-        sortPicker.backgroundColor = UIColor.whiteFour
+//        let sortPicker = UIPickerView(frame: CGRect(x: 0, y: barAccessory.frame.height, width: view.frame.width, height: picker.frame.height - barAccessory.frame.height))
         
-        picker.addSubview(sortPicker)
+        
+        self.pickerView.frame = CGRect(x: 0, y: barAccessory.frame.height, width: view.frame.width, height: picker.frame.height - barAccessory.frame.height)
+        
+        self.pickerView.delegate = self
+        self.pickerView.dataSource = self
+        self.pickerView.backgroundColor = UIColor.whiteFour
+        
+        picker.addSubview(self.pickerView)
         
         downloadStoryData()
         
@@ -134,10 +139,20 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
             self.picker.isHidden = true
             isClickedSortBtn = false
             self.sortButton.titleLabel?.text = selectString
+            
+            
         } else {
             self.picker.isHidden = false
             isClickedSortBtn = true
             self.sortButton.titleLabel?.text = selectString
+            
+            // 만약에 선택된 피커가 최신순이면
+            if selectString == "최신순" {
+                pickerView.selectedRow(inComponent: 0)
+            }
+            else {
+                pickerView.selectedRow(inComponent: 1)
+            }
         }
         
         

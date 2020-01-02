@@ -33,10 +33,13 @@ class Signin2ViewController: UIViewController {
     //    var genderBtn: Bool = false
     //    var agreeBtn: Bool = false
     
-    var userEmailString: String!
-    var userPwdString: String?
-    var phoneString: String?
-    
+    var userEmailString = ""
+    var userPwdString = ""
+    var phoneString = ""
+    var gender = ""
+    var name = ""
+    var nickname = ""
+    var birth = ""
     var isWoman: Bool = true
     
     
@@ -100,37 +103,24 @@ class Signin2ViewController: UIViewController {
         
         
         
-//        let loginStoryBoard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
-//        let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
-//        loginViewController.modalPresentationStyle = .fullScreen
-//        self.present(loginViewController, animated: true, completion: nil)
+        //        let loginStoryBoard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        //        let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        //        loginViewController.modalPresentationStyle = .fullScreen
+        //        self.present(loginViewController, animated: true, completion: nil)
     }
     
     func goSignup(){
         
-//        let name = 
-//        guard let title = self.titleLabel else { return }
-//        guard let tittleText = title.text else { return }
-        
-        
-        guard let name = self.nameTextField.text else { return }
-        guard let nickname = self.nicknameTextField.text else { return }
-        guard let birth = self.birthTextFieldd.text else { return }
-        
-        let gender: String!
-        
-        guard let email = self.userEmailString else { return }
-        guard let pwd = self.userPwdString else { return }
-        guard let phone = self.phoneString else { return }
+        // if email이 있으면
+        // if password이 있으면
         
         if isWoman == true {
-            gender = "woman"
+            self.gender = "woman"
         } else {
-            gender = "man"
+            self.gender = "man"
         }
         
-        
-        SignupService.sharedSignup.signup(email, pwd, phone, name, nickname, birth, gender) {
+        SignupService.sharedSignup.signup(userEmailString, userPwdString, phoneString, name, nickname, birth, gender) {
             
             response in
             
@@ -139,31 +129,20 @@ class Signin2ViewController: UIViewController {
                 
                 print("data?? ", data)
                 print("성공이닷~!~!~")
-
+                
             case.networkFail:
                 print("error")
                 //찍어보기 확인
-
+                
             case .requestErr(_):
+                print(self.userEmailString, self.userPwdString, self.phoneString, self.name, self.nickname, self.birth, self.gender)
                 print("requestErr")
             case .pathErr:
                 print("pathErr")
             case .serverErr:
                 print("serverErr")
             }
-            
-            
-            
-            
-            
-            
         }
-        
-        
-        
-        
-
-        
     }
     
     
