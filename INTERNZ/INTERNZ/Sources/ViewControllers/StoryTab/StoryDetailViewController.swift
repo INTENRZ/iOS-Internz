@@ -21,8 +21,10 @@ class StoryDetailViewController: UIViewController {
     @IBOutlet weak var scrapButton: UIButton!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var commentCountLabel: UILabel!
     
+    @IBOutlet weak var commentCountLabel: UILabel!
+    @IBOutlet weak var nicknameLabel: UILabel!
+    @IBOutlet weak var introduceLabel: UILabel!
     
     var isScrap:Bool = false
     
@@ -79,6 +81,8 @@ class StoryDetailViewController: UIViewController {
                 self.writerLabel.text = self.storyDetailDataSet[0].nickname
                 self.dateLabel.text = self.storyDetailDataSet[0].created_date
                 self.commentCountLabel.text = String(self.storyDetailDataSet[0].comment_count)
+                self.nicknameLabel.text = self.storyDetailDataSet[0].nickname
+                self.introduceLabel.text = self.storyDetailDataSet[0].introduce
                 
                 
             case.networkFail:

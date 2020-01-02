@@ -363,6 +363,8 @@
                         <outlet property="dateLabel" destination="tKP-2U-wlY" id="OCG-xm-y1Q"/>
                         <outlet property="detailLabel" destination="2dv-dB-qbM" id="vnZ-tf-akh"/>
                         <outlet property="followButton" destination="2Oa-Bc-M1p" id="ZdB-9M-b1E"/>
+                        <outlet property="introduceLabel" destination="bmZ-12-7sp" id="FKd-fA-Hmu"/>
+                        <outlet property="nicknameLabel" destination="5BY-t3-Fvq" id="9yc-ES-1dy"/>
                         <outlet property="scrapButton" destination="EuU-lQ-5sd" id="yaJ-nb-8kA"/>
                         <outlet property="storyTitleLabel" destination="VCe-sV-O9h" id="ium-io-D30"/>
                         <outlet property="writerLabel" destination="MBf-Pg-Z2F" id="lUe-vl-Phd"/>

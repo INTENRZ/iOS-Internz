@@ -115,7 +115,6 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
                 print("error")
                 //찍어보기 확인
                 
-                
             case .requestErr(_):
                 print("requestErr")
             case .pathErr:

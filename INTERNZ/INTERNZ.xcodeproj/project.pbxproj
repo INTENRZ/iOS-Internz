@@ -49,6 +49,7 @@
 		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
 		B68CF7DE23BE8D5E00D7DE0E /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7DD23BE8D5E00D7DE0E /* UILabel+Extensions.swift */; };
 		B68CF7E023BE8F8D00D7DE0E /* StoryDetailResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7DF23BE8F8D00D7DE0E /* StoryDetailResponseString.swift */; };
+		B68CF7E223BE9A2C00D7DE0E /* CommentResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7E123BE9A2C00D7DE0E /* CommentResponseString.swift */; };
 		B69D184423BDD65000E03A92 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69D184323BDD65000E03A92 /* OnBoarding.storyboard */; };
 		B69D184723BDD69F00E03A92 /* OnBoarding1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69D184623BDD69F00E03A92 /* OnBoarding1ViewController.swift */; };
 		B69D184923BDDB1D00E03A92 /* OnBoarding3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69D184823BDDB1D00E03A92 /* OnBoarding3ViewController.swift */; };
@@ -135,6 +136,7 @@
 		B67CBF9523B1740B001C78B2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		B68CF7DD23BE8D5E00D7DE0E /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		B68CF7DF23BE8F8D00D7DE0E /* StoryDetailResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailResponseString.swift; sourceTree = "<group>"; };
+		B68CF7E123BE9A2C00D7DE0E /* CommentResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentResponseString.swift; sourceTree = "<group>"; };
 		B69D184323BDD65000E03A92 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		B69D184623BDD69F00E03A92 /* OnBoarding1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding1ViewController.swift; sourceTree = "<group>"; };
 		B69D184823BDDB1D00E03A92 /* OnBoarding3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding3ViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				B6077AD923BCA235006DF0E7 /* CalenderResponseString.swift */,
 				7FE0B8E023BCE9EF008A52C7 /* SignupResponseString.swift */,
 				B68CF7DF23BE8F8D00D7DE0E /* StoryDetailResponseString.swift */,
+				B68CF7E123BE9A2C00D7DE0E /* CommentResponseString.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				7F0E5CA123B9001900F12492 /* MessageSendViewController.swift in Sources */,
 				B6AAF86423B6A927009571DE /* UIView+Extensions.swift in Sources */,
 				B6AAF86223B69FB2009571DE /* ProfileBanner.swift in Sources */,
+				B68CF7E223BE9A2C00D7DE0E /* CommentResponseString.swift in Sources */,
 				7F0E5CA823BA736000F12492 /* StoryListService.swift in Sources */,
 				B66EBE1E23B8E974009ACA31 /* Comment.swift in Sources */,
 				B6D9C98123B13D7400348A7B /* UIColor+Extensions.swift in Sources */,
