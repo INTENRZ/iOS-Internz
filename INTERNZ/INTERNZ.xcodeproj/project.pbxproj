@@ -47,6 +47,9 @@
 		B66EBE2A23BA46EB009ACA31 /* jobResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2923BA46EB009ACA31 /* jobResponseString.swift */; };
 		B66EBE2C23BA47D7009ACA31 /* JobListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2B23BA47D7009ACA31 /* JobListService.swift */; };
 		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
+		B69D184423BDD65000E03A92 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69D184323BDD65000E03A92 /* OnBoarding.storyboard */; };
+		B69D184723BDD69F00E03A92 /* OnBoarding1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69D184623BDD69F00E03A92 /* OnBoarding1ViewController.swift */; };
+		B69D184923BDDB1D00E03A92 /* OnBoarding3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69D184823BDDB1D00E03A92 /* OnBoarding3ViewController.swift */; };
 		B6AAF85823B668C3009571DE /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85723B668C3009571DE /* UIButton+Extensions.swift */; };
 		B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */; };
 		B6AAF85E23B69CE4009571DE /* ProfileBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85D23B69CE4009571DE /* ProfileBannerCell.swift */; };
@@ -75,7 +78,7 @@
 		B6D9C97823B12F2400348A7B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C97723B12F2400348A7B /* ProfileViewController.swift */; };
 		B6D9C97A23B12F7200348A7B /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C97923B12F7200348A7B /* StoryViewController.swift */; };
 		B6D9C97E23B1347600348A7B /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C97D23B1347600348A7B /* TabbarViewController.swift */; };
-		B6D9C98123B13D7400348A7B /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98023B13D7400348A7B /* UIColor+Additions.swift */; };
+		B6D9C98123B13D7400348A7B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98023B13D7400348A7B /* UIColor+Extensions.swift */; };
 		B6D9C98423B13E0600348A7B /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98323B13E0600348A7B /* NetworkResult.swift */; };
 		B6D9C98823B1575500348A7B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9C98723B1575500348A7B /* CalendarViewController.swift */; };
 		B6DFC56C23B607A9002EE94A /* Signin2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DFC56B23B607A9002EE94A /* Signin2ViewController.swift */; };
@@ -128,6 +131,9 @@
 		B66EBE2923BA46EB009ACA31 /* jobResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobResponseString.swift; sourceTree = "<group>"; };
 		B66EBE2B23BA47D7009ACA31 /* JobListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListService.swift; sourceTree = "<group>"; };
 		B67CBF9523B1740B001C78B2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		B69D184323BDD65000E03A92 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
+		B69D184623BDD69F00E03A92 /* OnBoarding1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding1ViewController.swift; sourceTree = "<group>"; };
+		B69D184823BDDB1D00E03A92 /* OnBoarding3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding3ViewController.swift; sourceTree = "<group>"; };
 		B6AAF85723B668C3009571DE /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileViewController.swift; sourceTree = "<group>"; };
 		B6AAF85D23B69CE4009571DE /* ProfileBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBannerCell.swift; sourceTree = "<group>"; };
@@ -158,7 +164,7 @@
 		B6D9C97723B12F2400348A7B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6D9C97923B12F7200348A7B /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		B6D9C97D23B1347600348A7B /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
-		B6D9C98023B13D7400348A7B /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		B6D9C98023B13D7400348A7B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		B6D9C98323B13E0600348A7B /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		B6D9C98723B1575500348A7B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		B6DFC56B23B607A9002EE94A /* Signin2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signin2ViewController.swift; sourceTree = "<group>"; };
@@ -302,6 +308,15 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		B69D184523BDD67C00E03A92 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				B69D184623BDD69F00E03A92 /* OnBoarding1ViewController.swift */,
+				B69D184823BDDB1D00E03A92 /* OnBoarding3ViewController.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
 		B6C0540723B560B700D455E1 /* Signin */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +369,7 @@
 		B6D9C96623B1187900348A7B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B69D184523BDD67C00E03A92 /* OnBoarding */,
 				7F0E5C9323B80DD800F12492 /* Message */,
 				B6DFC56F23B65101002EE94A /* FirstLogin */,
 				B6C0540723B560B700D455E1 /* Signin */,
@@ -390,6 +406,7 @@
 				B6C0540523B5606500D455E1 /* Signin.storyboard */,
 				B6DFC56D23B650B0002EE94A /* FirstLogin.storyboard */,
 				7F0E5C9123B80DB900F12492 /* Message.storyboard */,
+				B69D184323BDD65000E03A92 /* OnBoarding.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -397,7 +414,7 @@
 		B6D9C97F23B13D1800348A7B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B6D9C98023B13D7400348A7B /* UIColor+Additions.swift */,
+				B6D9C98023B13D7400348A7B /* UIColor+Extensions.swift */,
 				B6AAF85723B668C3009571DE /* UIButton+Extensions.swift */,
 				B6AAF86323B6A927009571DE /* UIView+Extensions.swift */,
 			);
@@ -510,6 +527,7 @@
 				B6C0540623B5606500D455E1 /* Signin.storyboard in Resources */,
 				B6D9C95B23B1169200348A7B /* Assets.xcassets in Resources */,
 				B6D9C95923B1169100348A7B /* Main.storyboard in Resources */,
+				B69D184423BDD65000E03A92 /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +593,7 @@
 				7F0E5C9923B811CC00F12492 /* MessageProfileTableViewCell.swift in Sources */,
 				B6D9C98823B1575500348A7B /* CalendarViewController.swift in Sources */,
 				B6D1F99E23B3E5F100C8BA31 /* BannerCell.swift in Sources */,
+				B69D184723BDD69F00E03A92 /* OnBoarding1ViewController.swift in Sources */,
 				B6D9C97623B12ED400348A7B /* AnnouncementViewController.swift in Sources */,
 				7F0E5CA623BA734800F12492 /* StoryResponseString.swift in Sources */,
 				7FF374B423B5EBEB004E4907 /* TimelineListViewController.swift in Sources */,
@@ -606,6 +625,7 @@
 				7F0E5C9F23B8A43600F12492 /* MessageList.swift in Sources */,
 				7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */,
 				B66EBE1C23B8E85E009ACA31 /* CommentCell.swift in Sources */,
+				B69D184923BDDB1D00E03A92 /* OnBoarding3ViewController.swift in Sources */,
 				B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */,
 				B6DFC57123B65135002EE94A /* SettingFavorViewController.swift in Sources */,
 				7F0E5C9D23B82F2600F12492 /* MessageListTableViewCell.swift in Sources */,
@@ -619,7 +639,7 @@
 				B6AAF86223B69FB2009571DE /* ProfileBanner.swift in Sources */,
 				7F0E5CA823BA736000F12492 /* StoryListService.swift in Sources */,
 				B66EBE1E23B8E974009ACA31 /* Comment.swift in Sources */,
-				B6D9C98123B13D7400348A7B /* UIColor+Additions.swift in Sources */,
+				B6D9C98123B13D7400348A7B /* UIColor+Extensions.swift in Sources */,
 				B6AAF85E23B69CE4009571DE /* ProfileBannerCell.swift in Sources */,
 				B6DFC56C23B607A9002EE94A /* Signin2ViewController.swift in Sources */,
 				B6077AD623BBA1D9006DF0E7 /* TimelineResponseString.swift in Sources */,
