@@ -19,6 +19,7 @@ extension UIView{
 
 class ProfileViewController: UIViewController,UITableViewDelegate {
     
+    @IBOutlet weak var navigaionItem: UINavigationItem!
     
     @IBOutlet weak var ProfileListTable: UITableView!
     @IBOutlet weak var followButton: UIButton!
@@ -41,10 +42,16 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
     var ProfileStorySampleList:
         [ProfileStory] = []
     
-    var timelineDataSet = [timelineResponseString.timelineDataClass]()
+    var timelineDataSet = [timelineDataClass]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 네비게이션을 투명하게 하는 방법
+        let naviBar = navigationController?.navigationBar
+        let naviBarAppearence = UINavigationBarAppearance()
+        naviBarAppearence.shadowColor = .none
+        naviBar?.scrollEdgeAppearance = naviBarAppearence
         
         //자기소개 부분 라인 수 증가
         introduceLabel.lineBreakMode = .byWordWrapping
@@ -79,7 +86,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
             case .success(let data):
                 print("@@@@@success@@@@@")
                 print(data)
-                self.timelineDataSet = data as! [timelineResponseString.timelineDataClass]
+                self.timelineDataSet = data as! [timelineDataClass]
                 self.ProfileListTable.reloadData()
                 
             case .networkFail :

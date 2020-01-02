@@ -38,13 +38,13 @@ struct TimelineListService {
                             switch status {
                             case 200:
                                 guard let data = response.data else { return }
-                                
+                                print("status", status)
                                 do {
+                                    print("start decode")
                                     let decoder = JSONDecoder()
-                                    print("value", value)
-                                    
                                     let object = try decoder.decode(timelineResponseString.self, from: data)
                                     
+                                    print("object", object)
                                     if object.success == true {
                                         print("성공~!~!")
                                         completion(.success(object.data))

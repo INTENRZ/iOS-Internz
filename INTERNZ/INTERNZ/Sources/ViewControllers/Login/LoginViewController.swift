@@ -66,6 +66,9 @@ class LoginViewController: UIViewController {
                 var isFirstStr = UserDefaults.standard.value(forKey: "isFirst") as! String
                 print("isFirstStr??", isFirstStr)
                 
+                var token = UserDefaults.standard.value(forKey: "token") as! String
+                print("token???", token)
+                
                 
                 if(isFirstStr == "0"){
                     print("처음 로그인")

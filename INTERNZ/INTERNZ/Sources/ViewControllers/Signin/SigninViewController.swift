@@ -56,11 +56,15 @@ class SigninViewController: UIViewController {
     
     @IBAction func gotoNextSignin(_ sender: UIButton) {
         
+        guard self.emailTextField.text != nil else { return }
+        guard self.passwordTextField.text != nil else { return }
+        guard self.phoneTextField.text != nil else { return }
+        
         let dvc = storyboard?.instantiateViewController(identifier: "Signin2ViewController") as! Signin2ViewController
         
-        dvc.userEmailString = emailLabel.text
-        dvc.userPwdString = passwordTextField.text
-        dvc.phoneString = phoneTextField.text
+        dvc.userEmailString = emailTextField.text!
+        dvc.userPwdString = passwordTextField.text!
+        dvc.phoneString = phoneTextField.text!
         
         navigationController?.pushViewController(dvc, animated: true)
         
@@ -74,8 +78,6 @@ class SigninViewController: UIViewController {
         self.present(loginViewController, animated: true, completion: nil)
         
     }
-    
-    
 }
 
 
