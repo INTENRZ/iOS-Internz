@@ -38,6 +38,23 @@
 
 <br/>
 
+---
+
+
+<br/>
+
+
+### 💻 기능 소개
+
+
+| 기능       | 개발 여부          | 기타사항  |
+| ------------- |:-------------:| -----:|
+|  로그인    | right-aligned | $1600 |
+| 회원가입   | right-aligned | $1600 |
+| col 3 is      | right-aligned | $1600 |
+| col 3 is      | right-aligned | $1600 |
+| col 3 is      | right-aligned | $1600 |
+
 ### 👶 Contributor
 - [최은지](https://github.com/ChoiEunji0114)
 - [박주연](https://github.com/juyeonblue)
