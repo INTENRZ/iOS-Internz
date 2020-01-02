@@ -36,10 +36,10 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         self.sortButton.titleLabel?.text = selectString
         
         downloadStoryData()
-        //        downloadStoryCountData()
-        
     }
     
+    
+    // picker view 생성
     @IBAction func doSortStory(_ sender: UIButton) {
         
         // 1. 전체를 잡는 view 생성 + constraint 걸기
@@ -47,10 +47,8 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         self.picker.frame = CGRect(x: 0, y: view.frame.height - 220, width: view.frame.width, height: 150)
         view.addSubview(self.picker)
         
-        
         // 2. Tool Bar 에 들어갈 버튼 생성
         let btnDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.testfunc))
-        
         
         // 3. UIPicker Toolbar 생성 + 속성 setting
         let barAccessory = UIToolbar(frame: CGRect(x: 0, y: 0, width: picker.frame.width, height: 44))
@@ -69,8 +67,6 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         self.pickerView.backgroundColor = UIColor.whiteFour
         
         picker.addSubview(self.pickerView)
-        
-        downloadStoryData()
         
     }
     
@@ -151,56 +147,39 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectString = dataArray[pickerView.selectedRow(inComponent: 0)]
+//        selectString = dataArray[pickerView.selectedRow(inComponent: 0)]
         
-        // 만약에 선택된 피커가 최신순이면
-        if selectString == "최신순" {
-//            pickerView.selectedRow(inComponent: 0)
-//            downloadStoryData()
-//            self.storyTable.reloadData()
-            print("최신순 조회")
-        }
-        else {
-//            pickerView.selectedRow(inComponent: 1)
-//            downloadStoryCountData()
-//            self.storyTable.reloadData()
-            print("조회순 조회")
-        }
-        
-        
-        
-        
+//        // 만약에 선택된 피커가 최신순이면
+//        if selectString == "최신순" {
+//            print("최신순 조회")
+//        }
+//        else {
+//            print("조회순 조회")
+//        }
     }
+    
     
     // PickerView 완료 버튼 클릭
     @objc func testfunc(){
         print("test")
+        selectString = dataArray[self.pickerView.selectedRow(inComponent: 0)]
         
         if isClickedSortBtn == false {
             self.picker.isHidden = true
             isClickedSortBtn = false
-            self.sortButton.titleLabel?.text = selectString
-            
-            
         } else {
             self.picker.isHidden = false
             isClickedSortBtn = true
-            self.sortButton.titleLabel?.text = selectString
-          
         }
         
         if selectString == "최신순" {
-//            pickerView.selectedRow(inComponent: 0)
-//            downloadStoryData()
-//            self.storyTable.reloadData()
             print("최신순 조회")
+            self.sortButton.titleLabel?.text = "최신순"
             downloadStoryData()
         }
         else {
-//            pickerView.selectedRow(inComponent: 1)
-//            downloadStoryCountData()
-//            self.storyTable.reloadData()
             print("조회순 조회")
+            self.sortButton.titleLabel?.text = "조회순"
             downloadStoryCountData()
         }
         
