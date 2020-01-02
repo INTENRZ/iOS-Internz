@@ -31,16 +31,26 @@ class TimelineListViewController: UIViewController, UITableViewDelegate {
         TimelineListTable.dataSource = self
         TimelineListTable.delegate = self
         
-//        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "left1Ic")
+//         self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "left1Ic")
 //        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "left1Ic")
-//        
+
 //        self.navigationController?.navigationBar.backIndicatorImage?.withTintColor(UIColor.black)
+//
+//        self.navigationItem.setHidesBackButton(true, animated:true);
+//
         
-        //        self.navigationItem.setHidesBackButton(true, animated:true);
+  
+//        let button1 = UIBarButtonItem(image: UIImage(named: "left1Ic"), style: .plain, target: self, action: #selector(goBack))
+//        button1.tintColor = UIColor.black
+//        self.navigationItem.leftBarButtonItem  = button1
         
-        //        let button1 = UIBarButtonItem(image: UIImage(named: "left1Ic"), style: .plain, target: self, action: #selector(goBack))
-        //        button1.tintColor = UIColor.black
-        //        self.navigationItem.leftBarButtonItem  = button1
+        
+        
+//        let backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: self, action: "backAction")
+//
+//        self.navigationItem.leftBarButtonItem = backButton
+        
+        
         
         let menuButton = UIBarButtonItem(image: UIImage(named: "menuIc"), style: .plain, target: self, action: #selector(goBack))
         menuButton.tintColor = UIColor.black
@@ -50,7 +60,8 @@ class TimelineListViewController: UIViewController, UITableViewDelegate {
     
     
     @objc func goBack(){
-        self.dismiss(animated: true)
+        //        self.dismiss(animated: true)
+        print("go back")
     }
 }
 
