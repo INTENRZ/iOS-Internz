@@ -13,20 +13,14 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var homeView: UIView!
     @IBOutlet weak var bannerCV: UICollectionView!
-    
     @IBOutlet weak var paging: CHIPageControlAleppo!
-    
-    
     @IBOutlet weak var profileBannerCV: UICollectionView!
-    
-    
     @IBOutlet weak var storyWholeView: UIView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.homeView.backgroundColor = UIColor(patternImage: UIImage(named: "bannerImg")!)
+        // self.homeView.backgroundColor = UIColor(patternImage: UIImage(named: "bannerImg")!)
         
         // tab bar item 의 title 설정
         if let downcastStrings = self.tabBarController?.tabBar.items

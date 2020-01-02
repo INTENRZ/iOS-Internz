@@ -23,27 +23,18 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
     
     @IBOutlet weak var ProfileListTable: UITableView!
     @IBOutlet weak var followButton: UIButton!
-    
     @IBOutlet weak var messageButton: UIButton!
-    
     @IBOutlet weak var followercountButton: UIButton!
     @IBOutlet weak var followingcountButton: UIButton!
-    
     @IBOutlet weak var introduceLabel: UILabel!
-    
     @IBOutlet weak var workselect1Label: UILabel!
     @IBOutlet weak var workselect2Label: UILabel!
     @IBOutlet weak var workselect3Label: UILabel!
-    
-    
     @IBOutlet weak var plusButton: UIButton!
     
-    
-    var ProfileStorySampleList:
-        [ProfileStory] = []
-    
+    var ProfileStorySampleList: [ProfileStory] = []
     var timelineDataSet = [timelineDataClass]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,11 +59,11 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
         ProfileListTable.dataSource = self
         ProfileListTable.delegate = self
         
-        print(ProfileStorySampleList.count)
+//        print(ProfileStorySampleList.count)
         
-        let menuButton = UIBarButtonItem(image: UIImage(named: "closeIc"), style: .plain, target: self, action: #selector(CloseBtn))
-        menuButton.tintColor = UIColor.black
-        self.navigationItem.rightBarButtonItem = menuButton
+//        let menuButton = UIBarButtonItem(image: UIImage(named: "closeIc"), style: .plain, target: self, action: #selector(CloseBtn))
+//        menuButton.tintColor = UIColor.black
+//        self.navigationItem.rightBarButtonItem = menuButton
         
         downloadTimeline()
     }
@@ -100,10 +91,51 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
             case .serverErr:
                 print(".serverErr")
             }
-            
+        }
+    }
+    
+    //네비게이션 라인
+    private var shadowImageView: UIImageView?
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if shadowImageView == nil {
+            shadowImageView = findShadowImage(under: navigationController!.navigationBar)
+        }
+        shadowImageView?.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        shadowImageView?.isHidden = false
+    }
+    
+    /*
+    그 인덱스에 해당하는 row 를 이용해 deslect 를 해줍니다.
+    */
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        if let index = ProfileListTable.indexPathForSelectedRow {
+            ProfileListTable.deselectRow(at: index, animated: true)
+        }
+    }
+    
+    private func findShadowImage(under view: UIView) -> UIImageView? {
+        if view is UIImageView && view.bounds.size.height <= 1 {
+            return (view as! UIImageView)
         }
         
-    }
+        for subview in view.subviews {
+            if let imageView = findShadowImage(under: subview) {
+                return imageView
+            }
+        }
+        return nil
+    }// 여기까지
+    
+    
     
     
     @objc func CloseBtn(){
@@ -124,7 +156,6 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
         let dvc = storyboard?.instantiateViewController(identifier: "FollowerViewController") as! FollowerViewController
         
         navigationController?.pushViewController(dvc, animated: true)
-        
     }
     
     @IBAction func plusBtn(_ sender: UIButton) {
@@ -132,7 +163,6 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
         let dvc = storyboard?.instantiateViewController(identifier: "CreateTimelineViewController") as! CreateTimelineViewController
         
         navigationController?.pushViewController(dvc, animated: true)
-        
     }
     
     @IBAction func messageBtn(_ sender: Any) {
@@ -140,10 +170,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
 //        let dvc = storyboard?.instantiateViewController(identifier: "ProfileViewController") as! ProfileViewController
 //
 //        navigationController?.pushViewController(dvc, animated: true)
-        
     }
-    
-
 }
 
 
@@ -163,10 +190,7 @@ extension ProfileViewController: UITableViewDataSource{
         cell.categoryLabel.text = "\(timelineDataSet[indexPath.row].category)"
         cell.dateLabel.text = "\(timelineDataSet[indexPath.row].end_date)"
         
-        
         return cell
-        
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -174,11 +198,7 @@ extension ProfileViewController: UITableViewDataSource{
         
         let dvc = storyboard?.instantiateViewController(identifier: "TimelineListViewController") as! TimelineListViewController
         
-        navigationController?.pushViewController(dvc, animated: true)
-        
-        
+        self.present(dvc, animated: true, completion: nil)
     }
-    
-    
 }
 

@@ -30,39 +30,13 @@ class TimelineListViewController: UIViewController, UITableViewDelegate {
         
         TimelineListTable.dataSource = self
         TimelineListTable.delegate = self
-        
-//         self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "left1Ic")
-//        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "left1Ic")
-
-//        self.navigationController?.navigationBar.backIndicatorImage?.withTintColor(UIColor.black)
-//
-//        self.navigationItem.setHidesBackButton(true, animated:true);
-//
-        
-  
-//        let button1 = UIBarButtonItem(image: UIImage(named: "left1Ic"), style: .plain, target: self, action: #selector(goBack))
-//        button1.tintColor = UIColor.black
-//        self.navigationItem.leftBarButtonItem  = button1
-        
-        
-        
-//        let backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: self, action: "backAction")
-//
-//        self.navigationItem.leftBarButtonItem = backButton
-        
-        
-        
-        let menuButton = UIBarButtonItem(image: UIImage(named: "menuIc"), style: .plain, target: self, action: #selector(goBack))
-        menuButton.tintColor = UIColor.black
-        self.navigationItem.rightBarButtonItem = menuButton
-        
+    
     }
     
-    
-    @objc func goBack(){
-        //        self.dismiss(animated: true)
-        print("go back")
+    @IBAction func goBack(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
+    
 }
 
 extension TimelineListViewController{
@@ -81,7 +55,6 @@ extension TimelineListViewController{
         
         TimelinesStorySampleList = [story1, story2, story3, story4, story5]
     }
-    
 }
 
 // TimelinesStory를 눌렀을 때 또 다른 페이지로 이동하는 코드이므로 아직 하지 않음. 추가되면 할 예정

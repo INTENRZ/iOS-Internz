@@ -99,6 +99,7 @@
                                 <state key="normal" title="최신순">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <state key="selected" title="조회순"/>
                                 <connections>
                                     <action selector="doSortStory:" destination="Mpp-1N-9vO" eventType="touchUpInside" id="vjA-7l-tRz"/>
                                 </connections>

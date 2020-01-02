@@ -17,8 +17,8 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
     var dataArray = ["최신순", "조회순"] // picker view array
     
     var isClickedSortBtn:Bool = false
-    var selectString = "최신순"
-    
+    var selectedRow : Int = 0
+    var selectedLabel : String = ""
     
     @IBOutlet weak var storyTable: UITableView!
     
@@ -32,8 +32,6 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         
         storyTable.dataSource = self
         storyTable.delegate = self
-        
-        self.sortButton.titleLabel?.text = selectString
         
         downloadStoryData()
     }
@@ -67,7 +65,6 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         self.pickerView.backgroundColor = UIColor.whiteFour
         
         picker.addSubview(self.pickerView)
-        
     }
     
     
@@ -80,7 +77,6 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
             
             switch response{
             case .success(let data):
-                print("성공이닷~!~!~")
                 self.StoryDataSet = [] // 초기화
                 self.StoryDataSet = data as! [StoryResponseString.StoryDataClass]
                 self.storyTable.reloadData()
@@ -97,7 +93,6 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
             case .serverErr:
                 print("serverErr")
             }
-            
         }
     }
     
@@ -111,7 +106,6 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
             
             switch response{
             case .success(let data):
-                print("성공이닷~!~!~")
                 self.StoryDataSet = [] // 초기화
                 self.StoryDataSet = data as! [StoryResponseString.StoryDataClass]
                 self.storyTable.reloadData()
@@ -128,7 +122,6 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
             case .serverErr:
                 print("serverErr")
             }
-            
         }
     }
     
@@ -142,27 +135,20 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let row = dataArray[row]
-        return row
+        self.selectedLabel = dataArray[row]
+        print("selectedLabel", selectedLabel)
+        return selectedLabel
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        selectString = dataArray[pickerView.selectedRow(inComponent: 0)]
         
-//        // 만약에 선택된 피커가 최신순이면
-//        if selectString == "최신순" {
-//            print("최신순 조회")
-//        }
-//        else {
-//            print("조회순 조회")
-//        }
+        self.selectedRow = row
+        self.selectedLabel = dataArray[selectedRow]
     }
-    
     
     // PickerView 완료 버튼 클릭
     @objc func testfunc(){
-        print("test")
-        selectString = dataArray[self.pickerView.selectedRow(inComponent: 0)]
+        sortButton.titleLabel?.text = selectedLabel
         
         if isClickedSortBtn == false {
             self.picker.isHidden = true
@@ -170,39 +156,22 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         } else {
             self.picker.isHidden = false
             isClickedSortBtn = true
+            
+            self.sortButton.titleLabel?.text = selectedLabel
+            
+            self.sortButton.titleLabel?.text = self.selectedLabel
+            
+            if selectedRow == 0 {
+                print("최신순 조회")
+                self.sortButton.titleLabel?.text = self.selectedLabel
+                downloadStoryData()
+            }
+            else {
+                print("조회순 조회")
+                self.sortButton.titleLabel?.text = self.selectedLabel
+                downloadStoryCountData()
+            }
         }
-        
-        if selectString == "최신순" {
-            print("최신순 조회")
-            self.sortButton.titleLabel?.text = "최신순"
-            downloadStoryData()
-        }
-        else {
-            print("조회순 조회")
-            self.sortButton.titleLabel?.text = "조회순"
-            downloadStoryCountData()
-        }
-        
-        
-        
-        
-    }
-}
-
-extension StoryViewController {
-    func setStorySampleData(){
-        let story1 = Story(title: "test title11 테스트테스트테스트트틑ㅌ", name: "김김김", date: "12.25", storyImgName: "33")
-        
-        let story2 = Story(title: "test title22 타이틀 길게 가자 멀티플라인", name: "박박박", date: "12.25", storyImgName: "33")
-        
-        let story3 = Story(title: "test title33 테스트테스트테스트트틑ㅌ", name: "최최최", date: "12.25", storyImgName: "33")
-        
-        let story4 = Story(title: "test title44 테스트테스트테스트트틑ㅌ", name: "name", date: "12.25", storyImgName: "33")
-        
-        let story5 = Story(title: "test title55 테스트테스트테스트트틑ㅌ", name: "name", date: "12.25", storyImgName: "33")
-        
-        
-        StoryList = [story1, story2, story3, story4, story5]
     }
 }
 
@@ -226,7 +195,6 @@ extension StoryViewController: UITableViewDelegate{
         self.present(dvc, animated: true, completion: nil)
         
     }
-    
 }
 
 extension StoryViewController: UITableViewDataSource {
@@ -259,6 +227,4 @@ extension StoryViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    
 }
