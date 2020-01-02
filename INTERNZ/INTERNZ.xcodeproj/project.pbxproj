@@ -47,6 +47,7 @@
 		B66EBE2A23BA46EB009ACA31 /* jobResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2923BA46EB009ACA31 /* jobResponseString.swift */; };
 		B66EBE2C23BA47D7009ACA31 /* JobListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2B23BA47D7009ACA31 /* JobListService.swift */; };
 		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
+		B68CF7DE23BE8D5E00D7DE0E /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7DD23BE8D5E00D7DE0E /* UILabel+Extensions.swift */; };
 		B69D184423BDD65000E03A92 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69D184323BDD65000E03A92 /* OnBoarding.storyboard */; };
 		B69D184723BDD69F00E03A92 /* OnBoarding1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69D184623BDD69F00E03A92 /* OnBoarding1ViewController.swift */; };
 		B69D184923BDDB1D00E03A92 /* OnBoarding3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69D184823BDDB1D00E03A92 /* OnBoarding3ViewController.swift */; };
@@ -131,6 +132,7 @@
 		B66EBE2923BA46EB009ACA31 /* jobResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobResponseString.swift; sourceTree = "<group>"; };
 		B66EBE2B23BA47D7009ACA31 /* JobListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListService.swift; sourceTree = "<group>"; };
 		B67CBF9523B1740B001C78B2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		B68CF7DD23BE8D5E00D7DE0E /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		B69D184323BDD65000E03A92 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		B69D184623BDD69F00E03A92 /* OnBoarding1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding1ViewController.swift; sourceTree = "<group>"; };
 		B69D184823BDDB1D00E03A92 /* OnBoarding3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding3ViewController.swift; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 				B6D9C98023B13D7400348A7B /* UIColor+Extensions.swift */,
 				B6AAF85723B668C3009571DE /* UIButton+Extensions.swift */,
 				B6AAF86323B6A927009571DE /* UIView+Extensions.swift */,
+				B68CF7DD23BE8D5E00D7DE0E /* UILabel+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				7F0E5C8E23B7B95200F12492 /* Follow.swift in Sources */,
 				7F0E5C8A23B7A68500F12492 /* FollowerViewController.swift in Sources */,
 				B6D9C95423B1169100348A7B /* SceneDelegate.swift in Sources */,
+				B68CF7DE23BE8D5E00D7DE0E /* UILabel+Extensions.swift in Sources */,
 				B66EBE2023B90224009ACA31 /* CreateTimelineViewController.swift in Sources */,
 				B66EBE1A23B8A478009ACA31 /* DateStruct.swift in Sources */,
 				B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */,
