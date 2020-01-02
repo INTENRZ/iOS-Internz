@@ -701,8 +701,8 @@
                                         <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twi-73-djb">
-                                        <rect key="frame" x="16" y="50" width="26" height="22"/>
-                                        <state key="normal" image="backward" catalog="system"/>
+                                        <rect key="frame" x="16" y="50" width="24" height="24"/>
+                                        <state key="normal" image="closeIc"/>
                                         <connections>
                                             <action selector="goBack:" destination="sox-8v-ehA" eventType="touchUpInside" id="DWk-c9-RcG"/>
                                         </connections>
@@ -1009,7 +1009,6 @@
     <resources>
         <image name="33" width="116" height="77"/>
         <image name="backIc" width="16" height="16"/>
-        <image name="backward" catalog="system" width="64" height="38"/>
         <image name="cirWh" width="90" height="90"/>
         <image name="closeIc" width="24" height="24"/>
         <image name="floatingBtn" width="86" height="86"/>

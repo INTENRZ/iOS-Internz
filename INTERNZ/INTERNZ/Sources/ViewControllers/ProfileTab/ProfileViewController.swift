@@ -189,6 +189,8 @@ extension ProfileViewController: UITableViewDataSource{
         cell.categoryLabel.text = "\(timelineDataSet[indexPath.row].category)"
         cell.dateLabel.text = "\(timelineDataSet[indexPath.row].end_date)"
         
+        print(timelineDataSet[indexPath.row])
+        
         return cell
     }
     
@@ -196,6 +198,10 @@ extension ProfileViewController: UITableViewDataSource{
         print("tab row")
         
         let dvc = storyboard?.instantiateViewController(identifier: "TimelineListViewController") as! TimelineListViewController
+        
+        dvc.timelineIdx = timelineDataSet[indexPath.row].timelineIdx
+        
+        dvc.timelineTitle = timelineDataSet[indexPath.row].title
         
         self.present(dvc, animated: true, completion: nil)
     }

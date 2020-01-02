@@ -18,8 +18,18 @@ class TimelineListViewController: UIViewController, UITableViewDelegate {
     
     var TimelinesStorySampleList:[TimelinesStory] = []
     
+    var timelineIdx: Int!
+    var timelineTitle: String!
+    
+    var timelineStoryDataSet = [timelineStoryDataClass]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("timelineIdx??", timelineIdx)
+        print("timelineTitle??", timelineTitle)
+        
+        self.topicLabel.text = self.timelineTitle
         
         //카테고리 버튼 라운드
         categoryLabel.setCornerRadius()
@@ -28,12 +38,45 @@ class TimelineListViewController: UIViewController, UITableViewDelegate {
         TimelineListTable.reloadData()
         TimelineListTable.dataSource = self
         TimelineListTable.delegate = self
+        
+//        downloadTimelineStoryData()
     }
     
     @IBAction func goBack(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    func downloadTimelineStoryData(){
+        
+        TimelineListService.timelineShared.timelineStoryList(self.timelineIdx) {
+            
+            response in
+            
+            switch response {
+                
+            case .success(let data):
+                print("data????", data)
+                self.timelineStoryDataSet = data as! [timelineStoryDataClass]
+                print(self.timelineStoryDataSet)
+                
+            case.networkFail:
+                print("error") //찍어보기 확인
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            }
+        }
+    }
+    
+    
 }
+
+
+
+
 
 extension TimelineListViewController{
     
@@ -67,19 +110,25 @@ extension TimelineListViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return TimelinesStorySampleList.count
+        return timelineStoryDataSet.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = TimelineListTable.dequeueReusableCell(withIdentifier: "TimelineStoryTableViewCell")as! TimelineStoryTableViewCell
         
-        let TimelineStory = TimelinesStorySampleList[indexPath.row]
+//        let TimelineStory = TimelinesStorySampleList[indexPath.row]
         
-        cell.storyTitleLabel.text = TimelineStory.storyTitle
-        cell.nameLabel.text = TimelineStory.name
-        cell.dateLabel.text = TimelineStory.date
-        cell.storyImage.image = TimelineStory.storyImg
+        let timelineStory = timelineStoryDataSet[indexPath.row]
+        
+        cell.storyTitleLabel.text = timelineStory.title
+        cell.nameLabel.text = "name"
+        cell.dateLabel.text = timelineStory.createdDate
+        
+//        cell.storyTitleLabel.text = TimelineStory.storyTitle
+//        cell.nameLabel.text = TimelineStory.name
+//        cell.dateLabel.text = TimelineStory.date
+//        cell.storyImage.image = TimelineStory.storyImg
         
         return cell
     }
