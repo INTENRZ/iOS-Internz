@@ -26,21 +26,3 @@ struct calenderResponseString: Codable {
     }
 }
 
-
-//struct timelineResponseString: Codable {
-//    let status: Int
-//    let success: Bool
-//    let message: String
-//
-//    let data: [timelineDataClass]
-//
-//    struct timelineDataClass: Codable {
-//        let timelineIdx: Int
-//        let userIdx: Int
-//        let title: String
-//        let start_date: String
-//        let end_date: String
-//        let category: String
-//    }
-//
-//}

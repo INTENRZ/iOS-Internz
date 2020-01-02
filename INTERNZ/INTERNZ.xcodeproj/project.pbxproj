@@ -50,6 +50,7 @@
 		B68CF7DE23BE8D5E00D7DE0E /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7DD23BE8D5E00D7DE0E /* UILabel+Extensions.swift */; };
 		B68CF7E023BE8F8D00D7DE0E /* StoryDetailResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7DF23BE8F8D00D7DE0E /* StoryDetailResponseString.swift */; };
 		B68CF7E223BE9A2C00D7DE0E /* CommentResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7E123BE9A2C00D7DE0E /* CommentResponseString.swift */; };
+		B68CF7E423BE9CFC00D7DE0E /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7E323BE9CFC00D7DE0E /* CommentService.swift */; };
 		B69D184423BDD65000E03A92 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69D184323BDD65000E03A92 /* OnBoarding.storyboard */; };
 		B69D184723BDD69F00E03A92 /* OnBoarding1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69D184623BDD69F00E03A92 /* OnBoarding1ViewController.swift */; };
 		B69D184923BDDB1D00E03A92 /* OnBoarding3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69D184823BDDB1D00E03A92 /* OnBoarding3ViewController.swift */; };
@@ -137,6 +138,7 @@
 		B68CF7DD23BE8D5E00D7DE0E /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		B68CF7DF23BE8F8D00D7DE0E /* StoryDetailResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailResponseString.swift; sourceTree = "<group>"; };
 		B68CF7E123BE9A2C00D7DE0E /* CommentResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentResponseString.swift; sourceTree = "<group>"; };
+		B68CF7E323BE9CFC00D7DE0E /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		B69D184323BDD65000E03A92 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		B69D184623BDD69F00E03A92 /* OnBoarding1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding1ViewController.swift; sourceTree = "<group>"; };
 		B69D184823BDDB1D00E03A92 /* OnBoarding3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding3ViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				7F0E5CA723BA736000F12492 /* StoryListService.swift */,
 				B6077AD723BBA2AD006DF0E7 /* TimelineListService.swift */,
 				B6077ADC23BCA312006DF0E7 /* CalenderService.swift */,
+				B68CF7E323BE9CFC00D7DE0E /* CommentService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */,
 				B6D1F99423B295F300C8BA31 /* AnnouncementCell.swift in Sources */,
 				B6D1F99A23B341BD00C8BA31 /* StoryDetailViewController.swift in Sources */,
+				B68CF7E423BE9CFC00D7DE0E /* CommentService.swift in Sources */,
 				B66EBE1823B8A2AD009ACA31 /* DateTableViewCell.swift in Sources */,
 				B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */,
 				B6AAF85823B668C3009571DE /* UIButton+Extensions.swift in Sources */,

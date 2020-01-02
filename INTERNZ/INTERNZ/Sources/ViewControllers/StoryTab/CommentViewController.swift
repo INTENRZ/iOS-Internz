@@ -13,6 +13,9 @@ class CommentViewController: UIViewController {
     @IBOutlet weak var commentTableView: UITableView!
     
     var commentList:[Comment] = []
+    var commentDataSet = [commentDataClass]()
+    
+    var storyIdx: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,15 +26,65 @@ class CommentViewController: UIViewController {
         self.navigationItem.leftBarButtonItem  = button1
         
         setCommentData()
+        
         commentTableView.delegate = self
         commentTableView.dataSource = self
+        
+        print("@@@@@@@@@storyIdx???", self.storyIdx)
+        
+        
+        downloadCommentData()
+        
+        
     }
     
     @objc func goBack(){
         print("tap close btn")
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    
+    func downloadCommentData(){
+        
+        print("@@@@@ start downloading comment data @@@@@")
+        
+        CommentService.commentShared.commentList(self.storyIdx){
+            
+            response in
+            
+            switch response{
+            case .success(let data):
+                print("data????", data)
+//                self.commentDataSet = data as! [commentDataClass]
+//                print(self.commentDataSet)
+               
+            case.networkFail:
+                print("error") //찍어보기 확인
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
 }
+
+
+
+
 
 extension CommentViewController {
     func setCommentData(){
@@ -61,8 +114,8 @@ extension CommentViewController: UITableViewDataSource{
         
         cell.profileImageView.image = comment.profileImg
         cell.nameLabel.text = comment.username
-//        cell.dateLabel.text = comment.commentDate
-//        cell.commentLabel.text = comment.comment
+        //        cell.dateLabel.text = comment.commentDate
+        //        cell.commentLabel.text = comment.comment
         
         cell.dateLabel.text = "날짜날짜"
         cell.commentLabel.text = "댓글내용"

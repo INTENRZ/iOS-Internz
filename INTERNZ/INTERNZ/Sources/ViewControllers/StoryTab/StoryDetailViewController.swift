@@ -111,6 +111,8 @@ class StoryDetailViewController: UIViewController {
     @IBAction func goToComment(_ sender: UIButton) {
         let dvc = storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
         
+        dvc.storyIdx = self.storyIdx
+        
         let navigationController = UINavigationController(rootViewController: dvc)
         
         navigationController.modalPresentationStyle = .fullScreen

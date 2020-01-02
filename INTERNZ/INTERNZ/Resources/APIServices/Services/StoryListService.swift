@@ -154,9 +154,6 @@ class StoryListService{
         
         let storyDetailURL = APIConstants.storyDetailURL + "\(storyIdx)"
         
-        
-//        Alamofire.request(APIConstants.profileTimelineURL, method: .post, encoding: JSONEncoding.default, headers: header)
-        
         Alamofire.request(storyDetailURL, method: .get, encoding: JSONEncoding.default, headers:
         header).responseJSON{
             response in
