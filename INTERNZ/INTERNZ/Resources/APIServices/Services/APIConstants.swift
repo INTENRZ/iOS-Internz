@@ -26,8 +26,9 @@ struct APIConstants {
     static let profileIntroduceEditURL = BaseURL + "/profile/intro"
     static let profileFavorEditURL = BaseURL + "/profile/task"
     static let profileListURL = BaseURL + "/profile/list"
-    static let profileFollowerURL = BaseURL + "/profile/follower"
-    static let profileFollowingURL = BaseURL + "/profile/following"
+    
+    static let profileFollowerURL = BaseURL + "/profile/follower" // 팔로워
+    static let profileFollowingURL = BaseURL + "/profile/following" // 팔로잉
     
     static let letterPeopleListURL = BaseURL + "/letter/others"
     

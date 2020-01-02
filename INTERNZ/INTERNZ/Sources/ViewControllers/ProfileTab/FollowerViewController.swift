@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FollowerViewController: UIViewController, UITableViewDelegate {
     
@@ -20,6 +21,9 @@ class FollowerViewController: UIViewController, UITableViewDelegate {
     var followStorySampleList:
         [Follow] = []
     
+    var followDataSet = [followDataClass]()
+    //    var commentDataSet = [commentDataClass]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,21 +36,20 @@ class FollowerViewController: UIViewController, UITableViewDelegate {
         setfollowStorySampleData()
         
         followTable.reloadData()
-
+        
         followTable.dataSource = self
         followTable.delegate = self
         
         
         if self.isFollowing == true {
-//            self.navigationItem.title = "팔로잉"
             self.titleLabel.text = "팔로잉"
+            downloadFollowingData()
         } else {
             self.titleLabel.text = "팔로워"
-//            self.navigationItem.title = "팔로워"
         }
         
         
-       // print(followStorySampleList.count)
+        
         
     }
     
@@ -58,7 +61,41 @@ class FollowerViewController: UIViewController, UITableViewDelegate {
     
     
     
+    func downloadFollowingData(){
+        print("@@@@@ start downloading following data @@@@@")
+        
+        FollowService.followShared.followingList {
+            
+            response in
+            
+            switch response{
+            case .success(let data):
+                print("data????", data)
+                self.followDataSet = data as! [followDataClass]
+                self.followTable.reloadData()
+                
+            case.networkFail:
+                print("error") //찍어보기 확인
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            }
+        }
+        
+        
+        
+    }
+    
+    
+
 }
+
+
+
+
 
 extension FollowerViewController{
     
@@ -80,20 +117,21 @@ extension FollowerViewController{
 
 extension FollowerViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return followStorySampleList.count
+        return followDataSet.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = followTable.dequeueReusableCell(withIdentifier: "FollowTableViewCell")as!FollowTableViewCell
+    
+        let follow = followDataSet[indexPath.row]
         
-        let Follow = followStorySampleList[indexPath.row]
+        cell.nameLabel.text = follow.nickname
+        cell.followcontentLabel.text = follow.introduce
         
-        cell.nameLabel.text = Follow.name
-        cell.followcontentLabel.text = Follow.introduce
-//        cell.followButton.button = Follow.followBtn
-        cell.followImgView.image = Follow.followImg
+        let urlStr = follow.frontImage
+        let url = URL(string: urlStr)
+        cell.followImgView.kf.setImage(with: url)
         
         return cell
     }

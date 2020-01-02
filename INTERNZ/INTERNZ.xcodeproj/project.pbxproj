@@ -51,6 +51,8 @@
 		B68CF7E023BE8F8D00D7DE0E /* StoryDetailResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7DF23BE8F8D00D7DE0E /* StoryDetailResponseString.swift */; };
 		B68CF7E223BE9A2C00D7DE0E /* CommentResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7E123BE9A2C00D7DE0E /* CommentResponseString.swift */; };
 		B68CF7E423BE9CFC00D7DE0E /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7E323BE9CFC00D7DE0E /* CommentService.swift */; };
+		B68CF7E623BEABDB00D7DE0E /* FollowResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7E523BEABDB00D7DE0E /* FollowResponseString.swift */; };
+		B68CF7E823BEACA400D7DE0E /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7E723BEACA400D7DE0E /* FollowService.swift */; };
 		B69D184423BDD65000E03A92 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69D184323BDD65000E03A92 /* OnBoarding.storyboard */; };
 		B69D184723BDD69F00E03A92 /* OnBoarding1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69D184623BDD69F00E03A92 /* OnBoarding1ViewController.swift */; };
 		B69D184923BDDB1D00E03A92 /* OnBoarding3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69D184823BDDB1D00E03A92 /* OnBoarding3ViewController.swift */; };
@@ -139,6 +141,8 @@
 		B68CF7DF23BE8F8D00D7DE0E /* StoryDetailResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailResponseString.swift; sourceTree = "<group>"; };
 		B68CF7E123BE9A2C00D7DE0E /* CommentResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentResponseString.swift; sourceTree = "<group>"; };
 		B68CF7E323BE9CFC00D7DE0E /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		B68CF7E523BEABDB00D7DE0E /* FollowResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowResponseString.swift; sourceTree = "<group>"; };
+		B68CF7E723BEACA400D7DE0E /* FollowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowService.swift; sourceTree = "<group>"; };
 		B69D184323BDD65000E03A92 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		B69D184623BDD69F00E03A92 /* OnBoarding1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding1ViewController.swift; sourceTree = "<group>"; };
 		B69D184823BDDB1D00E03A92 /* OnBoarding3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding3ViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 				7FE0B8E023BCE9EF008A52C7 /* SignupResponseString.swift */,
 				B68CF7DF23BE8F8D00D7DE0E /* StoryDetailResponseString.swift */,
 				B68CF7E123BE9A2C00D7DE0E /* CommentResponseString.swift */,
+				B68CF7E523BEABDB00D7DE0E /* FollowResponseString.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				B6077AD723BBA2AD006DF0E7 /* TimelineListService.swift */,
 				B6077ADC23BCA312006DF0E7 /* CalenderService.swift */,
 				B68CF7E323BE9CFC00D7DE0E /* CommentService.swift */,
+				B68CF7E723BEACA400D7DE0E /* FollowService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -630,6 +636,7 @@
 				7F0E5C9723B80EB500F12492 /* MessageUser.swift in Sources */,
 				B66EBE2423B9C203009ACA31 /* LoginService.swift in Sources */,
 				B6077ADD23BCA312006DF0E7 /* CalenderService.swift in Sources */,
+				B68CF7E623BEABDB00D7DE0E /* FollowResponseString.swift in Sources */,
 				B6C0540923B560D900D455E1 /* SigninViewController.swift in Sources */,
 				7F0E5C9523B80E1300F12492 /* MessageProfileViewController.swift in Sources */,
 				7F0E5C9023B7B98C00F12492 /* FollowTableViewCell.swift in Sources */,
@@ -639,6 +646,7 @@
 				7F0E5C9B23B82ECF00F12492 /* MessageListViewController.swift in Sources */,
 				7F0E5C9F23B8A43600F12492 /* MessageList.swift in Sources */,
 				7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */,
+				B68CF7E823BEACA400D7DE0E /* FollowService.swift in Sources */,
 				B66EBE1C23B8E85E009ACA31 /* CommentCell.swift in Sources */,
 				B69D184923BDDB1D00E03A92 /* OnBoarding3ViewController.swift in Sources */,
 				B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */,

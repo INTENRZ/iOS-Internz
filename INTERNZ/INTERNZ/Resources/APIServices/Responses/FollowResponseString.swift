@@ -1,5 +1,5 @@
 //
-//  CommentResponseString.swift
+//  FollowResponseString.swift
 //  INTERNZ
 //
 //  Created by 최은지 on 03/01/2020.
@@ -8,22 +8,21 @@
 
 import Foundation
 
-struct commentResponseString: Codable {
+
+struct followResponseString: Codable {
     let status: Int
     let success: Bool
     let message: String
-    let data: [commentDataClass]
+    
+    let data: [followDataClass]
 }
 
-struct commentDataClass: Codable {
-    let nickname: String
+struct followDataClass: Codable {
     let frontImage: String
-    let content, createdDate: String
-
+    let nickname, introduce: String
+    
     enum CodingKeys: String, CodingKey {
-        case nickname
         case frontImage = "front_image"
-        case content
-        case createdDate = "created_date"
+        case nickname, introduce
     }
 }
