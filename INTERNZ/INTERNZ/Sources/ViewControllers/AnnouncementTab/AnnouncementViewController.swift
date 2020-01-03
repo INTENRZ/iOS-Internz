@@ -45,6 +45,7 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         self.sortButton.titleLabel?.text = selectString
         
         downloadJobData()
+//        downloadJobPastData()
         
     }
     
@@ -114,25 +115,42 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         
     }
     
+    // 최신순 공고 조회
     func downloadJobData(){
-        
         JobListService.sharedJob.getJobList {
             
             response in
             switch response {
             case .success(let data):
-                print("@@@@@@ success @@@@@@@@")
+                self.jobDataSet = []
                 self.jobDataSet = data
                 self.announcementTable.reloadData()
-                //                print(self.jobDataSet)
                 
             case .failure :
                 print("error")
             }
-            
         }
-        
     }
+    
+    // 지난 공고 조회
+    func downloadJobPastData(){
+        JobListService.sharedJob.getPastJobList {
+            
+            response in
+            switch response {
+            case .success(let data):
+                self.jobDataSet = []
+                self.jobDataSet = data
+                self.announcementTable.reloadData()
+                
+            case .failure :
+                print("error")
+            }
+        }
+    }
+    
+    
+    
     
     
     // UIPickerView delegate functions
@@ -151,12 +169,13 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectString = dataArray[pickerView.selectedRow(inComponent: 0)]
+//        selectString = dataArray[pickerView.selectedRow(inComponent: row)]
+        self.selectString = dataArray[row]
     }
     
     // PickerView 완료 버튼 클릭
     @objc func testfunc(){
-        print("test")
+        print(selectString)
         
         if isClickedSortBtn == false {
             self.picker.isHidden = true
@@ -169,10 +188,19 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
             
             if selectString == "최신순" {
                 self.sortPicker.selectedRow(inComponent: 0)
+                
             } else {
                 self.sortPicker.selectedRow(inComponent: 1)
             }
         }
+        
+        if selectString == "최신순" {
+            downloadJobData()
+        } else {
+            downloadJobPastData()
+        }
+        
+        
     } // testfunc()
 }
 

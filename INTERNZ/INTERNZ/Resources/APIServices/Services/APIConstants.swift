@@ -48,6 +48,7 @@ struct APIConstants {
     
     // 공고
     static let jobURL = BaseURL + "/job"
+    static let jobPastURL = BaseURL + "/job/past"
     
     
     // 스토리

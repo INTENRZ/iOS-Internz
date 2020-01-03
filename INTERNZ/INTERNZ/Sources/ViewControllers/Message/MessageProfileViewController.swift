@@ -17,6 +17,7 @@ class MessageProfileViewController:UIViewController, UITableViewDelegate{
     var MessageProfileSampleList:[MessageUser] = []
     
     var messageDataSet = [letterDataClass]()
+    var userIdx: Int!
     
     
     @IBOutlet weak var closeButton: UIButton!
