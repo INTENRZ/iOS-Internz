@@ -19,6 +19,8 @@
 ### 🔥 WITH SOPT 25th iOS Project
 - 개발 기간 : 2019년 12월 21일 ~ 2020년 1월 3일
 
+<br/>
+
 
 ### ⚡️ 협업 규칙
 - 커밋 메세지는 영어로 
@@ -38,10 +40,19 @@
 
 <br/>
 
+### Xcode Version
+
+ 11.3
+
+
+<br/>
+
+
 ---
 
 
 <br/>
+
 
 
 ### 💻 &nbsp; 기능 소개
@@ -49,39 +60,205 @@
 
 | 기능 | 개발 여부| 기타사항 | 담당 |
 | :------------: |:------:| :--------:| :--------:|
-| 스플래쉬 | ○ |  |   |
-| 온보딩 | ○ |  어플 첫 실행 시 동작 |    |    |
-| 로그인 | ○ |  |  |    |
-| 회원가입(기본정보)| △  | 이메일 중복 체크  |  | 
-| 회원가입(관심직무 + 프로필 설정) | △ | 첫 번째 로그인 한 경우에만 지정 |  | 
-| 프로필 설정 | △ | 첫 번째 로그인 한 경우에만 지정  |  | 
-| 홈(맞춤 공고)  | △ | 회사 url 연결 |
-| 홈(추천 프로필) |  △ | 상세 프로필 연결 |
-| 홈(오늘의 스토리) | △ | 상세 스토리뷰 연결 |
-| 공고 | ○ | 전체공고 / 지난 공고 순으로 정렬 |
-| 공고 필터 | △ | 보고 싶은 직무를 필터에 따라 설정 |
-| 공고 캘린더 | ○ | 월별 공고 조회, 추가한 공고 리스트를 캘린더에 표시 |
-| 스토리 |  ○ | 최신순 / 조회순 정렬 |
-| 카테고리 별 스토리 조회 |  | 인턴 / 대외활동 / 공모전 / 동아리 / 자격증 / 기타 에 따라 조회 |
-| 스토리 상세글 | ○ |  |
-| 스토리 댓글 | ○  | 댓글보기 + 댓글쓰기 |
-| 개인 프로필 | △ | 정보: 회원가입시의 한 줄 소개 + 프로필 사진 + 관심 직무 |
-| 개인 프로필 쪽지 | ○ | 대화를 나눈 유저 리스트 |
-| 개인 프로필 쪽지 상세 내용 | △ |  |
-| 개인 프로필 타임라인 | ○ | 플러팅버튼을 통해 타임라인 추가 |
-| 개인 프로필 스토리 리스트 조회 | ○ |  |
-| 개인 프로필 스토리 추가 | △ |  |
-| 개인 프로필 스토리 팔로우 리스트 | ○ |  |
+| 스플래쉬 | ○ |  | 주연  |
+| 온보딩 | ○ |  어플 첫 실행 시 동작   |  은지   |
+| 로그인 | ○ |  |     주연,은지 |
+| 회원가입(기본정보)| △  | 이메일 중복 체크  | 은지 | 
+| 회원가입(관심직무 + 프로필 설정) | △ | 첫 번째 로그인 한 경우에만 지정 | 은지 | 
+| 프로필 설정 | △ | 첫 번째 로그인 한 경우에만 지정  | 은지 | 
+| 홈(맞춤 공고)  | △ | 회사 url 연결 | 은지  | 
+| 홈(추천 프로필) |  △ | 상세 프로필 연결 | 은지  | 
+| 홈(오늘의 스토리) | △ | 상세 스토리뷰 연결 | 은지  | 
+| 공고 | ○ | 전체공고 / 지난 공고 순으로 정렬 |  은지  | 
+| 공고 필터 | △ | 보고 싶은 직무를 필터에 따라 설정 | 은지   | 
+| 공고 캘린더 | ○ | 월별 공고 조회, 추가한 공고 리스트를 캘린더에 표시 | 은지   | 
+| 스토리 |  ○ | 최신순 / 조회순 정렬 |  은지  | 
+| 카테고리 별 스토리 조회 |  | 인턴 / 대외활동 / 공모전 / 동아리 / 자격증 / 기타 에 따라 조회 | 은지   | 
+| 스토리 상세글 | ○ |   |  은지 |
+| 스토리 댓글 | ○  | 댓글보기 + 댓글쓰기 | 은지   | 
+| 개인 프로필 | △ | 정보: 회원가입시의 한 줄 소개 + 프로필 사진 + 관심 직무 |  주연   | 
+| 개인 프로필 쪽지 | ○ | 대화를 나눈 유저 리스트 | 주연, 은지  | 
+| 개인 프로필 쪽지 상세 내용 | △ |  | 주연  |
+| 개인 프로필 타임라인 조회 | ○ |  |  주연 | 
+| 개인 프로필 타임라인 추가 | △ | 플러팅버튼을 통해 타임라인 추가 |  주연 | 
+| 타임라인 스토리 리스트 조회 | ○ |  | 주연, 은지 |
+| 개인 프로필 스토리 추가 | △ |   | 주연 |
+| 개인 프로필 스토리 팔로우 리스트 | ○ |    |주연, 은지 |
 
 
 
 <br/>
 
 ---
+---
+
+
+###  문제점과 해결 방법
+
+1. 문제1 : 서버에서 받아온 데이터가 decode 되지 않음  <br/>
+-> ResponseString 수정 (https://app.quicktype.io 참고 )
+
+```swift
+    enum CodingKeys: String, CodingKey {
+        case timelineIdx, userIdx, title
+        case start_date = "start_date"
+        case end_date = "end_date"
+        case category
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        timelineIdx = (try? values.decode(Int.self, forKey: .timelineIdx)) ?? 0
+        userIdx = (try? values.decode(Int.self, forKey: .userIdx)) ?? 0
+        title  = (try? values.decode(String.self, forKey: .title)) ?? ""
+        start_date = (try? values.decode(String.self, forKey: .start_date)) ?? ""
+        end_date = (try? values.decode(String.self, forKey: .end_date)) ?? ""
+        category = (try? values.decode(String.self, forKey: .category)) ?? ""
+    }
+```
 
 <br/>
+<br/>
+
+
+2. 문제2 : UIPicker + Tool Bar 생성 -> 코드로 작성
+
+```swift
+
+        // 1. 전체를 잡는 view 생성 + constraint 걸기
+        self.picker.isHidden = false
+        self.picker.frame = CGRect(x: 0, y: view.frame.height - 220, width: view.frame.width, height: 150)
+        view.addSubview(self.picker)
+        
+        // 2. Tool Bar 에 들어갈 버튼 생성
+        let btnDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.testfunc))
+        
+        // 3. UIPicker Toolbar 생성 + 속성 setting
+        let barAccessory = UIToolbar(frame: CGRect(x: 0, y: 0, width: picker.frame.width, height: 44))
+        
+        barAccessory.barStyle = UIBarStyle.default
+        barAccessory.isTranslucent = true
+        barAccessory.items = [btnDone]
+        
+        picker.addSubview(barAccessory)
+        
+        
+        // 4. UIPickerView 생성
+        self.pickerView.frame = CGRect(x: 0, y: barAccessory.frame.height, width: view.frame.width, height: picker.frame.height - barAccessory.frame.height)
+        
+        self.pickerView.delegate = self
+        self.pickerView.dataSource = self
+        self.pickerView.backgroundColor = UIColor.whiteFour
+        
+        picker.addSubview(self.pickerView)
+```
+
+<br/>
+<br/>
+
+
+3. CalendarView 를 기획에 맞게 커스텀 하기 
+
+- FSCalendar Library 설치  ( https://rhammer.tistory.com/126 )
+- DateFormatter 를 사용해 원하는 날짜에 이벤트 생성
+
+```swift
+    let formatter = DateFormatter()
+    formatter.locale = Locale(identifier: "ko_KR")
+    formatter.dateFormat = "yyyy-MM-dd"
+        
+    let xmas = formatter.date(from: "2019-12-25")
+    let sampledate = formatter.date(from: "2019-12-22")
+        
+    dates = [xmas!, sampledate!]
+```
+
+```swift
+extension CalendarViewController: FSCalendarDataSource{
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        
+        if self.dates.contains(date){
+            return 1
+        }
+        
+        return 0
+    }
+}
+```
+
+
+<br/>
+<br/>
+
+
+4. UITabBar 사용하기
+
+- Tabman Library 설치 ( https://github.com/uias/Tabman )
+- TMBarItem 공식 문서 참조해 custom
+
+```swift
+       // Create bar
+        let bar = TMBar.ButtonBar()
+        bar.layout.transitionStyle = .snap
+        
+        // Customize button color
+        bar.buttons.customize { (button) in
+            button.tintColor = UIColor.brownishGreyTwo
+            button.selectedTintColor = UIColor.marigold
+        }
+        
+        bar.indicator.tintColor = UIColor.marigold
+        
+        addBar(bar, dataSource: self, at: .top)
+```
+
+
+<br/>
+<br/>
+
+
+5. Navigation Bar Line Custom
+
+```swift
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if shadowImageView == nil {
+            shadowImageView = findShadowImage(under: navigationController!.navigationBar)
+        }
+        shadowImageView?.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        shadowImageView?.isHidden = false
+    }
+    
+    private func findShadowImage(under view: UIView) -> UIImageView? {
+        if view is UIImageView && view.bounds.size.height <= 1 {
+            return (view as! UIImageView)
+        }
+        
+        for subview in view.subviews {
+            if let imageView = findShadowImage(under: subview) {
+                return imageView
+            }
+        }
+        return nil
+    }
+```
+
+<br/>
+<br/>
+<br/>
+
+---
 
 
 ### 👶 Contributor
 - [최은지](https://github.com/ChoiEunji0114)
+> iOS 개발 경험이 없어 시행착오를 많이 겪으며 성장하는 중입니다. 인턴즈 체고 주연이 체체고‼️😘
 - [박주연](https://github.com/juyeonblue)
+> 앱개발은 처음이라 능숙치 못했지만 좋은 팀원 덕분에 많이 성장할 수 있던 뜻깊은 시간이었습니다! 은자이 체체고 ❣️
+
+
+<br/>
