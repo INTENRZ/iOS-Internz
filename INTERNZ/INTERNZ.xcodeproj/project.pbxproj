@@ -33,6 +33,8 @@
 		B6077AD823BBA2AD006DF0E7 /* TimelineListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6077AD723BBA2AD006DF0E7 /* TimelineListService.swift */; };
 		B6077ADA23BCA235006DF0E7 /* CalenderResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6077AD923BCA235006DF0E7 /* CalenderResponseString.swift */; };
 		B6077ADD23BCA312006DF0E7 /* CalenderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6077ADC23BCA312006DF0E7 /* CalenderService.swift */; };
+		B628BCD123BF007500FDD87D /* LetterResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628BCD023BF007500FDD87D /* LetterResponseString.swift */; };
+		B628BCD323BF00E300FDD87D /* LetterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628BCD223BF00E300FDD87D /* LetterService.swift */; };
 		B63DBAC923B275FE00EEE1C2 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */; };
 		B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBACD23B2779A00EEE1C2 /* Story.swift */; };
 		B66EBE1623B82305009ACA31 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1523B82305009ACA31 /* CommentViewController.swift */; };
@@ -126,6 +128,8 @@
 		B6077AD723BBA2AD006DF0E7 /* TimelineListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineListService.swift; sourceTree = "<group>"; };
 		B6077AD923BCA235006DF0E7 /* CalenderResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderResponseString.swift; sourceTree = "<group>"; };
 		B6077ADC23BCA312006DF0E7 /* CalenderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderService.swift; sourceTree = "<group>"; };
+		B628BCD023BF007500FDD87D /* LetterResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterResponseString.swift; sourceTree = "<group>"; };
+		B628BCD223BF00E300FDD87D /* LetterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterService.swift; sourceTree = "<group>"; };
 		B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
 		B63DBACD23B2779A00EEE1C2 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		B66EBE1523B82305009ACA31 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 				B68CF7E123BE9A2C00D7DE0E /* CommentResponseString.swift */,
 				B68CF7E523BEABDB00D7DE0E /* FollowResponseString.swift */,
 				B68CF7E923BEB24F00D7DE0E /* TimelineStoryResponseString.swift */,
+				B628BCD023BF007500FDD87D /* LetterResponseString.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 				B6077ADC23BCA312006DF0E7 /* CalenderService.swift */,
 				B68CF7E323BE9CFC00D7DE0E /* CommentService.swift */,
 				B68CF7E723BEACA400D7DE0E /* FollowService.swift */,
+				B628BCD223BF00E300FDD87D /* LetterService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -610,6 +616,7 @@
 				B66EBE1623B82305009ACA31 /* CommentViewController.swift in Sources */,
 				B66EBE2C23BA47D7009ACA31 /* JobListService.swift in Sources */,
 				B6D9C97E23B1347600348A7B /* TabbarViewController.swift in Sources */,
+				B628BCD323BF00E300FDD87D /* LetterService.swift in Sources */,
 				B6AAF86023B69DA3009571DE /* Profile.swift in Sources */,
 				7FF374BB23B69E47004E4907 /* ProfileTableViewCell.swift in Sources */,
 				B6D9C97823B12F2400348A7B /* ProfileViewController.swift in Sources */,
@@ -673,6 +680,7 @@
 				B68CF7E223BE9A2C00D7DE0E /* CommentResponseString.swift in Sources */,
 				7F0E5CA823BA736000F12492 /* StoryListService.swift in Sources */,
 				B66EBE1E23B8E974009ACA31 /* Comment.swift in Sources */,
+				B628BCD123BF007500FDD87D /* LetterResponseString.swift in Sources */,
 				B6D9C98123B13D7400348A7B /* UIColor+Extensions.swift in Sources */,
 				B6AAF85E23B69CE4009571DE /* ProfileBannerCell.swift in Sources */,
 				B6ABCEE523BED0FB002F3056 /* OnBoardingBanner.swift in Sources */,

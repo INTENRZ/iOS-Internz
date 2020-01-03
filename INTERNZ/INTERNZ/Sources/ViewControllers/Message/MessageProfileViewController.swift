@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MessageProfileViewController:UIViewController, UITableViewDelegate{
     
@@ -14,6 +15,8 @@ class MessageProfileViewController:UIViewController, UITableViewDelegate{
     @IBOutlet weak var MessageProfileListTable: UITableView!
     
     var MessageProfileSampleList:[MessageUser] = []
+    
+    var messageDataSet = [letterDataClass]()
     
     
     @IBOutlet weak var closeButton: UIButton!
@@ -26,7 +29,8 @@ class MessageProfileViewController:UIViewController, UITableViewDelegate{
         self.navigationItem.title = "유저쪽지"
         
         setMessageProfileSampleData()
-        MessageProfileListTable.reloadData()
+        
+//        MessageProfileListTable.reloadData()
         MessageProfileListTable.dataSource = self
         MessageProfileListTable.delegate = self
         
@@ -39,6 +43,9 @@ class MessageProfileViewController:UIViewController, UITableViewDelegate{
             return addItem
         }
         navigationItem.leftBarButtonItems = [addItem]
+        
+        downloadLetterListData()
+        
     }
     
     
@@ -48,6 +55,33 @@ class MessageProfileViewController:UIViewController, UITableViewDelegate{
     
     
     
+    
+    func downloadLetterListData(){
+        
+        LetterService.letterShared.letterPeopleList {
+            
+            response in
+            
+            switch response {
+            case .success(let data) :
+                print("data??", data)
+                self.messageDataSet = data as! [letterDataClass]
+                self.MessageProfileListTable.reloadData()
+       
+            case.networkFail:
+                print("error")
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+ 
+            }
+        }
+    } // downloadLetterListData
+    
+
 }
 
 extension MessageProfileViewController{
@@ -82,12 +116,12 @@ extension MessageProfileViewController: UITableViewDataSource{
         navigationController.modalPresentationStyle = .fullScreen
         
         present(navigationController, animated: true, completion: nil)
-
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return MessageProfileSampleList.count
+        return self.messageDataSet.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -96,9 +130,15 @@ extension MessageProfileViewController: UITableViewDataSource{
         
         let MessageUser = MessageProfileSampleList[indexPath.row]
         
-        cell.UserNameLabel.text = MessageUser.name
-        cell.UserTextLabel.text = MessageUser.content
-        cell.UserImgView.image = MessageUser.userMessageImg
+        let msgUser = self.messageDataSet[indexPath.row]
+        
+        cell.UserNameLabel.text = msgUser.nickname
+        cell.UserTextLabel.text = msgUser.content
+        
+        let urlStr = msgUser.frontImage
+        let url = URL(string: urlStr)
+        cell.UserImgView.kf.setImage(with: url)
+        
         
         return cell
     }
