@@ -17,4 +17,14 @@ class BannerCell: UICollectionViewCell {
     @IBOutlet weak var corpImage: UIImageView!
     
     @IBOutlet weak var cellView: UIView!
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.jobLabelName.setMultiLine()
+        
+    }
+  
+    
 }

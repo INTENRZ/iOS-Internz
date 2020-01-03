@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="width" constant="375" id="QWx-t5-FoP"/>
                                     <constraint firstAttribute="height" constant="340" id="W8g-gP-vbF"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jPj-H6-1vp">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="jPj-H6-1vp">
                                     <size key="itemSize" width="374" height="335"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -46,8 +46,10 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="WHx-Zc-bBm" firstAttribute="centerX" secondItem="aQa-h1-k0l" secondAttribute="centerX" id="6jX-OZ-YLk"/>
                                                 <constraint firstAttribute="bottom" secondItem="WHx-Zc-bBm" secondAttribute="bottom" id="CHN-YE-u12"/>
                                                 <constraint firstItem="WHx-Zc-bBm" firstAttribute="leading" secondItem="aQa-h1-k0l" secondAttribute="leading" id="NBp-zU-gYX"/>
+                                                <constraint firstItem="WHx-Zc-bBm" firstAttribute="centerY" secondItem="aQa-h1-k0l" secondAttribute="centerY" id="vnR-Cn-5ZC"/>
                                                 <constraint firstAttribute="trailing" secondItem="WHx-Zc-bBm" secondAttribute="trailing" id="xJO-g7-wFO"/>
                                                 <constraint firstItem="WHx-Zc-bBm" firstAttribute="top" secondItem="aQa-h1-k0l" secondAttribute="top" id="yhk-bo-rhS"/>
                                             </constraints>

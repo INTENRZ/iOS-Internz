@@ -85,17 +85,17 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회사가 원하는 직무" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3f-Ti-SSc">
-                                                                            <rect key="frame" x="16" y="42" width="148" height="19"/>
+                                                                            <rect key="frame" x="16" y="42" width="180" height="20"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" constant="148" id="2cV-TR-2Jw"/>
-                                                                                <constraint firstAttribute="height" constant="19" id="hMN-cJ-wk2"/>
+                                                                                <constraint firstAttribute="width" constant="180" id="2cV-TR-2Jw"/>
+                                                                                <constraint firstAttribute="height" constant="20" id="hMN-cJ-wk2"/>
                                                                             </constraints>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPa-VF-Sw4">
-                                                                            <rect key="frame" x="16" y="67" width="50" height="17"/>
+                                                                            <rect key="frame" x="16" y="68" width="50" height="17"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="17" id="Bof-N3-AGC"/>
                                                                                 <constraint firstAttribute="width" constant="50" id="gj2-oa-Qqd"/>

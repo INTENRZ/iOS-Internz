@@ -37,7 +37,6 @@ class TimelineListViewController: UIViewController, UITableViewDelegate {
         
         //카테고리 버튼 라운드
         categoryLabel.setCornerRadius()
-        setTimelinesStorySampleData()
         
         TimelineListTable.reloadData()
         TimelineListTable.dataSource = self
@@ -76,43 +75,24 @@ class TimelineListViewController: UIViewController, UITableViewDelegate {
         }
     }
     
-    
+    // 타임라인 글쓰기
     @IBAction func goWriteView(_ sender: Any) {
-        
-        
         let dvc = storyboard?.instantiateViewController(identifier: "CreateTimelineViewController") as! CreateTimelineViewController
         
         dvc.modalPresentationStyle = .fullScreen
         
         self.present(dvc, animated: true, completion: nil)
-        
-        
-        
     }
     
     
-    
-}
-
-
-
-
-
-extension TimelineListViewController{
-    
-    func setTimelinesStorySampleData(){
+    // 타임라인에 해당하는 스토리 작성 뷰로 이동
+    @IBAction func goStoryWriteView(_ sender: UIButton) {
         
-        let story1 = TimelinesStory(title: "1영화번역가는 AI 때문에 사라질 직업인가.", name:"한한한", date:"20.01.01", storyImgName: "33")
+        let dvc = storyboard?.instantiateViewController(identifier: "WritingStoryViewController") as! WritingStoryViewController
         
-        let story2 = TimelinesStory(title: "2영화번역가는 AI 때문에 사라질 직업인가.", name:"한한한", date:"20.01.01", storyImgName: "33")
+        dvc.modalPresentationStyle = .fullScreen
         
-        let story3 = TimelinesStory(title: "3영화번역가는 AI 때문에 사라질 직업인가.", name:"한한한", date:"20.01.01", storyImgName: "33")
-        
-        let story4 = TimelinesStory(title: "4영화번역가는 AI 때문에 사라질 직업인가.", name:"한한한", date:"20.01.01", storyImgName: "33")
-        
-        let story5 = TimelinesStory(title: "5영화번역가는 AI 때문에 사라질 직업인가.", name:"한한한", date:"20.01.01", storyImgName: "33")
-        
-        TimelinesStorySampleList = [story1, story2, story3, story4, story5]
+        self.present(dvc, animated: true, completion: nil)
     }
 }
 

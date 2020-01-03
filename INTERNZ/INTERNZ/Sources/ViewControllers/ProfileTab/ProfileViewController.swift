@@ -32,7 +32,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
     
     var ProfileStorySampleList: [ProfileStory] = []
     var timelineDataSet = [timelineDataClass]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,6 +59,23 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
         
         downloadTimeline()
     }
+    
+    
+    @IBAction func goWriteTimelineView(_ sender: UIButton) {
+        
+        
+        let dvc = storyboard?.instantiateViewController(identifier: "CreateTimelineViewController") as! CreateTimelineViewController
+        
+        dvc.modalPresentationStyle = .fullScreen
+        
+        self.present(dvc, animated: true, completion: nil)
+        
+        
+        
+    }
+    
+    
+    
     
     func downloadTimeline(){
         
@@ -104,8 +121,8 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
     }
     
     /*
-    그 인덱스에 해당하는 row 를 이용해 deslect 를 해줍니다.
-    */
+     그 인덱스에 해당하는 row 를 이용해 deslect 를 해줍니다.
+     */
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
@@ -138,32 +155,22 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
         let dvc = storyboard?.instantiateViewController(identifier: "FollowerViewController") as! FollowerViewController
         
         dvc.isFollowing = false
-        
         dvc.modalPresentationStyle = .fullScreen
         
         self.present(dvc, animated: true, completion: nil)
-
+        
     }
     
     
     // 팔로워로 이동
     @IBAction func followingCount(_ sender: UILabel) {
         
-        let dvc = storyboard?.instantiateViewController(identifier: "FollowerViewController") as! FollowerViewController
-        
-        dvc.isFollowing = true
+        let dvc = storyboard?.instantiateViewController(identifier: "CreateTimelineViewController") as! CreateTimelineViewController
         
         dvc.modalPresentationStyle = .fullScreen
         
         self.present(dvc, animated: true, completion: nil)
         
-    }
-    
-    @IBAction func plusBtn(_ sender: UIButton) {
-        
-        let dvc = storyboard?.instantiateViewController(identifier: "CreateTimelineViewController") as! CreateTimelineViewController
-        
-        navigationController?.pushViewController(dvc, animated: true)
     }
     
     @IBAction func messageBtn(_ sender: Any) {
@@ -176,9 +183,9 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
         
         self.present(dvc, animated: true, completion: nil)
         
-//        let dvc = storyboard?.instantiateViewController(identifier: "ProfileViewController") as! ProfileViewController
-//
-//        navigationController?.pushViewController(dvc, animated: true)
+        //        let dvc = storyboard?.instantiateViewController(identifier: "ProfileViewController") as! ProfileViewController
+        //
+        //        navigationController?.pushViewController(dvc, animated: true)
     }
 }
 

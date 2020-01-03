@@ -86,19 +86,19 @@ class HomeViewController: UIViewController {
     }
     
     private func setBanner(){
-        let banner1 = Banner(corpImgName: "corpImg1", corpName: "네이버11", jobName: "iOS 개발자", day: "d-20")
-        let banner2 = Banner(corpImgName: "corpImg1", corpName: "네이버22", jobName: "iOS 개발자", day: "d-20")
-        let banner3 = Banner(corpImgName: "corpImg1", corpName: "네이버33", jobName: "iOS 개발자", day: "d-20")
+        let banner1 = Banner(corpImgName: "corpImg1", corpName: "NAVER", jobName: "Clova NLP 기술 개발 인턴", day: "d - 6")
+        let banner2 = Banner(corpImgName: "corpImg1", corpName: "지멘스", jobName: "IT Infrastructure 인턴", day: "d - 28")
+        let banner3 = Banner(corpImgName: "corpImg1", corpName: "INNOBABY", jobName: "미국 시카고 INNOBABY 디자인 인턴", day: "d + 3")
         
         let delegate = UIApplication.shared.delegate as? AppDelegate
         delegate?.bannerList = [banner1, banner2, banner3]
     }
     
     private func setProfileBanner(){
-        let profileBanner1 = ProfileBanner(profileImgName: "profileImg1", userName: "핫가이", introduce: "영앤리치 빅앤핸섬")
-        let profileBanner2 = ProfileBanner(profileImgName: "profileImg1", userName: "핫가이", introduce: "영앤리치 빅앤핸섬")
-        let profileBanner3 = ProfileBanner(profileImgName: "profileImg1", userName: "핫가이", introduce: "영앤리치 빅앤핸섬")
-        let profileBanner4 = ProfileBanner(profileImgName: "profileImg1", userName: "핫가이", introduce: "영앤리치 빅앤핸섬")
+        let profileBanner1 = ProfileBanner(profileImgName: "profileImg1", userName: "은지짱", introduce: "구글의 개발자가 되고싶은 오투입니다!! 아요를 꽉 잡는 개발자가 되고싶습니다:)")
+        let profileBanner2 = ProfileBanner(profileImgName: "profileImg1", userName: "주연짱", introduce: "국정원 정보 보안 분야로 입사하는 것이 꿈인 우주입니다:) 저는 보안과 서버를 접목하고 싶습니다!!")
+        let profileBanner3 = ProfileBanner(profileImgName: "profileImg1", userName: "박정민", introduce: "구글의 개발자가 되고싶은 오투입니다!! 아요를 꽉 잡는 개발자가 되고싶습니다:)")
+        let profileBanner4 = ProfileBanner(profileImgName: "profileImg1", userName: "정우성", introduce: "국정원 정보 보안 분야로 입사하는 것이 꿈인 우주입니다:) 저는 보안과 서버를 접목하고 싶습니다!!")
         
         let delegate = UIApplication.shared.delegate as? AppDelegate
         

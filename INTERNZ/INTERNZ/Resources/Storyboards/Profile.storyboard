@@ -279,7 +279,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="floatingBtn"/>
                                         <connections>
-                                            <action selector="plusBtn:" destination="dQ9-e1-jus" eventType="touchUpInside" id="kfW-f7-csu"/>
+                                            <action selector="goWriteTimelineView:" destination="dQ9-e1-jus" eventType="touchUpInside" id="rGz-fI-3L8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -315,7 +315,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="스토리내용을" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vuK-qQ-VCS">
-                                <rect key="frame" x="0.0" y="84" width="375" height="388"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="388"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="388" id="BIY-LU-9GI"/>
@@ -326,7 +326,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="제목" translatesAutoresizingMaskIntoConstraints="NO" id="XAd-76-NJf">
-                                <rect key="frame" x="0.0" y="44" width="375" height="39"/>
+                                <rect key="frame" x="0.0" y="80" width="375" height="39"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="7Z9-DV-aXD"/>
@@ -337,22 +337,51 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SmR-0l-WIS">
-                                <rect key="frame" x="0.0" y="83" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="119" width="375" height="1"/>
                                 <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="6Wl-hr-qpi"/>
                                     <constraint firstAttribute="width" constant="375" id="Laf-ss-g1l"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVy-y2-Slx">
+                                <rect key="frame" x="16" y="44" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Q12-Kd-vBX"/>
+                                    <constraint firstAttribute="width" constant="24" id="oxd-y9-6Nb"/>
+                                </constraints>
+                                <state key="normal" image="closeIc"/>
+                                <connections>
+                                    <action selector="goBack:" destination="aIB-91-Gpj" eventType="touchUpInside" id="9wl-DL-WSL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5i-20-eCh">
+                                <rect key="frame" x="329" y="54" width="30" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="fNI-uA-j6m"/>
+                                    <constraint firstAttribute="width" constant="30" id="tgX-c1-RGu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="등록">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createStory:" destination="aIB-91-Gpj" eventType="touchUpInside" id="ERq-Fa-Wg8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="SmR-0l-WIS" secondAttribute="trailing" id="0v1-0T-oKR"/>
                             <constraint firstItem="XAd-76-NJf" firstAttribute="leading" secondItem="jNv-De-mXM" secondAttribute="leading" id="5qy-xg-lBJ"/>
+                            <constraint firstItem="eVy-y2-Slx" firstAttribute="top" secondItem="jNv-De-mXM" secondAttribute="top" id="98f-DC-c3B"/>
                             <constraint firstItem="SmR-0l-WIS" firstAttribute="leading" secondItem="xZK-I1-vpX" secondAttribute="leading" id="BDC-Yt-Nm9"/>
-                            <constraint firstItem="XAd-76-NJf" firstAttribute="top" secondItem="jNv-De-mXM" secondAttribute="top" id="Zjd-dJ-mLz"/>
+                            <constraint firstItem="eVy-y2-Slx" firstAttribute="leading" secondItem="jNv-De-mXM" secondAttribute="leading" constant="16" id="XHS-S5-ibN"/>
+                            <constraint firstItem="jNv-De-mXM" firstAttribute="trailing" secondItem="W5i-20-eCh" secondAttribute="trailing" constant="16" id="cbb-d6-fEL"/>
                             <constraint firstItem="XAd-76-NJf" firstAttribute="trailing" secondItem="jNv-De-mXM" secondAttribute="trailing" id="hLv-O9-gin"/>
+                            <constraint firstItem="XAd-76-NJf" firstAttribute="top" secondItem="jNv-De-mXM" secondAttribute="top" constant="36" id="kJH-y8-oQt"/>
                             <constraint firstItem="SmR-0l-WIS" firstAttribute="top" secondItem="XAd-76-NJf" secondAttribute="bottom" id="mFq-3L-bRS"/>
+                            <constraint firstItem="W5i-20-eCh" firstAttribute="top" secondItem="jNv-De-mXM" secondAttribute="top" constant="10" id="pi3-Ao-SmZ"/>
                             <constraint firstItem="vuK-qQ-VCS" firstAttribute="trailing" secondItem="jNv-De-mXM" secondAttribute="trailing" id="qm7-59-Plg"/>
                             <constraint firstItem="vuK-qQ-VCS" firstAttribute="leading" secondItem="jNv-De-mXM" secondAttribute="leading" id="rRR-Qu-t39"/>
                             <constraint firstItem="vuK-qQ-VCS" firstAttribute="top" secondItem="SmR-0l-WIS" secondAttribute="bottom" id="v5k-9u-xlX"/>
@@ -865,6 +894,9 @@
                                             <constraint firstAttribute="width" constant="56" id="IpR-MS-Rlc"/>
                                         </constraints>
                                         <state key="normal" image="storywriteFloatingBtn"/>
+                                        <connections>
+                                            <action selector="goStoryWriteView:" destination="sox-8v-ehA" eventType="touchUpInside" id="STn-f1-2rT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

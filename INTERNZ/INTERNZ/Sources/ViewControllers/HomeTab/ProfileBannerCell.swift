@@ -14,4 +14,10 @@ class ProfileBannerCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var introduceLabel: UILabel!
     @IBOutlet weak var cellView: UIView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.introduceLabel.setMultiLine()
+        
+    }
 }

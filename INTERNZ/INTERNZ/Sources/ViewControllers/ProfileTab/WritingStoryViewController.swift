@@ -16,33 +16,40 @@ class WritingStoryViewController: UIViewController,UITextViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "스토리"
+//        self.navigationItem.title = "스토리"
         
-        
-        let menuButton = UIBarButtonItem(image: UIImage(named: "closeIc"), style: .plain, target: self, action: #selector(CloseBtn))
-        menuButton.tintColor = UIColor.black
-        self.navigationItem.leftBarButtonItem = menuButton
-        
-        let sendButton = UIBarButtonItem(title: "전송", style: .plain, target: self, action: #selector(send))
-        sendButton.tintColor = UIColor.black
-        self.navigationItem.rightBarButtonItem = sendButton
-        
-        myTextField.font = UIFont.preferredFont(forTextStyle: .headline)
-        myTextView.font = UIFont.preferredFont(forTextStyle: .body)
-        
+//
+//        let menuButton = UIBarButtonItem(image: UIImage(named: "closeIc"), style: .plain, target: self, action: #selector(CloseBtn))
+//        menuButton.tintColor = UIColor.black
+//        self.navigationItem.leftBarButtonItem = menuButton
+//
+//        let sendButton = UIBarButtonItem(title: "전송", style: .plain, target: self, action: #selector(send))
+//        sendButton.tintColor = UIColor.black
+//        self.navigationItem.rightBarButtonItem = sendButton
+//
+//        myTextField.font = UIFont.preferredFont(forTextStyle: .headline)
+//        myTextView.font = UIFont.preferredFont(forTextStyle: .body)
+//
         addKeyboardObserver()
         myTextField.delegate = self
         myTextView.delegate = self
         
     }
     
-    @objc func CloseBtn(){
-        self.dismiss(animated: true)
+    @IBAction func goBack(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @objc func send(){
-        self.dismiss(animated: true)
+    
+    
+    @IBAction func createStory(_ sender: UIButton) {
+        let alert = UIAlertController(title: "스토리 추가 완료!", message: "내 스토리 목록에서 추가된 스토리를 확인해 주세요", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+  
     }
+    
 }
 
 extension WritingStoryViewController: UITextFieldDelegate {
