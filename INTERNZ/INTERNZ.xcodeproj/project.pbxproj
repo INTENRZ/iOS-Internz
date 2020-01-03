@@ -55,14 +55,15 @@
 		B68CF7E823BEACA400D7DE0E /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7E723BEACA400D7DE0E /* FollowService.swift */; };
 		B68CF7EA23BEB24F00D7DE0E /* TimelineStoryResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7E923BEB24F00D7DE0E /* TimelineStoryResponseString.swift */; };
 		B69D184423BDD65000E03A92 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69D184323BDD65000E03A92 /* OnBoarding.storyboard */; };
-		B69D184723BDD69F00E03A92 /* OnBoarding1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69D184623BDD69F00E03A92 /* OnBoarding1ViewController.swift */; };
-		B69D184923BDDB1D00E03A92 /* OnBoarding3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69D184823BDDB1D00E03A92 /* OnBoarding3ViewController.swift */; };
+		B69D184723BDD69F00E03A92 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69D184623BDD69F00E03A92 /* OnBoardingViewController.swift */; };
 		B6AAF85823B668C3009571DE /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85723B668C3009571DE /* UIButton+Extensions.swift */; };
 		B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */; };
 		B6AAF85E23B69CE4009571DE /* ProfileBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85D23B69CE4009571DE /* ProfileBannerCell.swift */; };
 		B6AAF86023B69DA3009571DE /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF85F23B69DA3009571DE /* Profile.swift */; };
 		B6AAF86223B69FB2009571DE /* ProfileBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF86123B69FB2009571DE /* ProfileBanner.swift */; };
 		B6AAF86423B6A927009571DE /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF86323B6A927009571DE /* UIView+Extensions.swift */; };
+		B6ABCEE523BED0FB002F3056 /* OnBoardingBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABCEE423BED0FB002F3056 /* OnBoardingBanner.swift */; };
+		B6ABCEE723BED4FB002F3056 /* OnBoardingBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABCEE623BED4FB002F3056 /* OnBoardingBannerCell.swift */; };
 		B6C0540623B5606500D455E1 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C0540523B5606500D455E1 /* Signin.storyboard */; };
 		B6C0540923B560D900D455E1 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C0540823B560D900D455E1 /* SigninViewController.swift */; };
 		B6D1F99423B295F300C8BA31 /* AnnouncementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D1F99323B295F300C8BA31 /* AnnouncementCell.swift */; };
@@ -146,14 +147,15 @@
 		B68CF7E723BEACA400D7DE0E /* FollowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowService.swift; sourceTree = "<group>"; };
 		B68CF7E923BEB24F00D7DE0E /* TimelineStoryResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineStoryResponseString.swift; sourceTree = "<group>"; };
 		B69D184323BDD65000E03A92 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
-		B69D184623BDD69F00E03A92 /* OnBoarding1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding1ViewController.swift; sourceTree = "<group>"; };
-		B69D184823BDDB1D00E03A92 /* OnBoarding3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding3ViewController.swift; sourceTree = "<group>"; };
+		B69D184623BDD69F00E03A92 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		B6AAF85723B668C3009571DE /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		B6AAF85B23B670D2009571DE /* SettingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileViewController.swift; sourceTree = "<group>"; };
 		B6AAF85D23B69CE4009571DE /* ProfileBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBannerCell.swift; sourceTree = "<group>"; };
 		B6AAF85F23B69DA3009571DE /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		B6AAF86123B69FB2009571DE /* ProfileBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBanner.swift; sourceTree = "<group>"; };
 		B6AAF86323B6A927009571DE /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		B6ABCEE423BED0FB002F3056 /* OnBoardingBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingBanner.swift; sourceTree = "<group>"; };
+		B6ABCEE623BED4FB002F3056 /* OnBoardingBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingBannerCell.swift; sourceTree = "<group>"; };
 		B6C0540523B5606500D455E1 /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
 		B6C0540823B560D900D455E1 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		B6D1F99323B295F300C8BA31 /* AnnouncementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCell.swift; sourceTree = "<group>"; };
@@ -331,8 +333,9 @@
 		B69D184523BDD67C00E03A92 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				B69D184623BDD69F00E03A92 /* OnBoarding1ViewController.swift */,
-				B69D184823BDDB1D00E03A92 /* OnBoarding3ViewController.swift */,
+				B6ABCEE423BED0FB002F3056 /* OnBoardingBanner.swift */,
+				B69D184623BDD69F00E03A92 /* OnBoardingViewController.swift */,
+				B6ABCEE623BED4FB002F3056 /* OnBoardingBannerCell.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -614,7 +617,7 @@
 				7F0E5C9923B811CC00F12492 /* MessageProfileTableViewCell.swift in Sources */,
 				B6D9C98823B1575500348A7B /* CalendarViewController.swift in Sources */,
 				B6D1F99E23B3E5F100C8BA31 /* BannerCell.swift in Sources */,
-				B69D184723BDD69F00E03A92 /* OnBoarding1ViewController.swift in Sources */,
+				B69D184723BDD69F00E03A92 /* OnBoardingViewController.swift in Sources */,
 				B6D9C97623B12ED400348A7B /* AnnouncementViewController.swift in Sources */,
 				7F0E5CA623BA734800F12492 /* StoryResponseString.swift in Sources */,
 				7FF374B423B5EBEB004E4907 /* TimelineListViewController.swift in Sources */,
@@ -625,6 +628,7 @@
 				7F0E5C8E23B7B95200F12492 /* Follow.swift in Sources */,
 				7F0E5C8A23B7A68500F12492 /* FollowerViewController.swift in Sources */,
 				B6D9C95423B1169100348A7B /* SceneDelegate.swift in Sources */,
+				B6ABCEE723BED4FB002F3056 /* OnBoardingBannerCell.swift in Sources */,
 				B68CF7DE23BE8D5E00D7DE0E /* UILabel+Extensions.swift in Sources */,
 				B66EBE2023B90224009ACA31 /* CreateTimelineViewController.swift in Sources */,
 				B68CF7E023BE8F8D00D7DE0E /* StoryDetailResponseString.swift in Sources */,
@@ -651,7 +655,6 @@
 				7F37E0FB23B33D8F00C80F1A /* LoginViewController.swift in Sources */,
 				B68CF7E823BEACA400D7DE0E /* FollowService.swift in Sources */,
 				B66EBE1C23B8E85E009ACA31 /* CommentCell.swift in Sources */,
-				B69D184923BDDB1D00E03A92 /* OnBoarding3ViewController.swift in Sources */,
 				B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */,
 				B6DFC57123B65135002EE94A /* SettingFavorViewController.swift in Sources */,
 				7F0E5C9D23B82F2600F12492 /* MessageListTableViewCell.swift in Sources */,
@@ -668,6 +671,7 @@
 				B66EBE1E23B8E974009ACA31 /* Comment.swift in Sources */,
 				B6D9C98123B13D7400348A7B /* UIColor+Extensions.swift in Sources */,
 				B6AAF85E23B69CE4009571DE /* ProfileBannerCell.swift in Sources */,
+				B6ABCEE523BED0FB002F3056 /* OnBoardingBanner.swift in Sources */,
 				B6DFC56C23B607A9002EE94A /* Signin2ViewController.swift in Sources */,
 				B6077AD623BBA1D9006DF0E7 /* TimelineResponseString.swift in Sources */,
 				B63DBAC923B275FE00EEE1C2 /* StoryCell.swift in Sources */,

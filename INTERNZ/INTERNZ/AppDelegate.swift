@@ -13,6 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var bannerList: [Banner] = []
     var profileBannerList: [ProfileBanner] = []
+    
+    var onBoardingBannerList: [BoardingBanner] = []
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
