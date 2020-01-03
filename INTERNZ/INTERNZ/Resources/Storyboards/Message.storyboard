@@ -98,12 +98,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaX-ua-xWz">
+                                <rect key="frame" x="0.0" y="87" width="375" height="1"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Pqr-IW-mys"/>
+                                    <constraint firstAttribute="width" constant="375" id="pbq-mq-pNc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="qaX-ua-xWz" firstAttribute="leading" secondItem="Qcc-JR-9gV" secondAttribute="leading" id="2cI-A9-dLZ"/>
+                            <constraint firstItem="qaX-ua-xWz" firstAttribute="top" secondItem="9jK-NS-T1Y" secondAttribute="bottom" constant="10" id="aVJ-45-YzD"/>
                             <constraint firstItem="DPD-7H-vG8" firstAttribute="leading" secondItem="9jK-NS-T1Y" secondAttribute="trailing" constant="120" id="bB1-R3-wbS"/>
                             <constraint firstItem="9jK-NS-T1Y" firstAttribute="top" secondItem="Qcc-JR-9gV" secondAttribute="top" constant="9" id="eQP-Ps-bS9"/>
                             <constraint firstItem="9jK-NS-T1Y" firstAttribute="leading" secondItem="Qcc-JR-9gV" secondAttribute="leading" constant="27" id="hho-1u-nUE"/>
+                            <constraint firstItem="qaX-ua-xWz" firstAttribute="trailing" secondItem="Qcc-JR-9gV" secondAttribute="trailing" id="oh6-B5-c10"/>
                             <constraint firstItem="DPD-7H-vG8" firstAttribute="top" secondItem="Qcc-JR-9gV" secondAttribute="top" constant="9" id="oyo-zo-Du9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qcc-JR-9gV"/>
