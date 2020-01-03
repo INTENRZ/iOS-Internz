@@ -144,7 +144,7 @@
 - 스토리 댓글
 
 
-<img src="./screenshot/스토리1.png" width="200" height="365">  <img src="./screenshot/스토리2.png" width="200" height="365"> <img src="./screenshot/스토리 상세.png" width="200" height="365">  
+<img src="./screenshot/스토리1.png" width="200" height="365">  <img src="./screenshot/스토리2.png" width="200" height="365"> <img src="./screenshot/스토리상세.png" width="200" height="365">  
 <br/>
 
 
@@ -153,6 +153,7 @@
 - 개인 활동에 대한 타임라인 작성 및 조회 
 - 개인 프로필 > 타임라인 > 각 타임라인에 대해 작성한 스토리 리스트 조회 
 - 팔로잉 / 팔로워 조회 
+- 쪽지 주고 받기 
 
 
 <img src="./screenshot/프로필1.png" width="200" height="365"> <img src="./screenshot/프로필2.png" width="200" height="365"> <img src="./screenshot/프로필3.png" width="200" height="365"> 
