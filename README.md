@@ -40,7 +40,7 @@
 
 <br/>
 
-### Xcode Version
+### 📱 Xcode Version
 
  11.3
 
@@ -90,8 +90,87 @@
 <br/>
 
 ---
----
 
+<br/>
+
+## 📌 screenshots 
+
+1. splash 
+
+<img src="./screenshot/스플래쉬.png" width="200" height="365">
+
+
+<br/>
+
+2. onBoarding
+
+<img src="./screenshot/온보딩1.png" width="200" height="365">  <img src="./screenshot/온보딩2.png" width="200" height="365">  <img src="./screenshot/온보딩3.png" width="200" height="365">
+
+
+<br/>
+
+3. Login & Signup
+
+<img src="./screenshot/로그인.png" width="200" height="365">  <img src="./screenshot/회원가입1.png" width="200" height="365">  <img src="./screenshot/회원가입2.png" width="200" height="365">
+
+
+<br/>
+
+
+4. home tab : 추천 공고, 추천 프로필, 최신 스토리 
+
+
+<img src="./screenshot/메인-홈1.png" width="200" height="365">  <img src="./screenshot/메인-홈2.png" width="200" height="365"> 
+
+
+<br/>
+
+
+5. announcement tab 
+- 전체 공고, 지난 공고 정렬 선택
+- 공고 필터 : 보고 싶은 직무 1개 선택, 필터에 따라 정렬
+- 공고 캘린더 : 관심 추가한 공고를 캘린더에 추가 
+
+
+<img src="./screenshot/메인-공고2.png" width="200" height="365">  <img src="./screenshot/메인-공고4.png" width="200" height="365"> <img src="./screenshot/메인-공고3.png" width="200" height="365">  <img src="./screenshot/메인-캘린더.png" width="200" height="365"> 
+
+<br/>
+
+
+6. story tab
+- 스토리 최신순, 조회순 정렬
+- 탭 바 : 인턴, 대외활동, 공모전, 동아리, 자격증, 기타에 따른 스토리 조회
+- 스토리 상세글
+- 스토리 댓글
+
+
+<img src="./screenshot/스토리1.png" width="200" height="365">  <img src="./screenshot/스토리2.png" width="200" height="365"> <img src="./screenshot/스토리 상세.png" width="200" height="365">  
+<br/>
+
+
+7. profile tab
+- 개인 프로필 정보 조회
+- 개인 활동에 대한 타임라인 작성 및 조회 
+- 개인 프로필 > 타임라인 > 각 타임라인에 대해 작성한 스토리 리스트 조회 
+- 팔로잉 / 팔로워 조회 
+
+
+<img src="./screenshot/프로필1.png" width="200" height="365"> <img src="./screenshot/프로필2.png" width="200" height="365"> <img src="./screenshot/프로필3.png" width="200" height="365"> 
+
+<br/>
+
+<img src="./screenshot/프로필4.png" width="200" height="365"> <img src="./screenshot/프로필-팔로잉.png" width="200" height="365"> <img src="./screenshot/프로필-팔로워.png" width="200" height="365"> 
+
+<br/>
+
+<img src="./screenshot/쪽지사람리스트.png" width="200" height="365"> <img src="./screenshot/쪽지리스트.png" width="200" height="365"> 
+ 
+
+
+<br/>
+
+---
+<br/>
 
 ###  문제점과 해결 방법
 
