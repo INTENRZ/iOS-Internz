@@ -26,6 +26,7 @@ class Signin2ViewController: UIViewController {
     
     var userEmailString = ""
     var userPwdString = ""
+    var userPwdConfirmString = ""
     var phoneString = ""
     var gender = ""
     var name = ""
@@ -86,6 +87,9 @@ class Signin2ViewController: UIViewController {
     }
     
     func goSignup(){
+        self.name = self.nameTextField.text ?? ""
+        self.nickname = self.nicknameTextField.text ?? ""
+        self.birth = self.birthTextFieldd.text ?? ""
         
         if isWoman == true {
             self.gender = "woman"
@@ -93,7 +97,7 @@ class Signin2ViewController: UIViewController {
             self.gender = "man"
         }
         
-        SignupService.sharedSignup.signup(userEmailString, userPwdString, phoneString, name, nickname, birth, gender) {
+        SignupService.sharedSignup.signup(userEmailString, userPwdString, userPwdConfirmString, phoneString, name, nickname, birth, gender) {
             
             response in
             

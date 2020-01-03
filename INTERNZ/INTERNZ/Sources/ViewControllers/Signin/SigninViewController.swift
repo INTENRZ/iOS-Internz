@@ -50,12 +50,14 @@ class SigninViewController: UIViewController {
         
         guard self.emailTextField.text != nil else { return }
         guard self.passwordTextField.text != nil else { return }
+        guard self.passwordConfirmTextField.text != nil else { return }
         guard self.phoneTextField.text != nil else { return }
         
         let dvc = storyboard?.instantiateViewController(identifier: "Signin2ViewController") as! Signin2ViewController
         
         dvc.userEmailString = emailTextField.text!
         dvc.userPwdString = passwordTextField.text!
+        dvc.userPwdConfirmString = passwordConfirmTextField.text!
         dvc.phoneString = phoneTextField.text!
         
         navigationController?.pushViewController(dvc, animated: true)

@@ -13,15 +13,16 @@ class SignupService{
     
     static let sharedSignup = SignupService()
     
-    func signup(_ email:String, _ password: String, _ phone: String, _ name: String, _ nickname:String, _ age:String, _ sex: String, completion: @escaping(NetworkResult<Any>) -> Void) {
+    func signup(_ email:String, _ password: String, _ password2: String, _ phone: String, _ name: String, _ nickname:String, _ age:String, _ sex: String, completion: @escaping(NetworkResult<Any>) -> Void) {
         
         let header: HTTPHeaders = [
-            "Content-Type" : "/application/json"
+            "Content-Type" : "application/json"
         ]
         
         let body: Parameters = [
             "email" : email,
             "password": password,
+            "password2": password2,
             "phone" : phone,
             "name": name,
             "nickname" : nickname,

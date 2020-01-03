@@ -180,11 +180,11 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         if isClickedSortBtn == false {
             self.picker.isHidden = true
             isClickedSortBtn = false
-            self.sortButton.titleLabel?.text = selectString
+            self.sortButton.setTitle(selectString, for: .normal)
         } else {
             self.picker.isHidden = false
             isClickedSortBtn = true
-            self.sortButton.titleLabel?.text = selectString
+            self.sortButton.setTitle(selectString, for: .normal)
             
             if selectString == "최신순" {
                 self.sortPicker.selectedRow(inComponent: 0)

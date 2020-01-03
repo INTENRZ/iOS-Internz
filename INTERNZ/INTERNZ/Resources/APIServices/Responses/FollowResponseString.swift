@@ -26,3 +26,9 @@ struct followDataClass: Codable {
         case nickname, introduce
     }
 }
+
+struct ResponseData<T: Codable>: Codable {
+    var status: Int
+    var message: String
+    var data: T
+}
