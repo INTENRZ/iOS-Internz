@@ -20,9 +20,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="filterBtn"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWu-q4-7zz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWu-q4-7zz">
                                 <rect key="frame" x="16" y="105" width="36" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="0uC-Fc-jiu"/>
+                                    <constraint firstAttribute="height" constant="17" id="qQU-Vu-YVB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="최신순">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -104,9 +107,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8P9-ba-bA7">
+                                <rect key="frame" x="54" y="102" width="16" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="O6T-n6-nf6"/>
+                                    <constraint firstAttribute="height" constant="22" id="tRC-6V-7pc"/>
+                                </constraints>
+                                <state key="normal" image="arrowDownIc"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="8P9-ba-bA7" firstAttribute="leading" secondItem="CWu-q4-7zz" secondAttribute="trailing" constant="2" id="BHt-eF-oGi"/>
+                            <constraint firstItem="CWu-q4-7zz" firstAttribute="top" secondItem="4H9-5e-AyD" secondAttribute="top" constant="17" id="U49-xd-LNR"/>
+                            <constraint firstItem="8P9-ba-bA7" firstAttribute="top" secondItem="4H9-5e-AyD" secondAttribute="top" constant="14" id="Y1q-ui-iCz"/>
+                            <constraint firstItem="CWu-q4-7zz" firstAttribute="leading" secondItem="4H9-5e-AyD" secondAttribute="leading" constant="16" id="Zp3-9z-lCv"/>
                             <constraint firstItem="6fc-z7-2ep" firstAttribute="top" secondItem="4H9-5e-AyD" secondAttribute="top" constant="57" id="mFm-Qd-p9l"/>
                             <constraint firstItem="6fc-z7-2ep" firstAttribute="leading" secondItem="4H9-5e-AyD" secondAttribute="leading" id="t8o-Ft-jqY"/>
                             <constraint firstItem="4H9-5e-AyD" firstAttribute="trailing" secondItem="6fc-z7-2ep" secondAttribute="trailing" id="vws-FX-U6G"/>
@@ -317,6 +332,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowDownIc" width="16" height="16"/>
         <image name="calendarIc" width="24" height="24"/>
         <image name="filterBtn" width="46" height="21"/>
         <image name="tabNoticeIc" width="24" height="24"/>

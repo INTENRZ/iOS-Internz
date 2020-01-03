@@ -209,10 +209,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.01.01" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKP-2U-wlY">
-                                <rect key="frame" x="303" y="257" width="56" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.01.01" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKP-2U-wlY">
+                                <rect key="frame" x="269" y="257" width="90" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="suh-5n-CaM"/>
+                                    <constraint firstAttribute="width" constant="90" id="suh-5n-CaM"/>
                                     <constraint firstAttribute="height" constant="17" id="wHM-Af-ReP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -284,11 +284,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="소개 어쩌구" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmZ-12-7sp">
-                                <rect key="frame" x="16" y="727" width="343" height="21"/>
+                                <rect key="frame" x="16" y="727" width="343" height="32"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="LNs-yH-c5y"/>
                                     <constraint firstAttribute="width" constant="343" id="wgo-29-m6D"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

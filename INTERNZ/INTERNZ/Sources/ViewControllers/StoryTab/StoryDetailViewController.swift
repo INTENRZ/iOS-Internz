@@ -46,6 +46,8 @@ class StoryDetailViewController: UIViewController {
         followButton.layer.cornerRadius = 10
         
         downloadStoryDetailData()
+        
+        self.introduceLabel.setMultiLine()
     }
     
     
