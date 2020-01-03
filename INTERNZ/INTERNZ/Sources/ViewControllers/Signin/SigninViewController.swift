@@ -11,20 +11,14 @@ import UIKit
 class SigninViewController: UIViewController {
     
     @IBOutlet weak var emailLabel: UILabel!
-    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var passwordConfirmTextField: UITextField!
-    
     @IBOutlet weak var phoneTextField: UITextField!
-    
     @IBOutlet weak var wholeView: UIView!
     
     
     @IBOutlet weak var loginButton: UIButton!
-    
     @IBOutlet weak var nextButton: UIButton!
     
     

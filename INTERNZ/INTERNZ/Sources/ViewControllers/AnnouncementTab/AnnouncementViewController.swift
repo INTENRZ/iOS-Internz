@@ -17,6 +17,8 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     @IBOutlet weak var sortButton: UIButton!
     
+    @IBOutlet weak var filtterButton: UIButton!
+    
     var announcementList:[Announcement] = [] // 공고 리스트를 전역으로 선언
     
     var jobDataSet = [jobResponseString.JobDataClass]()
@@ -46,6 +48,22 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         
     }
     
+    
+    
+    
+    @IBAction func goFilterView(_ sender: UIButton) {
+        
+        let dvc = storyboard?.instantiateViewController(identifier: "SortSelectViewController") as! SortSelectViewController
+        
+        dvc.modalPresentationStyle = .fullScreen
+        
+        self.present(dvc, animated: true, completion: nil)
+
+        
+    }
+    
+    
+    
     @IBAction func gotoCalendar(_ sender: UIBarButtonItem) {
         
         print("go to calendar")
@@ -55,7 +73,7 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         navigationController?.pushViewController(dvc, animated: true)
         
     }
-
+    
     
     // 정렬 버튼 눌렀을 때 -> picker 생성
     // create UIPickerViews programmatically
@@ -106,14 +124,14 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
                 print("@@@@@@ success @@@@@@@@")
                 self.jobDataSet = data
                 self.announcementTable.reloadData()
-//                print(self.jobDataSet)
+                //                print(self.jobDataSet)
                 
             case .failure :
                 print("error")
             }
             
         }
-       
+        
     }
     
     
@@ -180,19 +198,19 @@ extension AnnouncementViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
+        
         let cell = announcementTable.dequeueReusableCell(withIdentifier: "AnnouncementCell") as! AnnouncementCell
-    
+        
         
         cell.companyLabel.text = "\(jobDataSet[indexPath.row].company)"
         cell.jobLabel.text = "\(jobDataSet[indexPath.row].team)"
         cell.dayLabel.text = " D "+"\(jobDataSet[indexPath.row].d_day)"
-
+        
         let urlStr = jobDataSet[indexPath.row].logo
         let url = URL(string: urlStr)
         
         cell.companyImageView.kf.setImage(with: url)
-    
+        
         return cell
     }
     

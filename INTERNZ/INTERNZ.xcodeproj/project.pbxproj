@@ -64,6 +64,7 @@
 		B6AAF86423B6A927009571DE /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAF86323B6A927009571DE /* UIView+Extensions.swift */; };
 		B6ABCEE523BED0FB002F3056 /* OnBoardingBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABCEE423BED0FB002F3056 /* OnBoardingBanner.swift */; };
 		B6ABCEE723BED4FB002F3056 /* OnBoardingBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABCEE623BED4FB002F3056 /* OnBoardingBannerCell.swift */; };
+		B6ABCEE923BEF8A7002F3056 /* SortSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABCEE823BEF8A7002F3056 /* SortSelectViewController.swift */; };
 		B6C0540623B5606500D455E1 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C0540523B5606500D455E1 /* Signin.storyboard */; };
 		B6C0540923B560D900D455E1 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C0540823B560D900D455E1 /* SigninViewController.swift */; };
 		B6D1F99423B295F300C8BA31 /* AnnouncementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D1F99323B295F300C8BA31 /* AnnouncementCell.swift */; };
@@ -156,6 +157,7 @@
 		B6AAF86323B6A927009571DE /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		B6ABCEE423BED0FB002F3056 /* OnBoardingBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingBanner.swift; sourceTree = "<group>"; };
 		B6ABCEE623BED4FB002F3056 /* OnBoardingBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingBannerCell.swift; sourceTree = "<group>"; };
+		B6ABCEE823BEF8A7002F3056 /* SortSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortSelectViewController.swift; sourceTree = "<group>"; };
 		B6C0540523B5606500D455E1 /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
 		B6C0540823B560D900D455E1 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		B6D1F99323B295F300C8BA31 /* AnnouncementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCell.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				B6D9C98723B1575500348A7B /* CalendarViewController.swift */,
 				B6D1F99323B295F300C8BA31 /* AnnouncementCell.swift */,
 				B66EBE1723B8A2AD009ACA31 /* DateTableViewCell.swift */,
+				B6ABCEE823BEF8A7002F3056 /* SortSelectViewController.swift */,
 			);
 			path = AnnouncementTab;
 			sourceTree = "<group>";
@@ -662,6 +665,7 @@
 				B6D9C97423B12D7A00348A7B /* HomeViewController.swift in Sources */,
 				7FF374B923B60926004E4907 /* TimelineStoryTableViewCell.swift in Sources */,
 				B66EBE2223B9C1F2009ACA31 /* SignupService.swift in Sources */,
+				B6ABCEE923BEF8A7002F3056 /* SortSelectViewController.swift in Sources */,
 				B6D1F9A023B3E78D00C8BA31 /* Banner.swift in Sources */,
 				7F0E5CA123B9001900F12492 /* MessageSendViewController.swift in Sources */,
 				B6AAF86423B6A927009571DE /* UIView+Extensions.swift in Sources */,
