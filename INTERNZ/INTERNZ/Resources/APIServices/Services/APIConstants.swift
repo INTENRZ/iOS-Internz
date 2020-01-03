@@ -23,15 +23,15 @@ struct APIConstants {
     
     
     // 프로필
-    static let profileIntroduceEditURL = BaseURL + "/profile/intro"
-    static let profileFavorEditURL = BaseURL + "/profile/task"
+    static let profileIntroduceEditURL = BaseURL + "/profile/intro" // 한 줄 소개 수정
+    static let profileFavorEditURL = BaseURL + "/profile/task" // 프로필 관심 직군 수정
     
-    static let profileListURL = BaseURL + "/profile/list"
+    static let profileListURL = BaseURL + "/profile/list" // 프로필 조회
     
-    static let profileFollowerURL = BaseURL + "/profile/follower" // 팔로워
-    static let profileFollowingURL = BaseURL + "/profile/following" // 팔로잉
+    static let profileFollowerURL = BaseURL + "/profile/follower" // 팔로워 리스트
+    static let profileFollowingURL = BaseURL + "/profile/following" // 팔로잉 리스트
     
-    static let letterPeopleListURL = BaseURL + "/letter/others"
+    static let letterPeopleListURL = BaseURL + "/letter/others"  // 쪽지 주고 받은 사람 목록
     
     static let timelineStoryURL = BaseURL + "/timeline/" // 타임라인 스토리 조회
     

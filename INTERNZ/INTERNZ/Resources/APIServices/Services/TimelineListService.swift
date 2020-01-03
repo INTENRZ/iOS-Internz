@@ -74,6 +74,8 @@ struct TimelineListService {
         }
     } // func timelinelist
     
+    
+    // 타임라인 스토리 조회
     func timelineStoryList(_ timelineIdx: Int,  completion: @escaping(NetworkResult<Any>) -> Void ){
         
         var token = UserDefaults.standard.value(forKey: "token") as! String

@@ -142,8 +142,6 @@ struct FollowService {
         } // alamofire.request
     } // func followerlist
     
-    
-    
-    
+   
     
 }

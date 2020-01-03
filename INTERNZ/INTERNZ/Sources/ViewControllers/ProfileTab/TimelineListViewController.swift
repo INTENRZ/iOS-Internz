@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 
 class TimelineListViewController: UIViewController, UITableViewDelegate {
@@ -57,8 +58,9 @@ class TimelineListViewController: UIViewController, UITableViewDelegate {
             case .success(let data):
                 print("data????", data)
                 self.timelineStoryDataSet = data as! [timelineStoryDataClass]
-                print(self.timelineStoryDataSet)
-                
+//                print(self.timelineStoryDataSet)
+                self.TimelineListTable.reloadData()
+
             case.networkFail:
                 print("error") //찍어보기 확인
             case .requestErr(_):
@@ -96,15 +98,6 @@ extension TimelineListViewController{
     }
 }
 
-// TimelinesStory를 눌렀을 때 또 다른 페이지로 이동하는 코드이므로 아직 하지 않음. 추가되면 할 예정
-//extension TimelineListViewController: UITableViewDelegate{
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        let dvc = storyboard?.instantiateInitialViewController(identifier: "TimelineListViewController")as! Sto
-//
-//    }
-//}
 
 extension TimelineListViewController: UITableViewDataSource{
     
@@ -117,18 +110,10 @@ extension TimelineListViewController: UITableViewDataSource{
         
         let cell = TimelineListTable.dequeueReusableCell(withIdentifier: "TimelineStoryTableViewCell")as! TimelineStoryTableViewCell
         
-//        let TimelineStory = TimelinesStorySampleList[indexPath.row]
-        
         let timelineStory = timelineStoryDataSet[indexPath.row]
         
         cell.storyTitleLabel.text = timelineStory.title
-        cell.nameLabel.text = "name"
-        cell.dateLabel.text = timelineStory.created_date
-        
-//        cell.storyTitleLabel.text = TimelineStory.storyTitle
-//        cell.nameLabel.text = TimelineStory.name
-//        cell.dateLabel.text = TimelineStory.date
-//        cell.storyImage.image = TimelineStory.storyImg
+        cell.dateLabel.text = timelineStory.createdDate
         
         return cell
     }

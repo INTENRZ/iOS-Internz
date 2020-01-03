@@ -765,11 +765,11 @@
                                                     <color key="textColor" red="0.12941176470588234" green="0.14509803921568626" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.01.01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ha-91-zhq">
-                                                    <rect key="frame" x="59" y="72" width="53.333333333333343" height="17.333333333333329"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.01.01" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ha-91-zhq">
+                                                    <rect key="frame" x="66" y="72" width="120" height="17.333333333333329"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17.329999999999998" id="QYU-Kn-p46"/>
-                                                        <constraint firstAttribute="width" constant="53.329999999999998" id="QoU-8b-qlt"/>
+                                                        <constraint firstAttribute="width" constant="120" id="cZm-22-nWb"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.12941176470588234" green="0.14509803921568626" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -785,6 +785,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="g8h-No-tsG" firstAttribute="top" secondItem="Rih-IE-did" secondAttribute="top" constant="16" id="1om-Bn-J4b"/>
+                                                <constraint firstItem="2ha-91-zhq" firstAttribute="leading" secondItem="GI8-zi-4iC" secondAttribute="trailing" constant="13" id="30G-S4-Qq3"/>
                                                 <constraint firstAttribute="trailing" secondItem="hgD-bg-05a" secondAttribute="trailing" constant="150" id="4h3-du-4S5"/>
                                                 <constraint firstAttribute="bottom" secondItem="hgD-bg-05a" secondAttribute="bottom" constant="49.000002543131501" id="6KM-wA-QkV"/>
                                                 <constraint firstAttribute="trailing" secondItem="g8h-No-tsG" secondAttribute="trailing" constant="16" id="9uT-vL-BzG"/>
@@ -792,7 +793,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="GI8-zi-4iC" secondAttribute="bottom" constant="16.000002543131515" id="HLe-zI-YbU"/>
                                                 <constraint firstAttribute="bottom" secondItem="2ha-91-zhq" secondAttribute="bottom" constant="16.000002543131515" id="Wla-9a-uck"/>
                                                 <constraint firstItem="2ha-91-zhq" firstAttribute="top" secondItem="Rih-IE-did" secondAttribute="top" constant="72" id="Z2I-Bu-9VA"/>
-                                                <constraint firstAttribute="trailing" secondItem="2ha-91-zhq" secondAttribute="trailing" constant="262.66666666666663" id="gjC-dm-OQh"/>
                                                 <constraint firstAttribute="trailing" secondItem="GI8-zi-4iC" secondAttribute="trailing" constant="322" id="s36-yC-L7f"/>
                                                 <constraint firstItem="GI8-zi-4iC" firstAttribute="top" secondItem="Rih-IE-did" secondAttribute="top" constant="72" id="x1L-Jj-icJ"/>
                                                 <constraint firstAttribute="bottom" secondItem="g8h-No-tsG" secondAttribute="bottom" constant="12.000002543131515" id="yEv-fQ-0Uq"/>

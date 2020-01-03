@@ -9,40 +9,24 @@
 import Foundation
 
 struct timelineStoryResponseString: Codable {
-    let stautus: Int!
-    let success: Bool!
-    let message: String!
+    let status: Int
+    let success: Bool
+    let message: String
+    
     let data: [timelineStoryDataClass]?
 }
 
-struct checkMe: Codable {
-    let isMeCheck: String?
-}
 
 struct timelineStoryDataClass: Codable {
-    let storyIdx, timelineIdx, userIdx: Int?
-    let title, content: String?
-    let count: Int?
-    let created_date, updated_date: String?
-    let isme: checkMe?
-    
+    let storyIdx, timelineIdx, userIdx: Int
+    let title, content: String
+    let count: Int
+    let createdDate, updatedDate, isme: String
+
     enum CodingKeys: String, CodingKey {
         case storyIdx, timelineIdx, userIdx, title, content, count
-        case created_date = "created_date"
-        case updated_date = "updated_date"
+        case createdDate = "created_date"
+        case updatedDate = "updated_date"
         case isme
-    }
-    
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        storyIdx = (try? values.decode(Int.self, forKey: .storyIdx)) ?? 0
-        timelineIdx = (try? values.decode(Int.self, forKey: .timelineIdx)) ?? 0
-        userIdx = (try? values.decode(Int.self, forKey: .userIdx)) ?? 0
-        count = (try? values.decode(Int.self, forKey: .count)) ?? 0
-        title  = (try? values.decode(String.self, forKey: .title)) ?? ""
-        content = (try? values.decode(String.self, forKey: .content)) ?? ""
-        created_date = (try? values.decode(String.self, forKey: .created_date)) ?? ""
-        updated_date = (try? values.decode(String.self, forKey: .updated_date)) ?? ""
-        isme = (try? values.decode(checkMe.self, forKey: .isme)) ?? nil
     }
 }
