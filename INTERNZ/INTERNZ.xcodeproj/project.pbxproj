@@ -48,6 +48,8 @@
 		B66EBE2723B9C243009ACA31 /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2623B9C243009ACA31 /* ResponseString.swift */; };
 		B66EBE2A23BA46EB009ACA31 /* jobResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2923BA46EB009ACA31 /* jobResponseString.swift */; };
 		B66EBE2C23BA47D7009ACA31 /* JobListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE2B23BA47D7009ACA31 /* JobListService.swift */; };
+		B67B380123BF6E01005F2C3C /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67B380023BF6E01005F2C3C /* Splash.storyboard */; };
+		B67B380423BF6E37005F2C3C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67B380323BF6E37005F2C3C /* SplashViewController.swift */; };
 		B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CBF9523B1740B001C78B2 /* APIConstants.swift */; };
 		B68CF7DE23BE8D5E00D7DE0E /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7DD23BE8D5E00D7DE0E /* UILabel+Extensions.swift */; };
 		B68CF7E023BE8F8D00D7DE0E /* StoryDetailResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68CF7DF23BE8F8D00D7DE0E /* StoryDetailResponseString.swift */; };
@@ -143,6 +145,8 @@
 		B66EBE2623B9C243009ACA31 /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
 		B66EBE2923BA46EB009ACA31 /* jobResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobResponseString.swift; sourceTree = "<group>"; };
 		B66EBE2B23BA47D7009ACA31 /* JobListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListService.swift; sourceTree = "<group>"; };
+		B67B380023BF6E01005F2C3C /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		B67B380323BF6E37005F2C3C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B67CBF9523B1740B001C78B2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		B68CF7DD23BE8D5E00D7DE0E /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		B68CF7DF23BE8F8D00D7DE0E /* StoryDetailResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailResponseString.swift; sourceTree = "<group>"; };
@@ -279,6 +283,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		B67B380223BF6E25005F2C3C /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B67B380323BF6E37005F2C3C /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		B67CBF9823B174B8001C78B2 /* HomeTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +403,7 @@
 		B6D9C96523B1186F00348A7B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B67B380223BF6E25005F2C3C /* Splash */,
 				B63DBACA23B2775C00EEE1C2 /* Models */,
 				B6D9C97F23B13D1800348A7B /* Extensions */,
 				B6D9C96623B1187900348A7B /* ViewControllers */,
@@ -439,6 +452,7 @@
 				B6DFC56D23B650B0002EE94A /* FirstLogin.storyboard */,
 				7F0E5C9123B80DB900F12492 /* Message.storyboard */,
 				B69D184323BDD65000E03A92 /* OnBoarding.storyboard */,
+				B67B380023BF6E01005F2C3C /* Splash.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -561,6 +575,7 @@
 				B6D9C95B23B1169200348A7B /* Assets.xcassets in Resources */,
 				B6D9C95923B1169100348A7B /* Main.storyboard in Resources */,
 				B69D184423BDD65000E03A92 /* OnBoarding.storyboard in Resources */,
+				B67B380123BF6E01005F2C3C /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +682,7 @@
 				B66EBE1C23B8E85E009ACA31 /* CommentCell.swift in Sources */,
 				B6AAF85C23B670D2009571DE /* SettingProfileViewController.swift in Sources */,
 				B6DFC57123B65135002EE94A /* SettingFavorViewController.swift in Sources */,
+				B67B380423BF6E37005F2C3C /* SplashViewController.swift in Sources */,
 				7F0E5C9D23B82F2600F12492 /* MessageListTableViewCell.swift in Sources */,
 				7FF374B723B608F3004E4907 /* TimelineStory.swift in Sources */,
 				B6D9C97423B12D7A00348A7B /* HomeViewController.swift in Sources */,
