@@ -17,7 +17,7 @@ class CreateTimelineViewController: UIViewController {
     
     var isClickedDatePicker:Bool = false
     var isClickedSortBtn: Bool = false
-
+    
     
     var picker = UIView()
     
@@ -81,11 +81,29 @@ class CreateTimelineViewController: UIViewController {
         
     }
     
-    
+    // 뒤로 가기
+    @IBAction func goBack(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @objc func clickDoneButton(){
         print("click done button")
         self.picker.isHidden = true
     }
+    
+    
+    @IBAction func selectButton(_ sender: UIButton) {
+        
+        if sender.layer.borderColor == UIColor.marigold.cgColor {
+            sender.disSelectFavor()
+        } else {
+            sender.selectFavor()
+        }
+        
+    }
+    
+    
+    
+    
     
 }

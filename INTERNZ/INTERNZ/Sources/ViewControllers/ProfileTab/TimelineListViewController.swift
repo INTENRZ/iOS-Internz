@@ -17,6 +17,9 @@ class TimelineListViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var topicLabel: UILabel!
     @IBOutlet weak var topicdateLabel: UILabel!
     
+    @IBOutlet weak var writeButton: UIButton!
+    
+    
     var TimelinesStorySampleList:[TimelinesStory] = []
     
     var timelineIdx: Int!
@@ -72,6 +75,21 @@ class TimelineListViewController: UIViewController, UITableViewDelegate {
             }
         }
     }
+    
+    
+    @IBAction func goWriteView(_ sender: Any) {
+        
+        
+        let dvc = storyboard?.instantiateViewController(identifier: "CreateTimelineViewController") as! CreateTimelineViewController
+        
+        dvc.modalPresentationStyle = .fullScreen
+        
+        self.present(dvc, animated: true, completion: nil)
+        
+        
+        
+    }
+    
     
     
 }

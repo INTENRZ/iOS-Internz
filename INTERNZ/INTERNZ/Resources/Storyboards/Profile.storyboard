@@ -476,6 +476,9 @@
                                                         <state key="normal" title="인턴">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectButton:" destination="fVx-6y-3f1" eventType="touchUpInside" id="X0T-T0-Fd6"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -498,6 +501,9 @@
                                                         <state key="normal" title="대외활동">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectButton:" destination="fVx-6y-3f1" eventType="touchUpInside" id="fwI-I3-ZK2"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -520,6 +526,9 @@
                                                         <state key="normal" title="공모전">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectButton:" destination="fVx-6y-3f1" eventType="touchUpInside" id="3ya-Gz-4g5"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -542,6 +551,9 @@
                                                         <state key="normal" title="동아리">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectButton:" destination="fVx-6y-3f1" eventType="touchUpInside" id="iBN-yS-tfM"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -569,6 +581,9 @@
                                                         <state key="normal" title="자격증">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectButton:" destination="fVx-6y-3f1" eventType="touchUpInside" id="yj5-iM-XPl"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -591,6 +606,9 @@
                                                         <state key="normal" title="기타">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectButton:" destination="fVx-6y-3f1" eventType="touchUpInside" id="lFA-lZ-QEq"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -617,6 +635,28 @@
                                     <constraint firstAttribute="width" constant="375" id="ccZ-Gw-YKE"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXN-bw-JtO">
+                                <rect key="frame" x="16" y="44" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="GML-z0-y1Q"/>
+                                    <constraint firstAttribute="width" constant="24" id="gIX-wf-Uxa"/>
+                                </constraints>
+                                <state key="normal" image="closeIc"/>
+                                <connections>
+                                    <action selector="goBack:" destination="fVx-6y-3f1" eventType="touchUpInside" id="XZH-vT-ToM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wS4-SV-2KW">
+                                <rect key="frame" x="329" y="44" width="30" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="0Ct-M1-tg1"/>
+                                    <constraint firstAttribute="height" constant="33" id="3wk-Vi-Hp1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="등록">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -625,13 +665,17 @@
                             <constraint firstItem="MGb-uA-66R" firstAttribute="trailing" secondItem="grH-Xs-J56" secondAttribute="trailing" constant="16" id="46U-Qu-X48"/>
                             <constraint firstItem="YcP-v1-2yA" firstAttribute="leading" secondItem="MGb-uA-66R" secondAttribute="leading" constant="16" id="6Wn-xo-HdN"/>
                             <constraint firstItem="grH-Xs-J56" firstAttribute="top" secondItem="t6a-wy-qIf" secondAttribute="bottom" constant="6" id="EYF-6Z-pqh"/>
+                            <constraint firstItem="MGb-uA-66R" firstAttribute="trailing" secondItem="wS4-SV-2KW" secondAttribute="trailing" constant="16" id="Fng-gk-eh2"/>
                             <constraint firstItem="c9b-qN-qzs" firstAttribute="top" secondItem="KKx-eG-h2N" secondAttribute="bottom" constant="5" id="KMK-Z4-gQJ"/>
                             <constraint firstItem="KKx-eG-h2N" firstAttribute="leading" secondItem="MGb-uA-66R" secondAttribute="leading" constant="16" id="Ki6-Wd-kvD"/>
                             <constraint firstItem="t6a-wy-qIf" firstAttribute="top" secondItem="Aux-Cw-7jT" secondAttribute="bottom" constant="10" id="KzU-fZ-yXe"/>
+                            <constraint firstItem="lXN-bw-JtO" firstAttribute="leading" secondItem="MGb-uA-66R" secondAttribute="leading" constant="16" id="NZn-AT-JG9"/>
                             <constraint firstItem="t6a-wy-qIf" firstAttribute="leading" secondItem="MGb-uA-66R" secondAttribute="leading" constant="16" id="QKD-hR-RqD"/>
                             <constraint firstItem="YcP-v1-2yA" firstAttribute="top" secondItem="lWW-Fe-6X1" secondAttribute="bottom" constant="10" id="QOW-Dc-tbg"/>
                             <constraint firstItem="c9b-qN-qzs" firstAttribute="trailing" secondItem="MGb-uA-66R" secondAttribute="trailing" id="RVn-lX-1QL"/>
                             <constraint firstItem="Aux-Cw-7jT" firstAttribute="top" secondItem="MGb-uA-66R" secondAttribute="top" constant="40" id="Twk-Z1-gZ6"/>
+                            <constraint firstItem="lXN-bw-JtO" firstAttribute="top" secondItem="MGb-uA-66R" secondAttribute="top" id="Z2E-7c-JLM"/>
+                            <constraint firstItem="wS4-SV-2KW" firstAttribute="top" secondItem="MGb-uA-66R" secondAttribute="top" id="e0W-LC-geT"/>
                             <constraint firstItem="Aux-Cw-7jT" firstAttribute="leading" secondItem="MGb-uA-66R" secondAttribute="leading" constant="16" id="fDK-AA-hNO"/>
                             <constraint firstItem="MGb-uA-66R" firstAttribute="trailing" secondItem="t6a-wy-qIf" secondAttribute="trailing" constant="16" id="fsb-ei-nf6"/>
                             <constraint firstItem="HUc-px-xdJ" firstAttribute="leading" secondItem="GCf-RQ-6QE" secondAttribute="trailing" constant="6" id="l53-ju-sxF"/>
@@ -710,6 +754,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXq-he-KX9">
                                         <rect key="frame" x="335" y="50" width="24" height="24"/>
                                         <state key="normal" image="menuIc"/>
+                                        <connections>
+                                            <action selector="goWriteView:" destination="sox-8v-ehA" eventType="touchUpInside" id="n26-Rh-UBM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -846,6 +893,7 @@
                         <outlet property="categoryLabel" destination="B5c-OQ-cW5" id="Aj5-rf-dUH"/>
                         <outlet property="topicLabel" destination="cxm-cS-uHC" id="cp4-tm-p1i"/>
                         <outlet property="topicdateLabel" destination="TWi-iM-1Jo" id="AeZ-ce-E6p"/>
+                        <outlet property="writeButton" destination="pXq-he-KX9" id="LNF-cF-2aT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1d-qf-md5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
