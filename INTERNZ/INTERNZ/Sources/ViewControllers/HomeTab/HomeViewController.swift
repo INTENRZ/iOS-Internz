@@ -17,6 +17,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var profileBannerCV: UICollectionView!
     @IBOutlet weak var storyWholeView: UIView!
     
+    
+    
+    @IBOutlet weak var storyTitleLabel1: UILabel!
+    @IBOutlet weak var storyTitleLabel2: UILabel!
+    @IBOutlet weak var storyTitleLabel3: UILabel!
+    @IBOutlet weak var storyTitleLabel4: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,6 +66,23 @@ class HomeViewController: UIViewController {
         profileBannerCV.dataSource = self
         
         storyWholeView.setViewShadow()
+        
+        setStoryTitle()
+        
+    }
+    
+    
+    func setStoryTitle(){
+        self.storyTitleLabel1.setMultiLine()
+        self.storyTitleLabel2.setMultiLine()
+        self.storyTitleLabel3.setMultiLine()
+        self.storyTitleLabel4.setMultiLine()
+        
+        self.storyTitleLabel1.text = "영화번역가는 AI 때문에 사라질 직업인가."
+        self.storyTitleLabel2.text = "코딩 테스트부터 코딩 인턴까지 코딩에 대한 A to Z"
+        self.storyTitleLabel3.text = "디자인 인턴 합격까지의 과정! 서류부터 면접까지."
+        self.storyTitleLabel4.text = "비전공자가 알아본 외국계 디자인 인턴과정"
+       
     }
     
     private func setBanner(){

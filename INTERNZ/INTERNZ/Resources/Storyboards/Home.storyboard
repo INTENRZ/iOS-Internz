@@ -489,6 +489,10 @@
                         <outlet property="homeView" destination="e4b-Cc-FyX" id="TU7-lC-SGY"/>
                         <outlet property="paging" destination="SGm-96-Nos" id="XOd-7f-CJM"/>
                         <outlet property="profileBannerCV" destination="wOq-XL-lvN" id="2Eb-kn-SyN"/>
+                        <outlet property="storyTitleLabel1" destination="bgH-T1-SmG" id="25b-48-Qiu"/>
+                        <outlet property="storyTitleLabel2" destination="fz2-aR-c1p" id="IAm-cJ-5BH"/>
+                        <outlet property="storyTitleLabel3" destination="HXB-1s-4Hu" id="dUJ-H0-w2z"/>
+                        <outlet property="storyTitleLabel4" destination="Qxg-YY-UXD" id="HBz-tu-Rg3"/>
                         <outlet property="storyWholeView" destination="tZ6-y2-hB9" id="LPY-OO-JBX"/>
                     </connections>
                 </viewController>
