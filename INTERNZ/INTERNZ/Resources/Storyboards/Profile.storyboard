@@ -314,25 +314,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="스토리내용을" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vuK-qQ-VCS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="스토리 내용을 입력하세요 " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vuK-qQ-VCS">
                                 <rect key="frame" x="0.0" y="120" width="375" height="388"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="388" id="BIY-LU-9GI"/>
                                     <constraint firstAttribute="width" constant="375" id="VhL-gj-Jh8"/>
                                 </constraints>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="제목" translatesAutoresizingMaskIntoConstraints="NO" id="XAd-76-NJf">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="제목을 입력하세요" translatesAutoresizingMaskIntoConstraints="NO" id="XAd-76-NJf">
                                 <rect key="frame" x="0.0" y="80" width="375" height="39"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="7Z9-DV-aXD"/>
                                     <constraint firstAttribute="height" constant="39" id="Ost-1j-SWw"/>
                                 </constraints>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -780,13 +780,6 @@
                                             <action selector="goBack:" destination="sox-8v-ehA" eventType="touchUpInside" id="DWk-c9-RcG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXq-he-KX9">
-                                        <rect key="frame" x="335" y="50" width="24" height="24"/>
-                                        <state key="normal" image="menuIc"/>
-                                        <connections>
-                                            <action selector="goWriteView:" destination="sox-8v-ehA" eventType="touchUpInside" id="n26-Rh-UBM"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -796,7 +789,6 @@
                                     <constraint firstAttribute="bottom" secondItem="YTe-xE-dyg" secondAttribute="bottom" id="FVD-4R-CDd"/>
                                     <constraint firstItem="TWi-iM-1Jo" firstAttribute="leading" secondItem="Pbl-O3-KyT" secondAttribute="leading" constant="16" id="Il1-Rd-Wms"/>
                                     <constraint firstItem="cxm-cS-uHC" firstAttribute="leading" secondItem="Pbl-O3-KyT" secondAttribute="leading" constant="16" id="LZu-Sk-f2B"/>
-                                    <constraint firstAttribute="trailing" secondItem="pXq-he-KX9" secondAttribute="trailing" constant="16" id="NHE-AQ-hXB"/>
                                     <constraint firstAttribute="trailing" secondItem="B5c-OQ-cW5" secondAttribute="trailing" constant="299" id="Puh-jl-XSg"/>
                                     <constraint firstAttribute="trailing" secondItem="cxm-cS-uHC" secondAttribute="trailing" constant="36" id="Rn8-dH-3Ca"/>
                                     <constraint firstAttribute="trailing" secondItem="YTe-xE-dyg" secondAttribute="trailing" id="SYr-dR-tnA"/>
@@ -806,7 +798,6 @@
                                     <constraint firstItem="TWi-iM-1Jo" firstAttribute="top" secondItem="cxm-cS-uHC" secondAttribute="bottom" constant="7" id="egP-Xo-Ri7"/>
                                     <constraint firstItem="YTe-xE-dyg" firstAttribute="top" secondItem="TWi-iM-1Jo" secondAttribute="bottom" constant="9" id="h7m-kQ-vwS"/>
                                     <constraint firstItem="twi-73-djb" firstAttribute="leading" secondItem="Pbl-O3-KyT" secondAttribute="leading" constant="16" id="i8S-Y8-67M"/>
-                                    <constraint firstItem="pXq-he-KX9" firstAttribute="top" secondItem="Pbl-O3-KyT" secondAttribute="top" constant="50" id="z5Q-HM-rCf"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h68-rc-rYr">
@@ -925,7 +916,6 @@
                         <outlet property="categoryLabel" destination="B5c-OQ-cW5" id="Aj5-rf-dUH"/>
                         <outlet property="topicLabel" destination="cxm-cS-uHC" id="cp4-tm-p1i"/>
                         <outlet property="topicdateLabel" destination="TWi-iM-1Jo" id="AeZ-ce-E6p"/>
-                        <outlet property="writeButton" destination="pXq-he-KX9" id="LNF-cF-2aT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1d-qf-md5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1093,7 +1083,6 @@
         <image name="closeIc" width="24" height="24"/>
         <image name="floatingBtn" width="86" height="86"/>
         <image name="kakaoTalkPhoto20191218224026" width="80" height="80"/>
-        <image name="menuIc" width="24" height="24"/>
         <image name="profileBg" width="375" height="42"/>
         <image name="profileImg1" width="46" height="46"/>
         <image name="reMessageIc" width="24" height="24"/>

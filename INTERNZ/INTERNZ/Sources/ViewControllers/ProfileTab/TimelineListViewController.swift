@@ -17,8 +17,6 @@ class TimelineListViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var topicLabel: UILabel!
     @IBOutlet weak var topicdateLabel: UILabel!
     
-    @IBOutlet weak var writeButton: UIButton!
-    
     
     var TimelinesStorySampleList:[TimelinesStory] = []
     
@@ -73,15 +71,6 @@ class TimelineListViewController: UIViewController, UITableViewDelegate {
                 print("serverErr")
             }
         }
-    }
-    
-    // 타임라인 글쓰기
-    @IBAction func goWriteView(_ sender: Any) {
-        let dvc = storyboard?.instantiateViewController(identifier: "CreateTimelineViewController") as! CreateTimelineViewController
-        
-        dvc.modalPresentationStyle = .fullScreen
-        
-        self.present(dvc, animated: true, completion: nil)
     }
     
     

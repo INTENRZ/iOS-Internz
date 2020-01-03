@@ -149,7 +149,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
     }
     
     
-    // 팔로잉으로 이동
+    // 팔로워로 이동
     @IBAction func followerCount(_ sender: UIButton) {
         
         let dvc = storyboard?.instantiateViewController(identifier: "FollowerViewController") as! FollowerViewController
@@ -162,14 +162,24 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
     }
     
     
-    // 팔로워로 이동
+    // 팔로잉으로 이동
     @IBAction func followingCount(_ sender: UILabel) {
         
-        let dvc = storyboard?.instantiateViewController(identifier: "CreateTimelineViewController") as! CreateTimelineViewController
         
+        let dvc = storyboard?.instantiateViewController(identifier: "FollowerViewController") as! FollowerViewController
+        
+        dvc.isFollowing = true
         dvc.modalPresentationStyle = .fullScreen
         
         self.present(dvc, animated: true, completion: nil)
+        
+        
+        
+//        let dvc = storyboard?.instantiateViewController(identifier: "CreateTimelineViewController") as! CreateTimelineViewController
+//
+//        dvc.modalPresentationStyle = .fullScreen
+//
+//        self.present(dvc, animated: true, completion: nil)
         
     }
     
