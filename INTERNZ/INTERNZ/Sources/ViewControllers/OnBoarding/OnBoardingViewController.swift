@@ -29,6 +29,8 @@ class OnBoardingViewController: UIViewController {
         onBoardingBannerCV.isPagingEnabled = true
         self.startButton.layer.cornerRadius = 5
         self.startButton.layer.isHidden = true
+        
+        self.view.backgroundColor = UIColor.white
     }
     
     

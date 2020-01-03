@@ -100,7 +100,7 @@ struct TimelineListService {
                                 guard let data = response.data else { return }
                                 print("status", status)
                                 do {
-                                    print("start decode")
+                                    print("data", String(data:value, encoding: .utf8))
                                     let decoder = JSONDecoder()
                                     let object = try decoder.decode(timelineStoryResponseString.self, from: data)
                                     

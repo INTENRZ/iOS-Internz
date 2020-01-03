@@ -39,7 +39,7 @@ class TimelineListViewController: UIViewController, UITableViewDelegate {
         TimelineListTable.dataSource = self
         TimelineListTable.delegate = self
         
-//        downloadTimelineStoryData()
+        downloadTimelineStoryData()
     }
     
     @IBAction func goBack(_ sender: UIButton) {
@@ -123,7 +123,7 @@ extension TimelineListViewController: UITableViewDataSource{
         
         cell.storyTitleLabel.text = timelineStory.title
         cell.nameLabel.text = "name"
-        cell.dateLabel.text = timelineStory.createdDate
+        cell.dateLabel.text = timelineStory.created_date
         
 //        cell.storyTitleLabel.text = TimelineStory.storyTitle
 //        cell.nameLabel.text = TimelineStory.name
