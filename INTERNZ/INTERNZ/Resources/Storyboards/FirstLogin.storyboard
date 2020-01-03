@@ -680,15 +680,28 @@
                                     <action selector="gotoProfileSetting:" destination="Iog-kh-EcK" eventType="touchUpInside" id="vaf-XP-2SZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGL-Nu-HNf">
+                                <rect key="frame" x="16" y="50" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="UCn-hr-nYB"/>
+                                    <constraint firstAttribute="height" constant="24" id="tvi-LL-eoy"/>
+                                </constraints>
+                                <state key="normal" image="closeIc"/>
+                                <connections>
+                                    <action selector="goBack:" destination="Iog-kh-EcK" eventType="touchUpInside" id="R2f-7g-apk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="k7Z-KX-Vg4" firstAttribute="top" secondItem="8cT-0q-mnY" secondAttribute="bottom" id="8FF-az-wMv"/>
                             <constraint firstItem="4ZQ-Si-6DH" firstAttribute="top" secondItem="k7Z-KX-Vg4" secondAttribute="bottom" constant="19" id="I6W-jo-KvV"/>
                             <constraint firstItem="Kkb-IR-jzE" firstAttribute="leading" secondItem="Fqc-yd-O8b" secondAttribute="leading" constant="16" id="IlH-Gj-6m3"/>
+                            <constraint firstItem="HGL-Nu-HNf" firstAttribute="leading" secondItem="Fqc-yd-O8b" secondAttribute="leading" constant="16" id="Nhz-ph-gSk"/>
                             <constraint firstItem="k7Z-KX-Vg4" firstAttribute="leading" secondItem="Fqc-yd-O8b" secondAttribute="leading" constant="16" id="PQ1-jW-Ucu"/>
                             <constraint firstItem="Fqc-yd-O8b" firstAttribute="trailing" secondItem="4ZQ-Si-6DH" secondAttribute="trailing" constant="8" id="T4x-hD-Siw"/>
                             <constraint firstItem="Fqc-yd-O8b" firstAttribute="trailing" secondItem="Kkb-IR-jzE" secondAttribute="trailing" constant="16" id="Zuy-rM-HmV"/>
+                            <constraint firstItem="HGL-Nu-HNf" firstAttribute="top" secondItem="uvG-Dz-68A" secondAttribute="top" constant="50" id="bbO-Ts-KHO"/>
                             <constraint firstItem="8cT-0q-mnY" firstAttribute="leading" secondItem="Fqc-yd-O8b" secondAttribute="leading" constant="16" id="dj6-gz-ZGg"/>
                             <constraint firstItem="4ZQ-Si-6DH" firstAttribute="leading" secondItem="Fqc-yd-O8b" secondAttribute="leading" constant="8" id="uRj-Gr-EsL"/>
                             <constraint firstItem="8cT-0q-mnY" firstAttribute="top" secondItem="Fqc-yd-O8b" secondAttribute="top" constant="41" id="uih-wS-cnU"/>
@@ -842,6 +855,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="closeIc" width="24" height="24"/>
         <image name="pictureIc" width="24" height="24"/>
     </resources>
 </document>

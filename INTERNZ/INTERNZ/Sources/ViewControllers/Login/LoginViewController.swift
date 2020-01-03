@@ -67,7 +67,6 @@ class LoginViewController: UIViewController {
                 if(isFirstStr == "0"){
                     print("처음 로그인")
                     self.goFirstLogin()
-                    self.goMain()
                 } else {
                     print("이미 로그인 해봄")
                     self.goMain()
@@ -113,10 +112,13 @@ class LoginViewController: UIViewController {
         
         let dvc = firstLoginStoryBoard.instantiateViewController(identifier: "FirstLogin") as! SettingFavorViewController
         
-        let navigationController = UINavigationController(rootViewController: dvc)
+        dvc.modalPresentationStyle = .fullScreen
+        self.present(dvc, animated: true, completion: nil)
         
-        navigationController.modalPresentationStyle = .fullScreen
-        self.present(navigationController, animated: true, completion: nil)
+//        let navigationController = UINavigationController(rootViewController: dvc)
+//
+//        navigationController.modalPresentationStyle = .fullScreen
+//        self.present(navigationController, animated: true, completion: nil)
     }
 }
 

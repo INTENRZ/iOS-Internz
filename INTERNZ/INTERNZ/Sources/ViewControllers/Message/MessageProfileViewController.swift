@@ -54,9 +54,6 @@ class MessageProfileViewController:UIViewController, UITableViewDelegate{
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    
-    
     func downloadLetterListData(){
         
         LetterService.letterShared.letterPeopleList {
@@ -110,12 +107,13 @@ extension MessageProfileViewController: UITableViewDataSource{
         print(MessageUser.name)
         
         let dvc = storyboard?.instantiateViewController(withIdentifier: "MessageListViewController") as! MessageListViewController
-        dvc.username = MessageUser.name
+        
+        
+        dvc.username = self.messageDataSet[indexPath.row].nickname
+        
         
         let navigationController = UINavigationController(rootViewController: dvc)
-        
         navigationController.modalPresentationStyle = .fullScreen
-        
         present(navigationController, animated: true, completion: nil)
         
     }

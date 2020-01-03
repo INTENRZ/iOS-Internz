@@ -74,6 +74,12 @@ class SettingFavorViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func goBack(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     // 버튼 초기 상태 setting
     func initBtn(){
         

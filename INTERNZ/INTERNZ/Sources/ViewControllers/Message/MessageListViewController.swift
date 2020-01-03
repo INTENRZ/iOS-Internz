@@ -16,6 +16,7 @@ class MessageListViewController: UIViewController, UITableViewDelegate {
     
     var username: String?
     
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -36,6 +37,7 @@ class MessageListViewController: UIViewController, UITableViewDelegate {
         let sendButton = UIBarButtonItem(image: UIImage(named: "messagesendIc"), style: .plain, target: self, action: #selector(goSend))
         sendButton.tintColor = UIColor.black
         self.navigationItem.rightBarButtonItem = sendButton
+        
     }
     
     @objc func goBack(){
