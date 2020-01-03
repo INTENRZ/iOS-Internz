@@ -28,22 +28,19 @@ class StoryDetailViewController: UIViewController {
     
     var isScrap:Bool = false
     
+    var isClickedFollow:Bool = false
+    
 //    var StoryDataSet = [StoryResponseString.StoryDataClass]()
     var storyDetailDataSet = [storyDetailDataClass]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("storyIdx????", storyIdx)
-        
-        setContents()
-        
-        detailLabel.text = "detail"
-        
         storyTitleLabel.setMultiLine()
         detailLabel.setMultiLine()
         
         followButton.layer.cornerRadius = 10
+        followButton.backgroundColor = UIColor.gray
         
         downloadStoryDetailData()
         
@@ -56,15 +53,37 @@ class StoryDetailViewController: UIViewController {
         if isScrap == false {
             self.scrapButton.setImage(UIImage(named: "scrapFillIc"), for: .normal)
             isScrap = true
+            
+            let alert = UIAlertController(title: "스크랩 성공!", message: "\(self.nicknameLabel.text!) 님이 작성한 글이 스크랩 리스트에 추가되었습니다.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
         } else {
             self.scrapButton.setImage(UIImage(named: "scrapIc"), for: .normal)
             isScrap = false
+            
+            let alert = UIAlertController(title: "스크랩 취소!", message: "스크랩을 취소합니다.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
         }
     }
     
-    func setContents(){
-        storyTitleLabel.text = storyString
-        writerLabel.text = writerString
+    @IBAction func clickFollowButton(_ sender: UIButton) {
+        if self.isClickedFollow == false {
+            self.followButton.backgroundColor = UIColor.marigold
+            self.isClickedFollow = true
+            
+            let alert = UIAlertController(title: "팔로우 추가!", message: "\(self.nicknameLabel.text!) 님을 팔로우하기 시작합니다.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+            
+        } else {
+            self.followButton.backgroundColor = UIColor.gray
+            self.isClickedFollow = false
+            
+            let alert = UIAlertController(title: "팔로우 취소!", message: "\(self.nicknameLabel.text!) 님 팔로우를 취소합니다.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+        }
     }
     
     func downloadStoryDetailData(){
@@ -97,9 +116,6 @@ class StoryDetailViewController: UIViewController {
                 print("serverErr")
             }
         }
-        
-        
-        
     }
     
     
@@ -110,6 +126,7 @@ class StoryDetailViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // 댓글 창으로 이동
     @IBAction func goToComment(_ sender: UIButton) {
         let dvc = storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
         
