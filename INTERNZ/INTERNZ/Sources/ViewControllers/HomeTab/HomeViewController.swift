@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var profileBannerCV: UICollectionView!
     @IBOutlet weak var storyWholeView: UIView!
     
+    @IBOutlet weak var storyStackView: UIStackView!
     
     
     @IBOutlet weak var storyTitleLabel1: UILabel!
@@ -67,7 +68,12 @@ class HomeViewController: UIViewController {
         
         storyWholeView.setViewShadow()
         
+        self.storyStackView.layer.cornerRadius = 5
+        
         setStoryTitle()
+        
+        
+        
         
     }
     
@@ -86,9 +92,9 @@ class HomeViewController: UIViewController {
     }
     
     private func setBanner(){
-        let banner1 = Banner(corpImgName: "corpImg1", corpName: "NAVER", jobName: "Clova NLP 기술 개발 인턴", day: "d - 6")
-        let banner2 = Banner(corpImgName: "corpImg1", corpName: "지멘스", jobName: "IT Infrastructure 인턴", day: "d - 28")
-        let banner3 = Banner(corpImgName: "corpImg1", corpName: "INNOBABY", jobName: "미국 시카고 INNOBABY 디자인 인턴", day: "d + 3")
+        let banner1 = Banner(corpImgName: "corpImg1", corpName: "NAVER", jobName: "Clova NLP 기술 개발 인턴", day: "D - 6")
+        let banner2 = Banner(corpImgName: "corpImg1", corpName: "지멘스", jobName: "IT Infrastructure 인턴", day: "D - 28")
+        let banner3 = Banner(corpImgName: "corpImg1", corpName: "INNOBABY", jobName: "미국 시카고 INNOBABY 디자인 인턴", day: "D + 3")
         
         let delegate = UIApplication.shared.delegate as? AppDelegate
         delegate?.bannerList = [banner1, banner2, banner3]

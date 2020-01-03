@@ -23,6 +23,8 @@ class CalendarViewController: UIViewController {
     
     var calenderDataSet = [calenderResponseString.calenderListDataClass]()
     
+    private var refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,6 +49,17 @@ class CalendarViewController: UIViewController {
         calendarTableView.dataSource = self
         
         downloadCalenderData()
+        
+        self.calendarTableView.refreshControl = refreshControl
+        refreshControl.attributedTitle = NSAttributedString(string: "")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        
+    }
+    
+    @objc func refresh(){
+        downloadCalenderData()
+    
+        self.refreshControl.endRefreshing()
     }
     
     

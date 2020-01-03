@@ -29,6 +29,8 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
     var isClickedSortBtn: Bool = false
     var selectString = "최신순" // pickerView 에서 선택한 내용
     
+    private var refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,12 +47,24 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         self.sortButton.titleLabel?.text = selectString
         
         downloadJobData()
-//        downloadJobPastData()
+        
+        self.announcementTable.refreshControl = refreshControl
+        refreshControl.attributedTitle = NSAttributedString(string: "")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         
     }
     
-    
-    
+    @objc func refresh(){
+//        downloadJobData()
+        
+        if self.sortButton.titleLabel?.text == "최신순" {
+            downloadJobData()
+        } else {
+            downloadJobPastData()
+        }
+        
+        self.refreshControl.endRefreshing()
+    }
     
     @IBAction func goFilterView(_ sender: UIButton) {
         
@@ -59,10 +73,8 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         dvc.modalPresentationStyle = .fullScreen
         
         self.present(dvc, animated: true, completion: nil)
-
         
     }
-    
     
     
     @IBAction func gotoCalendar(_ sender: UIBarButtonItem) {
@@ -150,9 +162,6 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     
-    
-    
-    
     // UIPickerView delegate functions
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -169,7 +178,7 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        selectString = dataArray[pickerView.selectedRow(inComponent: row)]
+        //        selectString = dataArray[pickerView.selectedRow(inComponent: row)]
         self.selectString = dataArray[row]
     }
     

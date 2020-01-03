@@ -1,9 +1,9 @@
 {
   "images" : [
     {
+      "filename" : "bannerImg.png",
       "scale" : "1x",
-      "idiom" : "universal",
-      "filename" : "bannerImg.png"
+      "idiom" : "universal"
     },
     {
       "filename" : "bannerImg@2x.png",
@@ -12,8 +12,8 @@
     },
     {
       "filename" : "bannerImg@3x.png",
-      "scale" : "3x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

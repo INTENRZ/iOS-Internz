@@ -27,6 +27,8 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
     var StoryList: [Story] = []
     var StoryDataSet = [StoryResponseString.StoryDataClass]()
     
+    private var refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +37,19 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         
         downloadStoryData()
         
+        self.storyTable.refreshControl = refreshControl
+        refreshControl.attributedTitle = NSAttributedString(string: "")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+    }
+    
+    @objc func refresh(){
+        if selectedLabel == "최신순" {
+            downloadStoryData()
+        } else {
+            downloadStoryCountData()
+        }
+        
+        self.refreshControl.endRefreshing()
     }
     
     
@@ -85,7 +100,7 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
                 
             case.networkFail:
                 print("error")
-  
+                
             case .requestErr(_):
                 print("requestErr")
             case .pathErr:
@@ -136,7 +151,7 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         self.selectedLabel = dataArray[row]
-//        print("selectedLabel", selectedLabel)
+        //        print("selectedLabel", selectedLabel)
         return selectedLabel
     }
     
@@ -162,12 +177,14 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         
         if selectedLabel == "최신순" {
             print("최신순 조회")
-            self.sortButton.titleLabel?.text = "최신순"
+            self.sortButton.setTitle("최신순", for: .normal)
+//            self.sortButton.titleLabel?.text = "최신순"
             downloadStoryData()
         }
         else {
             print("조회순 조회")
-            self.sortButton.titleLabel?.text = "조회순"
+//            self.sortButton.titleLabel?.text = "조회순"
+            self.sortButton.setTitle("조회순", for: .normal)
             downloadStoryCountData()
         }
         
@@ -177,8 +194,6 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
 extension StoryViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        //        let story = StoryList[indexPath.row]
         
         let story = StoryDataSet[indexPath.row]
         
@@ -206,22 +221,12 @@ extension StoryViewController: UITableViewDataSource {
         
         let cell = storyTable.dequeueReusableCell(withIdentifier: "StoryCell") as! StoryCell
         
-        //        cell.storyTitleLabel.text = story.storyTitle
-        //        cell.nameLabel.text = story.name
-        //        cell.dateLabel.text = story.date
-        
         cell.storyImage.image = UIImage(named: "33")
         
         
         cell.storyTitleLabel.text = "\(StoryDataSet[indexPath.row].title)"
         cell.nameLabel.text = "\(StoryDataSet[indexPath.row].nickname)"
         cell.dateLabel.text = "\(StoryDataSet[indexPath.row].created_date)"
-        
-        //              let urlStr = StoryDataSet[indexPath.row].picture
-        //              let url = URL(string: urlStr)
-        //
-        //              cell.storyImage.kf.setImage(with: url)
-        
         
         return cell
     }

@@ -28,6 +28,8 @@ class LoginViewController: UIViewController {
         idTextField.delegate = self
         pwTextField.delegate = self
         
+        self.loginButton.layer.cornerRadius = 5
+        
         self.signupButton.underline()
     }
     
@@ -128,6 +130,15 @@ extension LoginViewController: UITextFieldDelegate {
         if textField == pwTextField {
             pwlineUIView.backgroundColor = .marigold
         }
+        
+        if self.idTextField.text != "" || self.pwTextField.text != "" {
+            
+            self.loginButton.backgroundColor = .marigold
+            
+        }
+        
+        
+        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
