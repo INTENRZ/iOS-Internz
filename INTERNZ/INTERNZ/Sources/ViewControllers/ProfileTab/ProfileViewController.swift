@@ -168,6 +168,14 @@ class ProfileViewController: UIViewController,UITableViewDelegate {
     
     @IBAction func messageBtn(_ sender: Any) {
         
+        let MainStoryBoard:UIStoryboard = UIStoryboard(name: "Message", bundle: nil)
+        
+        let dvc = MainStoryBoard.instantiateViewController(identifier: "Message") as! MessageProfileViewController
+        
+        dvc.modalPresentationStyle = .fullScreen
+        
+        self.present(dvc, animated: true, completion: nil)
+        
 //        let dvc = storyboard?.instantiateViewController(identifier: "ProfileViewController") as! ProfileViewController
 //
 //        navigationController?.pushViewController(dvc, animated: true)

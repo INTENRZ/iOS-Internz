@@ -15,6 +15,10 @@ class MessageProfileViewController:UIViewController, UITableViewDelegate{
     
     var MessageProfileSampleList:[MessageUser] = []
     
+    
+    @IBOutlet weak var closeButton: UIButton!
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -36,6 +40,14 @@ class MessageProfileViewController:UIViewController, UITableViewDelegate{
         }
         navigationItem.leftBarButtonItems = [addItem]
     }
+    
+    
+    @IBAction func goBack(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
 }
 
 extension MessageProfileViewController{
@@ -58,7 +70,6 @@ extension MessageProfileViewController: UITableViewDataSource{
     
     // table cell click event
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print(indexPath.row)
         
         let MessageUser = MessageProfileSampleList[indexPath.row]
         print(MessageUser.name)
@@ -71,6 +82,7 @@ extension MessageProfileViewController: UITableViewDataSource{
         navigationController.modalPresentationStyle = .fullScreen
         
         present(navigationController, animated: true, completion: nil)
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
