@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import CHIPageControl
 
 class OnBoardingViewController: UIViewController {
     
     
     @IBOutlet var onBoardingBannerCV: UICollectionView!
+    
+    @IBOutlet weak var paging: CHIPageControlAleppo!
+    
+    @IBOutlet weak var startButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -21,10 +26,22 @@ class OnBoardingViewController: UIViewController {
         
         onBoardingBannerCV.delegate = self
         onBoardingBannerCV.dataSource = self
-        
+        onBoardingBannerCV.isPagingEnabled = true
+        self.startButton.layer.cornerRadius = 5
+        self.startButton.layer.isHidden = true
     }
     
     
+    @IBAction func goStart(_ sender: UIButton) {
+        
+        let loginStoryBoard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        loginViewController.modalPresentationStyle = .fullScreen
+        self.present(loginViewController, animated: true, completion: nil)
+        
+    }
+    
+
     private func setBanner(){
         
         let banner1 = BoardingBanner(bannerImg: "onboarding1")
@@ -41,7 +58,25 @@ class OnBoardingViewController: UIViewController {
 }
 
 extension OnBoardingViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
     
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        let x = onBoardingBannerCV.contentOffset.x
+        let w = onBoardingBannerCV.bounds.size.width
+        let currentPage = Int(ceil(x/w))
+        
+        print(currentPage)
+        
+        if currentPage == 2 {
+            self.startButton.layer.isHidden = false
+        } else {
+            self.startButton.layer.isHidden = true
+        }
+        
+        self.paging.set(progress: currentPage, animated: true)
+    }
 }
 
 extension OnBoardingViewController: UICollectionViewDataSource {
@@ -61,24 +96,10 @@ extension OnBoardingViewController: UICollectionViewDataSource {
         
         bannerCell.boardingImageView?.image = banner.bannerImg
         
-//        bannerCell.boardingImageView = banner.bannerImg
         
         return bannerCell
         
-//        let bannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCell", for: indexPath) as! BannerCell
-//
-//        guard let delegate = UIApplication.shared.delegate as? AppDelegate else { return UICollectionViewCell() }
-//
-//        let banner = delegate.bannerList[indexPath.row]
-//
-//        bannerCell.corpImage?.image = banner.corpImg
-//        bannerCell.corpNameLabel.text = banner.corpName
-//        bannerCell.jobLabelName.text = banner.jobName
-//        bannerCell.dateLabel.text = banner.day
-//
-//        bannerCell.cellView.setViewShadow()
-//
-//        return bannerCell
+        
     }
     
     
