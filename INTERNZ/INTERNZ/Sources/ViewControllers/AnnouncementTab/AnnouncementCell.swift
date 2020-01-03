@@ -20,4 +20,10 @@ class AnnouncementCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.jobLabel.setMultiLine()
+    }
 }

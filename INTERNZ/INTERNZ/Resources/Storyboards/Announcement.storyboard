@@ -61,38 +61,37 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한한한" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAF-Pl-VU1">
-                                                    <rect key="frame" x="16" y="57" width="39" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="직무 이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAF-Pl-VU1">
+                                                    <rect key="frame" x="16" y="49" width="200" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="39" id="Wob-me-gad"/>
-                                                        <constraint firstAttribute="height" constant="20" id="Yyg-R1-JSe"/>
-                                                        <constraint firstAttribute="width" secondItem="aAF-Pl-VU1" secondAttribute="height" multiplier="39:20" id="fAd-A4-PCg"/>
+                                                        <constraint firstAttribute="height" constant="20" id="7En-Tu-XLa"/>
+                                                        <constraint firstAttribute="width" constant="200" id="XzM-Ht-NJA"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.25" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLa-6t-BD7">
-                                                    <rect key="frame" x="59" y="58" width="38" height="17"/>
+                                                    <rect key="frame" x="16" y="72" width="60" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="N0T-ck-kuo"/>
-                                                        <constraint firstAttribute="width" constant="38" id="VLK-1h-8IL"/>
+                                                        <constraint firstAttribute="width" constant="60" id="VLK-1h-8IL"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="0.85098039219999999" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="kLa-6t-BD7" firstAttribute="leading" secondItem="aAF-Pl-VU1" secondAttribute="trailing" constant="4" id="CBq-5J-i10"/>
                                                 <constraint firstItem="Bje-l3-M7z" firstAttribute="leading" secondItem="r9w-1x-MCz" secondAttribute="leading" constant="16" id="Dkt-I8-eoT"/>
                                                 <constraint firstAttribute="bottom" secondItem="Bje-l3-M7z" secondAttribute="bottom" constant="48" id="IgP-G6-8AQ"/>
                                                 <constraint firstAttribute="bottom" secondItem="TEv-lK-Tsj" secondAttribute="bottom" constant="18" id="PIl-TA-jZ4"/>
                                                 <constraint firstItem="TEv-lK-Tsj" firstAttribute="top" secondItem="r9w-1x-MCz" secondAttribute="top" constant="19" id="UV6-0O-SYX"/>
-                                                <constraint firstItem="aAF-Pl-VU1" firstAttribute="top" secondItem="Bje-l3-M7z" secondAttribute="bottom" constant="10" id="a6t-c0-Keo"/>
-                                                <constraint firstItem="kLa-6t-BD7" firstAttribute="top" secondItem="Bje-l3-M7z" secondAttribute="bottom" constant="11" id="eMb-6k-gSm"/>
+                                                <constraint firstItem="aAF-Pl-VU1" firstAttribute="top" secondItem="Bje-l3-M7z" secondAttribute="bottom" constant="2" id="a6t-c0-Keo"/>
+                                                <constraint firstItem="kLa-6t-BD7" firstAttribute="leading" secondItem="r9w-1x-MCz" secondAttribute="leading" constant="16" id="emE-hT-p51"/>
                                                 <constraint firstItem="aAF-Pl-VU1" firstAttribute="leading" secondItem="r9w-1x-MCz" secondAttribute="leading" constant="16" id="f0t-uq-mhC"/>
                                                 <constraint firstAttribute="trailing" secondItem="TEv-lK-Tsj" secondAttribute="trailing" constant="16" id="iSQ-uA-jhD"/>
+                                                <constraint firstItem="kLa-6t-BD7" firstAttribute="top" secondItem="aAF-Pl-VU1" secondAttribute="bottom" constant="3" id="jvH-y9-bLR"/>
                                                 <constraint firstItem="TEv-lK-Tsj" firstAttribute="leading" secondItem="Bje-l3-M7z" secondAttribute="trailing" constant="36" id="mz8-BZ-2qN"/>
                                             </constraints>
                                         </tableViewCellContentView>

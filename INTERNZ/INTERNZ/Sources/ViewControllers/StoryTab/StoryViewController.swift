@@ -34,6 +34,7 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         storyTable.delegate = self
         
         downloadStoryData()
+        
     }
     
     
