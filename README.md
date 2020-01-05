@@ -144,7 +144,7 @@
 - 스토리 댓글
 
 
-<img src="./screenshot/스토리1.png" width="200" height="365">  <img src="./screenshot/스토리2.png" width="200" height="365"> <img src="./screenshot/스토리상세.png" width="200" height="365">  
+<img src="./screenshot/스토리1.png" width="200" height="365">  <img src="./screenshot/스토리2.png" width="200" height="365"> <img src="./screenshot/스토리상세.png" width="200" height="365"> <img src="./screenshot/댓글.png" width="200" height="365">  
 <br/>
 
 
@@ -156,15 +156,11 @@
 - 쪽지 주고 받기 
 
 
-<img src="./screenshot/프로필1.png" width="200" height="365"> <img src="./screenshot/프로필2.png" width="200" height="365"> <img src="./screenshot/프로필3.png" width="200" height="365"> 
+<img src="./screenshot/프로필1.png" width="200" height="365">  <img src="./screenshot/프로필3.png" width="200" height="365">  <img src="./screenshot/프로필4.png" width="200" height="365">
 
 <br/>
 
-<img src="./screenshot/프로필4.png" width="200" height="365"> <img src="./screenshot/프로필-팔로잉.png" width="200" height="365"> <img src="./screenshot/프로필-팔로워.png" width="200" height="365"> 
-
-<br/>
-
-<img src="./screenshot/쪽지사람리스트.png" width="200" height="365"> <img src="./screenshot/쪽지리스트.png" width="200" height="365"> 
+<img src="./screenshot/프로필-팔로잉.png" width="200" height="365"> <img src="./screenshot/프로필-팔로워.png" width="200" height="365">  <img src="./screenshot/쪽지사람리스트.png" width="200" height="365"> <img src="./screenshot/쪽지리스트.png" width="200" height="365"> 
  
 
 
