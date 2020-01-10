@@ -11,13 +11,16 @@ import UIKit
 
 extension UIButton {
     func setFavor() {
-
         self.layer.backgroundColor = UIColor.white.cgColor
         self.layer.borderColor = UIColor.whiteFour.cgColor
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 15
         self.tintColor = UIColor.darkGreyTwo
+    }
     
+    func setWhiteButton(){
+        self.backgroundColor = UIColor.whiteFour
+        self.layer.cornerRadius = 5
     }
     
     func selectFavor(){

@@ -117,9 +117,11 @@ class SignupService{
                                         
                                     case true:
                                         print("success")
+                                        completion(.success(result.success))
 //                                        completion(.success(result.data)) // NetworkResult 에서 접근
                                     case false:
-                                        completion(.requestErr(result.message))
+                                        completion(.requestErr(result.success))
+//                                        completion(.requestErr(result.message))
                                     }
                                 }
                                 catch {

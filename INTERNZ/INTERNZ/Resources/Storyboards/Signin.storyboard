@@ -516,10 +516,13 @@
                     <connections>
                         <outlet property="agree1" destination="qQR-QD-LlU" id="klV-tb-Er7"/>
                         <outlet property="agree2" destination="OHI-o7-tZT" id="Bbr-Dz-kNg"/>
-                        <outlet property="birthTextFieldd" destination="WI1-57-hPX" id="3tk-K8-AsF"/>
+                        <outlet property="birthLineView" destination="q1y-fJ-lF4" id="ldt-MM-COT"/>
+                        <outlet property="birthTextField" destination="WI1-57-hPX" id="4IY-QE-EDy"/>
                         <outlet property="completeButton" destination="Mql-bq-m6Z" id="heH-MX-h8F"/>
                         <outlet property="man" destination="mOj-bT-IJa" id="Yxh-gh-itQ"/>
+                        <outlet property="nameLineView" destination="RWk-lG-2Nf" id="Tn0-as-cGH"/>
                         <outlet property="nameTextField" destination="Qpa-DV-6XH" id="J8m-4F-LNi"/>
+                        <outlet property="nicknameLineView" destination="uSJ-is-ON3" id="ad8-G0-84x"/>
                         <outlet property="nicknameTextField" destination="2mn-fl-RhX" id="wel-Ll-i1h"/>
                         <outlet property="wholeView" destination="Erb-52-PgW" id="ChL-Gi-YMp"/>
                         <outlet property="woman" destination="Pex-dW-Gns" id="xse-QE-KLA"/>

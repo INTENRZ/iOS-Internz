@@ -11,9 +11,16 @@ import UIKit
 class Signin2ViewController: UIViewController {
     
     @IBOutlet weak var wholeView: UIView!
+    
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var nameLineView: UIView!
+    
     @IBOutlet weak var nicknameTextField: UITextField!
-    @IBOutlet weak var birthTextFieldd: UITextField!
+    @IBOutlet weak var nicknameLineView: UIView!
+    
+    @IBOutlet weak var birthTextField: UITextField!
+    @IBOutlet weak var birthLineView: UIView!
+    
     @IBOutlet weak var woman: UIButton!
     @IBOutlet weak var man: UIButton!
     @IBOutlet weak var completeButton: UIButton!
@@ -24,31 +31,34 @@ class Signin2ViewController: UIViewController {
     var userEmailString = ""
     var userPwdString = ""
     var phoneString = ""
-
+    
     /* radio button value */
     var gender = ""
     
+    /* 회원가입시 필요한 정보 */
+    var name = ""
+    var nickname = ""
+    var birth = ""
     
-//    var name = ""
-//    var nickname = ""
-//    var birth = ""
     var isWoman: Bool = true
+    
+    var isSuccessSignup: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(userEmailString)
-        print(userPwdString)
-        print(phoneString)
-        
         addKeyboardObserver()
+        
         nameTextField.delegate = self
-        completeButton.backgroundColor = UIColor.whiteFour
-        completeButton.layer.cornerRadius = 5
+        nicknameTextField.delegate = self
+        birthTextField.delegate = self
+        
+        completeButton.setWhiteButton()
         
         self.navigationItem.title = "회원가입"
     }
     
+    // 성별 클릭 radio button click event
     @IBAction func clickRadioButton(_ sender: UIButton) {
         
         if isWoman == true {
@@ -62,29 +72,21 @@ class Signin2ViewController: UIViewController {
         }
     }
     
+    // 약관 동의 click event
     @IBAction func clickAgreeButton(_ sender: UIButton) {
-        
-        if sender.currentImage?.isEqual(UIImage(named: "checkBtn")) == true {
+        if sender.image(for: .normal)?.isEqual(UIImage(named: "checkBtn")) == true {
             sender.setImage(UIImage(named: "checkSelectedBtn"), for: .normal)
         } else {
             sender.setImage(UIImage(named: "checkBtn"), for: .normal)
         }
     }
     
+    
     @IBAction func gotoLogin(_ sender: UIButton) {
         
-        goSignup()
-        
-        //        let loginStoryBoard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
-        //        let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
-        //        loginViewController.modalPresentationStyle = .fullScreen
-        //        self.present(loginViewController, animated: true, completion: nil)
-    }
-    
-    func goSignup(){
-//        self.name = self.nameTextField.text ?? ""
-//        self.nickname = self.nicknameTextField.text ?? ""
-//        self.birth = self.birthTextFieldd.text ?? ""
+        self.name = self.nameTextField.text ?? ""
+        self.nickname = self.nicknameTextField.text ?? ""
+        self.birth = self.birthTextField.text ?? ""
         
         if isWoman == true {
             self.gender = "woman"
@@ -92,36 +94,88 @@ class Signin2ViewController: UIViewController {
             self.gender = "man"
         }
         
-//        SignupService.sharedSignup.signup(userEmailString, userPwdString, userPwdConfirmString, phoneString, name, nickname, birth, gender) {
-//
-//            response in
-//
-//            switch response{
-//            case .success(let data):
-//
-//                print("data?? ", data)
-//                print("성공이닷~!~!~")
-//
-//            case.networkFail:
-//                print("error")
-//                //찍어보기 확인
-//
-//            case .requestErr(_):
-//                print(self.userEmailString, self.userPwdString, self.phoneString, self.name, self.nickname, self.birth, self.gender)
-//                print("requestErr")
-//            case .pathErr:
-//                print("pathErr")
-//            case .serverErr:
-//                print("serverErr")
-//            }
-//        }
+        SignupService.sharedSignup.signup(userPwdString, userPwdString, userEmailString, phoneString, name, nickname, birth, gender) {
+            
+            response in
+            
+            switch response{
+            case .success(let data):
+                
+                print("data?? ", data)
+                self.isSuccessSignup = data as! Bool
+                print("isSuccessSignup?? ", self.isSuccessSignup)
+                
+                if self.isSuccessSignup == true { // 회원가입 성공
+                    
+                    let alert = UIAlertController(title: "회원 가입 성공!", message: "로그인 화면으로 넘어갑니다.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "확인", style: .default, handler: {
+                        action in
+                        self.goLoginView();
+                        return;
+                    }))
+
+                } else {
+                    let alert = UIAlertController(title: "회원가입 실패!", message: "값을 제대로 입력했는지 확인해 주세요.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+                    self.present(alert, animated: true)
+                }
+                
+            case.networkFail:
+                print("error")
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            }
+        }
     }
     
+    func goLoginView(){
+        let loginStoryBoard : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        loginViewController.modalPresentationStyle = .fullScreen
+        self.present(loginViewController, animated: true, completion: nil)
+    }
     
 }
 
+
 extension Signin2ViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField {
+        case nameTextField:
+            nameLineView.backgroundColor = .marigold
+        case nicknameTextField:
+            nicknameLineView.backgroundColor = .marigold
+        case birthTextField :
+            birthLineView.backgroundColor = .marigold
+        default:
+            break
+        }
+    }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField {
+        case nameTextField:
+            nameLineView.backgroundColor = .whiteFour
+        case nicknameTextField:
+            nicknameLineView.backgroundColor = .whiteFour
+        case birthTextField :
+            birthLineView.backgroundColor = .whiteFour
+        default:
+            break
+        }
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if self.nameTextField.text != "" && self.nicknameTextField.text != "" && self.birthTextField.text != "" {
+            self.completeButton.backgroundColor = .marigold
+        } else {
+            self.completeButton.backgroundColor = .whiteFour
+        }
+    }
 }
 
 extension Signin2ViewController {
