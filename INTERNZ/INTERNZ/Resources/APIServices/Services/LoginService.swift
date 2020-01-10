@@ -26,12 +26,7 @@ struct LoginService {
         // 서버로 request 전송 - http 비동기 통신 라이브러리 : 함수가 호출된 순차적으로 진행됨
         Alamofire.request(APIConstants.loginURL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
             .responseData { response in // response 에 결과값 저장 -> print 해보기
-                
-                //                print("request", response.request)
-                //                print("response", response.response)
-                //                print("data", response.data)
-                //                print("result", response.result)
-                
+        
                 // parameter 위치
                 switch response.result {
                     

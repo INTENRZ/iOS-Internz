@@ -13,6 +13,65 @@ class SignupService{
     
     static let sharedSignup = SignupService()
     
+    // 이메일 중복 체크
+    func emailCheck(_ email:String, completion: @escaping(NetworkResult<Any>) -> Void){
+        let header: HTTPHeaders = [
+            "Content-Type" : "application/json"
+        ]
+        
+        let body: Parameters = [
+            "email" : email
+        ]
+        
+        Alamofire.request(APIConstants.Signup1URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
+            .responseData { response in
+                
+                switch response.result {
+                    
+                case .success: // 통신 성공
+                    
+                    if let value = response.result.value {
+                        if let status = response.response?.statusCode {
+                            switch status {
+                            case 200:
+                                do{
+                                    let decoder = JSONDecoder()
+                                    let result = try decoder.decode(EmailCheckResponseString.self, from: value)
+                                    
+                                    switch result.success {
+                                        
+                                    case true: // 이메일 중복이 없는 경우
+                                        print("이메일 중복 체크!!")
+                                        completion(.success(result.success))
+                                    case false:
+                                        print("fail,,")
+//                                        completion(.success(result.success))
+                                        completion(.requestErr(result.message))
+                                    }
+                                    
+                                } catch {
+                                    print(error.localizedDescription)
+                                }
+                            case 330:
+                                print("이메일중복")
+                            case 400:
+                                completion(.pathErr)
+                            case 500:
+                                completion(.serverErr)
+                            default:
+                                break
+                            }
+                        }
+                    }
+                    
+                case .failure(let err) : // 통신 실패
+                    print(err.localizedDescription)
+                }
+        }
+    } // emailCheck Func
+    
+    
+    // 회원가입
     func signup(_ email:String, _ password: String, _ password2: String, _ phone: String, _ name: String, _ nickname:String, _ age:String, _ sex: String, completion: @escaping(NetworkResult<Any>) -> Void) {
         
         let header: HTTPHeaders = [
@@ -33,7 +92,6 @@ class SignupService{
         
         Alamofire.request(APIConstants.Signup2URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
-                
                 
                print("body?? ",  body)
                 
@@ -57,11 +115,10 @@ class SignupService{
                                     // ResponseString2에 있는 success로 분기 처리
                                     switch result.success {
                                         
-                                    case true: // 진짜 로그인 성공인 경우
+                                    case true:
                                         print("success")
 //                                        completion(.success(result.data)) // NetworkResult 에서 접근
                                     case false:
-                                        
                                         completion(.requestErr(result.message))
                                     }
                                 }

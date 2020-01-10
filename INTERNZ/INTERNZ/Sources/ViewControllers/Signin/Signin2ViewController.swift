@@ -20,18 +20,18 @@ class Signin2ViewController: UIViewController {
     @IBOutlet weak var agree1: UIButton!
     @IBOutlet weak var agree2: UIButton!
     
-    //이거 빼도 됨
-    //    var genderBtn: Bool = false
-    //    var agreeBtn: Bool = false
-    
+    /* 전 회원가입 뷰에서 받아오는 값 */
     var userEmailString = ""
     var userPwdString = ""
-    var userPwdConfirmString = ""
     var phoneString = ""
+
+    /* radio button value */
     var gender = ""
-    var name = ""
-    var nickname = ""
-    var birth = ""
+    
+    
+//    var name = ""
+//    var nickname = ""
+//    var birth = ""
     var isWoman: Bool = true
     
     override func viewDidLoad() {
@@ -47,11 +47,6 @@ class Signin2ViewController: UIViewController {
         completeButton.layer.cornerRadius = 5
         
         self.navigationItem.title = "회원가입"
-        self.navigationItem.setHidesBackButton(true, animated:true);
-        
-        let button1 = UIBarButtonItem(image: UIImage(named: "left1Ic"), style: .plain, target: self, action: #selector(goBack))
-        button1.tintColor = UIColor.black
-        self.navigationItem.leftBarButtonItem  = button1
     }
     
     @IBAction func clickRadioButton(_ sender: UIButton) {
@@ -87,9 +82,9 @@ class Signin2ViewController: UIViewController {
     }
     
     func goSignup(){
-        self.name = self.nameTextField.text ?? ""
-        self.nickname = self.nicknameTextField.text ?? ""
-        self.birth = self.birthTextFieldd.text ?? ""
+//        self.name = self.nameTextField.text ?? ""
+//        self.nickname = self.nicknameTextField.text ?? ""
+//        self.birth = self.birthTextFieldd.text ?? ""
         
         if isWoman == true {
             self.gender = "woman"
@@ -97,35 +92,32 @@ class Signin2ViewController: UIViewController {
             self.gender = "man"
         }
         
-        SignupService.sharedSignup.signup(userEmailString, userPwdString, userPwdConfirmString, phoneString, name, nickname, birth, gender) {
-            
-            response in
-            
-            switch response{
-            case .success(let data):
-                
-                print("data?? ", data)
-                print("성공이닷~!~!~")
-                
-            case.networkFail:
-                print("error")
-                //찍어보기 확인
-                
-            case .requestErr(_):
-                print(self.userEmailString, self.userPwdString, self.phoneString, self.name, self.nickname, self.birth, self.gender)
-                print("requestErr")
-            case .pathErr:
-                print("pathErr")
-            case .serverErr:
-                print("serverErr")
-            }
-        }
+//        SignupService.sharedSignup.signup(userEmailString, userPwdString, userPwdConfirmString, phoneString, name, nickname, birth, gender) {
+//
+//            response in
+//
+//            switch response{
+//            case .success(let data):
+//
+//                print("data?? ", data)
+//                print("성공이닷~!~!~")
+//
+//            case.networkFail:
+//                print("error")
+//                //찍어보기 확인
+//
+//            case .requestErr(_):
+//                print(self.userEmailString, self.userPwdString, self.phoneString, self.name, self.nickname, self.birth, self.gender)
+//                print("requestErr")
+//            case .pathErr:
+//                print("pathErr")
+//            case .serverErr:
+//                print("serverErr")
+//            }
+//        }
     }
     
-    @objc func goBack(){
-        print("tap back")
-        self.dismiss(animated: true, completion: nil)
-    }
+    
 }
 
 extension Signin2ViewController: UITextFieldDelegate {

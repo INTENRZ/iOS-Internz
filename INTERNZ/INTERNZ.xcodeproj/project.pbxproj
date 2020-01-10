@@ -35,6 +35,7 @@
 		B6077ADD23BCA312006DF0E7 /* CalenderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6077ADC23BCA312006DF0E7 /* CalenderService.swift */; };
 		B628BCD123BF007500FDD87D /* LetterResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628BCD023BF007500FDD87D /* LetterResponseString.swift */; };
 		B628BCD323BF00E300FDD87D /* LetterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628BCD223BF00E300FDD87D /* LetterService.swift */; };
+		B6324AD823C8979000C39607 /* EmailCheckResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6324AD723C8979000C39607 /* EmailCheckResponseString.swift */; };
 		B63DBAC923B275FE00EEE1C2 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */; };
 		B63DBACE23B2779A00EEE1C2 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DBACD23B2779A00EEE1C2 /* Story.swift */; };
 		B66EBE1623B82305009ACA31 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66EBE1523B82305009ACA31 /* CommentViewController.swift */; };
@@ -132,6 +133,7 @@
 		B6077ADC23BCA312006DF0E7 /* CalenderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderService.swift; sourceTree = "<group>"; };
 		B628BCD023BF007500FDD87D /* LetterResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterResponseString.swift; sourceTree = "<group>"; };
 		B628BCD223BF00E300FDD87D /* LetterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterService.swift; sourceTree = "<group>"; };
+		B6324AD723C8979000C39607 /* EmailCheckResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckResponseString.swift; sourceTree = "<group>"; };
 		B63DBAC823B275FE00EEE1C2 /* StoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
 		B63DBACD23B2779A00EEE1C2 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		B66EBE1523B82305009ACA31 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				B68CF7E523BEABDB00D7DE0E /* FollowResponseString.swift */,
 				B68CF7E923BEB24F00D7DE0E /* TimelineStoryResponseString.swift */,
 				B628BCD023BF007500FDD87D /* LetterResponseString.swift */,
+				B6324AD723C8979000C39607 /* EmailCheckResponseString.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				B68CF7DE23BE8D5E00D7DE0E /* UILabel+Extensions.swift in Sources */,
 				B66EBE2023B90224009ACA31 /* CreateTimelineViewController.swift in Sources */,
 				B68CF7E023BE8F8D00D7DE0E /* StoryDetailResponseString.swift in Sources */,
+				B6324AD823C8979000C39607 /* EmailCheckResponseString.swift in Sources */,
 				B66EBE1A23B8A478009ACA31 /* DateStruct.swift in Sources */,
 				B67CBF9623B1740B001C78B2 /* APIConstants.swift in Sources */,
 				B6D1F99423B295F300C8BA31 /* AnnouncementCell.swift in Sources */,
