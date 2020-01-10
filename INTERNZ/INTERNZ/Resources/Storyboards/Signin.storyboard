@@ -222,12 +222,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="yYb-6h-XfW"/>
                     <connections>
-                        <outlet property="emailLabel" destination="j98-sP-rFv" id="MUT-0j-Ggd"/>
+                        <outlet property="emailLineView" destination="fA8-bE-NCs" id="wru-0g-G3L"/>
                         <outlet property="emailTextField" destination="2bG-BZ-6L2" id="sdD-pp-KdE"/>
                         <outlet property="loginButton" destination="jJe-Ak-t1H" id="ha9-W9-bue"/>
                         <outlet property="nextButton" destination="8Mo-hg-7IV" id="hpa-nX-0xX"/>
+                        <outlet property="passwordConfirmLineView" destination="grg-H2-GIn" id="efS-Mn-XkB"/>
                         <outlet property="passwordConfirmTextField" destination="4nc-M0-Oaw" id="x3m-gH-3hn"/>
+                        <outlet property="passwordLineView" destination="mZS-qS-jme" id="was-hr-WWI"/>
                         <outlet property="passwordTextField" destination="Y8z-6g-2N6" id="s4J-by-Qc3"/>
+                        <outlet property="phoneLineView" destination="6bh-2P-K42" id="m3b-1D-Vau"/>
                         <outlet property="phoneTextField" destination="5kV-hg-Bkv" id="bGu-xU-xlz"/>
                         <outlet property="wholeView" destination="85V-TO-4qC" id="Xep-ng-RwW"/>
                     </connections>

@@ -133,13 +133,6 @@ extension LoginViewController: UITextFieldDelegate {
             pwlineUIView.backgroundColor = .marigold
         }
         
-        if self.idTextField.text != "" || self.pwTextField.text != "" {
-            
-            self.loginButton.backgroundColor = .marigold
-            
-        }
-        
-        
         
     }
     
@@ -154,7 +147,9 @@ extension LoginViewController: UITextFieldDelegate {
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        //        print("did change selection")
+        if self.idTextField.text != "" && self.pwTextField.text != "" {
+            self.loginButton.backgroundColor = .marigold
+        }
     }
 }
 

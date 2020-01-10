@@ -10,13 +10,19 @@ import UIKit
 
 class SigninViewController: UIViewController {
     
-    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var passwordConfirmTextField: UITextField!
-    @IBOutlet weak var phoneTextField: UITextField!
-    @IBOutlet weak var wholeView: UIView!
+    @IBOutlet weak var emailLineView: UIView!
     
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordLineView: UIView!
+    
+    @IBOutlet weak var passwordConfirmTextField: UITextField!
+    @IBOutlet weak var passwordConfirmLineView: UIView!
+    
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var phoneLineView: UIView!
+    
+    @IBOutlet weak var wholeView: UIView!
     
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
@@ -34,7 +40,11 @@ class SigninViewController: UIViewController {
         nextButton.layer.cornerRadius = 5
         
         addKeyboardObserver()
+        
         emailTextField.delegate = self
+        passwordTextField.delegate = self
+        passwordConfirmTextField.delegate = self
+        phoneTextField.delegate = self
         
     }
     
@@ -99,7 +109,7 @@ class SigninViewController: UIViewController {
                 }
                 
             case.networkFail:
-                print("error") //찍어보기 확인
+                print("error")
             case .requestErr(_):
                 print("requestErr")
             case .pathErr:
@@ -115,7 +125,7 @@ class SigninViewController: UIViewController {
             self.present(alert, animated: true)
             return
         }
-
+        
     }
     
     @IBAction func gotoLoginView(_ sender: UIButton) {
@@ -124,7 +134,7 @@ class SigninViewController: UIViewController {
     
     // 다음 회원가입 뷰로 넘어감
     func goNextSigninView(){
-    
+        
         guard let userEmail = self.emailTextField.text else { return }
         guard let userPassword = self.passwordTextField.text else { return }
         guard let userPhone = self.phoneTextField.text else { return }
@@ -134,13 +144,49 @@ class SigninViewController: UIViewController {
         dvc.userEmailString = userEmail
         dvc.userPwdString = userPassword
         dvc.phoneString = userPhone
-   
+        
         navigationController?.pushViewController(dvc, animated: true)
     }
-
+    
 }
 
 extension SigninViewController: UITextFieldDelegate{
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField {
+        case emailTextField :
+            emailLineView.backgroundColor = .marigold
+        case passwordTextField:
+            passwordLineView.backgroundColor = .marigold
+        case passwordConfirmTextField:
+            passwordConfirmLineView.backgroundColor = .marigold
+        case phoneTextField:
+            phoneLineView.backgroundColor = .marigold
+        default:
+            break
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField {
+        case emailTextField :
+            emailLineView.backgroundColor = .whiteFour
+        case passwordTextField:
+            passwordLineView.backgroundColor = .whiteFour
+        case passwordConfirmTextField:
+            passwordConfirmLineView.backgroundColor = .whiteFour
+        case phoneTextField:
+            phoneLineView.backgroundColor = .whiteFour
+        default:
+            break
+        }
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if self.emailTextField.text != "" && self.passwordConfirmTextField.text != "" && self.passwordTextField.text != "" && self.phoneTextField.text != "" {
+            self.nextButton.backgroundColor = .marigold
+        }
+    }
     
 }
 
