@@ -288,7 +288,8 @@
 			children = (
 				B67B380323BF6E37005F2C3C /* SplashViewController.swift */,
 			);
-			path = Splash;
+			name = Splash;
+			path = ../Splash;
 			sourceTree = "<group>";
 		};
 		B67CBF9823B174B8001C78B2 /* HomeTab */ = {
@@ -403,7 +404,6 @@
 		B6D9C96523B1186F00348A7B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B67B380223BF6E25005F2C3C /* Splash */,
 				B63DBACA23B2775C00EEE1C2 /* Models */,
 				B6D9C97F23B13D1800348A7B /* Extensions */,
 				B6D9C96623B1187900348A7B /* ViewControllers */,
@@ -414,6 +414,7 @@
 		B6D9C96623B1187900348A7B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B67B380223BF6E25005F2C3C /* Splash */,
 				B69D184523BDD67C00E03A92 /* OnBoarding */,
 				7F0E5C9323B80DD800F12492 /* Message */,
 				B6DFC56F23B65101002EE94A /* FirstLogin */,
@@ -850,7 +851,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 78QKCLC82G;
 				INFOPLIST_FILE = INTERNZ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -869,7 +870,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 78QKCLC82G;
 				INFOPLIST_FILE = INTERNZ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
