@@ -27,8 +27,7 @@ class SigninViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
-//    var isCheckEmail:Bool = false
-    
+    var isCheckEmail:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +48,6 @@ class SigninViewController: UIViewController {
     
     // 다음 회원가입 뷰로 이동하기 위한 조건검사
     @IBAction func gotoNextSignin(_ sender: UIButton) {
-        
-        var isCheckEmail:Bool = false
         
         // 이메일을 입력하지 않았을 경우 -> 다음 뷰로 넘어가지 못함
         if self.emailTextField.text == "" {
@@ -93,11 +90,11 @@ class SigninViewController: UIViewController {
             switch response {
             case .success(let data):
                 print("data???", data)
-                isCheckEmail = data as! Bool
-                print("checkEmail??? ", isCheckEmail)
+                self.isCheckEmail = data as! Bool
+                print("checkEmail??? ", self.isCheckEmail)
                 
                 // 이메일 중복 체크 성공일 경우 -> 다음 뷰로 넘어감
-                if isCheckEmail == true {
+                if self.isCheckEmail == true {
                     let alert = UIAlertController(title: "이메일 중복 없음!", message: "다음 회원가입 화면으로 넘어갑니다.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "확인", style: .default, handler: {
                         action in
@@ -118,7 +115,7 @@ class SigninViewController: UIViewController {
             }
         }
         
-        if isCheckEmail == false {
+        if self.isCheckEmail == false {
             let alert = UIAlertController(title: "이메일 중복!", message: "다른 이메일을 입력해주세요.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
             self.present(alert, animated: true)

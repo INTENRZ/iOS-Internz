@@ -72,7 +72,7 @@ class LoginViewController: UIViewController {
                     self.goMain()
                 }
                 
-            case .requestErr(let message) :
+            case .requestErr :
 
                 let alert = UIAlertController(title: "Login Failed!", message: "이메일과 비밀번호를 다시 확인해 주세요", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))

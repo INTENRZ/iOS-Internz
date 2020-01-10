@@ -113,6 +113,7 @@ class Signin2ViewController: UIViewController {
                         self.goLoginView();
                         return;
                     }))
+                    self.present(alert, animated: true)
 
                 } else {
                     let alert = UIAlertController(title: "회원가입 실패!", message: "값을 제대로 입력했는지 확인해 주세요.", preferredStyle: .alert)
@@ -137,6 +138,7 @@ class Signin2ViewController: UIViewController {
         let loginViewController = loginStoryBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
         loginViewController.modalPresentationStyle = .fullScreen
         self.present(loginViewController, animated: true, completion: nil)
+        return
     }
     
 }

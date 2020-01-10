@@ -89,16 +89,11 @@ class SignupService{
             "sex": sex
         ]
         
-        
         Alamofire.request(APIConstants.Signup2URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
                 
-               print("body?? ",  body)
-                
-                // parameter 위치
                 switch response.result {
                     
-                // 통신 성공 - 네트워크 연결
                 case .success:
                     if let value = response.result.value {
                         
@@ -112,9 +107,7 @@ class SignupService{
                                         .self, from: value)
                                     print(result)
                                     
-                                    // ResponseString2에 있는 success로 분기 처리
                                     switch result.success {
-                                        
                                     case true:
                                         print("success")
                                         completion(.success(result.success))
@@ -139,7 +132,6 @@ class SignupService{
                     }
                     break
                     
-                    
                 // 네트워크 통신 실패
                 case .failure(let err):
                     print(err.localizedDescription)
@@ -148,7 +140,6 @@ class SignupService{
                     
                 }
         }
-        
-    }
+    } // signup func
     
 }

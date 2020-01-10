@@ -43,7 +43,7 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
     }
     
     @objc func refresh(){
-        if selectedLabel == "최신순" {
+        if self.selectedLabel == "최신순" {
             downloadStoryData()
         } else {
             downloadStoryCountData()
@@ -95,12 +95,9 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
             case .success(let data):
                 self.StoryDataSet = [] // 초기화
                 self.StoryDataSet = data as! [StoryResponseString.StoryDataClass]
-                self.sortButton.titleLabel!.text = "최신순"
                 self.storyTable.reloadData()
-                
             case.networkFail:
                 print("error")
-                
             case .requestErr(_):
                 print("requestErr")
             case .pathErr:
@@ -123,13 +120,9 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
             case .success(let data):
                 self.StoryDataSet = [] // 초기화
                 self.StoryDataSet = data as! [StoryResponseString.StoryDataClass]
-                self.sortButton.titleLabel!.text = "조회순"
                 self.storyTable.reloadData()
-                
             case.networkFail:
                 print("error")
-                //찍어보기 확인
-                
             case .requestErr(_):
                 print("requestErr")
             case .pathErr:
@@ -151,7 +144,6 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         self.selectedLabel = dataArray[row]
-        //        print("selectedLabel", selectedLabel)
         return selectedLabel
     }
     
@@ -178,12 +170,10 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
         if selectedLabel == "최신순" {
             print("최신순 조회")
             self.sortButton.setTitle("최신순", for: .normal)
-//            self.sortButton.titleLabel?.text = "최신순"
             downloadStoryData()
         }
         else {
             print("조회순 조회")
-//            self.sortButton.titleLabel?.text = "조회순"
             self.sortButton.setTitle("조회순", for: .normal)
             downloadStoryCountData()
         }
