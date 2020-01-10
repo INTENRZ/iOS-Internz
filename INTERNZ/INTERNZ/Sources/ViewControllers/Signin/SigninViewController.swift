@@ -39,12 +39,20 @@ class SigninViewController: UIViewController {
     }
     
     
-    // 조건을 충족하였을 경우 다음 회원가입 뷰로 이동
+    // 다음 회원가입 뷰로 이동하기 위한 조건검사
     @IBAction func gotoNextSignin(_ sender: UIButton) {
         
         // 이메일을 입력하지 않았을 경우 -> 다음 뷰로 넘어가지 못함
         if self.emailTextField.text == "" {
             let alert = UIAlertController(title: "회원가입 실패!", message: "이메일을 입력해주세요.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+            return
+        }
+        
+        // 비밀번호를 입력하지 않았을 경우 -> 다음 뷰로 넘어가지 못함
+        if self.passwordTextField.text == "" {
+            let alert = UIAlertController(title: "회원가입 실패!", message: "비밀번호를 입력해주세요.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
             self.present(alert, animated: true)
             return
@@ -78,6 +86,7 @@ class SigninViewController: UIViewController {
                 self.isCheckEmail = data as! Bool
                 print("checkEmail??? ", self.isCheckEmail)
                 
+                // 이메일 중복 체크 성공일 경우 -> 다음 뷰로 넘어감
                 if self.isCheckEmail == true {
                     let alert = UIAlertController(title: "이메일 중복 없음!", message: "다음 회원가입 화면으로 넘어갑니다.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "확인", style: .default, handler: {
@@ -100,48 +109,35 @@ class SigninViewController: UIViewController {
             }
         }
         
-//        print("checkEmail2??? ", self.isCheckEmail)
-        
         if self.isCheckEmail == false {
             let alert = UIAlertController(title: "이메일 중복!", message: "다른 이메일을 입력해주세요.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
             self.present(alert, animated: true)
             return
         }
-        
-        
-        //        guard self.emailTextField.text != nil else { return }
-        //        guard self.passwordTextField.text != nil else { return }
-        //        guard self.passwordConfirmTextField.text != nil else { return }
-        //        guard self.phoneTextField.text != nil else { return }
-        
-        //        let dvc = storyboard?.instantiateViewController(identifier: "Signin2ViewController") as! Signin2ViewController
-        
-        
-        
-        
-        //        dvc.userEmailString = emailTextField.text
-        //        dvc.userPwdString = passwordTextField.text
-        //        dvc.userPwdConfirmString = passwordConfirmTextField.text
-        //        dvc.phoneString = phoneTextField.text
-        
-        //        navigationController?.pushViewController(dvc, animated: true)
+
     }
     
     @IBAction func gotoLoginView(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
+    // 다음 회원가입 뷰로 넘어감
     func goNextSigninView(){
+    
+        guard let userEmail = self.emailTextField.text else { return }
+        guard let userPassword = self.passwordTextField.text else { return }
+        guard let userPhone = self.phoneTextField.text else { return }
+        
         let dvc = storyboard?.instantiateViewController(identifier: "Signin2ViewController") as! Signin2ViewController
+        
+        dvc.userEmailString = userEmail
+        dvc.userPwdString = userPassword
+        dvc.phoneString = userPhone
    
         navigationController?.pushViewController(dvc, animated: true)
-        return
     }
-    
-    
-    
+
 }
 
 extension SigninViewController: UITextFieldDelegate{
