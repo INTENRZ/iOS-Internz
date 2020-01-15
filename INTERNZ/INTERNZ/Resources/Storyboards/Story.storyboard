@@ -104,12 +104,22 @@
                                     <action selector="doSortStory:" destination="Mpp-1N-9vO" eventType="touchUpInside" id="vjA-7l-tRz"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDownIc" translatesAutoresizingMaskIntoConstraints="NO" id="bHv-rW-us2">
+                                <rect key="frame" x="55" y="60" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="KzC-zV-adl"/>
+                                    <constraint firstAttribute="width" secondItem="bHv-rW-us2" secondAttribute="height" multiplier="1:1" id="T0Z-wC-Gg5"/>
+                                    <constraint firstAttribute="height" constant="16" id="dMA-Nm-70y"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="5U4-Ie-dnp" firstAttribute="leading" secondItem="hKi-a3-mgc" secondAttribute="leading" constant="16" id="08o-mr-jEe"/>
                             <constraint firstItem="sjh-fH-drb" firstAttribute="leading" secondItem="hKi-a3-mgc" secondAttribute="leading" id="3lN-KS-GX7"/>
                             <constraint firstAttribute="bottom" secondItem="sjh-fH-drb" secondAttribute="bottom" id="PuA-H9-T4T"/>
+                            <constraint firstItem="bHv-rW-us2" firstAttribute="top" secondItem="hKi-a3-mgc" secondAttribute="top" constant="16" id="QpJ-ZO-Nb1"/>
+                            <constraint firstItem="bHv-rW-us2" firstAttribute="leading" secondItem="5U4-Ie-dnp" secondAttribute="trailing" constant="2" id="dWY-2M-RAp"/>
                             <constraint firstItem="sjh-fH-drb" firstAttribute="trailing" secondItem="hKi-a3-mgc" secondAttribute="trailing" id="dem-00-zre"/>
                             <constraint firstItem="5U4-Ie-dnp" firstAttribute="top" secondItem="hKi-a3-mgc" secondAttribute="top" constant="16" id="n4D-2m-8PK"/>
                             <constraint firstItem="sjh-fH-drb" firstAttribute="top" secondItem="5U4-Ie-dnp" secondAttribute="bottom" id="tHW-8u-bB5"/>
@@ -484,6 +494,7 @@
     </scenes>
     <resources>
         <image name="22" width="147.33332824707031" height="184.33332824707031"/>
+        <image name="arrowDownIc" width="16" height="16"/>
         <image name="backWhIc" width="24" height="24"/>
         <image name="commentIc" width="24" height="24"/>
         <image name="profileImg1" width="46" height="46"/>

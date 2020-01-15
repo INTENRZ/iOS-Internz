@@ -32,26 +32,15 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("category???", category)
+        
         storyTable.dataSource = self
         storyTable.delegate = self
         
         downloadStoryData()
-        
-        self.storyTable.refreshControl = refreshControl
-        refreshControl.attributedTitle = NSAttributedString(string: "")
-        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-    }
+//        downloadCategotyStoryData()
     
-    @objc func refresh(){
-        if self.selectedLabel == "최신순" {
-            downloadStoryData()
-        } else {
-            downloadStoryCountData()
-        }
-        
-        self.refreshControl.endRefreshing()
     }
-    
     
     // picker view 생성
     @IBAction func doSortStory(_ sender: UIButton) {
@@ -131,6 +120,40 @@ class StoryViewController: UIViewController,  UIPickerViewDelegate, UIPickerView
                 print("serverErr")
             }
         }
+    }
+    
+    
+    // 스토리 카테고리별 조회
+    func downloadCategotyStoryData(){
+        
+        guard let myCategory = self.category else { return }
+        var mySort = ""
+        
+        if selectedLabel == "조회순" {
+            mySort = "1"
+        } else {
+            mySort = "0"
+        }
+        
+        StoryListService.shared.StoryCategoryList("동아리", "0"){
+            response in
+            
+            switch response{
+            case .success(let data):
+                self.StoryDataSet = [] // 초기화
+                self.StoryDataSet = data as! [StoryResponseString.StoryDataClass]
+                self.storyTable.reloadData()
+            case.networkFail:
+                print("error")
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            }
+        }
+
     }
     
     

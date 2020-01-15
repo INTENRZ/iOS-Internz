@@ -65,7 +65,11 @@ class SettingFavorViewController: UIViewController {
             dvc.selectTwo = self.selectTwo
             dvc.selectThree = self.selectThree
             
-            navigationController?.pushViewController(dvc, animated: true)
+            dvc.modalPresentationStyle = .fullScreen
+            
+            self.present(dvc, animated: true, completion: nil)
+            
+//            navigationController?.pushViewController(dvc, animated: true)
             
         } else {
             let alert = UIAlertController(title: "선택 오류!", message: "관심 직무를 세 개 선택해 주세요", preferredStyle: .alert)
