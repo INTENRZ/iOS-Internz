@@ -117,8 +117,15 @@
 
 <br/>
 
+4. FirstLogin
 
-4. home tab : 추천 공고, 추천 프로필, 최신 스토리 
+<img src="./screenshot/첫로그인.png" width="200" height="365">  <img src="./screenshot/첫로그인2.png" width="200" height="365">  
+
+
+<br/>
+
+
+5. home tab : 추천 공고, 추천 프로필, 최신 스토리 
 
 
 <img src="./screenshot/메인-홈1.png" width="200" height="365">  <img src="./screenshot/메인-홈2.png" width="200" height="365"> 
@@ -127,7 +134,7 @@
 <br/>
 
 
-5. announcement tab 
+6. announcement tab 
 - 전체 공고, 지난 공고 정렬 선택
 - 공고 필터 : 보고 싶은 직무 1개 선택, 필터에 따라 정렬
 - 공고 캘린더 : 관심 추가한 공고를 캘린더에 추가 
@@ -138,7 +145,7 @@
 <br/>
 
 
-6. story tab
+7. story tab
 - 스토리 최신순, 조회순 정렬
 - 탭 바 : 인턴, 대외활동, 공모전, 동아리, 자격증, 기타에 따른 스토리 조회
 - 스토리 상세글
@@ -149,7 +156,7 @@
 <br/>
 
 
-7. profile tab
+8. profile tab
 - 개인 프로필 정보 조회
 - 개인 활동에 대한 타임라인 작성 및 조회 
 - 개인 프로필 > 타임라인 > 각 타임라인에 대해 작성한 스토리 리스트 조회 
