@@ -35,9 +35,7 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         super.viewDidLoad()
         
         // 뒤로 가기 버튼 숨기기
-        self.navigationItem.setHidesBackButton(true, animated:true);
-        
-        setAnnouncementSampleData()
+        self.navigationItem.setHidesBackButton(true, animated:true)
         
         announcementTable.reloadData()
         
@@ -100,10 +98,8 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         view.addSubview(self.picker)
         
-        
         // 2. Tool Bar 에 들어갈 버튼 생성
         let btnDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.testfunc))
-        
         
         // 3. UIPicker Toolbar 생성 + 속성 setting
         let barAccessory = UIToolbar(frame: CGRect(x: 0, y: 0, width: picker.frame.width, height: 44))
@@ -114,7 +110,6 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         picker.addSubview(barAccessory)
         
-        
         // 4. PickerView 생성
         self.sortPicker.frame = CGRect(x: 0, y: barAccessory.frame.height, width: view.frame.width, height: picker.frame.height - barAccessory.frame.height)
         self.sortPicker.delegate = self
@@ -122,9 +117,6 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
         self.sortPicker.backgroundColor = UIColor.whiteFour
         
         picker.addSubview(sortPicker)
-        
-        downloadJobData()
-        
     }
     
     // 최신순 공고 조회
@@ -173,56 +165,43 @@ class AnnouncementViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let row = dataArray[row]
-        return row
+//        let row = dataArray[row]
+//        return row
+        self.selectString = dataArray[row]
+        return selectString
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //        selectString = dataArray[pickerView.selectedRow(inComponent: row)]
+//        self.selectString = dataArray[row]
         self.selectString = dataArray[row]
     }
     
     // PickerView 완료 버튼 클릭
     @objc func testfunc(){
-        print(selectString)
         
-        if isClickedSortBtn == false {
+        if isClickedSortBtn == false{
             self.picker.isHidden = true
             isClickedSortBtn = false
-            self.sortButton.setTitle(selectString, for: .normal)
         } else {
             self.picker.isHidden = false
-            isClickedSortBtn = true
-            self.sortButton.setTitle(selectString, for: .normal)
-            
-            if selectString == "최신순" {
-                self.sortPicker.selectedRow(inComponent: 0)
-                
-            } else {
-                self.sortPicker.selectedRow(inComponent: 1)
-            }
+            isClickedSortBtn  = true
         }
         
-        if selectString == "최신순" {
-            downloadJobData()
+        if selectString == "최신순"{
+            print("최신순조회")
+            self.sortButton.setTitle("최신순", for: .normal)
+            downloadJobData();
         } else {
+            print("마감순조회")
+            self.sortButton.setTitle("마감순", for: .normal)
             downloadJobPastData()
         }
-        
-        
+    
     } // testfunc()
 }
 
 extension AnnouncementViewController {
-    func setAnnouncementSampleData(){
-        let sample1 = Announcement(companyName: "회사11", jobName: "개발직군", day: "d-20", companyImageName: "1")
-        let sample2 = Announcement(companyName: "회사22222", jobName: "개발직군", day: "d-20", companyImageName: "1")
-        let sample3 = Announcement(companyName: "회사33", jobName: "개발직군", day: "d-20", companyImageName: "1")
-        let sample4 = Announcement(companyName: "회사44", jobName: "디쟌직군", day: "d-20", companyImageName: "1")
-        let sample5 = Announcement(companyName: "회사555", jobName: "디쟌직군", day: "d-20", companyImageName: "1")
-        
-        announcementList = [sample1, sample2, sample3, sample4, sample5, sample1, sample1, sample1, sample1]
-    }
 }
 
 extension AnnouncementViewController: UITableViewDelegate {
